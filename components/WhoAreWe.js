@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import { Text, Icon } from "@goright/design-system";
+import { Text, Icon } from "@bridge-the-gap/design-system";
 import TwitterIcon from "../public/twitter.svg";
 import LinkedinIcon from "../public/linkedin.svg";
 import Link from "@components/link";

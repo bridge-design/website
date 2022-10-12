@@ -1,4 +1,4 @@
-import { Text, Icon, Testimonial } from "@goright/design-system";
+import { Text, Icon, Testimonial } from "@bridge-the-gap/design-system";
 import SectionTitle from "@components/SectionTitle";
 
 const testimonials = [

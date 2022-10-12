@@ -1,4 +1,4 @@
-import { Text, Icon, Timetable } from "@goright/design-system";
+import { Text, Icon, Timetable } from "@bridge-the-gap/design-system";
 import SectionTitle from "@components/SectionTitle";
 import localTime from "@components/local-time";
 

@@ -1,4 +1,4 @@
-import { Text, Emoji, Card, Icon, CtaLink } from "@goright/design-system";
+import { Text, Emoji, Card, Icon, CtaLink } from "@bridge-the-gap/design-system";
 import { NextSeo } from "next-seo"
 import Link from "@components/link";
 
@@ -6,13 +6,13 @@ export default function IndexPage() {
   return (
     <>
       <NextSeo
-        title="GoRight"
+        title="Bridge-the-Gap"
         description="We team up with designers and developers to build and scale design systems"
         keywords="Design system, design system workshop, design system team"
         openGraph={{
           type: "website",
           locale: "en_US",
-          site_name: "GoRight.io",
+          site_name: "Bridge-the-Gap.dev",
         }}
       />
       <div className="mt-48 text-center">

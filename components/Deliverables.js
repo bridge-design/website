@@ -1,4 +1,4 @@
-import { Text, Icon } from "@goright/design-system";
+import { Text, Icon } from "@bridge-the-gap/design-system";
 import SectionTitle from "@components/SectionTitle";
 
 export default function Deliverables() {

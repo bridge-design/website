@@ -8,7 +8,7 @@ const navItems = [
   },
   {
     name: "About us",
-    href: "https://goright.io/about",
+    href: "https://bridge-the-gap.dev/about",
   },
 ];
 

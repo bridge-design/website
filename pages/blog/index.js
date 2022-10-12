@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Emoji, Card, Icon } from "@goright/design-system";
+import { Text, Emoji, Card, Icon } from "@bridge-the-gap/design-system";
 import WorkshopContent from "@components/WorkshopContent";
 import Deliverables from "@components/Deliverables";
 import WhyAttend from "@components/WhyAttend";
@@ -19,14 +19,14 @@ export default function Blog(
   return (
     <>
       <NextSeo
-        title="GoRight Blog"
+        title="Bridge-the-Gap Blog"
         description="Sharing our knowledge on design systems with the world"
         keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
         canonical={canonical}
         openGraph={{
           type: "website",
           locale: "en_US",
-          site_name: "GoRight.io",
+          site_name: "Bridge-the-Gap.dev",
         }}
       />
       {/***** HERO SECTION *****/}
