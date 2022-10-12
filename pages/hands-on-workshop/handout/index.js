@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Text, Card, Badge, Emoji } from "@goright/design-system";
+import { Text, Card, Badge, Emoji } from "@bridge-the-gap/design-system";
 
 import Link from "@components/link";
 import { useRouter } from "next/router";

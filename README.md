@@ -1,4 +1,4 @@
-# GoRight Website
+# Bridge-the-Gap Website
 
 ## Available scripts
 

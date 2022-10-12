@@ -1,4 +1,4 @@
-import { Text } from "@goright/design-system";
+import { Text } from "@bridge-the-gap/design-system";
 import TwitterIcon from "../public/twitter.svg";
 import LinkedinIcon from "../public/linkedin.svg";
 import Link from "@components/link";

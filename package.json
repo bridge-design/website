@@ -1,8 +1,8 @@
 {
-  "name": "with-tailwindcss",
+  "name": "@bridge-the-gap/website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://goright-io.github.io/website-new/",
+  "homepage": "https://bridge-the-gap.dev/",
   "scripts": {
     "dev": "next dev",
     "build": "NODE_ENV=production next build",
@@ -12,7 +12,7 @@
     "deploy": "gh-pages -d ./out"
   },
   "dependencies": {
-    "@goright/design-system": "^1.0.14",
+    "@bridge-the-gap/design-system": "^1.0.1",
     "@svgr/webpack": "^5.5.0",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "copy-webpack-plugin": "^9.0.1",

@@ -1,6 +1,6 @@
 import { MDXProvider } from "@mdx-js/react";
 import Link from "@components/link";
-import { Text, CtaLink } from "@goright/design-system";
+import { Text, CtaLink } from "@bridge-the-gap/design-system";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import path from "path";
@@ -33,13 +33,13 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
   return (
     <>
       <NextSeo
-        title={title + " - Blog - GoRight"}
+        title={title + " - Blog - Bridge-the-Gap"}
         description="Sharing our knowledge and experience"
         openGraph={{
           type: "website",
           locale: "en_US",
-          url: "https://goright.io/blog",
-          site_name: "GoRight.io",
+          url: "https://bridge-the-gap.dev/blog",
+          site_name: "Bridge-the-Gap.dev",
         }}
         {...seo}
       />

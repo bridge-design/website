@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Link from "@components/link";
-import { Nav, Button, Logo } from "@goright/design-system";
+import { Nav, Button, Logo } from "@bridge-the-gap/design-system";
 import { useRouter } from "next/router";
-import { Text, CtaLink } from "@goright/design-system"
+import { Text, CtaLink } from "@bridge-the-gap/design-system"
 import localTime from "@components/local-time"
 
 

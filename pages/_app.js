@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { LayoutDefault, LayoutWorkshop } from "@components/layout";
-import "@goright/design-system/dist/styles.css";
+import "@bridge-the-gap/design-system/dist/styles.css";
 import "tailwindcss/tailwind.css";
 import { DefaultSeo } from "next-seo";
 import path from "path";
@@ -19,14 +19,14 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
           type: "website",
           locale: "en_US",
           url: baseUrl,
-          site_name: "GoRight.io",
+          site_name: "Bridge-the-Gap.dev",
           images: thumb &&
             baseUrl && [
               {
                 url: baseUrl + "/images" + thumb,
                 width: 1000,
                 height: 750,
-                alt: "GoRight — build and scale design systems",
+                alt: "Bridge-the-Gap — build and scale design systems",
               },
             ],
         }}
@@ -47,7 +47,7 @@ MyApp.getInitialProps = async ({ ctx: { pathname, req } }) => {
     const BASE_URL = (() => {
       if (process.env.NODE_ENV === "development")
         return "http://localhost:3000";
-      return process.env.BASEPATH ? process.env.BASEPATH : "https://goright.io";
+      return process.env.BASEPATH ? process.env.BASEPATH : "https://bridge-the-gap.dev";
     })();
     const thumb = getThumbnailPath(pathname);
 

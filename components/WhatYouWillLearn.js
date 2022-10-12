@@ -1,4 +1,4 @@
-import { Text } from "@goright/design-system";
+import { Text } from "@bridge-the-gap/design-system";
 import SectionTitle from "@components/SectionTitle";
 
 export default function WhyAttend() {

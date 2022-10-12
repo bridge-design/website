@@ -1,4 +1,4 @@
-import { Text, Icon, Button } from "@goright/design-system";
+import { Text, Icon, Button } from "@bridge-the-gap/design-system";
 import SectionTitle from "@components/SectionTitle";
 
 export default function CustomWorkshop() {

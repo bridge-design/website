@@ -12,15 +12,15 @@ export default function Footer() {
               className="inline-block hover:text-primary-500"
             >
             <a
-              href="https://goright.io/"
+              href="https://bridge-the-gap.dev"
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold hover:no-underline "
             >
-              GoRight
+              Bridge-the-Gap
             </a>
             </Link>
-            {"\u00A0"}2021
+            {"\u00A0"}2022
           </div>
         </div>
       </div>

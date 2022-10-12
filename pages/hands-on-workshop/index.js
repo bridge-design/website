@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Emoji, Card, Icon } from "@goright/design-system";
+import { Text, Emoji, Card, Icon } from "@bridge-the-gap/design-system";
 import WorkshopContent from "@components/WorkshopContent";
 import Deliverables from "@components/Deliverables";
 import WhyAttend from "@components/WhyAttend";
