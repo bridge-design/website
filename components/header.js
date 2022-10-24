@@ -38,7 +38,7 @@ export default function Header({ navItems }) {
       <div className="container">
         <header className="relative flex items-center w-full pt-8">
           <Link href="/">
-            <Logo className="mr-auto" />
+            <Logo className="mr-auto w-36" />
           </Link>
           <Nav
             items={navItems}

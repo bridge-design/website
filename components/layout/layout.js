@@ -2,14 +2,14 @@ import Header from "@components/header";
 import Footer from "@components/footer";
 
 const navItems = [
-  {
-    name: "Workshop",
-    href: "/hands-on-workshop",
-  },
   // {
   //   name: "Services",
   //   href: "/services",
   // },
+  {
+    name: "Workshop",
+    href: "/hands-on-workshop",
+  },
   {
     name: "Blog",
     href: "/blog",
