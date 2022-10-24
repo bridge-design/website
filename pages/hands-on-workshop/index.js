@@ -80,7 +80,7 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
           <Card
             className="min-h-[240px]"
             heading="Need a custom workshop for your team?"
-            link={{ text: "Let's talk", href: "mailto:hello@goright.io" }}
+            link={{ text: "Let's talk", href: "mailto:mail@bridge-the-gap.dev" }}
             linkComponent={Link}
           >
             <div className="mb-8">
