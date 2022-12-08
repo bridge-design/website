@@ -51,7 +51,7 @@ export default function Header({ navItems }) {
             size="small"
             label="Let's&nbsp;talk&nbsp; ↗"
             as="a"
-            href="mailto:hello@goright.io"
+            href="mailto:mail@bridge-the-gap.dev"
             target="_blank"
             rel="noopener"
           />
