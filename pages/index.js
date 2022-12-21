@@ -1,5 +1,5 @@
 import { Text, Emoji, Card, Icon, CtaLink } from "@bridge-the-gap/design-system";
-import { NextSeo } from "next-seo"
+import { NextSeo } from "next-seo";
 import Link from "@components/link";
 
 export default function IndexPage() {
@@ -15,26 +15,23 @@ export default function IndexPage() {
           site_name: "Bridge-the-Gap.dev",
         }}
       />
-      <div className="mt-48 text-center">
-        <Text
-          as="h1"
-          variant="6Xl"
-          className="max-w-4xl mx-auto mt-4 animate-fadein animate-reveal"
-        >
-          We team up with designers and developers to build and scale{"\n"}
-          <Text as="span" variant="6Xl" highlight="yellow-100">
-            design systems
-          </Text>
-          .
+      <div className="max-w-[615px] mt-48 text-left">
+        <Text as="h1" variant="5Xl" className="max-w-4xl mb-10">
+          We team up with designers and developers to build and scale design systems.
+        </Text>
+        <Text as="p" variant="2Xl">
+          Bridge the gap agency is a strategic partner for fast-growing tech companies in need of a
+          scalable tools with a modular design system, to ship products to market faster.
         </Text>
         <CtaLink
           href="/hands-on-workshop"
           as={Link}
-          className="mt-16 animate-fadeindelay"
+          underline
+          className="mt-14 animate-fadeindelay"
         >
-          Check our workshop
+          Get in touch
         </CtaLink>
       </div>
     </>
-  )
+  );
 }
