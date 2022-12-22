@@ -15,21 +15,17 @@ export default function IndexPage() {
           site_name: "Bridge-the-Gap.dev",
         }}
       />
-      <div className="max-w-[615px] mt-48 text-left">
-        <Text as="h1" variant="5Xl" className="max-w-4xl mb-10">
+      <div className="mt-48 text-center">
+        <Text as="h1" variant="7Xl" className="max-w-5xl mx-auto mb-40">
           We team up with designers and developers to build and scale design systems.
-        </Text>
-        <Text as="p" variant="2Xl">
-          Bridge the gap agency is a strategic partner for fast-growing tech companies in need of a
-          scalable tools with a modular design system, to ship products to market faster.
         </Text>
         <CtaLink
           href="/hands-on-workshop"
           as={Link}
           underline
-          className="mt-14 animate-fadeindelay"
+          className="text-xl animate-fadeindelay"
         >
-          Get in touch
+          Start a conversation
         </CtaLink>
       </div>
     </>

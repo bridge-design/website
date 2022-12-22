@@ -9,7 +9,7 @@ export default function Header({ navItems }) {
   const { asPath } = useRouter();
 
   return (
-    <header className="flex items-center w-full pt-14">
+    <header className="flex items-center w-full">
       <Link href="/">
         <Logo className="max-w-[250px] mr-auto" />
       </Link>
