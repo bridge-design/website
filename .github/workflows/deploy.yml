@@ -36,9 +36,6 @@ jobs:
       - name: Export static files for main site
         run: yarn export
         
-      - name: Export hands-on workshop files
-        run: yarn export:hands-on-workshop
-        
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
@@ -47,38 +44,4 @@ jobs:
           clean: true
           clean-exclude: |
             .nojekyll
-            CNAME
-       
-       
-      - name: Archive hands-on-workshop export as artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: hands-on-workshop
-          path: |
-            hands-on-workshop/
-            
-  deploy-workshop:
-    runs-on: ubuntu-18.04
-    needs: deploy
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Download artifact of hands-on-workshop export
-        uses: actions/download-artifact@v2
-        with:
-          name: hands-on-workshop
-          path: hands-on-workshop/
-          
-      - name: Deploy hands-on-workshop.goright.io
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          folder: hands-on-workshop/
-          repository-name: goright-io/hands-on-workshop.goright.io
-          token: ${{ secrets.GH_PAT }}
-          branch: gh-pages
-          clean: true
-          clean-exclude: |
-            .nojekyll
-            CNAME
-            
-      
+            CNAME 
