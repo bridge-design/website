@@ -27,6 +27,7 @@ const navItems = [
     href: "/contact",
   },
 ];
+
 export default function Layout({ children }) {
   return (
     <div className="container flex flex-col min-h-screen overflow-hidden mt-11">

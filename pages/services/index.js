@@ -78,11 +78,11 @@ export default function Services() {
         href="/hands-on-workshop"
         as={Link}
         underline
-        className="flex justify-center w-full mt-32 text-xl animate-fadeindelay"
+        className="flex justify-center w-full text-xl mt-28 animate-fadeindelay"
       >
         Start a conversation
       </CtaLink>
-      <Text as="h2" variant="3xl" className="mt-10 animate-fadein animate-reveal">
+      <Text as="h2" variant="3xl" className="mt-32 animate-fadein animate-reveal">
         Design System for teams and enterprises
       </Text>
       <Text as="h2" variant="3xl" className="mt-10 animate-fadein animate-reveal">

@@ -19,12 +19,7 @@ export default function IndexPage() {
         <Text as="h1" variant="7Xl" className="max-w-5xl mx-auto mb-40">
           We team up with designers and developers to build and scale design systems.
         </Text>
-        <CtaLink
-          href="/hands-on-workshop"
-          as={Link}
-          underline
-          className="text-xl animate-fadeindelay"
-        >
+        <CtaLink href="/contact" as={Link} underline className="text-xl animate-fadeindelay">
           Start a conversation
         </CtaLink>
       </div>
