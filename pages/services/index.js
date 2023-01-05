@@ -1,12 +1,35 @@
-import { Text, CtaLink, Testimonial } from "@bridge-the-gap/design-system";
+import { Text, CtaLink, Testimonial, Advantages } from "@bridge-the-gap/design-system";
 import { NextSeo } from "next-seo";
 import Link from "@components/link";
+import ArrowIcon from "../../public/arrow.svg";
+import ArrowLeftIcon from "../../public/arrow-left.svg";
 
 export const TestimonialTitle = (
-  <Text variant="3Xl" as="h2">
+  <Text variant="3Xl" as="h2" className="mt-32">
     People Say
   </Text>
 );
+
+const CONTENT = [
+  {
+    icon: "Rocket",
+    title: "Coherent",
+    description:
+      "Ensuring that your company's identity and the experience it provides for customers is consistent across the board for all of your digital products.",
+  },
+  {
+    icon: "UserIdentification",
+    title: "5× Faster",
+    description:
+      "Reusing the same design and development components and patterns from a design system library. allows all organizational teams to create, test, and launch products more quickly.",
+  },
+  {
+    icon: "TreeView",
+    title: "Scalability",
+    description:
+      "Maintain and scale your products more easily. The entire product line will be aligned, so each new release will work seamlessly with all previous versions and updates (and vice versa)",
+  },
+];
 
 export const testimonials = [
   {
@@ -82,17 +105,97 @@ export default function Services() {
       >
         Start a conversation
       </CtaLink>
-      <Text as="h2" variant="3xl" className="mt-32 animate-fadein animate-reveal">
+      <Text as="h2" variant="3xl" className="mt-32 mb-6 animate-fadein animate-reveal">
         Design System for teams and enterprises
       </Text>
-      <Text as="h2" variant="3xl" className="mt-10 animate-fadein animate-reveal">
+      <Advantages colorSchema="dark" content={CONTENT} />
+      <Text as="h2" variant="3xl" className="mt-32 animate-fadein animate-reveal">
         Design Sytem processes
       </Text>
-      <Text as="h2" variant="3xl" className="mt-10 animate-fadein animate-reveal">
+      <div className="relative w-full h-64">
+        <div className="top-0 right-0 z-10 w-full ">
+          <div className="flex items-center gap-[4%] mt-20 ">
+            <Text as="p" variant="3xl" className="">
+              Setup
+            </Text>
+            <ArrowIcon
+              width="116"
+              height="16"
+              fill="currentColor"
+              className="text-light-on-background-900"
+              title="arrow"
+            />
+            <Text as="p" variant="3xl" className="">
+              POC
+            </Text>
+            <ArrowIcon
+              width="116"
+              height="16"
+              fill="currentColor"
+              className="text-light-on-background-900"
+              title="arrow"
+            />
+            <Text as="p" variant="3xl" className="">
+              Outline
+            </Text>
+            <ArrowIcon
+              width="116"
+              height="16"
+              fill="currentColor"
+              className="text-light-on-background-900"
+              title="arrow"
+            />
+            <Text as="p" variant="3xl" className="">
+              Alignment
+            </Text>
+            <ArrowIcon
+              width="116"
+              height="16"
+              fill="currentColor"
+              className="text-light-on-background-900"
+              title="arrow"
+            />
+          </div>
+          <div className="flex gap-24 mt-20 ml-32">
+            <Text as="p" variant="3xl" className="">
+              Handover
+            </Text>
+            <ArrowLeftIcon
+              width="116"
+              height="16"
+              fill="currentColor"
+              className="text-light-on-background-900"
+              title="arrow"
+            />
+            <Text as="p" variant="3xl" className="">
+              Adoption
+            </Text>
+            <ArrowLeftIcon
+              width="116"
+              height="16"
+              fill="currentColor"
+              className="text-light-on-background-900"
+              title="arrow"
+            />
+            <Text as="p" variant="3xl" className="">
+              Components library
+            </Text>
+            <ArrowLeftIcon
+              width="116"
+              height="16"
+              fill="currentColor"
+              className="text-light-on-background-900"
+              title="arrow"
+            />
+          </div>
+        </div>
+      </div>
+      <Text as="h2" variant="3xl" className="mt-32 mb-10 animate-fadein animate-reveal">
         How it works
       </Text>
+      <Advantages colorSchema="light" content={CONTENT} />
       <Testimonial testimonials={testimonials} title={TestimonialTitle} />
-      <Text as="h2" variant="3xl" className="mt-10 animate-fadein animate-reveal">
+      <Text as="h2" variant="3xl" className="mt-32 animate-fadein animate-reveal">
         Meet the team
       </Text>
       <div></div>
