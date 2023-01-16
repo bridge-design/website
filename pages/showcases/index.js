@@ -7,6 +7,7 @@ import {
   HelpTeams,
 } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
+import TableComponent from "@components/TableComponent";
 
 const Showcases = () => {
   return (
@@ -135,6 +136,58 @@ const Showcases = () => {
         </Text>
         <Text variant="lg" className="mt-6">
           And that's the end of this section.
+        </Text>
+        <Text as="h1" variant="3xl" className="mt-16">
+          What if we stack headings?
+        </Text>
+        <Text as="p" variant="2xl" className="mt-8">
+          We should make sure that looks good, too.
+        </Text>
+        <Text as="p" variant="lg" className="mt-4">
+          Sometimes you have headings directly underneath each other. In those cases you often have
+          to undo the top margin on the second heading because it usually looks better for the
+          headings to be closer together than a paragraph followed by a heading should be.
+        </Text>
+        <Text as="p" variant="2xl" className="mt-8">
+          We should make sure that looks good, too.
+        </Text>
+        <Text as="p" variant="lg" className="mt-4">
+          Sometimes you have headings directly underneath each other. In those cases you often have
+          to undo the top margin on the second heading because it usually looks better for the
+          headings to be closer together than a paragraph followed by a heading should be.
+        </Text>
+        <Text as="h1" variant="2xl" className="mt-16">
+          There are other elements we need to style
+        </Text>
+        <Text as="p" variant="lg" className="mt-4">
+          I almost forgot to mention links, like this link to the Tailwind CSS website. We almost
+          made them blue but that's so yesterday, so we went with dark gray, feels edgier.
+        </Text>
+        <Text as="p" variant="lg" className="mt-4">
+          I almost forgot to mention links, like this link to the Tailwind CSS website. We almost
+          made them blue but that's so yesterday, so we went with dark gray, feels edgier.
+        </Text>
+        <TableComponent />
+        <Text as="p" variant="lg" className="mt-4">
+          Sometimes you have headings directly underneath each other. In those cases you often have
+          to undo the top margin on the second heading because it usually looks better for the
+          headings to be closer together than a paragraph followed by a heading should be.
+        </Text>
+        <Text as="h1" variant="2xl" className="mt-8">
+          We should make sure that looks good, too.
+        </Text>
+        <Text as="p" variant="lg" className="mt-4">
+          Sometimes you have headings directly underneath each other. In those cases you often have
+          to undo the top margin on the second heading because it usually looks better for the
+          headings to be closer together than a paragraph followed by a heading should be.
+        </Text>
+        <Text as="p" variant="lg" className="mt-8">
+          We should make sure that looks good, too.
+        </Text>
+        <Text as="p" variant="lg" className="mt-2">
+          But now we have. Please don't use h5 or h6 in your content, Medium only supports two
+          heading levels for a reason, you animals. I honestly considered using a before
+          pseudo-element to scream at you if you use an h5 or h6.
         </Text>
       </div>
     </div>
