@@ -11,10 +11,6 @@ const navItems = [
     href: "/services",
   },
   {
-    name: "Workshop",
-    href: "/hands-on-workshop",
-  },
-  {
     name: "Blog",
     href: "/blog",
   },
