@@ -1,5 +1,5 @@
 import { Text, Emoji, Card, Icon, CtaLink } from "@bridge-the-gap/design-system";
-import { NextSeo } from "next-seo"
+import { NextSeo } from "next-seo";
 import Link from "@components/link";
 
 export default function IndexPage() {
@@ -16,25 +16,13 @@ export default function IndexPage() {
         }}
       />
       <div className="mt-48 text-center">
-        <Text
-          as="h1"
-          variant="6Xl"
-          className="max-w-4xl mx-auto mt-4 animate-fadein animate-reveal"
-        >
-          We team up with designers and developers to build and scale{"\n"}
-          <Text as="span" variant="6Xl" highlight="yellow-100">
-            design systems
-          </Text>
-          .
+        <Text as="h1" variant="7Xl" className="max-w-5xl mx-auto mb-40">
+          We team up with designers and developers to build and scale design systems.
         </Text>
-        <CtaLink
-          href="/hands-on-workshop"
-          as={Link}
-          className="mt-16 animate-fadeindelay"
-        >
-          Check our workshop
+        <CtaLink href="/contact" as={Link} underline className="text-xl animate-fadeindelay">
+          Start a conversation
         </CtaLink>
       </div>
     </>
-  )
+  );
 }

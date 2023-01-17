@@ -49,7 +49,7 @@ const config = {
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
-}
+};
 
 let finalConfig = resolveConfig(bridgeConfig, config);
 
