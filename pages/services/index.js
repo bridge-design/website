@@ -10,7 +10,6 @@ import { NextSeo } from "next-seo";
 import Link from "@components/link";
 import BreadCrumbsArrows from "@components/BreadCrumbsArrows";
 import MeatTheTeam from "@components/MeatTheTeam";
-import { CONTENT, HOW_IT_WORKS, TESTIMONIALS } from "./content";
 
 export const CONTENT = [
   {
