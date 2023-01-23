@@ -1045,10 +1045,10 @@
     "@babel/helper-validator-identifier" "^7.15.7"
     to-fast-properties "^2.0.0"
 
-"@bridge-the-gap/design-system@^2.0.8":
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/@bridge-the-gap/design-system/-/design-system-2.0.8.tgz#593641c5c3481978a9dcbea4e73ccdbfdf4d856f"
-  integrity sha512-Cm1tV4Eupj9c8zPQPgbcvDRLeO7hXikP0XBFoU1BePrXFlrgdr7ZRQCqZ/Ona6nPx8JVWkFXHHBdzolq8Q1mfg==
+"@bridge-the-gap/design-system@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@bridge-the-gap/design-system/-/design-system-2.0.9.tgz#09d8da9de821aa41cd4713eae26fe8527ea8ca7c"
+  integrity sha512-2AWtV+4pUKwkNfnmTQrmd3m9qTlkcjHqrTK4VlF8YKbf2XMuHA3GbvULO87uCw/ByT5gDncpXxTsf1Qt8ARTOw==
   dependencies:
     "@carbon/icons-react" "^11.13.0"
     "@tailwindcss/typography" "^0.4.1"
