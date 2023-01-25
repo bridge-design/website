@@ -11,7 +11,7 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
   return (
     <LayoutComponent>
       <DefaultSeo
-        title="GoRight - design systems consulting and workshops"
+        title="Bridge-The-Gap - design systems consulting and workshops"
         description="We team up with designers and developers to build and scale design systems"
         keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
         canonical={canonical}
@@ -45,8 +45,7 @@ MyApp.getInitialProps = async ({ ctx: { pathname, req } }) => {
   if (req) {
     const exportedSubpath = process.env.GORIGHT_EXPORT;
     const BASE_URL = (() => {
-      if (process.env.NODE_ENV === "development")
-        return "http://localhost:3000";
+      if (process.env.NODE_ENV === "development") return "http://localhost:3000";
       return process.env.BASEPATH ? process.env.BASEPATH : "https://bridge-the-gap.dev";
     })();
     const thumb = getThumbnailPath(pathname);

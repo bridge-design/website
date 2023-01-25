@@ -4,10 +4,10 @@ import { Text, ProfileCard } from "@bridge-the-gap/design-system";
 export default function MeatTheTeam() {
   return (
     <>
-      <Text as="h2" variant="3xl" className="mt-32 animate-fadein animate-reveal">
+      <Text as="h2" variant="4xl" className="mt-32 animate-fadein animate-reveal">
         Meet the team
       </Text>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-2 gap-10 mt-10">
         <ProfileCard
           photoUrl="/images/meet-the-team/rectangle_60.png"
           name="Varya Stepanova"

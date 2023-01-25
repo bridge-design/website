@@ -48,7 +48,11 @@ const Showcases = () => {
           surprising and unintuitive.
         </Text>
         <div className="max-w-2xl pl-4 my-6 border-l-2 border-light-on-background-500">
-          <Text as="i" variant="lg">
+          <Text
+            as="i"
+            variant="lgItalicg"
+            className="text-lgItalic font-lgItalic tracking-lgItalic leading-lgItalic"
+          >
             “Why is Tailwind removing the default styles on my h1 elements? How do I disable this?
             What do you mean I lose all the other base styles too?
           </Text>
@@ -60,9 +64,12 @@ const Showcases = () => {
           use the user-agent styles either — you want them to look awesome, not awful.
         </Text>
         <Text as="p" variant="lg" className="mt-6">
-          The <span className="">`@tailwindcss/typography`</span> plugin is our attempt to give you
-          what you actually want, without any of the downsides of doing something stupid like
-          disabling our base styles.
+          The{" "}
+          <span className="text-lgMedium font-lgMedium tracking-lgMedium leading-lgMedium">
+            `@tailwindcss/typography`
+          </span>{" "}
+          plugin is our attempt to give you what you actually want, without any of the downsides of
+          doing something stupid like disabling our base styles.
         </Text>
         <img
           src="/syntax_highlighter.png"
@@ -72,19 +79,29 @@ const Showcases = () => {
         <Text as="p" variant="lg">
           Night Owl them for more information about how to use the plugin and the features it
           includes,{" "}
-          <Link href="https://play.tailwindcss.com/uj1vGACRJA?layout=preview" className="underline">
+          <Link
+            href="https://play.tailwindcss.com/uj1vGACRJA?layout=preview"
+            className="underline text-lgMedium font-lgMedium tracking-lgMedium leading-lgMedium"
+          >
             read the documentation
           </Link>
           .
         </Text>
         <div className="w-full border-b my-14 border-light-on-background-300"></div>
-        <Text as="h1" variant="3xl">
+        <Text
+          as="h1"
+          variant="3XlBold"
+          className="text-3XlBold font-3XlBold tracking-3XlBold leading-3XlBold"
+        >
           What to expect from here on out
         </Text>
         <Text as="p" variant="lg" className="mt-10">
           What follows from here is just a bunch of absolute nonsense I've written to dogfood the
-          plugin itself. It includes every sensible typographic element I could think of, like bold
-          text, unordered lists, ordered lists, code blocks, block quotes, and even italics.
+          plugin itself. It includes every sensible typographic element I could think of, like{" "}
+          <span className="text-lgMedium font-lgMedium tracking-lgMedium leading-lgMedium">
+            bold text
+          </span>
+          , unordered lists, ordered lists, code blocks, block quotes, and even italics.
         </Text>
         <Text as="p" variant="lg" className="mt-6">
           It's important to cover all of these use cases for a few reasons:
@@ -102,7 +119,11 @@ const Showcases = () => {
         <Text as="p" variant="lg" className="mt-6">
           Now we're going to try out another header style.
         </Text>
-        <Text as="h1" variant="2xl" className="mt-9">
+        <Text
+          as="h1"
+          variant="2xlMedium"
+          className="mt-9 text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
+        >
           Typography should be easy
         </Text>
         <Text as="p" variant="lg" className="mt-4">
@@ -113,7 +134,11 @@ const Showcases = () => {
           Something a wise person once told me about typography is:
         </Text>
         <div className="max-w-2xl pl-4 my-6 border-l-2 border-light-on-background-500">
-          <Text as="i" variant="lg">
+          <Text
+            as="i"
+            variant="lgMediumItalic"
+            className="text-lgMediumItalic font-lgMediumItalic tracking-lgMediumItalic leading-lgMediumItalic"
+          >
             “Why is Tailwind removing the default styles on my h1 elements? How do I disable this?
             What do you mean I lose all the other base styles too?
           </Text>
@@ -140,7 +165,11 @@ const Showcases = () => {
         <Text as="h1" variant="3xl" className="mt-16">
           What if we stack headings?
         </Text>
-        <Text as="p" variant="2xl" className="mt-8">
+        <Text
+          as="p"
+          variant="2XlMedium"
+          className="mt-8 text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
+        >
           We should make sure that looks good, too.
         </Text>
         <Text as="p" variant="lg" className="mt-4">
@@ -148,7 +177,11 @@ const Showcases = () => {
           to undo the top margin on the second heading because it usually looks better for the
           headings to be closer together than a paragraph followed by a heading should be.
         </Text>
-        <Text as="p" variant="2xl" className="mt-8">
+        <Text
+          as="p"
+          variant="2XlMedium"
+          className="mt-8 text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
+        >
           We should make sure that looks good, too.
         </Text>
         <Text as="p" variant="lg" className="mt-4">
@@ -156,7 +189,11 @@ const Showcases = () => {
           to undo the top margin on the second heading because it usually looks better for the
           headings to be closer together than a paragraph followed by a heading should be.
         </Text>
-        <Text as="h1" variant="2xl" className="mt-16">
+        <Text
+          as="h1"
+          variant="2XlMedium"
+          className="mt-16 text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
+        >
           There are other elements we need to style
         </Text>
         <Text as="p" variant="lg" className="mt-4">
@@ -173,7 +210,11 @@ const Showcases = () => {
           to undo the top margin on the second heading because it usually looks better for the
           headings to be closer together than a paragraph followed by a heading should be.
         </Text>
-        <Text as="h1" variant="2xl" className="mt-8">
+        <Text
+          as="h1"
+          variant="2XlMedium"
+          className="mt-8 text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
+        >
           We should make sure that looks good, too.
         </Text>
         <Text as="p" variant="lg" className="mt-4">
@@ -181,7 +222,11 @@ const Showcases = () => {
           to undo the top margin on the second heading because it usually looks better for the
           headings to be closer together than a paragraph followed by a heading should be.
         </Text>
-        <Text as="p" variant="lg" className="mt-8">
+        <Text
+          as="p"
+          variant="lgMedium"
+          className="mt-8 text-lgMedium font-lgMedium tracking-lgMedium leading-lgMedium"
+        >
           We should make sure that looks good, too.
         </Text>
         <Text as="p" variant="lg" className="mt-2">

@@ -31,10 +31,7 @@ class MyDocument extends Document {
           {/* Fonts */}
           {/* <link href="/fonts/styles.css" rel="stylesheet" /> */}
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -51,52 +48,23 @@ class MyDocument extends Document {
             src={`https://www.googleoptimize.com/optimize.js?id=${OPT_CONTAINER_ID}`}
           ></script>
           {/* Favicon */}
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/static/apple-touch-icon.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/static/favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/static/favicon-16x16.png"
-          />
+          <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
           <link rel="manifest" href="/static/site.webmanifest" />
-          <link
-            rel="mask-icon"
-            href="/static/safari-pinned-tab.svg"
-            color="#0a5c51"
-          />
+          <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#0a5c51" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <meta name="msapplication-TileColor" content="#0a5c51" />
-          <meta
-            name="msapplication-config"
-            content="/static/browserconfig.xml"
-          />
-          <meta
-            name="theme-color"
-            content="#ffffff"
-            media="(prefers-color-scheme: light)"
-          />
-          <meta
-            name="theme-color"
-            content="#0a5c51"
-            media="(prefers-color-scheme: dark)"
-          />
+          <meta name="msapplication-config" content="/static/browserconfig.xml" />
+          <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+          <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
         </Head>
         <body className="">
           <Main />
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 
