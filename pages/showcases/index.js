@@ -7,6 +7,7 @@ import {
   HelpTeams,
 } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
+import PreCode from "@components/PreCode";
 import TableComponent from "@components/TableComponent";
 
 const Showcases = () => {
@@ -71,11 +72,7 @@ const Showcases = () => {
           plugin is our attempt to give you what you actually want, without any of the downsides of
           doing something stupid like disabling our base styles.
         </Text>
-        <img
-          src="/syntax_highlighter.png"
-          alt="article"
-          className="w-full h-auto my-6 object-conains"
-        />
+        <PreCode />
         <Text as="p" variant="lg">
           Night Owl them for more information about how to use the plugin and the features it
           includes,{" "}
