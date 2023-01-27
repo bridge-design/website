@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TableComponent() {
   return (
-    <table class="table-auto w-full mt-4">
+    <table className="w-full mt-4 table-auto">
       <thead className="text-left border-b border-light-on-background-300">
         <tr>
           <th className="py-3">Title</th>

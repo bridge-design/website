@@ -1,8 +1,4 @@
-import { Text, ProfileCard } from "@bridge-the-gap/design-system";
-import TwitterIcon from "../public/twitter.svg";
-import LinkedinIcon from "../public/linkedin.svg";
-import Link from "@components/link";
-import classnames from "classnames";
+import { ProfileCard } from "@bridge-the-gap/design-system";
 
 export const people = [
   {

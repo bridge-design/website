@@ -32,9 +32,7 @@ const Showcases = () => {
           height="434"
           src="https://www.youtube.com/embed/8u032Qq4aV4?controls=0"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
           className="w-full mt-32"
         ></iframe>
         <Text as="p" variant="2xl" className="mt-8">
