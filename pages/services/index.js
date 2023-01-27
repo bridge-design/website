@@ -94,7 +94,7 @@ export const TESTIMONIALS = [
 ];
 
 const TestimonialTitle = (
-  <Text variant="3Xl" as="h2" className="mt-32">
+  <Text variant="4xl" as="h2" className="mt-32">
     People Say
   </Text>
 );
@@ -114,15 +114,15 @@ export default function Services() {
       />
       <Text
         as="h1"
-        variant="6Xl"
-        className="max-w-[950px] mx-auto mt-56 text-center animate-fadein animate-reveal"
+        variant="7Xl"
+        className="mx-auto mt-56 text-center animate-fadein animate-reveal"
       >
         Design system speeds building digital products and time to market
       </Text>
       <Text
         as="h2"
-        variant="xl"
-        className="max-w-4xl mx-auto mt-10 text-center animate-fadein animate-reveal"
+        variant="2XlMedium"
+        className="mx-auto mt-10 text-center animate-fadein animate-reveal text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
       >
         A reusable components library enabling organization teams to build products efficiently.
       </Text>
@@ -134,15 +134,15 @@ export default function Services() {
       >
         Start a conversation
       </CtaLink>
-      <Text as="h2" variant="3xl" className="mt-32 mb-6 animate-fadein animate-reveal">
+      <Text as="h2" variant="4xl" className="mt-32 mb-6 animate-fadein animate-reveal">
         Design System for teams and enterprises
       </Text>
       <Advantages colorSchema="dark" content={CONTENT} />
-      <Text as="h2" variant="3xl" className="mt-32 animate-fadein animate-reveal">
+      <Text as="h2" variant="4xl" className="mt-32 animate-fadein animate-reveal">
         Design Sytem processes
       </Text>
       <BreadCrumbsArrows />
-      <Text as="h2" variant="3xl" className="mt-32 mb-10 animate-fadein animate-reveal">
+      <Text as="h2" variant="4xl" className="mt-32 mb-10 animate-fadein animate-reveal">
         How it works
       </Text>
       <Advantages colorSchema="light" content={HOW_IT_WORKS} />

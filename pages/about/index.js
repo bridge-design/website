@@ -1,6 +1,6 @@
 import { people, People } from "@components/People";
-import { NextSeo } from "next-seo"
-
+import { ProfileCard } from "@bridge-the-gap/design-system";
+import { NextSeo } from "next-seo";
 
 export default function About() {
   return (
@@ -17,5 +17,5 @@ export default function About() {
       />
       <People people={people} />
     </>
-  )
+  );
 }

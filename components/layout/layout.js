@@ -26,9 +26,9 @@ const navItems = [
 
 export default function Layout({ children }) {
   return (
-    <div className="container flex flex-col min-h-screen overflow-hidden mt-11">
+    <div className="container flex flex-col justify-between min-h-screen overflow-hidden pt-11">
       <Header navItems={navItems} />
-      <main className="flex-1 max-w-full text-light-on-background-900">{children}</main>
+      <main className="max-w-full text-light-on-background-900">{children}</main>
       <Footer />
     </div>
   );

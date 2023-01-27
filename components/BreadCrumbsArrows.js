@@ -6,8 +6,8 @@ import { Text } from "@bridge-the-gap/design-system";
 export default function BreadCrumbsArrows() {
   return (
     <div className="relative w-full h-54">
-      <div className="flex items-baseline gap-[3%] mt-20">
-        <Text as="p" variant="3xl" className="">
+      <div className="flex items-baseline gap-[2%] mt-20">
+        <Text as="p" responsive={true} variant="4xl" className="">
           Setup
         </Text>
         <ArrowIcon
@@ -17,7 +17,7 @@ export default function BreadCrumbsArrows() {
           className="text-light-on-background-900"
           title="arrow"
         />
-        <Text as="p" variant="3xl" className="">
+        <Text as="p" responsive={true} variant="4xl" className="">
           POC
         </Text>
         <ArrowIcon
@@ -27,7 +27,7 @@ export default function BreadCrumbsArrows() {
           className="text-light-on-background-900"
           title="arrow"
         />
-        <Text as="p" variant="3xl" className="">
+        <Text as="p" responsive={true} variant="4xl" className="">
           Outline
         </Text>
         <ArrowIcon
@@ -37,7 +37,7 @@ export default function BreadCrumbsArrows() {
           className="text-light-on-background-900"
           title="arrow"
         />
-        <Text as="p" variant="3xl" className="">
+        <Text as="p" responsive={true} variant="4xl" className="">
           Alignment
         </Text>
         <ArrowIcon
@@ -49,7 +49,7 @@ export default function BreadCrumbsArrows() {
         />
       </div>
       <div className="flex items-baseline gap-[3%] mt-20 ml-24">
-        <Text as="p" variant="3xl" className="">
+        <Text as="p" responsive={true} variant="4xl" className="">
           Handover
         </Text>
         <ArrowLeftIcon
@@ -59,7 +59,7 @@ export default function BreadCrumbsArrows() {
           className="text-light-on-background-900"
           title="arrow"
         />
-        <Text as="p" variant="3xl" className="">
+        <Text as="p" responsive={true} variant="4xl" className="">
           Adoption
         </Text>
         <ArrowLeftIcon
@@ -69,7 +69,7 @@ export default function BreadCrumbsArrows() {
           className="text-light-on-background-900"
           title="arrow"
         />
-        <Text as="p" variant="3xl" className="min-w-max">
+        <Text as="p" responsive={true} variant="4xl" className="min-w-max">
           Components library
         </Text>
         <ArrowLeftIcon

@@ -15,11 +15,11 @@ export default function IndexPage() {
           site_name: "Bridge-the-Gap.dev",
         }}
       />
-      <div className="mt-48 text-center">
-        <Text as="h1" variant="7Xl" className="max-w-5xl mx-auto mb-40">
+      <div className="text-center">
+        <Text as="h1" variant="7Xl" className="max-w-5xl mx-auto mb-[14%]">
           We team up with designers and developers to build and scale design systems.
         </Text>
-        <CtaLink href="/contact" as={Link} underline className="text-xl animate-fadeindelay">
+        <CtaLink href="/contact" as={Link} underline className="animate-fadeindelay">
           Start a conversation
         </CtaLink>
       </div>
