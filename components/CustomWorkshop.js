@@ -4,8 +4,8 @@ import SectionTitle from "@components/SectionTitle";
 export default function CustomWorkshop() {
   return (
     <div className="max-w-4xl mx-auto mt-28">
-      <SectionTitle icon="ChartMarimekko32">Want a custom workshop for your team?</SectionTitle>
-      <Text variant="xlBolder" className="flex mt-16">
+      <SectionTitle icon="ChartMarimekko">Want a custom workshop for your team?</SectionTitle>
+      <Text variant="xlMedium" className="flex mt-16">
         Need a custom version? We can tailor this workshop for your company. When focused on your
         product and taking into account your team shape, the workshop outcome is not only a training
         session but also your design system's kick-off. We’ll walk through the design system

@@ -37,7 +37,7 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
       />
       {/***** HERO SECTION *****/}
       <div className="leading-normal tracking-normal text-center text-light-on-background-900">
-        <Text as="p" variant="xlBolder" className="mt-24">
+        <Text as="p" variant="xlMedium" className="mt-24">
           <Emoji symbol="👋 " label="hand" />
           Hands-on
         </Text>
@@ -70,7 +70,7 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
             //linkComponent={Link}
           >
             <div className="mb-8">
-              <Text variant="smBolder" className="mb-3">
+              <Text variant="smMedium" className="mb-3">
                 Available tickets:
               </Text>
               <p>Designers: SOLD OUT</p>
@@ -84,9 +84,9 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
             linkComponent={Link}
           >
             <div className="mb-8">
-              <Text variant="smBolder" className="mb-3">
-                At the moment, we do not plan public workshops. But we will be
-                happy to arrange a private workshop for your team
+              <Text variant="smMedium" className="mb-3">
+                At the moment, we do not plan public workshops. But we will be happy to arrange a
+                private workshop for your team
               </Text>
             </div>
           </Card>

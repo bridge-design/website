@@ -47,11 +47,7 @@ const Showcases = () => {
           surprising and unintuitive.
         </Text>
         <div className="max-w-2xl pl-4 my-6 border-l-2 border-light-on-background-500">
-          <Text
-            as="i"
-            variant="lgItalicg"
-            className="text-lgItalic font-lgItalic tracking-lgItalic leading-lgItalic"
-          >
+          <Text as="i" variant="lgItalic">
             “Why is Tailwind removing the default styles on my h1 elements? How do I disable this?
             What do you mean I lose all the other base styles too?
           </Text>
@@ -83,11 +79,7 @@ const Showcases = () => {
           .
         </Text>
         <div className="w-full border-b my-14 border-light-on-background-300"></div>
-        <Text
-          as="h1"
-          variant="3XlBold"
-          className="text-3XlBold font-3XlBold tracking-3XlBold leading-3XlBold"
-        >
+        <Text as="h1" variant="3XlBold">
           What to expect from here on out
         </Text>
         <Text as="p" variant="lg" className="mt-10">
@@ -114,11 +106,7 @@ const Showcases = () => {
         <Text as="p" variant="lg" className="mt-6">
           Now we're going to try out another header style.
         </Text>
-        <Text
-          as="h1"
-          variant="2xlMedium"
-          className="mt-9 text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
-        >
+        <Text as="h1" variant="2xlMedium" className="mt-9">
           Typography should be easy
         </Text>
         <Text as="p" variant="lg" className="mt-4">
@@ -129,11 +117,7 @@ const Showcases = () => {
           Something a wise person once told me about typography is:
         </Text>
         <div className="max-w-2xl pl-4 my-6 border-l-2 border-light-on-background-500">
-          <Text
-            as="i"
-            variant="lgMediumItalic"
-            className="text-lgMediumItalic font-lgMediumItalic tracking-lgMediumItalic leading-lgMediumItalic"
-          >
+          <Text as="i" variant="lgMediumItalic">
             “Why is Tailwind removing the default styles on my h1 elements? How do I disable this?
             What do you mean I lose all the other base styles too?
           </Text>
@@ -160,11 +144,7 @@ const Showcases = () => {
         <Text as="h1" variant="3xl" className="mt-16">
           What if we stack headings?
         </Text>
-        <Text
-          as="p"
-          variant="2XlMedium"
-          className="mt-8 text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
-        >
+        <Text as="p" variant="2XlMedium" className="mt-8">
           We should make sure that looks good, too.
         </Text>
         <Text as="p" variant="lg" className="mt-4">
@@ -172,11 +152,7 @@ const Showcases = () => {
           to undo the top margin on the second heading because it usually looks better for the
           headings to be closer together than a paragraph followed by a heading should be.
         </Text>
-        <Text
-          as="p"
-          variant="2XlMedium"
-          className="mt-8 text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
-        >
+        <Text as="p" variant="2XlMedium" className="mt-8">
           We should make sure that looks good, too.
         </Text>
         <Text as="p" variant="lg" className="mt-4">
@@ -184,11 +160,7 @@ const Showcases = () => {
           to undo the top margin on the second heading because it usually looks better for the
           headings to be closer together than a paragraph followed by a heading should be.
         </Text>
-        <Text
-          as="h1"
-          variant="2XlMedium"
-          className="mt-16 text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
-        >
+        <Text as="h1" variant="2XlMedium" className="mt-16">
           There are other elements we need to style
         </Text>
         <Text as="p" variant="lg" className="mt-4">
@@ -205,11 +177,7 @@ const Showcases = () => {
           to undo the top margin on the second heading because it usually looks better for the
           headings to be closer together than a paragraph followed by a heading should be.
         </Text>
-        <Text
-          as="h1"
-          variant="2XlMedium"
-          className="mt-8 text-2XlMedium font-2XlMedium tracking-2XlMedium leading-2XlMedium"
-        >
+        <Text as="h1" variant="2XlMedium" className="mt-8">
           We should make sure that looks good, too.
         </Text>
         <Text as="p" variant="lg" className="mt-4">
@@ -217,11 +185,7 @@ const Showcases = () => {
           to undo the top margin on the second heading because it usually looks better for the
           headings to be closer together than a paragraph followed by a heading should be.
         </Text>
-        <Text
-          as="p"
-          variant="lgMedium"
-          className="mt-8 text-lgMedium font-lgMedium tracking-lgMedium leading-lgMedium"
-        >
+        <Text as="p" variant="lgMedium" className="mt-8">
           We should make sure that looks good, too.
         </Text>
         <Text as="p" variant="lg" className="mt-2">

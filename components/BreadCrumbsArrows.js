@@ -7,7 +7,7 @@ export default function BreadCrumbsArrows() {
   return (
     <div className="relative w-full h-54">
       <div className="flex items-baseline gap-[2%] mt-20">
-        <Text as="p" responsive={true} variant="4xl" className="">
+        <Text as="p" responsive={{ sm: "baseMedium", md: "xlmedium", lg: "4xl" }} variant="4xl">
           Setup
         </Text>
         <ArrowIcon
@@ -17,7 +17,7 @@ export default function BreadCrumbsArrows() {
           className="text-light-on-background-900"
           title="arrow"
         />
-        <Text as="p" responsive={true} variant="4xl" className="">
+        <Text as="p" responsive={{ sm: "baseMedium", md: "xlmedium", lg: "4xl" }} variant="4xl">
           POC
         </Text>
         <ArrowIcon
@@ -27,7 +27,7 @@ export default function BreadCrumbsArrows() {
           className="text-light-on-background-900"
           title="arrow"
         />
-        <Text as="p" responsive={true} variant="4xl" className="">
+        <Text as="p" responsive={{ sm: "baseMedium", md: "xlmedium", lg: "4xl" }} variant="4xl">
           Outline
         </Text>
         <ArrowIcon
@@ -37,7 +37,7 @@ export default function BreadCrumbsArrows() {
           className="text-light-on-background-900"
           title="arrow"
         />
-        <Text as="p" responsive={true} variant="4xl" className="">
+        <Text as="p" responsive={{ sm: "baseMedium", md: "xlmedium", lg: "4xl" }} variant="4xl">
           Alignment
         </Text>
         <ArrowIcon
@@ -49,7 +49,7 @@ export default function BreadCrumbsArrows() {
         />
       </div>
       <div className="flex items-baseline gap-[3%] mt-20 ml-24">
-        <Text as="p" responsive={true} variant="4xl" className="">
+        <Text as="p" responsive={{ sm: "baseMedium", md: "xlmedium", lg: "4xl" }} variant="4xl">
           Handover
         </Text>
         <ArrowLeftIcon
@@ -59,7 +59,7 @@ export default function BreadCrumbsArrows() {
           className="text-light-on-background-900"
           title="arrow"
         />
-        <Text as="p" responsive={true} variant="4xl" className="">
+        <Text as="p" responsive={{ sm: "baseMedium", md: "xlmedium", lg: "4xl" }} variant="4xl">
           Adoption
         </Text>
         <ArrowLeftIcon
@@ -69,7 +69,12 @@ export default function BreadCrumbsArrows() {
           className="text-light-on-background-900"
           title="arrow"
         />
-        <Text as="p" responsive={true} variant="4xl" className="min-w-max">
+        <Text
+          as="p"
+          responsive={{ sm: "baseMedium", md: "xlmedium", lg: "4xl" }}
+          variant="4xl"
+          className="min-w-max"
+        >
           Components library
         </Text>
         <ArrowLeftIcon
