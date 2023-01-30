@@ -17,23 +17,21 @@ export default function WhyAttend() {
           What you <span className="md:block">will learn?</span>
         </Text>
       </div> */}
-      <Text variant="xlBolder" as="div" className="mt-16 md:mt-0">
+      <Text variant="xlMedium" as="div" className="mt-16 md:mt-0">
         <p className="mb-6">
-          This workshop helps you learn and practice design systems working in a
-          team. You can join as a designer or developer.
+          This workshop helps you learn and practice design systems working in a team. You can join
+          as a designer or developer.
         </p>
         <p className="mb-6">
-          The designers define visual design language and Figma components. At
-          the same time, the developers create the components with React. You
-          practice iterative component-driven design and development and create
-          documentation along with making the product. The exercise contains
-          managing collaborative updates and keeping the code in sync with the
+          The designers define visual design language and Figma components. At the same time, the
+          developers create the components with React. You practice iterative component-driven
+          design and development and create documentation along with making the product. The
+          exercise contains managing collaborative updates and keeping the code in sync with the
           design reality.
         </p>
         <p>
-          By the end of the workshop, each team has a ready-to-use component
-          library, an end product built out of that, and a tuned process to
-          ensure smooth updates.
+          By the end of the workshop, each team has a ready-to-use component library, an end product
+          built out of that, and a tuned process to ensure smooth updates.
         </p>
       </Text>
     </div>

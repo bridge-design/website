@@ -1,5 +1,4 @@
 import { people, People } from "@components/People";
-import { ProfileCard } from "@bridge-the-gap/design-system";
 import { NextSeo } from "next-seo";
 
 export default function About() {

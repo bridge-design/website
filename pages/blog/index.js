@@ -12,10 +12,7 @@ import Link from "@components/link";
 import { NextSeo } from "next-seo";
 import { getAllPosts } from "../../lib/api";
 
-export default function Blog(
-  { canonical, baseUrl, pageProps: { posts }, ...props },
-  arg1
-) {
+export default function Blog({ canonical, baseUrl, pageProps: { posts }, ...props }, arg1) {
   return (
     <>
       <NextSeo
@@ -39,9 +36,13 @@ export default function Blog(
             posts.length > 0 &&
             posts.map((post) => {
               return (
-                <>
+                <div key={post.title}>
                   <hr />
-                  <Link href={`/blog/${post.slug}`} key={post.title} className="hover:text-primary-500">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    key={post.title}
+                    className="hover:text-primary-500"
+                  >
                     <Text as="h3" variant="3Xl" className="mb-4">
                       {post.title}
                     </Text>
@@ -50,13 +51,13 @@ export default function Blog(
                     </Text>
                     <span className="font-smBolder">Read more →</span>
                   </Link>
-                </>
-              )
+                </div>
+              );
             })}
         </div>
       </div>
     </>
-  )
+  );
 }
 
 export async function getStaticProps() {
