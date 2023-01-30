@@ -145,7 +145,7 @@ export default function Services() {
       <Text as="h2" variant="4xl" className="mt-32 mb-10 animate-fadein animate-reveal">
         How it works
       </Text>
-      <Advantages colorSchema="light" content={HOW_IT_WORKS} />
+      <Advantages content={HOW_IT_WORKS} />
       <HelpTeams className="mt-24" photoUrl="/images/meet-the-team/rectangle_14.png" />
       <Testimonial testimonials={TESTIMONIALS} title={TestimonialTitle} />
       <MeatTheTeam />
