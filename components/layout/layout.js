@@ -20,7 +20,7 @@ const navItems = [
   },
   {
     name: "Contact",
-    href: "/contact",
+    href: "mailto:hello@goright.io",
   },
 ];
 
