@@ -45,6 +45,7 @@ export const people = [
     photoUrl: "/images/meet-the-team/rectangle_64.jpg",
     name: "Alexandra Stepanova",
     role: "Senior Frontend Developer",
+    description: "Alexandra is an experienced front-end developer with a solid understanding of the back-end. Her attention to detail, strive for excellence, and excellent collaborative skills make her a valuable asset to any project.",
     twitter: "#",
     linkedin: "https://www.linkedin.com/in/alexandra-stepanova",
     github: "https://github.com/alexandra-stepanova",
