@@ -15,7 +15,8 @@ export default function Footer({ className }) {
             Bridge the gap
           </a>
         </Link>
-        {"\u00A0"}2022
+        {"\u00A0"}
+        {new Date().getFullYear()}
       </div>
     </footer>
   );

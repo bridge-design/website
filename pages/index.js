@@ -19,7 +19,12 @@ export default function IndexPage() {
         <Text as="h1" variant="7Xl" className="max-w-5xl mx-auto mb-[14%]">
           We team up with designers and developers to build and scale design systems.
         </Text>
-        <CtaLink href="/contact" as={Link} underline className="animate-fadeindelay">
+        <CtaLink
+          href="mailto:mail@bridge-the-gap.dev"
+          as={Link}
+          underline
+          className="animate-fadeindelay"
+        >
           Start a conversation
         </CtaLink>
       </div>
