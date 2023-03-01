@@ -36,6 +36,8 @@ export const people = [
     photoUrl: "/images/meet-the-team/rectangle_63.png",
     name: "Andriy Kotko",
     role: "Senior Frontend Engineer",
+    description:
+      "Our front-end developer is like a superhero, but instead of a cape, they wear a keyboard! With React.js, Tailwind, and Apollo GraphQL, he builds user-friendly and engaging websites. Plus, their passion for web programming and problem-solving is unmatched. With years of experience in web development, he is ready to take on any challenge. This developer is unstoppable!",
     reverse: true,
     twitter: "https://twitter.com/Kotkoa",
     linkedin: "https://www.linkedin.com/in/kotkoa/",
