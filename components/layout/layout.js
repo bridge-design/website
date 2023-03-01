@@ -2,10 +2,10 @@ import Header from "@components/header";
 import Footer from "@components/footer";
 
 const navItems = [
-  {
-    name: "Showcases",
-    href: "/showcases",
-  },
+  // {
+  //   name: "Showcases",
+  //   href: "/showcases",
+  // },
   {
     name: "Services",
     href: "/services",
