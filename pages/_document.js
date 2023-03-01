@@ -52,12 +52,12 @@ class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
           <link rel="manifest" href="/static/site.webmanifest" />
-          <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#0a5c51" />
+          <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#131313" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          <meta name="msapplication-TileColor" content="#0a5c51" />
+          <meta name="msapplication-TileColor" content="#d9d9d9" />
           <meta name="msapplication-config" content="/static/browserconfig.xml" />
-          <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-          <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+          <meta name="theme-color" content="#D9D9D9" media="(prefers-color-scheme: light)" />
+          <meta name="theme-color" content="#131313" media="(prefers-color-scheme: dark)" />
         </Head>
         <body className="">
           <Main />
