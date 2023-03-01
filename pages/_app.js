@@ -8,6 +8,15 @@ import { getThumbnailPath } from "lib/api";
 
 function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
   const LayoutComponent = canonical ? LayoutWorkshop : LayoutDefault;
+
+  if (!baseUrl) {
+    baseUrl = "https://bridge-the-gap.dev";
+  }
+
+  if (!thumb) {
+    thumb = "/seo/thumb.png";
+  }
+
   return (
     <LayoutComponent>
       <DefaultSeo
@@ -27,6 +36,7 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
                 width: 1000,
                 height: 750,
                 alt: "Bridge-the-Gap — build and scale design systems",
+                type: "image/png",
               },
             ],
         }}
