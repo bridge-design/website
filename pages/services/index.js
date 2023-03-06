@@ -127,8 +127,9 @@ export default function Services() {
         A reusable components library enabling organization teams to build products efficiently.
       </Text>
       <CtaLink
-        href="mailto:mail@bridge-the-gap.dev"
+        href="/contact"
         as={Link}
+        onClick={() => (window.location = "mailto:mail@bridge-the-gap.dev")}
         underline
         className="flex justify-center w-full text-xl mt-28 animate-fadeindelay"
       >

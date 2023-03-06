@@ -20,8 +20,9 @@ export default function IndexPage() {
           We team up with designers and developers to build and scale design systems.
         </Text>
         <CtaLink
-          href="mailto:mail@bridge-the-gap.dev"
+          href="/contact"
           as={Link}
+          onClick={() => (window.location = "mailto:mail@bridge-the-gap.dev")}
           underline
           className="animate-fadeindelay"
         >

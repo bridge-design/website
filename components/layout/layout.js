@@ -20,7 +20,7 @@ const navItems = [
   },
   {
     name: "Contact",
-    href: "mailto:mail@bridge-the-gap.dev",
+    href: "/contact",
   },
 ];
 
