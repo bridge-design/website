@@ -16,12 +16,15 @@
     "@svgr/webpack": "^5.5.0",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "copy-webpack-plugin": "^9.0.1",
+    "date-fns": "^2.30.0",
     "gray-matter": "^4.0.3",
+    "html-to-image": "^1.11.11",
     "next": "latest",
     "next-seo": "^4.26.0",
     "react-ga": "^3.3.0",
     "string.prototype.replaceall": "^1.0.5",
-    "stringify-object": "^3.3.0"
+    "stringify-object": "^3.3.0",
+    "theme-ui": "0.3.1"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.22",
