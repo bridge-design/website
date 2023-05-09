@@ -8,7 +8,6 @@ import {
     Button,
     Checkbox,
     Grid,
-    Input,
     Label,
 } from "theme-ui";
 import { getInputName, parts } from "./Data";
@@ -62,8 +61,6 @@ const instructions = {
 
 export default function PartsExercise() {
     const [stage, setStage] = useState('cross-out');
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
     const [crossedOut, setCrossedOut] = useState([]);
     const [selected, setSelected] = useState([]);
     const [pickedUp, setPickedUp] = useState([]);
@@ -202,14 +199,12 @@ export default function PartsExercise() {
     };
 
     const sendForm = (e) => {
-        fetch("https://api.formik.com/submit/ds101-parts/parts-of-design-system", {
+        fetch("#", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                name: name,
-                email: email,
                 crossedOut: crossedOut,
                 selected: selected,
                 pickedUp: pickedUp,
@@ -269,22 +264,6 @@ export default function PartsExercise() {
                 {instructions[stage]}
                 <form onSubmit={handleSubmit}>
                     <Grid gap={4}>
-                        <Grid columns={2} gap={4}>
-                            <Box>
-                                <Label htmlFor="name">Name: </Label>
-                                <Input
-                                    name="name"
-                                    onChange={(e) => setName({ name: e.target.value })}
-                                />
-                            </Box>
-                            <Box>
-                                <Label htmlFor="email">Email: </Label>
-                                <Input
-                                    name="email"
-                                    onChange={(e) => setEmail({ email: e.target.value })}
-                                />
-                            </Box>
-                        </Grid>
                         {partsInBoxes.map((box) => (
                             <Grid gap={4} columns={box.length}>
                                 {box.map((category) => {
