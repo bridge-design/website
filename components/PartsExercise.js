@@ -71,7 +71,7 @@ export default function PartsExercise() {
         if (ref.current === null) {
             return
         }
-        toPng(ref.current, { cacheBust: true })
+        toPng(ref.current, { cacheBust: true, backgroundColor: 'white' })
             .then((dataUrl) => {
                 const link = document.createElement('a')
                 link.download = getFileName('png')
@@ -81,7 +81,7 @@ export default function PartsExercise() {
             .catch((err) => {
                 console.log(err)
             })
-    }, [ref])
+    }, [ref]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -250,7 +250,7 @@ export default function PartsExercise() {
             </Label>
         );
     }
-    
+
     return (
         <>
             <Flex
