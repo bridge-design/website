@@ -65,7 +65,7 @@ export default function PartsExercise() {
     const [selected, setSelected] = useState([]);
     const [pickedUp, setPickedUp] = useState([]);
     const ref = useRef(null);
-    const getFileName = (fileType) => `${format(new Date(), "'SomeName-'HH-mm-ss")}.${fileType}`;
+    const getFileName = (fileType) => `${format(new Date(), "'PartsOfDesignSystem-'HH-mm-ss")}.${fileType}`;
 
     const downloadPng = useCallback(() => {
         if (ref.current === null) {
