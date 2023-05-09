@@ -10,7 +10,7 @@ import {
     Grid,
     Label,
 } from "theme-ui";
-import { getInputName, parts } from "./Data";
+import { getInputName, parts } from "./data";
 
 const toBox = (parts) => {
     return parts.reduce(

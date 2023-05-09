@@ -1,31 +1,58 @@
 export const parts = [
     {
-        title: "Visual language",
+        title: "Design Guidelines",
         innerColumns: 4,
         size: 4,
         category: true,
         parts: [
             {
+                title: "Design Philosophy",
+            },
+            {
+                title: "Component design",
+                parts: ["Componentizing", "Components in Figma", "Auto layout"]
+            },
+            {
+                title: "Naming",
+                parts: ["UI elements", "Layers"]
+            },
+            {
+                title: "Cross-panel design",
+                parts: ["Guidelines", "Custom vs Native"],
+            }
+        ]
+    },
+    {
+        title: "Foundation",
+        innerColumns: 4,
+        size: 4,
+        category: true,
+        parts: [
+            {
+                title: "Design tokens",
+                parts: ["Tokens types", "Naming convention", "Tokens tooling", "Examples"]
+            },
+            {
                 title: "Color",
-                parts: ["Palettes", "Contrast", "Meaning", "Swatches"],
+                parts: ["Principles", "Palettes", "Contrast", "Meaning", "Swatches", "Accessibility"],
             },
             {
                 title: "Typography",
-                parts: ["Hierarchy", "Weights / types", "Web fonts", "Baseline grid"],
+                parts: ["Headings", "Weights / types", "Web fonts", "Baseline grid", "Responsive text"],
             },
             {
                 title: "Iconography",
-                parts: ["Pictograms", "Illustration", "Icon fonts", "Alignment"],
+                parts: ["Icons", "Illustration", "Alignment"],
             },
             {
                 title: "Motion",
-                parts: ["Principles", "Timing", "Types", "Transitions"],
+                parts: ["Principles", "Timing", "Types", "Transitions", "Accessibility"],
             },
             {
                 title: "Space",
                 parts: ["Units / measurments", "Metrics and keylines", "Structure"],
             },
-            "Photography",
+            "Border radius",
         ],
     },
     {
@@ -42,7 +69,6 @@ export const parts = [
             "Links",
             "Code",
             "Divider / rule",
-            "Units / measurments",
             {
                 title: "Buttons",
                 parts: [
@@ -62,7 +88,7 @@ export const parts = [
                 title: "Form controls",
                 parts: [
                     "Text",
-                    "Variants (email, etc)",
+                    "Input",
                     "Text area",
                     "Radio",
                     "Checkbox",
@@ -85,7 +111,7 @@ export const parts = [
         parts: [
             "Action bar/sheet",
             "Back to top",
-            "Badges",
+            "Badge",
             "Breadcrumbs",
             "Calendar picker",
             "Caption",
@@ -124,8 +150,10 @@ export const parts = [
             "Search",
             "Sidebar",
             "Site/App navigation",
+            "Slider",
             "Social networking",
             "Status (alpha, beta,...)",
+            "Switch",
             "Tabs",
             "Tags / chips / pills",
             "Thumbnails / #-ups",
@@ -142,19 +170,27 @@ export const parts = [
         category: true,
         parts: [
             "Authentication",
+            "Chatbots",
             "Create account",
             "Database connection",
+            "Exporting",
             "Form structure",
+            "Generating keys",
+            "Importing",
             "Launch",
+            "Lists",
+            "Navigation",
+            "Onboarding",
             "Permissions",
             "Purchase/checkout",
+            "Removing",
             "Settings",
             "Site / app structure",
             "Swipe to refresh",
         ],
     },
     {
-        title: "Page templates",
+        title: "View templates",
         category: true,
         innerColumns: 2,
         size: 2,
@@ -217,7 +253,7 @@ export const parts = [
             "Accessibility",
             "Prototyping",
             "Performance",
-            "SEO",
+            "Reviews",
             "Design thinking",
         ],
     },
@@ -249,25 +285,25 @@ export const parts = [
         ],
     },
     {
-        title: "About the program",
+        title: "About the system",
         category: true,
         parts: [
             "Home page",
             "Principles / pillars",
             "Getting started",
             "FAQ",
-            "Version history",
+            "Changelog",
         ],
     },
     {
         title: "About the team",
         category: true,
-        parts: ["Team", "Recruiting / jobs"],
+        parts: ["People in the team", "Holiday schedule", "Design System Café", "Partners", "Join us"],
     },
     {
         title: "Utilities",
         category: true,
-        parts: ["Variables / tokens", "Mixins", "Helpers", "Customize"],
+        parts: ["Packages", "Licenses", "Mixins", "Helpers", "Customize"],
     },
 ];
 
