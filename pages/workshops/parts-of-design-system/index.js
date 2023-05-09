@@ -1,5 +1,5 @@
 import React from 'react';
-import PartsExercise from '@components/PartsExercise';
+import PartsExercise from '@components/ds-parts';
 import { ThemeProvider } from 'theme-ui'
 import theme from '../../../components/theme-ui-object/index';
 
