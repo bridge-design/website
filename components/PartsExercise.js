@@ -68,20 +68,20 @@ export default function PartsExercise() {
     const getFileName = (fileType) => `${format(new Date(), "'SomeName-'HH-mm-ss")}.${fileType}`;
 
     const downloadPng = useCallback(() => {
-            if (ref.current === null) {
-                return
-            }
-            toPng(ref.current, { cacheBust: true })
-                .then((dataUrl) => {
-                    const link = document.createElement('a')
-                    link.download = getFileName('png')
-                    link.href = dataUrl
-                    link.click()
-                })
-                .catch((err) => {
-                    console.log(err)
-                })
-        }, [ref])
+        if (ref.current === null) {
+            return
+        }
+        toPng(ref.current, { cacheBust: true })
+            .then((dataUrl) => {
+                const link = document.createElement('a')
+                link.download = getFileName('png')
+                link.href = dataUrl
+                link.click()
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }, [ref])
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -250,7 +250,7 @@ export default function PartsExercise() {
             </Label>
         );
     }
-
+    
     return (
         <>
             <Flex
@@ -264,6 +264,17 @@ export default function PartsExercise() {
                 {instructions[stage]}
                 <form onSubmit={handleSubmit}>
                     <Grid gap={4}>
+                        <Flex
+                            sx={{
+                                flexDirection: "column",
+                                position: "sticky",
+                                bottom: 0,
+                                py: 4,
+                                bg: "background",
+                            }}
+                        >
+                            {actionButton()}
+                        </Flex>
                         {partsInBoxes.map((box) => (
                             <Grid gap={4} columns={box.length}>
                                 {box.map((category) => {
@@ -330,18 +341,20 @@ export default function PartsExercise() {
                                 })}
                             </Grid>
                         ))}
+                        {stage !== 'done' ?
 
-                        <Flex
-                            sx={{
-                                flexDirection: "column",
-                                position: "sticky",
-                                bottom: 0,
-                                py: 4,
-                                bg: "background",
-                            }}
-                        >
-                            {actionButton()}
-                        </Flex>
+                            <Flex
+                                sx={{
+                                    flexDirection: "column",
+                                    position: "sticky",
+                                    bottom: 0,
+                                    py: 4,
+                                    bg: "background",
+                                }}
+                            >
+                                {actionButton()}
+                            </Flex> : null
+                        }
                     </Grid>
                 </form>
             </Flex>
