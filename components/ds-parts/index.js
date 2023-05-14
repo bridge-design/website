@@ -92,10 +92,6 @@ export default function PartsExercise() {
             });
         }, 100);
 
-        if (stage === 'pick-up') {
-            sendForm();
-        }
-
         setStage(stages[stages.indexOf(stage) + 1]);
     };
 
@@ -188,7 +184,6 @@ export default function PartsExercise() {
                     </Button>
                 );
             case 'done':
-                // isButtonDisabled = screenShot === true; disabled={isButtonDisabled}
                 buttonMessage = "Save your result as a .png file";
                 return (
                     <Button type="button" onClick={downloadPng}>
@@ -196,20 +191,6 @@ export default function PartsExercise() {
                     </Button>
                 );
         }
-    };
-
-    const sendForm = (e) => {
-        fetch("#", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                crossedOut: crossedOut,
-                selected: selected,
-                pickedUp: pickedUp,
-            }),
-        });
     };
 
     const drawPartItem = (category, categoryId, part, level) => {
