@@ -46,7 +46,7 @@ export const parts = [
             },
             {
                 title: "Motion",
-                parts: ["Principles", "Timing", "Types", "Transitions", "Accessibility"],
+                parts: ["Concept", "Timing", "Types", "Transitions", "Availability"],
             },
             {
                 title: "Space",

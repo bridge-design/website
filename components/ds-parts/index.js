@@ -1,7 +1,4 @@
-import { useState, useRef } from "react";
-import { useCallback } from "react";
-import { toPng } from 'html-to-image';
-import format from 'date-fns/format';
+import { useState, useRef, useCallback } from "react";
 import {
     Box,
     Flex,
@@ -11,6 +8,7 @@ import {
     Label,
 } from "theme-ui";
 import { getInputName, parts } from "./data";
+import { downloadPng } from './downloadPng';
 
 const toBox = (parts) => {
     return parts.reduce(
@@ -67,20 +65,8 @@ export default function PartsExercise() {
     const ref = useRef(null);
     const getFileName = (fileType) => `${format(new Date(), "'PartsOfDesignSystem-'HH-mm-ss")}.${fileType}`;
 
-    const downloadPng = useCallback(() => {
-        if (ref.current === null) {
-            return
-        }
-        toPng(ref.current, { cacheBust: true, backgroundColor: 'white' })
-            .then((dataUrl) => {
-                const link = document.createElement('a')
-                link.download = getFileName('png')
-                link.href = dataUrl
-                link.click()
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+    const handleDownloadPng = useCallback(() => {
+        downloadPng(ref);
     }, [ref]);
 
     const handleSubmit = (e) => {
@@ -134,19 +120,6 @@ export default function PartsExercise() {
         }
     };
 
-    const pickUpPart = (e) => {
-        const partId = e.target.name;
-
-        if (pickedUp.indexOf(partId) === -1) {
-            if (pickedUp.length === pickUpLimit) {
-                return;
-            }
-            setPickedUp([...pickedUp, partId]);
-        } else {
-            setPickedUp(pickedUp.filter((i) => i !== partId));
-        }
-    };
-
     const actionButton = () => {
         let isButtonDisabled, buttonMessage;
         switch (stage) {
@@ -186,7 +159,7 @@ export default function PartsExercise() {
             case 'done':
                 buttonMessage = "Save your result as a .png file";
                 return (
-                    <Button type="button" onClick={downloadPng}>
+                    <Button type="button" onClick={handleDownloadPng}>
                         {buttonMessage}
                     </Button>
                 );
@@ -209,6 +182,36 @@ export default function PartsExercise() {
         if (pickedUp.indexOf(getInputName(category.title, partTitle)) !== -1) {
             disabledCheckbox = false;
         }
+
+        const handleClick = () => {
+            const clickedPart = getInputName(category.title, partTitle);
+            const clickedParts = part.parts;
+            const partIndex = pickedUp.indexOf(clickedPart);
+
+            if (partIndex !== -1) {
+                setPickedUp((prevState) => prevState.filter((part) => part !== clickedPart));
+                if (clickedParts) {
+                    clickedParts.forEach((parts) => {
+                        const subPart = getInputName(category.title, parts);
+                        setPickedUp((prevState) => prevState.filter((part) => part !== subPart));
+                        setPickedUp((prevState) => prevState.filter((part) => part !== clickedPart));
+                    });
+                }
+            } else {
+                setPickedUp((prevState) => [...prevState, clickedPart]);
+                if (clickedParts) {
+                    clickedParts.forEach((parts) => {
+                        const subPart = getInputName(category.title, parts);
+                        setPickedUp((prevState) =>
+                            prevState.includes(subPart) ? prevState : [...prevState, subPart]
+                        );
+                    });
+                }
+            }
+        };
+
+        const isChecked = pickedUp.includes(getInputName(category.title, partTitle));
+
         return (
             <Label
                 sx={{
@@ -216,11 +219,13 @@ export default function PartsExercise() {
                     pl: 3 * level,
                     color: disabledCheckbox ? "primary" : "text",
                 }}
+                key={getInputName(category.title, partTitle)}
             >
                 <Checkbox
                     name={getInputName(category.title, partTitle)}
                     disabled={disabledCheckbox}
-                    onChange={pickUpPart}
+                    checked={isChecked}
+                    onChange={handleClick}
                     sx={{
                         mr: 1,
                         width: "1rem",
@@ -230,7 +235,7 @@ export default function PartsExercise() {
                 {partTitle}
             </Label>
         );
-    }
+    };
 
     return (
         <>
@@ -341,5 +346,4 @@ export default function PartsExercise() {
             </Flex>
         </>
     );
-
 }
