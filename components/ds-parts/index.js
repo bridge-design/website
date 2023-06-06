@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import {
     Box,
     Flex,
@@ -63,7 +63,49 @@ export default function PartsExercise() {
     const [selected, setSelected] = useState([]);
     const [pickedUp, setPickedUp] = useState([]);
     const ref = useRef(null);
-    const getFileName = (fileType) => `${format(new Date(), "'PartsOfDesignSystem-'HH-mm-ss")}.${fileType}`;
+
+    useEffect(() => {
+        // Check if any parts values are unchecked and uncheck the corresponding name
+        const checkParts = () => {
+            parts.forEach((category) => {
+                if (selected.indexOf(category.id) !== -1) {
+                    category.parts.forEach((part) => {
+                        if (part.parts) {
+                            const allPartsChecked = part.parts.every(
+                                (subpart) =>
+                                    pickedUp.indexOf(
+                                        getInputName(category.title, subpart)
+                                    ) !== -1
+                            );
+
+                            if (!allPartsChecked) {
+                                const nameChecked = getInputName(
+                                    category.title,
+                                    part.title
+                                );
+                                if (pickedUp.indexOf(nameChecked) !== -1) {
+                                    const allPartsUnchecked = part.parts.every(
+                                        (subpart) =>
+                                            pickedUp.indexOf(
+                                                getInputName(category.title, subpart)
+                                            ) === -1
+                                    );
+
+                                    if (allPartsUnchecked) {
+                                        setPickedUp((prevState) =>
+                                            prevState.filter((part) => part !== nameChecked)
+                                        );
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        };
+
+        checkParts();
+    }, [pickedUp, selected]);
 
     const handleDownloadPng = useCallback(() => {
         downloadPng(ref);
