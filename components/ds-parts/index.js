@@ -78,11 +78,12 @@ export default function PartsExercise() {
                                     ) !== -1
                             );
 
+                            const nameChecked = getInputName(
+                                category.title,
+                                part.title
+                            );
+
                             if (!allPartsChecked) {
-                                const nameChecked = getInputName(
-                                    category.title,
-                                    part.title
-                                );
                                 if (pickedUp.indexOf(nameChecked) !== -1) {
                                     const allPartsUnchecked = part.parts.every(
                                         (subpart) =>
@@ -96,6 +97,12 @@ export default function PartsExercise() {
                                             prevState.filter((part) => part !== nameChecked)
                                         );
                                     }
+                                }
+                            } else if (allPartsChecked) {
+                                if (pickedUp.indexOf(nameChecked) === -1) {
+                                    setPickedUp((prevState) =>
+                                        prevState.includes(nameChecked) ? prevState : [...prevState, nameChecked]
+                                    );
                                 }
                             }
                         }
