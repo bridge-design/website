@@ -1,7 +1,4 @@
-import { useState, useRef } from "react";
-import { useCallback } from "react";
-import { toPng } from 'html-to-image';
-import format from 'date-fns/format';
+import { useState, useRef, useCallback, useEffect } from "react";
 import {
     Box,
     Flex,
@@ -11,6 +8,7 @@ import {
     Label,
 } from "theme-ui";
 import { getInputName, parts } from "./data";
+import { downloadPng } from './downloadPng';
 
 const toBox = (parts) => {
     return parts.reduce(
@@ -65,22 +63,59 @@ export default function PartsExercise() {
     const [selected, setSelected] = useState([]);
     const [pickedUp, setPickedUp] = useState([]);
     const ref = useRef(null);
-    const getFileName = (fileType) => `${format(new Date(), "'PartsOfDesignSystem-'HH-mm-ss")}.${fileType}`;
 
-    const downloadPng = useCallback(() => {
-        if (ref.current === null) {
-            return
-        }
-        toPng(ref.current, { cacheBust: true, backgroundColor: 'white' })
-            .then((dataUrl) => {
-                const link = document.createElement('a')
-                link.download = getFileName('png')
-                link.href = dataUrl
-                link.click()
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+    useEffect(() => {
+        // Check if any parts values are unchecked and uncheck the corresponding name
+        const checkParts = () => {
+            parts.forEach((category) => {
+                if (selected.indexOf(category.id) !== -1) {
+                    category.parts.forEach((part) => {
+                        if (part.parts) {
+                            const allPartsChecked = part.parts.every(
+                                (subpart) =>
+                                    pickedUp.indexOf(
+                                        getInputName(category.title, subpart)
+                                    ) !== -1
+                            );
+
+                            const nameChecked = getInputName(
+                                category.title,
+                                part.title
+                            );
+
+                            if (!allPartsChecked) {
+                                if (pickedUp.indexOf(nameChecked) !== -1) {
+                                    const allPartsUnchecked = part.parts.every(
+                                        (subpart) =>
+                                            pickedUp.indexOf(
+                                                getInputName(category.title, subpart)
+                                            ) === -1
+                                    );
+
+                                    if (allPartsUnchecked) {
+                                        setPickedUp((prevState) =>
+                                            prevState.filter((part) => part !== nameChecked)
+                                        );
+                                    }
+                                }
+                            } else if (allPartsChecked) {
+                                if (pickedUp.indexOf(nameChecked) === -1) {
+                                    setPickedUp((prevState) =>
+                                        prevState.includes(nameChecked) ? prevState : [...prevState, nameChecked]
+                                    );
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        };
+
+        checkParts();
+    }, [pickedUp, selected]);
+
+    const handleDownloadPng = useCallback(() => {
+        downloadPng(ref);
     }, [ref]);
 
     const handleSubmit = (e) => {
@@ -91,10 +126,6 @@ export default function PartsExercise() {
                 behavior: 'smooth',
             });
         }, 100);
-
-        if (stage === 'pick-up') {
-            sendForm();
-        }
 
         setStage(stages[stages.indexOf(stage) + 1]);
     };
@@ -138,19 +169,6 @@ export default function PartsExercise() {
         }
     };
 
-    const pickUpPart = (e) => {
-        const partId = e.target.name;
-
-        if (pickedUp.indexOf(partId) === -1) {
-            if (pickedUp.length === pickUpLimit) {
-                return;
-            }
-            setPickedUp([...pickedUp, partId]);
-        } else {
-            setPickedUp(pickedUp.filter((i) => i !== partId));
-        }
-    };
-
     const actionButton = () => {
         let isButtonDisabled, buttonMessage;
         switch (stage) {
@@ -188,28 +206,13 @@ export default function PartsExercise() {
                     </Button>
                 );
             case 'done':
-                // isButtonDisabled = screenShot === true; disabled={isButtonDisabled}
                 buttonMessage = "Save your result as a .png file";
                 return (
-                    <Button type="button" onClick={downloadPng}>
+                    <Button type="button" onClick={handleDownloadPng}>
                         {buttonMessage}
                     </Button>
                 );
         }
-    };
-
-    const sendForm = (e) => {
-        fetch("#", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                crossedOut: crossedOut,
-                selected: selected,
-                pickedUp: pickedUp,
-            }),
-        });
     };
 
     const drawPartItem = (category, categoryId, part, level) => {
@@ -228,6 +231,36 @@ export default function PartsExercise() {
         if (pickedUp.indexOf(getInputName(category.title, partTitle)) !== -1) {
             disabledCheckbox = false;
         }
+
+        const handleClick = () => {
+            const clickedPart = getInputName(category.title, partTitle);
+            const clickedParts = part.parts;
+            const partIndex = pickedUp.indexOf(clickedPart);
+
+            if (partIndex !== -1) {
+                setPickedUp((prevState) => prevState.filter((part) => part !== clickedPart));
+                if (clickedParts) {
+                    clickedParts.forEach((parts) => {
+                        const subPart = getInputName(category.title, parts);
+                        setPickedUp((prevState) => prevState.filter((part) => part !== subPart));
+                        setPickedUp((prevState) => prevState.filter((part) => part !== clickedPart));
+                    });
+                }
+            } else {
+                setPickedUp((prevState) => [...prevState, clickedPart]);
+                if (clickedParts) {
+                    clickedParts.forEach((parts) => {
+                        const subPart = getInputName(category.title, parts);
+                        setPickedUp((prevState) =>
+                            prevState.includes(subPart) ? prevState : [...prevState, subPart]
+                        );
+                    });
+                }
+            }
+        };
+
+        const isChecked = pickedUp.includes(getInputName(category.title, partTitle));
+
         return (
             <Label
                 sx={{
@@ -235,11 +268,13 @@ export default function PartsExercise() {
                     pl: 3 * level,
                     color: disabledCheckbox ? "primary" : "text",
                 }}
+                key={getInputName(category.title, partTitle)}
             >
                 <Checkbox
                     name={getInputName(category.title, partTitle)}
                     disabled={disabledCheckbox}
-                    onChange={pickUpPart}
+                    checked={isChecked}
+                    onChange={handleClick}
                     sx={{
                         mr: 1,
                         width: "1rem",
@@ -249,7 +284,7 @@ export default function PartsExercise() {
                 {partTitle}
             </Label>
         );
-    }
+    };
 
     return (
         <>
@@ -360,5 +395,4 @@ export default function PartsExercise() {
             </Flex>
         </>
     );
-
 }
