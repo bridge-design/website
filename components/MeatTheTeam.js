@@ -43,7 +43,7 @@ export default function MeatTheTeam() {
         <ProfileCard
           photoUrl="/images/meet-the-team/rectangle_64.jpg"
           name="Alexandra Stepanova"
-          role="Senior Frontend Developer"
+          role="Middle Frontend Developer"
           twitter="#"
           linkedin="https://www.linkedin.com/in/alexandra-stepanova"
           github="https://github.com/alexandra-stepanova"
