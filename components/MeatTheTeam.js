@@ -7,7 +7,7 @@ export default function MeatTheTeam() {
       <Text as="h2" variant="4xl" className="mt-32 animate-fadein animate-reveal">
         Meet the team
       </Text>
-      <div className="xl:grid xl:grid-cols-2 lg:flex lg:flex-col mt-10 flex flex-wrap items-stretch justify-center gap-10">
+      <div className="xl:grid xl:grid-cols-2 lg:flex lg:flex-col md:grid md:grid-cols-2 mt-10 flex flex-wrap  justify-center gap-10">
         <ProfileCard
           photoUrl="/images/meet-the-team/rectangle_60.png"
           name="Varya Stepanova"
