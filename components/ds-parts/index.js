@@ -390,6 +390,9 @@ export default function PartsExercise() {
                                 {actionButton()}
                             </Flex> : null
                         }
+                        <Box>
+                            Inspired by <a href="https://medium.com/@nathanacurtis">Nathan Curtis</a>.
+                        </Box>
                     </Grid>
                 </form>
             </Flex>
