@@ -1,18 +1,10 @@
-import React from "react";
-import { Text, Emoji, Card, Icon } from "@bridge-the-gap/design-system";
-import WorkshopContent from "@components/WorkshopContent";
-import Deliverables from "@components/Deliverables";
-import WhyAttend from "@components/WhyAttend";
-import TeamsAttended from "@components/TeamsAttended";
-import WhoAreWe from "@components/WhoAreWe";
-import PeopleSay from "@components/PeopleSay";
-import WhatYouWillLearn from "@components/WhatYouWillLearn";
-import CustomWorkshop from "@components/CustomWorkshop";
+import { Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
 import { NextSeo } from "next-seo";
 import { getAllPosts } from "../../lib/api";
+import React from 'react';
 
-export default function Blog({ canonical, baseUrl, pageProps: { posts }, ...props }, arg1) {
+export default function Blog({ canonical, pageProps: { posts }}) {
   return (
     <>
       <NextSeo

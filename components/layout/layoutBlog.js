@@ -4,7 +4,7 @@ import { Text, CtaLink } from "@bridge-the-gap/design-system";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import path from "path";
-import NextImage from "next/image";
+import Image from "next/image";
 
 const myLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`;
@@ -12,7 +12,7 @@ const myLoader = ({ src, width, quality }) => {
 
 const MDXComponents = {
   a: Link,
-  NextImage: (props) => <NextImage loader={myLoader} {...props} />, // cannot use real NextImage, because it doesn't work in static export
+  Image: (props) => <Image loader={myLoader} {...props} />, // cannot use real NextImage, because it doesn't work in static export
 };
 export default function LayoutBlog({ title, seo, layout, ...props }) {
   const router = useRouter();

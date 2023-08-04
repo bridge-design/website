@@ -1,4 +1,5 @@
 import Head from "next/head";
+import React from "react";
 import { LayoutDefault, LayoutWorkshop } from "@components/layout";
 import "@bridge-the-gap/design-system/dist/styles.css";
 import "tailwindcss/tailwind.css";
@@ -51,7 +52,7 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
   );
 }
 
-MyApp.getInitialProps = async ({ ctx: { pathname, req } }) => {
+export async function getServerSideProps({ pathname, req }) {
   if (req) {
     const exportedSubpath = process.env.GORIGHT_EXPORT;
     const BASE_URL = (() => {
@@ -61,11 +62,11 @@ MyApp.getInitialProps = async ({ ctx: { pathname, req } }) => {
     const thumb = getThumbnailPath(pathname);
 
     let pageProps = { baseUrl: BASE_URL, thumb: thumb };
-    if (!exportedSubpath) return pageProps;
+    if (!exportedSubpath) return { props: pageProps };
 
-    return { ...pageProps, canonical: BASE_URL + pathname };
+    return { props: { ...pageProps, canonical: BASE_URL + pathname } };
   }
-  return {};
-};
+  return { props: {} };
+}
 
 export default MyApp;
