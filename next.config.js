@@ -75,7 +75,7 @@ module.exports = withMDX({
     return defaultPathMap;
   },
   basePath: process.env.BASEPATH ? process.env.BASEPATH : "",
-  assetPrefix: process.env.BASEPATH ? process.env.BASEPATH + "/" : "/",
+  assetPrefix: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
 
   pageExtensions: ["js", "jsx", "mdx"],
   trailingSlash: true,
