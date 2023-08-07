@@ -43,7 +43,7 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
         }}
         {...seo}
       />
-      <div className="flex-grow py-8 bg-white border-b">
+      <div className="grow py-8 bg-white">
         <div className="flex bg-white min-w-100">
           <div className="w-full max-w-2xl px-4 py-2 mx-auto my-8 mb-8 text-xl text-left ">
             <CtaLink arrow="start" as={Link} href={blogPagePath}>
@@ -57,7 +57,7 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
         >
           {title}
         </Text>
-        <div className="px-4 mx-auto my-8 prose text-justify">
+        <div className="px-4 md:mx-auto my-8 prose text-justify">
           <MDXProvider components={MDXComponents}>{props.children}</MDXProvider>
         </div>
       </div>
