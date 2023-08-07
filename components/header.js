@@ -1,24 +1,15 @@
-import { useState } from "react";
+import React from "react";
 import Link from "@components/link";
-import { Nav, Button, Logo } from "@bridge-the-gap/design-system";
-import { useRouter } from "next/router";
-import { Text, CtaLink } from "@bridge-the-gap/design-system";
-import localTime from "@components/local-time";
+import { Logo, Nav } from "@bridge-the-gap/design-system";
 
 export default function Header({ navItems }) {
-  const { asPath } = useRouter();
 
   return (
     <header className="flex items-center w-full">
       <Link href="/">
         <Logo className="max-w-[250px] mr-auto" />
       </Link>
-      <Nav
-        items={navItems}
-        linkComponent={Link}
-        className="ml-auto max-w-min"
-        currentPath={asPath}
-      />
+      <Nav items={navItems} className="ml-auto max-w-min" linkComponent={Link} />
     </header>
   );
 }

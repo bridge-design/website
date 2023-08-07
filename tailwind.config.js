@@ -1,15 +1,14 @@
 const designSystem = require("@bridge-the-gap/design-system");
-
 const bridgeConfig = designSystem.twconfig;
-
-const defaultConfig = require("tailwindcss/defaultConfig");
-
-const resolveConfig = require("tailwindcss/resolveConfig");
+const { merge } = require("lodash");
 
 const config = {
-  mode: "jit",
-  darkMode: false, // or 'media' or 'class'
-  purge: bridgeConfig.purge,
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/\\@bridge-the-gap/design-system/dist/**/*.js",
+    "./node_modules/\\@bridge-the-gap/design-system/dist/*.js",
+  ],
   theme: {
     extend: {
       container: {
@@ -42,24 +41,13 @@ const config = {
       },
     },
   },
-  variants: {
-    extend: {
-      ringColor: ["group-focus"],
-      ringWidth: ["group-focus"],
-    },
-  },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [require("@tailwindcss/aspect-ratio"), require('@tailwindcss/typography')],
 };
 
-let finalConfig = resolveConfig(bridgeConfig, config);
+let finalConfig = merge({}, bridgeConfig, config);
 
-// Purge prop is not extendable, should be overriden
-finalConfig.purge.content = [
-  "./pages/**/*.{js,ts,jsx,tsx}",
-  "./components/**/*.{js,ts,jsx,tsx}",
-  "./node_modules/\\@bridge-the-gap/design-system/dist/**/*.js",
-];
-
-finalConfig.purge.safelist = finalConfig.purge.safelist.concat(["bg-6XL"]);
+// Ensure that finalConfig.content.patterns is an array before adding to it
+finalConfig.content.safelist = finalConfig.content.safelist || [];
+finalConfig.content.safelist.push("bg-6XL");
 
 module.exports = finalConfig;

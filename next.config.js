@@ -50,16 +50,16 @@ module.exports = withMDX({
 
     return config;
   },
-  exportPathMap: async (defaultPathMap) => {
+  exportPathMap: (defaultPathMap) => {
     const resultMap = {
       "/handout/v2/releasing-library": {
         page: "/hands-on-workshop/handout/v2/releasing-library",
         query: { canonical: true },
       },
     };
-
-    if (exportPath && exportPath in defaultPathMap) {
-      const exportPaths = Object.keys(defaultPathMap).forEach((path) => {
+  
+    if (exportPath && defaultPathMap.hasOwnProperty(exportPath)) { // Corrected condition
+      Object.keys(defaultPathMap).forEach((path) => {
         if (path.startsWith(exportPath)) {
           const newPath =
             path.length === exportPath.length
@@ -75,12 +75,14 @@ module.exports = withMDX({
     return defaultPathMap;
   },
   basePath: process.env.BASEPATH ? process.env.BASEPATH : "",
-  assetPrefix: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
+  assetPrefix: process.env.BASEPATH ? process.env.BASEPATH + "/" : "/",
+
   pageExtensions: ["js", "jsx", "mdx"],
-  trailingSlash: true, // keep true
+  trailingSlash: true,
   // workaround, see: https://github.com/vercel/next.js/issues/21079
   images: {
     loader: "imgix",
-    path: "",
+    // Provide a default value for images.path
+    path: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
   },
 });
