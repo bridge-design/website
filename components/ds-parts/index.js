@@ -391,7 +391,7 @@ export default function PartsExercise() {
                             </Flex> : null
                         }
                         <Box>
-                            Based on <a href="https://medium.com/@nathanacurtis">Nathan Curtis</a>'s <a href="https://drive.google.com/file/d/1qXMUXKHaEXnLDOu99GCzTMY2XW6NnPe_/view">PDF</a>. 
+                            Based on <a href="https://medium.com/@nathanacurtis">Nathan Curtis</a>' <a href="https://drive.google.com/file/d/1qXMUXKHaEXnLDOu99GCzTMY2XW6NnPe_/view">PDF</a>. 
                         </Box>
                     </Grid>
                 </form>
