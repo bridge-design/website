@@ -1,0 +1,140 @@
+---
+title: Tracking Design System Adoption — Where Do We Get the Data From?
+date: 2023-12-11
+layout: LayoutBlog
+seo:
+  desc: >
+    Explore the transformative journey from task-focused metrics to goal-oriented strategies
+    in design systems. Learn how shifting from output
+    to outcome can align design systems with broader organizational objectives. Discover various
+    methods to track design system adoption, including surveys, 3rd-party tools, injected scripts,
+    and GitHub searches. Understand their pros and cons, and how they contribute to a dynamic,
+    user-focused design system evolution.
+  
+---
+
+In "Impact Players," Liz Wiseman uses a specific example of a department responsible for training employees to
+illustrate her point about the difference between task completion and goal aiming. Initially, this department
+measured its success based on the quantity of training sessions provided, a classic example of focusing on
+task completion. They diligently counted the number of training programs delivered, essentially ticking off
+a checklist of activities. However, this metric didn't resonate with upper management. The reports generated
+by the department, which focused on these quantitative measures, failed to capture the interest or attention of
+senior leaders. This situation is a classic example of how focusing solely on task completion can lead to a
+disconnect with organizational goals and fail to demonstrate real impact.
+
+The shift occurred when the department changed its key performance indicator (KPI) to measure the actual
+educational advancement of the employees – a goal-aiming approach. This new metric aligned more closely with
+the broader organizational objectives of enhancing employee skills and capabilities. By focusing on the outcome
+of training – the improved education level of employees – rather than just the output (number of training
+sessions conducted), the department's work suddenly became much more relevant and impactful from the
+perspective of the upper management. This change in measurement criteria underscored the value of understanding
+and aligning with the organization’s larger goals. It demonstrated how shifting focus from mere task completion
+to aiming for overarching objectives can create a more meaningful impact and garner greater support and
+recognition from higher-ups in the organization.
+
+This concept mirrors the challenges in managing design systems.
+In a task-oriented approach to a design system, the focus would be on the release of a certain number of
+components. Here, the team would concentrate on the specifics – creating individual UI elements, documenting
+them, and ensuring they are available for use. This approach is akin to ticking boxes off a checklist: create
+a button, a dropdown menu, a modal, etc. The team's success would be measured by how many components they've
+developed and released. While this method ensures the delivery of tangible assets, it doesn't necessarily
+reflect the actual effectiveness or integration of those components in real projects.
+
+A more meaningful measure is the adoption rate of the design system, focusing not just on the output but on
+the outcome.
+This perspective aligns more closely with the overarching objective of a design system, which is to streamline
+and improve the design and development process across an organization. Instead of merely counting the number of
+components created, the team's efforts would be directed towards how these components are being utilized in
+projects, how they enhance consistency and efficiency, and how they can be improved based on user feedback. In
+this approach, the team would measure success not just by output (number of components) but by outcome (rate of
+adoption and improvement). This would lead to a more dynamic, user-focused design system, constantly evolving
+in response to the needs of its users and the goals of the organization.
+
+To transition from a task-oriented to a goal-oriented approach in managing a design system,
+it's essential to have clear data on the system's adoption and usage. Understanding and improving this
+aspect of the design system requires gathering accurate data on how developers are using the system,
+which components are most popular, where gaps might exist, and how the system influences the efficiency
+and consistency of development work.
+
+Tracking the adoption rate is crucial for understanding a design system's impact and effectiveness
+within an organization. Here are some methods for tracking:
+
+Tracking the adoption rate of a design system is crucial for understanding its impact and effectiveness within an organization. Here are some methods that a design system team can use to track this rate:
+
+1. **Regular Surveys**,
+2. **Using 3rd-party Tools**,
+3. **Gathering Own Stats via an Injected Script**,
+4. **Gathering Stats Using GitHub Search**.
+
+Each of these methods has strengths and weaknesses.
+
+### Tracking Using Surveys
+
+Surveys provide a direct channel to gather feedback from teams using the design system.
+They can be structured to inquire about the frequency and manner of component usage, offering qualitative
+insights into user satisfaction and potential areas for improvement. 
+
+### Tracking Using 3rd-Party Tools
+
+3rd-party tools offer a more data-centric perspective. Tools like [Omlet](https://omlet.dev/),
+[Componly](https://componly.co/), and [Stylebit](https://stylebit.io/adoption) provide analytics and
+insights into the usage patterns of design system components across various projects. These tools can
+track specific components' usage, customization, and performance, offering quantitative data that is
+objective and insightful for understanding system implementation.
+
+### Tracking Using Injected Script
+
+The method of using an injected script involves integrating a custom script into the development environment.
+This script collects data on component usage, frequency, and context, providing real-time, accurate data
+directly from the source. This approach is highly customizable, allowing teams to tailor the tracking to
+their specific needs.
+
+### Tracking Using GitHub Search
+
+For organizations utilizing GitHub, searching within the organization's repositories can reveal how
+extensively and in what ways the design system is being used. This method offers a broad, non-intrusive
+overview of adoption, requiring no additional tooling or scripts.
+
+When comparing these methods, several factors come into play:
+
+- **Accuracy and Depth of Data**: While surveys provide valuable qualitative insights, 
+hey rely on self-reporting and may not always be accurate or unbiased. In contrast, 3rd-part
+ tools and injected scripts offer more objective, quantitative data. GitHub search, while convenient,
+ might not provide the depth of data that other methods offer.
+
+- **Technical Complexity and Resource Requirements**: Injected scripts require significant technical
+know-how and ongoing maintenance, which may not be feasible for all teams. 3rd-party tools also require
+integration into the development workflow but are generally easier to implement than custom scripts.
+
+- **Privacy and Security Considerations**: Injecting scripts into the development environment raises concerns
+about privacy and security. It's crucial to ensure these scripts do not infringe on developers' privacy or
+compromise security. 3rd-party tools may also raise similar concerns.
+
+- **Real-Time Insights**: Injected scripts provide real-time data, offering a dynamic view of component
+usage. In contrast, GitHub search results are limited to the latest code updates in the repositories,
+and surveys provide periodic insights.
+
+- **Ease of Use and Accessibility**: GitHub search is straightforward and accessible to anyone with
+repository access, making it a user-friendly option. Surveys are also relatively easy to implement and
+participate in, compared to the technical requirements of scripts and some 3rd-party tools.
+
+The choice of tracking method depends on the specific needs of the design system team, the resources available,
+and the organization's policies on data privacy and security.
+
+
+## What is next?
+
+As we embark on the journey of gathering data, the path ahead is both intriguing and complex. The accumulation of
+this data is only the beginning. The real task lies in transforming these raw numbers and feedback into meaningful,
+actionable strategies.
+This is a vast and multifaceted topic,
+encompassing areas such as data analysis, strategic planning, and iterative development.
+Many questions arise. Why are certain components more popular? Why some are neglected?
+Are the tokens adopted and widely used?
+The answers to these questions are keys to unlocking a more efficient, user-centric, and impactful design system.
+
+For those seeking guidance and inspiration on this journey, resources such as the
+[Future of Design Systems 2023](https://intodesignsystems.gumroad.com/l/thefutureofdesignsystems) conference are
+invaluable. Talks like the one by Varya Stepanova and Daniel Miebach on
+[Data-Driven Design System Management](https://app.pitch.com/app/public/player/3899f1a0-cd01-45b5-baab-51cc83fab3e7)
+offer a glimpse into the practical aspects of this approach.
