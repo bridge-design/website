@@ -40,6 +40,12 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
           locale: "en_US",
           url: "https://bridge-the-gap.dev/blog",
           site_name: "Bridge-the-Gap.dev",
+          images: [
+            {
+              url: `/images${router.asPath}thumb.png`,
+              alt: title,
+            },
+          ],
         }}
         {...seo}
       />
