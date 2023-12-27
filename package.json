@@ -21,6 +21,7 @@
     "html-to-image": "^1.11.11",
     "next": "12",
     "next-seo": "^4.29.0",
+    "react-calendly": "^4.3.0",
     "react-ga": "^3.3.1",
     "string.prototype.replaceall": "^1.0.7",
     "stringify-object": "^3.3.0",
@@ -38,5 +39,6 @@
   "peerDependencies": {
     "react": "17",
     "react-dom": "17"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }

@@ -21,7 +21,7 @@ export default function MeatTheTeam() {
           github="https://github.com/varya"
         />
         <ProfileCard
-          photoUrl="/images/meet-the-team/ririna.png"
+          photoUrl="/images/meet-the-team/irina.png"
           name="Irina (Samoylova) Illustrova"
           role="Senior Frontend Engineer"
           twitter="https://twitter.com/illustrova"

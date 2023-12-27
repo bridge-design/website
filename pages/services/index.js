@@ -36,27 +36,32 @@ export const HOW_IT_WORKS = [
   {
     icon: "UserMultiple",
     title: "Meet the team",
-    description: "Hiring an agency brings additional expertise and knowledge to your business",
+    description:
+      "Hiring an agency brings additional expertise and knowledge to your business",
   },
   {
     icon: "Cursor_1",
     title: "Workshop together",
-    description: "Hiring an agency brings additional expertise and knowledge to your business",
+    description:
+      "Hiring an agency brings additional expertise and knowledge to your business",
   },
   {
     icon: "Network_3Reference",
     title: "Regular alignement",
-    description: "Hiring an agency brings additional expertise and knowledge to your business",
+    description:
+      "Hiring an agency brings additional expertise and knowledge to your business",
   },
   {
     icon: "CircleDash",
     title: "Iterations",
-    description: "Hiring an agency brings additional expertise and knowledge to your business",
+    description:
+      "Hiring an agency brings additional expertise and knowledge to your business",
   },
   {
     icon: "Task",
     title: "Agile",
-    description: "Hiring an agency brings additional expertise and knowledge to your business",
+    description:
+      "Hiring an agency brings additional expertise and knowledge to your business",
   },
 ];
 
@@ -124,30 +129,34 @@ export default function Services() {
         variant="2XlMedium"
         className="mx-auto mt-10 text-center animate-fadein animate-reveal"
       >
-        A reusable components library enabling organization teams to build products efficiently.
+        A reusable components library enabling organization teams to build
+        products efficiently.
       </Text>
       <CtaLink
         href="/contact"
         as={Link}
-        onClick={() => (window.location = "mailto:mail@bridge-the-gap.dev")}
+        // onClick={() => (window.location = "mailto:mail@bridge-the-gap.dev")}
         underline
-        className="flex justify-center w-full text-xl mt-28 animate-fadeindelay"
+        className="flex justify-center w-full text-xl mt-28 animate-fadein delay"
       >
         Start a conversation
       </CtaLink>
-      <Text as="h2" variant="4xl" className="mt-32 mb-6 animate-fadein animate-reveal">
+      <Text as="h2" variant="4xl" className="mt-32 mb-6 animate-reveal">
         Design System for teams and enterprises
       </Text>
       <Advantages colorSchema="dark" content={CONTENT} />
-      <Text as="h2" variant="4xl" className="mt-32 animate-fadein animate-reveal">
-        Design Sytem processes
+      <Text as="h2" variant="4xl" className="mt-32">
+        Design System processes
       </Text>
       <BreadCrumbsArrows />
-      <Text as="h2" variant="4xl" className="mt-32 mb-10 animate-fadein animate-reveal">
+      <Text as="h2" variant="4xl" className="mt-32 mb-10">
         How it works
       </Text>
       <Advantages content={HOW_IT_WORKS} />
-      <HelpTeams className="mt-24" photoUrl="/images/meet-the-team/rectangle_14.png" />
+      <HelpTeams
+        className="mt-24"
+        photoUrl="/images/meet-the-team/rectangle_14.png"
+      />
       <Testimonial testimonials={TESTIMONIALS} title={TestimonialTitle} />
       <MeatTheTeam />
     </>
