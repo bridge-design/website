@@ -15,7 +15,7 @@ export default function MeatTheTeam() {
         <ProfileCard
           photoUrl="/images/meet-the-team/varya.png"
           name="Varya Stepanova"
-          role="Design systems architect and engineering manager"
+          role="Design Systems Architect and Engineering Manager"
           twitter="https://twitter.com/varya_en"
           linkedin="https://www.linkedin.com/in/varyastepanova/"
           github="https://github.com/varya"
@@ -23,7 +23,7 @@ export default function MeatTheTeam() {
         <ProfileCard
           photoUrl="/images/meet-the-team/irina.png"
           name="Irina (Samoylova) Illustrova"
-          role="Senior Frontend Engineer"
+          role="Senior UI Engineer"
           twitter="https://twitter.com/illustrova"
           linkedin="https://www.linkedin.com/in/illustrova/"
           github="https://github.com/Illustrova"
@@ -31,7 +31,7 @@ export default function MeatTheTeam() {
         <ProfileCard
           photoUrl="/images/meet-the-team/sherif.png"
           name="Sherif Saleh"
-          role="Design manager"
+          role="Design Manager"
           twitter="#"
           linkedin="https://www.linkedin.com/in/salehsherif/"
           github="https://github.com/sherifsaleh"
@@ -39,15 +39,15 @@ export default function MeatTheTeam() {
         <ProfileCard
           photoUrl="/images/meet-the-team/andriy.png"
           name="Andriy Kotko"
-          role="Senior Frontend Engineer"
+          role="UI Engineer"
           twitter="https://twitter.com/Kotkoa"
           linkedin="https://www.linkedin.com/in/kotkoa/"
           github="https://github.com/kotkoa"
         />
         <ProfileCard
           photoUrl="/images/meet-the-team/alexandra.jpg"
-          name="Alexandra Stepanova"
-          role="Middle Frontend Developer"
+          name="Alexandra Urberg"
+          role="UI Engineer"
           twitter="#"
           linkedin="https://www.linkedin.com/in/alexandra-stepanova"
           github="https://github.com/alexandra-stepanova"
