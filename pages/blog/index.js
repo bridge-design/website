@@ -2,9 +2,9 @@ import { Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
 import { NextSeo } from "next-seo";
 import { getAllPosts } from "../../lib/api";
-import React from 'react';
+import React from "react";
 
-export default function Blog({ canonical, pageProps: { posts }}) {
+export default function Blog({ canonical, pageProps: { posts } }) {
   return (
     <>
       <NextSeo
@@ -18,18 +18,21 @@ export default function Blog({ canonical, pageProps: { posts }}) {
           site_name: "Bridge-the-Gap.dev",
         }}
       />
-      {/***** HERO SECTION *****/}
       <div className="leading-normal tracking-normal text-light-on-background-900">
-        <Text as="h1" variant="6Xl" className="max-w-3xl mx-auto mt-4">
+        <Text
+          as="h1"
+          variant="6Xl"
+          className="max-w-3xl mx-auto my-24 mb-12 text-center"
+        >
           The knowlegde we share
         </Text>
-        <div className="grid max-w-3xl grid-cols-1 gap-10 mx-auto mt-12">
+        <div className="grid max-w-3xl grid-cols-1 gap-8 mx-auto mt-12">
           {posts &&
             posts.length > 0 &&
             posts.map((post) => {
               return (
                 <div key={post.title}>
-                  <hr />
+                  <hr className="mb-8" />
                   <Link
                     href={`/blog/${post.slug}`}
                     key={post.title}
@@ -41,7 +44,7 @@ export default function Blog({ canonical, pageProps: { posts }}) {
                     <Text as="p" variant="lg" className="mb-4">
                       {post.description}
                     </Text>
-                    <span className="font-smBolder">Read more →</span>
+                    <span className="font-smBolder">Read →</span>
                   </Link>
                 </div>
               );
