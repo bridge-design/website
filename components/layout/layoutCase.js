@@ -86,8 +86,8 @@ export const ProjectTeam = ({ team }) => {
 
 const Avatar = ({ name }) => {
   return (
-    <div className="relative mb-8 group">
-      <div className="w-12 h-12 -mr-4 overflow-hidden border border-2 rounded-full border-light-on-background-300 group group-hover:scale-105 transition-200">
+    <div className="relative flex mb-8 -mr-4 group flex-column ">
+      <div className="w-12 h-12 overflow-hidden border border-2 rounded-full border-light-on-background-300 group group-hover:scale-105 transition-200">
         <img
           src={btgTeam[name].photoUrl}
           title={btgTeam[name].name}
@@ -95,7 +95,7 @@ const Avatar = ({ name }) => {
           className="w-full rounded-full"
         />
       </div>
-      <p className="absolute invisible h-8 text-center -left-1/2 tranlate-x-0.5 text-small -bottom-8 group-hover:visible text-xs">
+      <p className="w-20 text-center absolute invisible h-8 text-center -left-1/2 tranlate-x-0.5 text-small -bottom-8 group-hover:visible text-xs">
         {btgTeam[name].name}
       </p>
     </div>

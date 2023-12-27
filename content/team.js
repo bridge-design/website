@@ -2,7 +2,7 @@ export const team = {
   varya: {
     photoUrl: "/images/meet-the-team/varya.png",
     name: "Varya Stepanova",
-    role: "Design systems architect and engineering manager",
+    role: "Design Systems Architect and Engineering Manager",
     description:
       "As an independent consultant, Varya helps companies to launch and boost their design systems. Her major focus is bridging the gap for designers, developers, and business specialists. That all is seasoned with extensive experience in component-driven UI development and a design degree.",
     twitter: "https://twitter.com/varya_en",
@@ -23,7 +23,7 @@ export const team = {
   sherif: {
     photoUrl: "/images/meet-the-team/sherif.png",
     name: "Sherif Saleh",
-    role: "Design manager",
+    role: "Design Manager",
     description:
       "Sherif is a senior product designer. He crafts deligthful experiences through data analytics, user research, prototypes and validation. Sherif has extensive experience with design systems and years of working for financial services, banks and automotive.",
     twitter: "#",
