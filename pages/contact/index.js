@@ -7,7 +7,7 @@ const Contact = () => {
   const [copyToClipboard, setCopyToClipboard] = useState("");
   return (
     <>
-      <Text className="text-center">
+      <Text className="text-center mt-16">
         Book a 30-minute session with our design system architect Varya to
         discuss your project.
       </Text>
