@@ -1,7 +1,7 @@
-import NextLink from "next/link";
+import NextLink from 'next/link';
 
 export default function Link({ children, href, ...props }) {
-  if (href.startsWith("http")) {
+  if (href.startsWith('http')) {
     return (
       <a target="_blank" rel="noopener" href={href} {...props}>
         {children}
@@ -9,8 +9,8 @@ export default function Link({ children, href, ...props }) {
     );
   }
   return (
-    <NextLink href={href}>
-      <a href={href} {...props}>{children}</a>
+    <NextLink href={href} {...props}>
+      {children}
     </NextLink>
   );
 }
