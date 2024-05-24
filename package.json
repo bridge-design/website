@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
     "@next/mdx": "^14.2.3",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
@@ -38,8 +39,8 @@
     "tailwindcss": "^3.4.3"
   },
   "peerDependencies": {
-    "react": "17",
-    "react-dom": "17"
+    "react": "18",
+    "react-dom": "18"
   },
   "packageManager": "yarn@1.22.19"
 }

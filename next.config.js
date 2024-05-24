@@ -1,5 +1,4 @@
 const path = require("path");
-const replaceAll = require("string.prototype.replaceall");
 const frontmatterPlugin = require("./lib/frontmatter");
 
 const CopyWebpackPlugin = require("copy-webpack-plugin");
@@ -10,7 +9,6 @@ const withMDX = require("@next/mdx")({
     remarkPlugins: [frontmatterPlugin],
   },
 });
-
 const exportPath = process.env.GORIGHT_EXPORT;
 
 module.exports = withMDX({
@@ -28,9 +26,8 @@ module.exports = withMDX({
     });
     // replace images with NextImage and require statement in mdx files
     // @source: https://dev.to/jokeneversoke/adding-relative-img-paths-to-mdx-59l4
-    let rule = config.module.rules.find(
-      (rule) => String(rule.test) === String(/\.mdx?$/)
-    );
+    let rule = config.module.rules.find((rule) => String(rule.test) === String(/\.mdx?$/));
+
     rule.use.push({ loader: path.resolve(__dirname, "lib/mdxLoader.js") });
 
     if (isServer) {
@@ -57,14 +54,13 @@ module.exports = withMDX({
         query: { canonical: true },
       },
     };
-  
-    if (exportPath && defaultPathMap.hasOwnProperty(exportPath)) { // Corrected condition
+
+    if (exportPath && defaultPathMap.hasOwnProperty(exportPath)) {
+      // Corrected condition
       Object.keys(defaultPathMap).forEach((path) => {
         if (path.startsWith(exportPath)) {
           const newPath =
-            path.length === exportPath.length
-              ? "/"
-              : path.substring(exportPath.length);
+            path.length === exportPath.length ? "/" : path.substring(exportPath.length);
           resultMap[newPath] = Object.assign(defaultPathMap[path], {
             query: { canonical: true },
           });
