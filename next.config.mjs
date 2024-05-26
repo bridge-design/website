@@ -1,17 +1,20 @@
-const path = require("path");
-const frontmatterPlugin = require("./lib/frontmatter");
+import path from "path";
+import frontmatterPlugin from "./lib/frontmatter.mjs";
+import CopyWebpackPlugin from "copy-webpack-plugin";
+import createMDX from "@next/mdx";
 
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const exportPath = process.env.GORIGHT_EXPORT;
 
-const withMDX = require("@next/mdx")({
+const withMDX = createMDX({
   extension: /\.mdx?$/,
+  loader: "@mdx-js/loader",
   options: {
+    providerImportSource: "@mdx-js/react",
     remarkPlugins: [frontmatterPlugin],
   },
 });
-const exportPath = process.env.GORIGHT_EXPORT;
 
-module.exports = withMDX({
+const config = {
   webpack: (config, { isServer }) => {
     // @see: https://github.com/vercel/next.js/issues/9866#issuecomment-881799911
     if (!isServer) {
@@ -28,7 +31,7 @@ module.exports = withMDX({
     // @source: https://dev.to/jokeneversoke/adding-relative-img-paths-to-mdx-59l4
     let rule = config.module.rules.find((rule) => String(rule.test) === String(/\.mdx?$/));
 
-    rule.use.push({ loader: path.resolve(__dirname, "lib/mdxLoader.js") });
+    rule.use.push({ loader: path.resolve(process.cwd(), "lib/mdxLoader.js") });
 
     if (isServer) {
       config.plugins.push(
@@ -36,8 +39,8 @@ module.exports = withMDX({
           patterns: [
             {
               from: "**/thumb.{png,jpg,jpeg,gif}",
-              context: path.resolve(__dirname, "pages"),
-              to: path.join(__dirname, "public", "images"),
+              context: path.resolve(process.cwd(), "pages"),
+              to: path.join(process.cwd(), "public", "images"),
               noErrorOnMissing: true,
             },
           ],
@@ -72,13 +75,16 @@ module.exports = withMDX({
   },
   basePath: process.env.BASEPATH ? process.env.BASEPATH : "",
   assetPrefix: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
-
-  pageExtensions: ["js", "jsx", "mdx"],
+  pageExtensions: ["js", "jsx", "md", "mdx"],
   trailingSlash: true,
+  reactStrictMode: true,
+  swcMinify: true,
   // workaround, see: https://github.com/vercel/next.js/issues/21079
   images: {
     loader: "imgix",
     // Provide a default value for images.path
     path: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
   },
-});
+};
+
+export default withMDX(config);
