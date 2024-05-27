@@ -60,7 +60,7 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
         </Text> */}
         <div className="grid grid-cols-1 gap-10 mt-24 sm:grid-cols-2 md:grid-cols-3">
           <Card
-            className="hover:!cursor-default hover:!bg-neutral-300 bg-neutral-300 opacity-70 [&_a]:!cursor-default [&_a]:hover:!text-primary-500 [&_span]:!transform-none"
+            className="hover:!cursor-default hover:!bg-neutral-300 bg-neutral-300 opacity-70 [&_a]:!cursor-default [&_a]:!text-gray-600 [&_span]:!transform-none"
             key="september"
             heading={`2 & 3 DECEMBER ${localTime(9, 13)}`}
             link={{
@@ -74,7 +74,7 @@ export default function Workshop({ canonical, baseUrl, ...props }) {
                 Available tickets:
               </Text>
               <p>Designers: SOLD OUT</p>
-              <p>Developers: 4</p>
+              <p>Developers: SOLD OUT</p>
             </div>
           </Card>
           <Card
