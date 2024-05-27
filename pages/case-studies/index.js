@@ -49,30 +49,35 @@ const CaseCard = ({ casePost }) => {
     >
       <div
         key={casePost.title}
-        className="flex overflow-hidden text-center align-center bg-light-on-background-100 flex-col sm:flex-row"
+        className="flex overflow-hidden text-center align-center bg-light-on-background-100 flex-col sm:flex-row hover:bg-light-on-background-200"
       >
         {casePost.logo && <img src={casePost.logo} className="max-w-[140px] mx-auto my-4 px-4" />}
-        <div className="relative flex flex-row p-4 group">
-          <div className="absolute top-0 left-0 w-full h-full transition-all duration-500 ease-out translate-x-full rounded bg-light-background-100 group-hover:translate-x-0" />
+        <div className="relative flex flex-row p-4">
+          <div
+            className="absolute top-0 left-0 w-full h-full rounded "
+            // transition-all duration-500 ease-out translate-x-full bg-light-background-100 group-hover:translate-x-0
+          />
           <div>
             <Text
               as="h3"
               variant="3Xl"
-              className="relative z-10 mb-4 text-left text-light-background-100 group-hover:text-light-on-background-50"
+              className="relative z-10 mb-4 text-left text-light-background-100"
+              //group-hover:text-light-on-background-50
             >
               {casePost.title}
             </Text>
             <Text
               as="p"
               variant="lg"
-              className="relative z-10 mb-4 text-left group-hover:text-light-on-background-50"
+              className="relative z-10 mb-4 text-left"
+              //group-hover:text-light-on-background-50
             >
               {casePost.description}
             </Text>
           </div>
-          <div className="z-10 self-center justify-center invisible w-20 text-lg text-center text-white group-hover:visible">
+          {/* <div className="z-10 self-center justify-center invisible w-20 text-lg text-center text-white group-hover:visible">
             →
-          </div>
+          </div> */}
         </div>
       </div>
     </Link>
