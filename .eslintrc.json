@@ -1,0 +1,29 @@
+{
+  "extends": "next/core-web-vitals",
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          ["^react"],
+          ["^\\u0000"],
+          ["^@?\\w"],
+          ["@/(.*)"],
+          ["^[./]"],
+          ["^\\."],
+          ["^.+\\.css$", "^classnames$"]
+        ]
+      }
+    ],
+    "simple-import-sort/exports": "warn",
+    "react/jsx-key": "error",
+    "no-unused-expressions": ["warn", { "allowShortCircuit": true, "allowTernary": true }],
+    "no-unused-vars": "warn"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "ignorePatterns": ["node_modules/*", ".next/*"]
+}

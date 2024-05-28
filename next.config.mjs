@@ -1,7 +1,8 @@
-import path from "path";
-import frontmatterPlugin from "./lib/frontmatter.mjs";
-import CopyWebpackPlugin from "copy-webpack-plugin";
 import createMDX from "@next/mdx";
+import CopyWebpackPlugin from "copy-webpack-plugin";
+import path from "path";
+
+import frontmatterPlugin from "./lib/frontmatter.mjs";
 
 const exportPath = process.env.GORIGHT_EXPORT;
 
@@ -14,6 +15,7 @@ const withMDX = createMDX({
   },
 });
 
+/** @type {import('next').NextConfig} */
 const config = {
   webpack: (config, { isServer }) => {
     // @see: https://github.com/vercel/next.js/issues/9866#issuecomment-881799911
