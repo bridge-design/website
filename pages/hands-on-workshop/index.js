@@ -1,14 +1,15 @@
 import React from "react";
-import { Text, Emoji, Card } from "@bridge-the-gap/design-system";
-import WorkshopContent from "@components/WorkshopContent";
+
+import { Card, Emoji, Text } from "@bridge-the-gap/design-system";
+import CustomWorkshop from "@components/CustomWorkshop";
 import Deliverables from "@components/Deliverables";
-import WhyAttend from "@components/WhyAttend";
+import Link from "@components/link";
 import localTime from "@components/local-time";
-import WhoAreWe from "@components/WhoAreWe";
 import PeopleSay from "@components/PeopleSay";
 import WhatYouWillLearn from "@components/WhatYouWillLearn";
-import CustomWorkshop from "@components/CustomWorkshop";
-import Link from "@components/link";
+import WhoAreWe from "@components/WhoAreWe";
+import WhyAttend from "@components/WhyAttend";
+import WorkshopContent from "@components/WorkshopContent";
 import { NextSeo } from "next-seo";
 
 export default function Workshop({ canonical, baseUrl, ...props }) {

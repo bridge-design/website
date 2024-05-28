@@ -1,10 +1,10 @@
-import { MDXProvider } from "@mdx-js/react";
+import { CtaLink, Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
-import { Text, CtaLink } from "@bridge-the-gap/design-system";
+import MDXComponents from "@components/MDXComponents";
+import { MDXProvider } from "@mdx-js/react";
+import { team as btgTeam } from "content/team";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import { team as btgTeam } from "content/team";
-import MDXComponents from "@components/MDXComponents";
 
 export default function LayoutCase({ title, seo, layout, team, ...props }) {
   const router = useRouter();

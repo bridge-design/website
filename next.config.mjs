@@ -8,7 +8,6 @@ const exportPath = process.env.GORIGHT_EXPORT;
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
-  loader: "@mdx-js/loader",
   options: {
     providerImportSource: "@mdx-js/react",
     remarkPlugins: [frontmatterPlugin],

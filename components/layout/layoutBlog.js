@@ -1,9 +1,9 @@
-import { MDXProvider } from "@mdx-js/react";
+import { CtaLink, Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
-import { Text, CtaLink } from "@bridge-the-gap/design-system";
+import MDXComponents from "@components/MDXComponents";
+import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import MDXComponents from "@components/MDXComponents";
 
 export default function LayoutBlog({ title, seo, layout, ...props }) {
   const router = useRouter();

@@ -1,8 +1,8 @@
-import { Text } from '@bridge-the-gap/design-system';
-import { NextSeo } from 'next-seo';
-import Link from '@components/link';
+import { Text } from "@bridge-the-gap/design-system";
+import Link from "@components/link";
+import { NextSeo } from "next-seo";
 
-import { getAllCases } from '../../lib/api';
+import { getAllCases } from "../../lib/api";
 
 export default function CaseStudies({ pageProps: { cases } }) {
   return (
@@ -12,9 +12,9 @@ export default function CaseStudies({ pageProps: { cases } }) {
         description="All the great things we have done for our clients"
         keywords="design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development"
         openGraph={{
-          type: 'website',
-          locale: 'en_US',
-          site_name: 'Bridge-the-Gap.dev',
+          type: "website",
+          locale: "en_US",
+          site_name: "Bridge-the-Gap.dev",
         }}
       />
       <div className="leading-normal tracking-normal text-light-on-background-900">

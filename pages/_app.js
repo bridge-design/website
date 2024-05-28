@@ -1,11 +1,13 @@
-import Head from "next/head";
 import React from "react";
-import { LayoutDefault, LayoutWorkshop } from "@components/layout";
-import "@bridge-the-gap/design-system/dist/styles.css";
-import "tailwindcss/tailwind.css";
+
+import { LayoutDefault, LayoutMdx, LayoutWorkshop } from "@components/layout";
+import { getThumbnailPath } from "lib/api";
+import Head from "next/head";
 import { DefaultSeo } from "next-seo";
 import path from "path";
-import { getThumbnailPath } from "lib/api";
+
+import "@bridge-the-gap/design-system/dist/styles.css";
+import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
   const LayoutComponent = canonical ? LayoutWorkshop : LayoutDefault;
@@ -17,6 +19,8 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
   if (!thumb) {
     thumb = "/seo/thumb.png";
   }
+
+  const getLayout = Component.getLayout || ((page) => page);
 
   return (
     <LayoutComponent>
@@ -47,7 +51,9 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
           cardType: "summary_large_image",
         }}
       />
-      <Component canonical={canonical} baseUrl={baseUrl} {...pageProps} />
+      <LayoutMdx>
+        <Component canonical={canonical} baseUrl={baseUrl} {...pageProps} />
+      </LayoutMdx>
     </LayoutComponent>
   );
 }

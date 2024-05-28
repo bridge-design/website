@@ -1,12 +1,6 @@
-import {
-  Text,
-  Emoji,
-  Card,
-  Icon,
-  CtaLink,
-} from "@bridge-the-gap/design-system";
-import { NextSeo } from "next-seo";
+import { CtaLink, Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
+import { NextSeo } from "next-seo";
 
 export default function IndexPage() {
   return (
@@ -23,8 +17,7 @@ export default function IndexPage() {
       />
       <div className="text-center">
         <Text as="h1" variant="7Xl" className="max-w-5xl mx-auto mb-[14%]">
-          We team up with designers and developers to build and scale design
-          systems.
+          We team up with designers and developers to build and scale design systems.
         </Text>
         <CtaLink
           href="/contact"
