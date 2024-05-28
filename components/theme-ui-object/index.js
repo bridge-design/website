@@ -1,4 +1,4 @@
-export default {
+export const theme = {
   colors: {
     text: "#000",
     background: "#fff",
@@ -63,11 +63,11 @@ export default {
   },
   styles: {
     root: {
-      fontFamily: 'MonoLisa, sans-serif',
+      fontFamily: "MonoLisa, sans-serif",
       fontWeight: 400,
-      fontKerning: 'normal',
-      fontVariantNumeric: 'proportional-nums',
-      fontVariantLigatures: 'common-ligatures contextual historical-ligatures',
+      fontKerning: "normal",
+      fontVariantNumeric: "proportional-nums",
+      fontVariantLigatures: "common-ligatures contextual historical-ligatures",
       fontSize: "16px", // Change the base font size for the website
       lineHeight: 1.5,
     },
