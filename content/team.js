@@ -36,7 +36,6 @@ export const team = {
     description: `Sherif is a senior product designer. He crafts deligthful experiences through
     data analytics, user research, prototypes and validation. Sherif has extensive experience with
     design systems and years of working for financial services, banks and automotive.`,
-    twitter: "#",
     linkedin: "https://www.linkedin.com/in/salehsherif/",
     github: "https://github.com/sherifsaleh",
   },
@@ -69,7 +68,6 @@ export const team = {
     She has been instrumental in various design system projects.
     Her commitment to detail is particularly beneficial in design-system specific tasks, where precision and consistency are key.
     `,
-    twitter: "#",
     linkedin: "https://www.linkedin.com/in/alexandra-stepanova",
     github: "https://github.com/alexandra-stepanova",
   },
