@@ -17,7 +17,7 @@ export default function CustomWorkshop() {
         className="justify-center w-64 mt-8"
         label="Let's talk"
         as="a"
-        href="mailto:mail@bridge-the-gap.dev"
+        href="/contact"
         target="_blank"
         rel="noopener"
       />
