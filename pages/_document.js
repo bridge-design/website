@@ -1,5 +1,7 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
 import ReactGA from "react-ga";
+
+import Document, { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 const GA_TRACKING_ID = "UA-185519437-1";
 const OPT_CONTAINER_ID = "OPT-KRWKXQN";
 function trackPageView() {
@@ -44,9 +46,9 @@ class MyDocument extends Document {
           `,
             }}
           />
-          <script
+          <Script
             src={`https://www.googleoptimize.com/optimize.js?id=${OPT_CONTAINER_ID}`}
-          ></script>
+          ></Script>
           {/* Favicon */}
           <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />

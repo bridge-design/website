@@ -2,9 +2,7 @@ import React from "react";
 
 import { LayoutDefault, LayoutMdx, LayoutWorkshop } from "@components/layout";
 import { getThumbnailPath } from "lib/api";
-import Head from "next/head";
 import { DefaultSeo } from "next-seo";
-import path from "path";
 
 import "@bridge-the-gap/design-system/dist/styles.css";
 import "tailwindcss/tailwind.css";
@@ -19,8 +17,6 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
   if (!thumb) {
     thumb = "/seo/thumb.png";
   }
-
-  const getLayout = Component.getLayout || ((page) => page);
 
   return (
     <LayoutComponent>
