@@ -6,7 +6,7 @@ import { team as btgTeam } from "content/team";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
-export default function LayoutCase({ title, seo, layout, team, ...props }) {
+export default function LayoutCase({ title, seo, team, ...props }) {
   const router = useRouter();
   const currentPath = router.asPath;
 

@@ -3,9 +3,7 @@ import { usePathname } from "next/navigation";
 
 export default function LayoutMdx(props) {
   const pathname = usePathname();
-  if (/\/case-studies\/.+/.test(pathname)) {
-    return <LayoutCase {...props} />;
-  }
+  
   if (/\/blog\/.+/.test(pathname)) {
     return <LayoutBlog {...props} />;
   }
