@@ -1,16 +1,18 @@
 import createMDX from "@next/mdx";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 import path from "path";
+import remarkFrontmatter from "remark-frontmatter";
+import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 
-import frontmatterPlugin from "./lib/frontmatter.mjs";
+// import frontmatterPlugin from "./lib/frontmatter.mjs";
 
 const exportPath = process.env.GORIGHT_EXPORT;
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
+    remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
     providerImportSource: "@mdx-js/react",
-    remarkPlugins: [frontmatterPlugin],
   },
 });
 

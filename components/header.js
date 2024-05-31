@@ -1,6 +1,7 @@
 import React from "react";
-import Link from "@components/link";
+
 import { Logo, Nav } from "@bridge-the-gap/design-system";
+import Link from "@components/link";
 
 export default function Header({ navItems }) {
   return (
