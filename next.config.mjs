@@ -11,7 +11,7 @@ const exportPath = process.env.GORIGHT_EXPORT;
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+    remarkPlugins: [remarkFrontmatter],
     providerImportSource: "@mdx-js/react",
   },
 });
@@ -34,7 +34,7 @@ const config = {
     // @source: https://dev.to/jokeneversoke/adding-relative-img-paths-to-mdx-59l4
     let rule = config.module.rules.find((rule) => String(rule.test) === String(/\.mdx?$/));
 
-    rule.use.push({ loader: path.resolve(process.cwd(), "lib/mdxLoader.js") });
+    rule.use.push({ loader: path.resolve(process.cwd(), "./lib/mdxLoader.js") });
 
     if (isServer) {
       config.plugins.push(
@@ -57,7 +57,7 @@ const config = {
     const resultMap = {
       "/handout/v2/releasing-library": {
         page: "/hands-on-workshop/handout/v2/releasing-library",
-        query: { canonical: true },
+        query: { canonical: "true" },
       },
     };
 
@@ -68,7 +68,7 @@ const config = {
           const newPath =
             path.length === exportPath.length ? "/" : path.substring(exportPath.length);
           resultMap[newPath] = Object.assign(defaultPathMap[path], {
-            query: { canonical: true },
+            query: { canonical: "true" },
           });
         }
       });

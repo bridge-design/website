@@ -5,10 +5,10 @@ import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
-export default function LayoutBlog({ title, seo, layout, ...props }) {
+export default function LayoutBlog({ title, seo, ...props }) {
   const router = useRouter();
   const currentPath = router.asPath;
-  const meta = { title, ...seo };
+
   const getParentPath = (currentPath) => {
     if (currentPath.endsWith("/")) {
       currentPath = currentPath.substring(0, currentPath.length - 1); //make sure there is no trailing slash

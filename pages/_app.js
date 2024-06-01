@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LayoutDefault, LayoutMdx, LayoutWorkshop } from "@components/layout";
+import { LayoutDefault, LayoutWorkshop } from "@components/layout";
 import { getThumbnailPath } from "lib/api";
 import { DefaultSeo } from "next-seo";
 
@@ -47,9 +47,7 @@ function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
           cardType: "summary_large_image",
         }}
       />
-      <LayoutMdx>
-        <Component canonical={canonical} baseUrl={baseUrl} {...pageProps} />
-      </LayoutMdx>
+      <Component canonical={canonical} baseUrl={baseUrl} {...pageProps} />
     </LayoutComponent>
   );
 }
