@@ -1,6 +1,6 @@
 import { People } from "@components/People";
-import { NextSeo } from "next-seo";
 import { team } from "content/team";
+import { NextSeo } from "next-seo";
 export default function About() {
   const people = Object.values(team);
   return (

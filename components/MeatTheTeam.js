@@ -1,14 +1,11 @@
 import React from "react";
-import { Text, ProfileCard } from "@bridge-the-gap/design-system";
+
+import { ProfileCard, Text } from "@bridge-the-gap/design-system";
 
 export default function MeatTheTeam() {
   return (
     <>
-      <Text
-        as="h2"
-        variant="4xl"
-        className="mt-32 animate-fadein animate-reveal"
-      >
+      <Text as="h2" variant="4xl" className="mt-32 animate-reveal">
         Meet the team
       </Text>
       <div className="flex flex-wrap justify-center gap-10 mt-10 xl:grid xl:grid-cols-2 lg:flex lg:flex-col md:grid md:grid-cols-2">

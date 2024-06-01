@@ -5,10 +5,9 @@ import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
-export default function HandoutLayout({ title, seo, layout, children, ...props }) {
+export default function HandoutLayout({ title, seo, ...props }) {
   const router = useRouter();
   const currentPath = router.asPath;
-  const meta = { title, ...seo };
 
   const getParentPath = (currentPath) => {
     if (currentPath.endsWith("/")) {
@@ -48,7 +47,7 @@ export default function HandoutLayout({ title, seo, layout, children, ...props }
           {title}
         </Text>
         <div className="px-4 mx-auto my-8 prose text-justify ">
-          <MDXProvider components={MDXComponents}>{children}</MDXProvider>
+          <MDXProvider components={MDXComponents}>{props.children}</MDXProvider>
         </div>
       </div>
     </>

@@ -12,7 +12,7 @@ import WhyAttend from "@components/WhyAttend";
 import WorkshopContent from "@components/WorkshopContent";
 import { NextSeo } from "next-seo";
 
-export default function Workshop({ canonical, baseUrl, ...props }) {
+export default function Workshop({ canonical, baseUrl }) {
   return (
     <>
       <NextSeo
