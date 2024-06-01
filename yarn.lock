@@ -3635,6 +3635,11 @@ internal-slot@^1.0.7:
     hasown "^2.0.0"
     side-channel "^1.0.4"
 
+is-absolute-url@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/is-absolute-url/-/is-absolute-url-4.0.1.tgz#16e4d487d4fded05cfe0685e53ec86804a5e94dc"
+  integrity sha512-/51/TKE88Lmm7Gc4/8btclNXWS+g50wXhYJq8HWIBAGUBnoAdRu1aXeh364t/O7wXDAcTJDP8PNuNKWUDWie+A==
+
 is-alphabetical@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/is-alphabetical/-/is-alphabetical-2.0.1.tgz#01072053ea7c1036df3c7d19a6daaec7f19e789b"
@@ -3824,6 +3829,13 @@ is-regexp@^3.1.0:
   resolved "https://registry.yarnpkg.com/is-regexp/-/is-regexp-3.1.0.tgz#0235eab9cda5b83f96ac4a263d8c32c9d5ad7422"
   integrity sha512-rbku49cWloU5bSMI+zaRaXdQHXnthP6DZ/vLnfdSKyL4zUzuWnomtOEiZZOd+ioQ+avFo/qau3KPTc7Fjy1uPA==
 
+is-relative-url@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/is-relative-url/-/is-relative-url-4.0.0.tgz#4d8371999ff6033b76e4d9972fb5bf496fddfa97"
+  integrity sha512-PkzoL1qKAYXNFct5IKdKRH/iBQou/oCC85QhXj6WKtUQBliZ4Yfd3Zk27RHu9KQG8r6zgvAA2AQKC9p+rqTszg==
+  dependencies:
+    is-absolute-url "^4.0.1"
+
 is-set@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/is-set/-/is-set-2.0.3.tgz#8ab209ea424608141372ded6e0cb200ef1d9d01d"
@@ -3861,6 +3873,11 @@ is-typed-array@^1.1.13:
   integrity sha512-uZ25/bUAlUY5fR4OKT4rZQEBrzQWYV9ZJYGGsUmEJ6thodVJ1HX64ePQ6Z0qPWP+m+Uq6e9UugrE38jeYsDSMw==
   dependencies:
     which-typed-array "^1.1.14"
+
+is-url@^1.0.0:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/is-url/-/is-url-1.2.4.tgz#04a4df46d28c4cff3d73d01ff06abeb318a1aa52"
+  integrity sha512-ITvGim8FhRiYe4IQ5uHSkj7pVaPDrCTkNd3yq3cV7iZAcJdHTUMPMEHcqSOy9xZ9qFenQCvi+2wjH9a1nXqHww==
 
 is-weakmap@^2.0.2:
   version "2.0.2"
@@ -4589,6 +4606,11 @@ micromatch@^4.0.4, micromatch@^4.0.5:
     braces "^3.0.3"
     picomatch "^2.3.1"
 
+mime@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
+  integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
+
 minimatch@9.0.3:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.3.tgz#a6e00c3de44c3a542bfaae70abfc22420a6da825"
@@ -5196,6 +5218,17 @@ regjsparser@^0.9.1:
   dependencies:
     jsesc "~0.5.0"
 
+remark-embed-images@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/remark-embed-images/-/remark-embed-images-4.0.0.tgz#95747895bfe37c2d068ade17f07956354ae38599"
+  integrity sha512-c8qQMdhNTSO9TMMfbvf5CWI+HhIX5UZPTBVNaNSpxaEuRt0KCLFk68s5CQ7szbSERLnpos+c9K6xZoILWRh+eQ==
+  dependencies:
+    "@types/mdast" "^4.0.0"
+    is-relative-url "^4.0.0"
+    mime "^3.0.0"
+    unist-util-visit "^5.0.0"
+    vfile "^6.0.0"
+
 remark-frontmatter@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/remark-frontmatter/-/remark-frontmatter-5.0.0.tgz#b68d61552a421ec412c76f4f66c344627dc187a2"
@@ -5205,6 +5238,17 @@ remark-frontmatter@^5.0.0:
     mdast-util-frontmatter "^2.0.0"
     micromark-extension-frontmatter "^2.0.0"
     unified "^11.0.0"
+
+remark-images@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/remark-images/-/remark-images-4.0.0.tgz#2858a48496dcf06497dfe1c03940c1a750d0dc3e"
+  integrity sha512-YDZffkzmDWAve3tphTLZXlATb7TkJxTxqTJGrZDr+DSCMtVm78rCf4FORB/B+G64B0xGeXDfE6FUUb5mlTg3SQ==
+  dependencies:
+    "@types/mdast" "^4.0.0"
+    collapse-white-space "^2.0.0"
+    is-url "^1.0.0"
+    unist-util-position "^5.0.0"
+    unist-util-visit-parents "^6.0.0"
 
 remark-mdx-frontmatter@^4.0.0:
   version "4.0.0"
@@ -5217,6 +5261,15 @@ remark-mdx-frontmatter@^4.0.0:
     toml "^3.0.0"
     unified "^11.0.0"
     yaml "^2.0.0"
+
+remark-mdx-images@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/remark-mdx-images/-/remark-mdx-images-3.0.0.tgz#e8a2b8dfad3eab72aea345f805040297702ac446"
+  integrity sha512-EKpqw11XUprx/kFQPEkH3GdPEqI63Wcq5GT120N2hGlKCSwOM09NtL1i3G9HQ4TBIR2aF471HF5YStME5ukbJw==
+  dependencies:
+    "@types/mdast" "^4.0.0"
+    unified "^11.0.0"
+    unist-util-visit "^5.0.0"
 
 remark-mdx@^3.0.0:
   version "3.0.1"
@@ -5246,6 +5299,15 @@ remark-rehype@^11.0.0:
     mdast-util-to-hast "^13.0.0"
     unified "^11.0.0"
     vfile "^6.0.0"
+
+remark-unwrap-images@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/remark-unwrap-images/-/remark-unwrap-images-4.0.0.tgz#ea22d91c06daccdc7fad6cb2449ea77b10421b05"
+  integrity sha512-Ilr5ZhrhZSvnjemy1rRuxlTC0I/39YyWDRiE9d5vF079APcwdYYzwcZL8RGehlCtQCiik8hWMyo4Xhz2Fq0JhA==
+  dependencies:
+    "@types/mdast" "^4.0.0"
+    hast-util-whitespace "^3.0.0"
+    unist-util-visit "^5.0.0"
 
 require-from-string@^2.0.2:
   version "2.0.2"

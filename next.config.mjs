@@ -1,8 +1,9 @@
 import createMDX from "@next/mdx";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 import path from "path";
+import remarkEmbedImages from "remark-embed-images";
 import remarkFrontmatter from "remark-frontmatter";
-import remarkMdxFrontmatter from "remark-mdx-frontmatter";
+import remarkUnwrapImages from "remark-unwrap-images";
 
 // import frontmatterPlugin from "./lib/frontmatter.mjs";
 
@@ -11,7 +12,7 @@ const exportPath = process.env.GORIGHT_EXPORT;
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkFrontmatter],
+    remarkPlugins: [remarkFrontmatter, remarkEmbedImages, remarkUnwrapImages],
     providerImportSource: "@mdx-js/react",
   },
 });
@@ -32,9 +33,8 @@ const config = {
     });
     // replace images with NextImage and require statement in mdx files
     // @source: https://dev.to/jokeneversoke/adding-relative-img-paths-to-mdx-59l4
-    let rule = config.module.rules.find((rule) => String(rule.test) === String(/\.mdx?$/));
-
-    rule.use.push({ loader: path.resolve(process.cwd(), "./lib/mdxLoader.js") });
+    // let rule = config.module.rules.find((rule) => String(rule.test) === String(/\.mdx?$/));
+    // rule.use.push({ loader: path.resolve(process.cwd(), "./lib/mdxLoader.js") });
 
     if (isServer) {
       config.plugins.push(
