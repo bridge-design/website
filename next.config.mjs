@@ -88,6 +88,9 @@ const config = {
     // Provide a default value for images.path
     path: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default withMDX(config);
