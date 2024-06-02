@@ -4,8 +4,9 @@
 
 - `yarn dev` - starts development server.
 - `yarn build` - creates production build.
-- `yarn export` - exports static files to `/out` directory.
-- `yarn export:hands-on-workshop` - creates static export for `hands-on-workshop.goright.io`.
+<!-- - `yarn export` - exports static files to `/out` directory.
+- `yarn export:hands-on-workshop` - creates static export for `hands-on-workshop.goright.io`. -->
+- `yarn export` - deprecated at next@14 and higher. Use `yarn build` instead.
 - `yarn deploy` - deploys previously exported static assets. Normally should not be needed, because deploy is handled via Github Actions.
 
 ## Adding new articles to blog.

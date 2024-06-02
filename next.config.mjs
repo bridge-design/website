@@ -19,6 +19,7 @@ const withMDX = createMDX({
 
 /** @type {import('next').NextConfig} */
 const config = {
+  output: "export",
   webpack: (config, { isServer }) => {
     // @see: https://github.com/vercel/next.js/issues/9866#issuecomment-881799911
     if (!isServer) {
@@ -76,7 +77,6 @@ const config = {
     }
     return defaultPathMap;
   },
-  output: "export",
   basePath: process.env.BASEPATH ? process.env.BASEPATH : "",
   assetPrefix: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
   pageExtensions: ["js", "jsx", "md", "mdx"],

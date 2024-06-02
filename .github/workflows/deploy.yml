@@ -33,8 +33,8 @@ jobs:
       - name: Build
         run: yarn build
         
-      - name: Export static files for main site
-        run: yarn export
+      # - name: Export static files for main site
+        # run: yarn export
         
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.0

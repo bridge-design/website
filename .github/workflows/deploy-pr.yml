@@ -38,8 +38,8 @@ jobs:
       - name: Build
         run: BASEPATH=/pr:${{ github.event.number }} yarn build
         
-      - name: Export static files for main site
-        run: BASEPATH=/pr:${{ github.event.number }} yarn export
+      # - name: Export static files for main site
+        # run: BASEPATH=/pr:${{ github.event.number }} yarn export
                 
       - run: echo ${{ steps.extract_branch.outputs.branch }}
       
