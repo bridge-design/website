@@ -77,6 +77,7 @@ const config = {
     return defaultPathMap;
   },
   basePath: process.env.BASEPATH ? process.env.BASEPATH : "",
+  output: "export",
   assetPrefix: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
   pageExtensions: ["js", "jsx", "md", "mdx"],
   trailingSlash: true,
