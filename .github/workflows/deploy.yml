@@ -35,6 +35,7 @@ jobs:
         
       # - name: Export static files for main site
         # run: yarn export
+        # - `yarn export` - deprecated at next@14 and higher. Use `yarn build` instead.
         
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.0

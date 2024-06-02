@@ -9,7 +9,7 @@
 - `yarn export` - deprecated at next@14 and higher. Use `yarn build` instead.
 - `yarn deploy` - deploys previously exported static assets. Normally should not be needed, because deploy is handled via Github Actions.
 
-## Adding new articles to blog.
+## Adding new articles to blog
 
 Add a new directory named as the desired slug for the post, into `src/pages/blog` directory. Create `index.mdx` inside that directory and add your content. Any images or other assets can be also stored in the folder.
 `index.mdx` can contain frontmatter, which will be used for rendering the page. Frontmatter is written in `yaml` syntax, and always separated with `---` at the beginning and the end. See an example with comments:
@@ -34,7 +34,6 @@ All metadata can be added under `seo` section and need to match [NextSeo Options
 ## Deploy
 
 Deployment is handled by Github Actions workflow, which is triggered on push into `main` bran
-
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
