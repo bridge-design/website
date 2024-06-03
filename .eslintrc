@@ -12,18 +12,18 @@
           ["@/(.*)"],
           ["^[./]"],
           ["^\\."],
-          ["^.+\\.css$", "^classnames$"]
-        ]
-      }
+          ["^.+\\.css$", "^classnames$"],
+        ],
+      },
     ],
     "simple-import-sort/exports": "warn",
     "react/jsx-key": "error",
     "no-unused-expressions": ["warn", { "allowShortCircuit": true, "allowTernary": true }],
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
   },
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": "latest"
+    "ecmaVersion": "latest",
   },
-  "ignorePatterns": ["node_modules/*", ".next/*"]
+  "ignorePatterns": ["node_modules/*", ".next/*"],
 }
