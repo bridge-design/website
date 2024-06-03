@@ -5,7 +5,7 @@ import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
-export default function HandoutLayout({ title, seo, ...props }) {
+export default function LayoutHandout({ title, seo, ...props }) {
   const router = useRouter();
   const currentPath = router.asPath;
 

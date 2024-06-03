@@ -1,8 +1,11 @@
 ---
 title: Preparing to release
 layout: LayoutHandout
-
 ---
+
+import LayoutHandout from "../../../components/layout/layoutHandout";
+
+<LayoutHandout title="Preparing to release">
 
 ### Day 2:
 
@@ -10,16 +13,14 @@ layout: LayoutHandout
 1. Prepare to the release
 1. Run visual regression tests
 
-
 We are picking up where we left yesterday. You have received a new pull request in your repository with a set of components according to your UI inventory. Please review it and make sure that everything is working.
 If you didn't complete all the tasks yesterday, please revisit [coding practice](./coding-practice) page, and prepare your design tokens according instructions.
 
 ## 1. Update the components with tokens
 
-Although the components were provided ready, the style values are hardcoded. 
+Although the components were provided ready, the style values are hardcoded.
 
 **Let's bring tokens into the code.**
-
 
 ## 2. Writing new components
 
@@ -42,6 +43,7 @@ which is `design-system/src/index.js`. If you want to rename or remove a compone
 don't forget to change it accordingly.
 
 ### What do I code?
+
 Check [https://component.gallery/](https://component.gallery/) to get ideas on how to fill your
 component with code.
 
@@ -53,7 +55,7 @@ component with code.
 
 ## 4. Visual regression tests
 
-**Note**. *Creevey requires Docker to be installed.*
+**Note**. _Creevey requires Docker to be installed._
 
 To keep the system consistent, you should always provide visual references for your
 components. This will make automatic testing work smoothly. This is how
@@ -61,11 +63,10 @@ you can do it:
 
 1. Run the testing UI with `yarn test:ui`
 2. Run the tests and examine the results
-1. Noticed the inconcistency? Fix and run the tests again.
-2. There is a change but you were expecting it? Approve.
- 
-**Hint**. *Use `yarn test:update` to approve all screenshots at once*
+3. Noticed the inconcistency? Fix and run the tests again.
+4. There is a change but you were expecting it? Approve.
 
+**Hint**. _Use `yarn test:update` to approve all screenshots at once_
 
 If you created a new component, or visualy changed the existing one, it
 will always go with the change of their visual references. Notice the changes
@@ -75,4 +76,6 @@ ensures the tests automation.
 
 ## Goals
 
-Overall you have 1 hour 45 minutes to prepare the first version of your library for release. Call us to join you in breakout room if you have any questions. 
+Overall you have 1 hour 45 minutes to prepare the first version of your library for release. Call us to join you in breakout room if you have any questions.
+
+</ LayoutHandout>
