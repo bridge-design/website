@@ -1,8 +1,3 @@
----
-title: Product Release
-layout: LayoutHandout
----
-
 import LayoutHandout from "../../../components/layout/layoutHandout";
 
 <LayoutHandout title="Product Release">
@@ -15,7 +10,6 @@ the product with the following command:
 ```
 yarn product:build
 ```
-
 
 ## Preparing for deployment
 
@@ -32,7 +26,6 @@ If you want to take advantage of Github Actions and continuosly deploy your prod
 }
 ```
 
-
 ## Releasing the product
 
 1. When you are ready to release the product, you need to run the following command to bump the version:
@@ -42,6 +35,7 @@ yarn product:version
 ```
 
 2. As soon as you push your commits to main branch, a Github Action(`.github/workflows/release.yml`) will be triggered. It performs two tasks:
+
 - Checks the version of the product and compare it with previous one.
 - If version change is detected, build and deploy workflow is activated.
 
@@ -53,10 +47,10 @@ yarn deploy
 
 ## Goals
 
-Overall you have 1 hour for the following tasks: 
+Overall you have 1 hour for the following tasks:
 
 - Update your product with tokens (as described at [Product Update](../product-update) page)
-- When your designers will share with you the design updates, which you will need to bring into your library and product. The process is described in the next section: [Cast in Code](../cast-in-code) 
+- When your designers will share with you the design updates, which you will need to bring into your library and product. The process is described in the next section: [Cast in Code](../cast-in-code)
 - Release the new version of library and product, as described above.
 - If you finish early, visit bonus section - [Automatic synchronizations](../autosync)
 
