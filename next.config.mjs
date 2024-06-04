@@ -37,20 +37,20 @@ const config = {
     // let rule = config.module.rules.find((rule) => String(rule.test) === String(/\.mdx?$/));
     // rule.use.push({ loader: path.resolve(process.cwd(), "./lib/mdxLoader.js") });
 
-    if (isServer) {
-      config.plugins.push(
-        new CopyWebpackPlugin({
-          patterns: [
-            {
-              from: "**/thumb.{png,jpg,jpeg,gif}",
-              context: path.resolve(process.cwd(), "pages"),
-              to: path.join(process.cwd(), "public", "images"),
-              noErrorOnMissing: true,
-            },
-          ],
-        })
-      );
-    }
+    // if (isServer) {
+    //   config.plugins.push(
+    //     new CopyWebpackPlugin({
+    //       patterns: [
+    //         {
+    //           from: "**/thumb.{png,jpg,jpeg,gif}",
+    //           context: path.resolve(process.cwd(), "pages"),
+    //           to: path.join(process.cwd(), "public", "images"),
+    //           noErrorOnMissing: true,
+    //         },
+    //       ],
+    //     })
+    //   );
+    // }
 
     return config;
   },

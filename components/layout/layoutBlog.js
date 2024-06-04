@@ -35,7 +35,7 @@ export default function LayoutBlog({ title, seo, ...props }) {
           site_name: "Bridge-the-Gap.dev",
           images: [
             {
-              url: `${base_path}/images${router.asPath}thumb.png`,
+              url: `/images${currentPath}thumb.png`,
               alt: title,
             },
           ],
