@@ -78,17 +78,17 @@ const config = {
     return defaultPathMap;
   },
   basePath: process.env.BASEPATH ? process.env.BASEPATH : "",
-  assetPrefix: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
+  // assetPrefix: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
   pageExtensions: ["js", "jsx", "md", "mdx"],
   trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
   // workaround, see: https://github.com/vercel/next.js/issues/21079
-  // images: {
-  //   loader: "imgix",
-  //   // Provide a default value for images.path
-  //   path: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
-  // },
+  images: {
+    loader: "imgix",
+    //   // Provide a default value for images.path
+    path: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
