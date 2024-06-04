@@ -21,8 +21,6 @@ export default function LayoutBlog({ title, seo, ...props }) {
 
   const blogPagePath = currentPath ? getParentPath(currentPath) : "./";
 
-  const base_path = process.env.BASEPATH ? process.env.BASEPATH : "";
-
   return (
     <>
       <NextSeo
@@ -35,7 +33,7 @@ export default function LayoutBlog({ title, seo, ...props }) {
           site_name: "Bridge-the-Gap.dev",
           images: [
             {
-              url: `/images${currentPath}thumb.png`,
+              url: `${router.basePath}/images${router.asPath}thumb.png`,
               alt: title,
             },
           ],
