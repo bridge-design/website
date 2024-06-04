@@ -1053,10 +1053,10 @@
     "@babel/helper-validator-identifier" "^7.24.6"
     to-fast-properties "^2.0.0"
 
-"@bridge-the-gap/design-system@2.4.2":
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/@bridge-the-gap/design-system/-/design-system-2.4.2.tgz#c593762de173eb191009a59088a96f96a27d267b"
-  integrity sha512-IBuFo79xzRRb+TKGrE298yNI3LzWn/AfggfjFi4ZyFFGYBG5EgNaFwU7v/jL0H2MIIBkfCu1N0faYwB2QTvc0A==
+"@bridge-the-gap/design-system@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@bridge-the-gap/design-system/-/design-system-2.5.0.tgz#a886b7b5caecbe3d35e61bdfa53a808148384267"
+  integrity sha512-uOXVlLjWkH7m8Q/EFzunyJtnp6Tanjt736d1E3A6E694gifA9IwynzUD48nOlD3TJr2jFLU6X0ahMPtgTCss/A==
   dependencies:
     "@babel/plugin-proposal-object-rest-spread" "7.20.7"
     "@tailwindcss/typography" "0.5.9"
