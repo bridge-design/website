@@ -34,7 +34,7 @@ export default function LayoutCase({ title, seo, team, ...props }) {
           site_name: "Bridge-the-Gap.dev",
           images: [
             {
-              url: `/images${router.asPath}thumb.png`,
+              url: `${router.basePath}/images${router.asPath}thumb.png`,
               alt: title,
             },
           ],
