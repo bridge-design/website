@@ -87,7 +87,7 @@ const config = {
   images: {
     loader: "imgix",
     // Provide a default value for images.path
-    path: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
+    // path: process.env.BASEPATH ? process.env.BASEPATH + "/" : "",
   },
   eslint: {
     ignoreDuringBuilds: true,
