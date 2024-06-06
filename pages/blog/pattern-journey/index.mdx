@@ -13,7 +13,16 @@ seo:
 
 ---
 
+import LayoutBlog from '@components/layout/layoutBlog';
 
+<LayoutBlog 
+  title="Pattern Journey"
+  date="2021-07-25"
+  description="A process of maintaining and extending design systems"
+  seo={{
+    desc: "Visual illustration and explanation of what happens to a pattern on its way from identifying to actual implementation and how different the path might be depending on the situation. The Pattern Journey interactive tool helps to make more people in the organization involved into co-creation of design and development value under the Design Systems umbrella.",
+    canonical: "https://varya.me/design-systems/pattern-journey/"
+  }}>
 
 Design System artifacts whether it is a library of components, UI kit in Sketch, description of UI tokens or pieces of
 documentation for the visual language are maintained and developed similarly to regular products. However, usually,
@@ -196,3 +205,4 @@ in the Design System are changed and shapen.
 
 #### Source
 This article was originally published at [varya.me](https://varya.me/design-systems/pattern-journey/).
+</LayoutBlog>

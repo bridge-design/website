@@ -1,25 +1,15 @@
-import { MDXProvider } from "@mdx-js/react";
+import { CtaLink, Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
-import { Text, CtaLink } from "@bridge-the-gap/design-system";
+import MDXComponents from "@components/MDXComponents";
+import { MDXProvider } from "@mdx-js/react";
+import { team as btgTeam } from "content/team";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import path from "path";
-import Image from "next/image";
-import { team as btgTeam } from "content/team";
-const myLoader = ({ src, width, quality }) => {
-  return `${src}?w=${width}&q=${quality || 75}`;
-};
 
-const MDXComponents = {
-  a: Link,
-  Image: (props) => <Image loader={myLoader} {...props} />, // cannot use real NextImage, because it doesn't work in static export
-  p: (props) => <p className="mb-2" {...props} />,
-};
-export default function LayoutBlog({ title, seo, layout, team, ...props }) {
-  console.log("🚀 ~ file: layoutCase.js:19 ~ LayoutBlog ~ title:", title, team);
+export default function LayoutCase({ title, seo, team, ...props }) {
   const router = useRouter();
   const currentPath = router.asPath;
-  const meta = { title, team, ...seo };
+
   const getParentPath = (currentPath) => {
     if (currentPath.endsWith("/")) {
       currentPath = currentPath.substring(0, currentPath.length - 1); //make sure there is no trailing slash
@@ -59,10 +49,7 @@ export default function LayoutBlog({ title, seo, layout, team, ...props }) {
             </CtaLink>
           </div>
         </div>
-        <Text
-          variant="6Xl"
-          className="w-full mt-12 mb-24 text-center text-light-on-background-900"
-        >
+        <Text variant="6Xl" className="w-full mt-12 mb-24 text-center text-light-on-background-900">
           {title}
         </Text>
         {team && team.length > 0 && <ProjectTeam team={team} />}
@@ -78,7 +65,7 @@ export const ProjectTeam = ({ team }) => {
   return (
     <div className="flex justify-center w-full">
       {team.map((name) => (
-        <Avatar name={name} />
+        <Avatar key={name} name={name} />
       ))}
     </div>
   );
@@ -87,7 +74,7 @@ export const ProjectTeam = ({ team }) => {
 const Avatar = ({ name }) => {
   return (
     <div className="relative flex mb-8 -mr-4 group flex-column ">
-      <div className="w-12 h-12 overflow-hidden border border-2 rounded-full border-light-on-background-300 group group-hover:scale-105 transition-200">
+      <div className="w-12 h-12 overflow-hidden border-2 rounded-full border-light-on-background-300 group group-hover:scale-105 transition-200">
         <img
           src={btgTeam[name].photoUrl}
           title={btgTeam[name].name}
@@ -95,7 +82,7 @@ const Avatar = ({ name }) => {
           className="w-full rounded-full"
         />
       </div>
-      <p className="w-20 text-center absolute invisible h-8 text-center -left-1/2 tranlate-x-0.5 text-small -bottom-8 group-hover:visible text-xs">
+      <p className="w-20 absolute invisible h-8 text-center -left-1/2 tranlate-x-0.5 text-small -bottom-8 group-hover:visible text-xs">
         {btgTeam[name].name}
       </p>
     </div>

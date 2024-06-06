@@ -1,16 +1,7 @@
-import { Text, Icon } from "@bridge-the-gap/design-system";
-import SectionTitle from "@components/SectionTitle";
+import { Icon, Text } from "@bridge-the-gap/design-system";
 
 // Order of logos can be changed here.
-const logos = [
-  "planet",
-  "vaisala",
-  "scoutbee",
-  "buildie",
-  "paxful",
-  "storaenso",
-  "castor",
-];
+const logos = ["planet", "vaisala", "scoutbee", "buildie", "paxful", "storaenso", "castor"];
 export default function TeamsAttended() {
   return (
     <div className="max-w-4xl mx-auto mt-28">

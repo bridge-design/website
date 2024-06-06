@@ -1,7 +1,9 @@
 import React from "react";
+
+import { Text } from "@bridge-the-gap/design-system";
+
 import ArrowIcon from "../public/arrow.svg";
 import ArrowLeftIcon from "../public/arrow-left.svg";
-import { Text } from "@bridge-the-gap/design-system";
 
 export default function BreadCrumbsArrows() {
   return (

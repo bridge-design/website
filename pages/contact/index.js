@@ -1,23 +1,22 @@
 import { useState } from "react";
-import { Text, CtaLink } from "@bridge-the-gap/design-system";
-import Link from "@components/link";
-import CopyText from "../../public/copy-doc.svg";
 import { InlineWidget } from "react-calendly";
+
+import { CtaLink, Text } from "@bridge-the-gap/design-system";
+import Link from "@components/link";
+
+import CopyText from "../../public/copy-doc.svg";
 const Contact = () => {
   const [copyToClipboard, setCopyToClipboard] = useState("");
   return (
     <>
       <Text className="text-center mt-16">
-        Book a 30-minute session with our design system architect Varya to
-        discuss your project.
+        Book a 30-minute session with our design system architect Varya to discuss your project.
       </Text>
       <InlineWidget
         styles={{ minWidth: "320px", height: "660px" }}
         url="https://calendly.com/var_ya/30min"
       />
-      <Text className="py-8 text-center">
-        Or send an email with your request
-      </Text>
+      <Text className="py-8 text-center">Or send an email with your request</Text>
       <div className="flex items-center justify-center gap-5 text-center">
         <CtaLink href="mailto:mail@bridge-the-gap.dev" as={Link} underline>
           mail@bridge-the-gap.dev

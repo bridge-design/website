@@ -1,11 +1,4 @@
-import {
-  Text,
-  CtaLink,
-  Testimonial,
-  Advantages,
-  ProfileCard,
-  HelpTeams,
-} from "@bridge-the-gap/design-system";
+import { Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
 import PreCode from "@components/PreCode";
 import TableComponent from "@components/TableComponent";
@@ -53,10 +46,10 @@ const Showcases = () => {
           </Text>
         </div>
         <Text as="p" variant="lg">
-          We hear you, but we're not convinced that simply disabling our base styles is what you
-          really want. You don't want to have to remove annoying margins every time you use a p
-          element in a piece of your dashboard UI. And I doubt you really want your blog posts to
-          use the user-agent styles either — you want them to look awesome, not awful.
+          We hear you, but we&apos;re not convinced that simply disabling our base styles is what
+          you really want. You don&apos;t want to have to remove annoying margins every time you use
+          a p element in a piece of your dashboard UI. And I doubt you really want your blog posts
+          to use the user-agent styles either — you want them to look awesome, not awful.
         </Text>
         <Text as="p" variant="lg" className="mt-6">
           The{" "}
@@ -83,35 +76,35 @@ const Showcases = () => {
           What to expect from here on out
         </Text>
         <Text as="p" variant="lg" className="mt-10">
-          What follows from here is just a bunch of absolute nonsense I've written to dogfood the
-          plugin itself. It includes every sensible typographic element I could think of, like{" "}
+          What follows from here is just a bunch of absolute nonsense I&apos;ve written to dogfood
+          the plugin itself. It includes every sensible typographic element I could think of, like{" "}
           <span className="text-lgMedium font-lgMedium tracking-lgMedium leading-lgMedium">
             bold text
           </span>
           , unordered lists, ordered lists, code blocks, block quotes, and even italics.
         </Text>
         <Text as="p" variant="lg" className="mt-6">
-          It's important to cover all of these use cases for a few reasons:
+          It&apos;s important to cover all of these use cases for a few reasons:
         </Text>
         <Text variant="lg" className="mt-6">
           <ol className="pl-6 list-decimal">
             <li>We want everything to look good out of the box.</li>
-            <li>Really just the first reason, that's the whole point of the plugin.</li>
+            <li>Really just the first reason, that&apos;s the whole point of the plugin.</li>
             <li>
-              Here's a third pretend reason though a list with three items looks more realistic than
-              a list with two items.
+              Here&apos;s a third pretend reason though a list with three items looks more realistic
+              than a list with two items.
             </li>
           </ol>
         </Text>
         <Text as="p" variant="lg" className="mt-6">
-          Now we're going to try out another header style.
+          Now we&apos;re going to try out another header style.
         </Text>
         <Text as="h1" variant="2xlMedium" className="mt-9">
           Typography should be easy
         </Text>
         <Text as="p" variant="lg" className="mt-4">
-          So that's a header for you — with any luck if we've done our job correctly that will look
-          pretty reasonable.
+          So that&apos;s a header for you — with any luck if we&apos;ve done our job correctly that
+          will look pretty reasonable.
         </Text>
         <Text as="p" variant="lg" className="mt-6">
           Something a wise person once told me about typography is:
@@ -129,17 +122,15 @@ const Showcases = () => {
           of classical Latin literature from 45 BC, making it over 2000 years old.
         </Text>
         <Text variant="lg" className="mt-6">
-          Now I'm going to show you an example of an unordered list too:
+          Now I&apos;m going to show you an example of an unordered list too:
         </Text>
+        <ul className="pl-6 list-disc">
+          <li>So here is the first item in this list.</li>
+          <li>In this example we&apos;re keeping the items short.</li>
+          <li>Later, we&apos;ll use longer, more complex list items.</li>
+        </ul>
         <Text variant="lg" className="mt-6">
-          <ul className="pl-6 list-disc">
-            <li>So here is the first item in this list.</li>
-            <li>In this example we're keeping the items short.</li>
-            <li>Later, we'll use longer, more complex list items.</li>
-          </ul>
-        </Text>
-        <Text variant="lg" className="mt-6">
-          And that's the end of this section.
+          And that&apos;s the end of this section.
         </Text>
         <Text as="h1" variant="3xl" className="mt-16">
           What if we stack headings?
@@ -165,11 +156,11 @@ const Showcases = () => {
         </Text>
         <Text as="p" variant="lg" className="mt-4">
           I almost forgot to mention links, like this link to the Tailwind CSS website. We almost
-          made them blue but that's so yesterday, so we went with dark gray, feels edgier.
+          made them blue but that&apos;s so yesterday, so we went with dark gray, feels edgier.
         </Text>
         <Text as="p" variant="lg" className="mt-4">
           I almost forgot to mention links, like this link to the Tailwind CSS website. We almost
-          made them blue but that's so yesterday, so we went with dark gray, feels edgier.
+          made them blue but that&apos;s so yesterday, so we went with dark gray, feels edgier.
         </Text>
         <TableComponent />
         <Text as="p" variant="lg" className="mt-4">
@@ -189,7 +180,7 @@ const Showcases = () => {
           We should make sure that looks good, too.
         </Text>
         <Text as="p" variant="lg" className="mt-2">
-          But now we have. Please don't use h5 or h6 in your content, Medium only supports two
+          But now we have. Please don&apos;t use h5 or h6 in your content, Medium only supports two
           heading levels for a reason, you animals. I honestly considered using a before
           pseudo-element to scream at you if you use an h5 or h6.
         </Text>

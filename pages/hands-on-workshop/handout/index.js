@@ -1,7 +1,6 @@
 import React from "react";
 
-import { Text, Card, Badge, Emoji } from "@bridge-the-gap/design-system";
-
+import { Badge, Card, Emoji, Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
@@ -107,8 +106,7 @@ export const blocks = [
   {
     title: "Feedback Form",
     slug: "feedback",
-    url:
-      "https://forms.gle/rR2teKjU5LjAcnXz6",
+    url: "https://forms.gle/rR2teKjU5LjAcnXz6",
     roles: ["designer", "developer"],
     day: 2,
   },
@@ -132,14 +130,8 @@ const Blocks = (props) => {
             className={enabled ? "cursor-ponter p-5" : ""}
           >
             <div className="flex">
-              <Badge
-                role="developer"
-                isHidden={!block.roles.includes("developer")}
-              />
-              <Badge
-                role="designer"
-                isHidden={!block.roles.includes("designer")}
-              />
+              <Badge role="developer" isHidden={!block.roles.includes("developer")} />
+              <Badge role="designer" isHidden={!block.roles.includes("designer")} />
             </div>
           </Card>
         );
@@ -149,10 +141,7 @@ const Blocks = (props) => {
             {blockCard}
           </Link>
         ) : (
-          <div
-            className="filter grayscale sopacity-80 hover:none"
-            key={block.title}
-          >
+          <div className="filter grayscale sopacity-80 hover:none" key={block.title}>
             {blockCard}
           </div>
         );
@@ -161,7 +150,7 @@ const Blocks = (props) => {
   );
 };
 
-export default function HandoutPage({ canonical, baseUrl, ...props }) {
+export default function HandoutPage({ canonical, baseUrl }) {
   return (
     <>
       <NextSeo
@@ -197,7 +186,7 @@ export default function HandoutPage({ canonical, baseUrl, ...props }) {
             Hands-on with design systems workshop handout.
           </Text>
           <Text variant="xlBolder" className="mb-6">
-            What's next
+            {`What's next`}
             <Emoji symbol="👇" label="hand" />
           </Text>
         </div>

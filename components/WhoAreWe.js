@@ -1,10 +1,5 @@
-import classnames from "classnames";
-import TwitterIcon from "../public/twitter.svg";
-import LinkedinIcon from "../public/linkedin.svg";
-import Link from "@components/link";
-import SectionTitle from "@components/SectionTitle";
-
 import { People } from "@components/People";
+import SectionTitle from "@components/SectionTitle";
 import { team } from "content/team";
 
 export default function WhoAreWe() {

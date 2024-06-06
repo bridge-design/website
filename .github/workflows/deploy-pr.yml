@@ -38,8 +38,9 @@ jobs:
       - name: Build
         run: BASEPATH=/pr:${{ github.event.number }} yarn build
         
-      - name: Export static files for main site
-        run: BASEPATH=/pr:${{ github.event.number }} yarn export
+      # - name: Export static files for main site
+        # run: BASEPATH=/pr:${{ github.event.number }} yarn export
+        #- `yarn export` - deprecated at next@14 and higher. Use `yarn build` instead.
                 
       - run: echo ${{ steps.extract_branch.outputs.branch }}
       

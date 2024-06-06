@@ -5,12 +5,12 @@ const PreCode = () => {
         <span className="text-blue-400 ">
           <span className="">
             <span className="">&lt;</span>article
-          </span>{" "}
+          </span>
           <span className="token attr-name text-lime-400">class</span>
           <span className="token attr-value">
             <span className=" attr-equals text-neutral-300">=</span>
-            <span className="">"</span>prose
-            <span className="">"</span>
+            <span className="">&quot;</span>prose
+            <span className="">&rdquo;</span>
           </span>
           <span className="">&gt;</span>
         </span>

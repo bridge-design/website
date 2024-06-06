@@ -1,10 +1,6 @@
----
-title: Product Update
-layout: LayoutHandout
+import LayoutHandout from "../../../components/layout/layoutHandout";
 
----
-
-
+<LayoutHandout title="Product Update">
 
 Now the library is ready, and you can change your legacy product
 code with the new fancy components, from the library you have just
@@ -13,33 +9,30 @@ version of the library:
 
 ```diff
   "dependencies": {
--   "design-system": "0.1.0", 
+-   "design-system": "0.1.0",
 +   "design-system": "0.2.0",
     ...
   }
 
 ```
-Now you can change the product files to make use of your new components. 
+
+Now you can change the product files to make use of your new components.
 Keep product server running when making the changes to see them in action .
 
 ```
 yarn product
 ```
 
-
 ### Goals
 
 At this stage, your final goal is to replace the product legacy code
-with the components. Overall you have 1 hour for the following tasks: 
+with the components. Overall you have 1 hour for the following tasks:
 
 - Update your product with tokens (as described at this page)
-- When your designers will share with you the design updates, which you will need to bring into your library and product. The process is described in the next section: [Cast in Code](../cast-in-code) 
+- When your designers will share with you the design updates, which you will need to bring into your library and product. The process is described in the next section: [Cast in Code](../cast-in-code)
 - Release the new version of library and product. Read here about [Product release](../product-release)
 - If you finish early, visit bonus section - [Automatic synchronizations](../autosync)
 
 We will meet in the main room 30 minutes before the end to review what we've done and exchange our experience.
 
-
-
-
-
+</ LayoutHandout>

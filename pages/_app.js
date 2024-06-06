@@ -1,11 +1,11 @@
-import Head from "next/head";
 import React from "react";
+
 import { LayoutDefault, LayoutWorkshop } from "@components/layout";
+import { getThumbnailPath } from "lib/api";
+import { DefaultSeo } from "next-seo";
+
 import "@bridge-the-gap/design-system/dist/styles.css";
 import "tailwindcss/tailwind.css";
-import { DefaultSeo } from "next-seo";
-import path from "path";
-import { getThumbnailPath } from "lib/api";
 
 function MyApp({ Component, baseUrl, canonical, thumb, ...pageProps }) {
   const LayoutComponent = canonical ? LayoutWorkshop : LayoutDefault;

@@ -1,23 +1,14 @@
-import { MDXProvider } from "@mdx-js/react";
+import { CtaLink, Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
-import { Text, CtaLink } from "@bridge-the-gap/design-system";
+import MDXComponents from "@components/MDXComponents";
+import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import path from "path";
-import Image from "next/image";
 
-const myLoader = ({ src, width, quality }) => {
-  return `${src}?w=${width}&q=${quality || 75}`;
-};
-
-const MDXComponents = {
-  a: Link,
-  Image: (props) => <Image loader={myLoader} {...props} />, // cannot use real NextImage, because it doesn't work in static export
-};
-export default function LayoutBlog({ title, seo, layout, ...props }) {
+export default function LayoutBlog({ title, seo, ...props }) {
   const router = useRouter();
   const currentPath = router.asPath;
-  const meta = { title, ...seo };
+
   const getParentPath = (currentPath) => {
     if (currentPath.endsWith("/")) {
       currentPath = currentPath.substring(0, currentPath.length - 1); //make sure there is no trailing slash
@@ -42,7 +33,7 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
           site_name: "Bridge-the-Gap.dev",
           images: [
             {
-              url: `/images${router.asPath}thumb.png`,
+              url: `${router.basePath}/images${router.asPath}thumb.png`,
               alt: title,
             },
           ],
@@ -57,10 +48,7 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
             </CtaLink>
           </div>
         </div>
-        <Text
-          variant="6Xl"
-          className="w-full mt-12 mb-24 text-center text-light-on-background-900"
-        >
+        <Text variant="6Xl" className="w-full mt-12 mb-24 text-center text-light-on-background-900">
           {title}
         </Text>
         <div className="px-4 md:mx-auto my-8 prose text-justify">
@@ -68,5 +56,5 @@ export default function LayoutBlog({ title, seo, layout, ...props }) {
         </div>
       </div>
     </>
-  )
+  );
 }

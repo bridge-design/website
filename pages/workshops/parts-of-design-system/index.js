@@ -1,14 +1,16 @@
-import React from 'react';
-import PartsExercise from '@components/ds-parts';
-import { ThemeProvider } from 'theme-ui'
-import theme from '../../../components/theme-ui-object/index';
+import React from "react";
+
+import PartsExercise from "@components/ds-parts";
+import { ThemeUIProvider } from "theme-ui";
+
+import theme from "../../../components/theme-ui-object/index";
 
 const PartsOfDesignSystem = () => {
-    return (
-        <ThemeProvider theme={theme} >
-            <PartsExercise />
-        </ThemeProvider>
-    )
-}
+  return (
+    <ThemeUIProvider theme={theme}>
+      <PartsExercise />
+    </ThemeUIProvider>
+  );
+};
 
 export default PartsOfDesignSystem;

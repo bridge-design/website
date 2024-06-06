@@ -1,15 +1,8 @@
-import {
-  Text,
-  CtaLink,
-  Testimonial,
-  Advantages,
-  ProfileCard,
-  HelpTeams,
-} from "@bridge-the-gap/design-system";
-import { NextSeo } from "next-seo";
-import Link from "@components/link";
+import { Advantages, CtaLink, HelpTeams, Testimonial, Text } from "@bridge-the-gap/design-system";
 import BreadCrumbsArrows from "@components/BreadCrumbsArrows";
+import Link from "@components/link";
 import MeatTheTeam from "@components/MeatTheTeam";
+import { NextSeo } from "next-seo";
 
 export const CONTENT = [
   {
@@ -36,32 +29,27 @@ export const HOW_IT_WORKS = [
   {
     icon: "UserMultiple",
     title: "Meet the team",
-    description:
-      "Hiring an agency brings additional expertise and knowledge to your business",
+    description: "Hiring an agency brings additional expertise and knowledge to your business",
   },
   {
     icon: "Cursor_1",
     title: "Workshop together",
-    description:
-      "Hiring an agency brings additional expertise and knowledge to your business",
+    description: "Hiring an agency brings additional expertise and knowledge to your business",
   },
   {
     icon: "Network_3Reference",
     title: "Regular alignement",
-    description:
-      "Hiring an agency brings additional expertise and knowledge to your business",
+    description: "Hiring an agency brings additional expertise and knowledge to your business",
   },
   {
     icon: "CircleDash",
     title: "Iterations",
-    description:
-      "Hiring an agency brings additional expertise and knowledge to your business",
+    description: "Hiring an agency brings additional expertise and knowledge to your business",
   },
   {
     icon: "Task",
     title: "Agile",
-    description:
-      "Hiring an agency brings additional expertise and knowledge to your business",
+    description: "Hiring an agency brings additional expertise and knowledge to your business",
   },
 ];
 
@@ -117,20 +105,11 @@ export default function Services() {
           site_name: "Bridge-the-Gap.dev",
         }}
       />
-      <Text
-        as="h1"
-        variant="7Xl"
-        className="mx-auto mt-56 text-center animate-fadein animate-reveal"
-      >
+      <Text as="h1" variant="7Xl" className="mx-auto mt-56 text-center animate-reveal">
         Design system speeds building digital products and time to market
       </Text>
-      <Text
-        as="h2"
-        variant="2XlMedium"
-        className="mx-auto mt-10 text-center animate-fadein animate-reveal"
-      >
-        A reusable components library enabling organization teams to build
-        products efficiently.
+      <Text as="h2" variant="2XlMedium" className="mx-auto mt-10 text-center animate-reveal">
+        A reusable components library enabling organization teams to build products efficiently.
       </Text>
       <CtaLink
         href="/contact"
@@ -153,10 +132,7 @@ export default function Services() {
         How it works
       </Text>
       <Advantages content={HOW_IT_WORKS} />
-      <HelpTeams
-        className="mt-24"
-        photoUrl="/images/meet-the-team/rectangle_14.png"
-      />
+      <HelpTeams className="mt-24" photoUrl="/images/meet-the-team/rectangle_14.png" />
       <Testimonial testimonials={TESTIMONIALS} title={TestimonialTitle} />
       <MeatTheTeam />
     </>

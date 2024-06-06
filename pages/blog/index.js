@@ -1,8 +1,10 @@
+import React from "react";
+
 import { Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
 import { NextSeo } from "next-seo";
+
 import { getAllPosts } from "../../lib/api";
-import React from "react";
 
 export default function Blog({ canonical, pageProps: { posts } }) {
   return (
@@ -19,11 +21,7 @@ export default function Blog({ canonical, pageProps: { posts } }) {
         }}
       />
       <div className="leading-normal tracking-normal text-light-on-background-900">
-        <Text
-          as="h1"
-          variant="6Xl"
-          className="max-w-3xl mx-auto my-24 mb-12 text-center"
-        >
+        <Text as="h1" variant="6Xl" className="max-w-3xl mx-auto my-24 mb-12 text-center">
           The knowlegde we share
         </Text>
         <div className="grid max-w-3xl grid-cols-1 gap-8 mx-auto mt-12">

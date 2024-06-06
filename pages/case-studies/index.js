@@ -1,18 +1,8 @@
-import {
-  Text,
-  CtaLink,
-  Testimonial,
-  Advantages,
-  ProfileCard,
-  HelpTeams,
-} from "@bridge-the-gap/design-system";
-import { NextSeo } from "next-seo";
+import { Text } from "@bridge-the-gap/design-system";
 import Link from "@components/link";
-import BreadCrumbsArrows from "@components/BreadCrumbsArrows";
-import MeatTheTeam from "@components/MeatTheTeam";
-import { getAllCases } from "../../lib/api";
+import { NextSeo } from "next-seo";
 
-const caseStudies = [];
+import { getAllCases } from "../../lib/api";
 
 export default function CaseStudies({ pageProps: { cases } }) {
   return (
@@ -33,7 +23,9 @@ export default function CaseStudies({ pageProps: { cases } }) {
         </Text>
 
         <div className="grid grid-cols-1 gap-20 px-10 md:grid-cols-1 lg:grid-cols-1 py-11">
-          {cases && cases.length > 0 && cases.map((post) => <CaseCard casePost={post} />)}
+          {cases &&
+            cases.length > 0 &&
+            cases.map((post) => <CaseCard key={post.title} casePost={post} />)}
         </div>
       </div>
     </>

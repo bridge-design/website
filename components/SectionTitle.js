@@ -1,12 +1,8 @@
-import classnames from "classnames";
-import { Text, Icon } from "@bridge-the-gap/design-system";
+import { Icon, Text } from "@bridge-the-gap/design-system";
 
-export default function SectionTitle({
-  icon,
-  className,
-  iconClassName,
-  children,
-}) {
+import classnames from "classnames";
+
+export default function SectionTitle({ className, iconClassName, children }) {
   return (
     <div className={classnames("flex items-start", className)}>
       <Icon
