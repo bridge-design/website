@@ -5,7 +5,7 @@ import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
-export default function LayoutBlog({ title, description, seo, ...props }) {
+export default function LayoutBlog({ title, description, thumb, seo, ...props }) {
   const router = useRouter();
   const currentPath = router.asPath;
 
@@ -20,6 +20,7 @@ export default function LayoutBlog({ title, description, seo, ...props }) {
   };
 
   const blogPagePath = currentPath ? getParentPath(currentPath) : "./";
+  const thumbPath = thumb ? `${thumb.src}` : `${router.basePath}/images${router.asPath}thumb.png`;
 
   return (
     <>
@@ -33,7 +34,7 @@ export default function LayoutBlog({ title, description, seo, ...props }) {
           site_name: "Bridge-the-Gap.dev",
           images: [
             {
-              url: `${router.basePath}/images${router.asPath}thumb.png`,
+              url: thumbPath,
               alt: title,
             },
           ],

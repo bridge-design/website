@@ -12,7 +12,11 @@ const exportPath = process.env.GORIGHT_EXPORT;
 const withMDX = createMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkFrontmatter, remarkEmbedImages, remarkUnwrapImages],
+    remarkPlugins: [
+      remarkFrontmatter,
+      remarkEmbedImages,
+      remarkUnwrapImages
+    ],
     providerImportSource: "@mdx-js/react",
   },
 });
