@@ -1,0 +1,236 @@
+---
+title: Defining Components for Design Systems - A Comprehensive Approach
+date: 2024-06-11
+layout: LayoutBlog
+seo:
+  desc: >
+    Creating robust and maintainable components through a meticulous definition process
+    enhancing communication and efficiency in a remote, diverse environment.
+  
+---
+
+import LayoutBlog from '@components/layout/layoutBlog';
+
+<LayoutBlog 
+  title="Defining Components for Design Systems - A Comprehensive Approach"
+  date="2024-06-11"
+  description="Creating robust and maintainable components through a meticulous definition process, enhancing communication and efficiency in a remote, diverse environment."
+  seo={{
+    desc: "Creating robust and maintainable components through a meticulous definition process, enhancing communication and efficiency in a remote, diverse environment."
+  }}>
+
+In our team, defining components is a critical phase that ensures everyone understands
+the task at hand. This phase is particularly important in a remote, culturally diverse
+team environment where clear communication and shared understanding are paramount. Our
+approach to defining components is robust and meticulous, thanks to the role of the
+design system architect who ensures no detail is overlooked.
+
+![](./thumb.png)
+
+## Why to define?
+
+The define phase is crucial because it sets the foundation for the entire development
+process. It helps bridge the gap between design and development, ensuring that all team
+members, regardless of their background or location, are on the same page. By paying
+close attention to this phase, we can avoid misunderstandings and ensure that the final
+product meets the desired specifications.
+
+Our design system architect plays a pivotal role in this process. The architect brings
+a wealth of experience and a keen eye for detail, often identifying aspects that might
+be missed by the design team. Their primary responsibility is to ensure that our
+components are not only visually consistent but also functionally robust and easy to
+maintain.
+
+## How we define components
+
+#### 1. Research Phase
+
+The definition process begins with thorough research. This involves two key areas:
+
+- **Internal Codebase Review**: We start by examining our existing codebase to identify
+any existing implementations of the component. This ensures that all features are preserved
+or, if they need to be removed, we specify why and provide suitable alternatives.
+  
+- **Industry Research**: We then look at open design system implementations in the
+technology we are using, whether it’s React, Web Components, or Vue. By studying hundreds
+of design systems and their documentation, we gather valuable insights and use cases. This
+doesn’t mean we adopt all features blindly; instead, we consciously decide what to include
+or omit based on our product’s specific needs.
+
+#### 2. Creating the Component Description
+
+Based on the collected information, the architect drafts a comprehensive description of the
+component. This document lists all the features, parameters, and edge cases, forming a solid
+foundation for further refinement.
+
+#### 3. Team Refinement
+
+The initial description is then reviewed by the entire team. This phase is essential for
+aligning the designers and developers. Developers provide feedback from their perspective,
+ensuring that the design considers practical implementation aspects. This collaborative process
+helps refine the component description, ensuring that all necessary features are included and
+unnecessary ones are discarded.
+
+### Proven Success
+
+We have practiced this approach in several projects, and it has consistently proven its
+value.
+
+One of the key benefits of this approach is enhanced communication. Clear definitions help
+bridge the gap between designers and developers, ensuring everyone understands the component's
+purpose and functionality. This is particularly important in a remote and culturally diverse team,
+where misunderstandings can easily arise.
+
+Additionally, this method increases efficiency. Detailed descriptions reduce ambiguity, allowing 
+evelopers to focus on coding rather than interpreting requirements. This speeds up the development
+process.
+
+This proactive approach leads to more robust testing and higher-quality components. For example,
+with detailed component definitions, it becomes easier to practice Test-Driven Development (TDD).
+Often, the definition itself contains a list of tests to cover. If not, these tests are still
+straightforward to create before the implementation begins, ensuring a smooth development process. 
+
+Below is an example of a component description for a new Popover component:
+
+## Popover Component Description
+
+There is a new `<Popover>` component to enhance user interaction by displaying additional
+information or controls. It fits the new design as shown in Figma.
+
+### Parameters
+
+**Controlled State**
+- `open` (optional): A boolean parameter that controls the open state of the Popover. When `true`, the Popover is displayed. When `false`, it is hidden. Must be used in conjunction with `onOpenChange`.
+- `onOpenChange` (optional): A function parameter that takes a callback function, triggered when the open state changes.
+
+**Positioning and Alignment**
+- `side` (optional): A string parameter that specifies the position of the Popover relative to its trigger element. Possible values are `top`, `bottom`, `left`, and `right`. Default is `bottom`.
+- `align` (optional): A string parameter that specifies the alignment of the Popover relative to its trigger element. Possible values are `start`, `center`, and `end`. Default is `center`.
+- `sideOffset` (optional): A number parameter that sets the distance from the trigger element. Default is `2`.
+- `alignOffset` (optional): A number parameter that sets an offset from the alignment options `start` or `end`.
+
+**Collision Handling**
+- `avoidCollisions` (optional): A boolean parameter that, when `true`, overrides the `side` and `align` preferences to prevent collisions with boundary edges. Default is `false`.
+
+**Display and Content**
+- `displayTip` (optional): A boolean parameter that determines whether to display a tooltip arrow within the Popover. When `true`, a tooltip arrow is displayed. Default is `false`.
+- `children` (optional): A ReactNode parameter that specifies the content to be displayed within the Popover container.
+
+**Styling and Customization**
+- `className` (optional): A string parameter that sets custom CSS classes for the Popover container.
+- `id` (optional): A string parameter that sets a unique identifier for the Popover container.
+- `tabIndex` (optional): A number parameter that sets the tab index for keyboard navigation. Default is `0`.
+
+**Events**
+- `onChange` (optional): A function parameter that takes a callback function, triggered when the Popover content changes.
+- `onInput` (optional): A function parameter that takes a callback function, triggered when the Popover receives input.
+- `onFocus` (optional): A function parameter that takes a callback function, triggered when the Popover gets focus.
+- `onBlur` (optional): A function parameter that takes a callback function, triggered when the Popover loses focus.
+
+### Accessibility
+
+The Popover component adheres to several accessibility standards:
+- The root element of the Popover uses `role="dialog"` to indicate it is a dialog.
+- The trigger element should be focusable and interactive, ensuring it can be activated via keyboard navigation.
+- When the Popover is open, it sets `aria-expanded="true"` on the trigger element to indicate the expanded state.
+- The Popover content should be easily dismissible, either through a close button or by clicking outside the Popover.
+
+### Subcomponents
+
+The Popover component includes several subcomponents to structure its content:
+- `Popover.Trigger`: Element that triggers the Popover.
+- `Popover.Content`: Container for the Popover content.
+- `Popover.Close`: Element that triggers the closing of the Popover.
+- `Popover.Anchor`: Element that anchors the Popover to another element.
+
+### Example Usage
+
+```jsx
+import { Popover } from './Popover';
+import { Button } from '../button';
+import { Paragraph } from '../typography/typography';
+
+const Example = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Popover open={isOpen} onOpenChange={setIsOpen}>
+      <Popover.Trigger asChild>
+        <Button>Open</Button>
+      </Popover.Trigger>
+      <Popover.Content side="bottom" align="center" displayTip>
+        <Paragraph size="s">
+          End hunger, achieve food security, and promote sustainable agriculture.
+        </Paragraph>
+      </Popover.Content>
+    </Popover>
+  );
+};
+```
+
+### Focus and Interaction Accessibility Checks
+
+The Popover component should pass the following accessibility checks to ensure it is user-friendly and complies with accessibility standards:
+
+1. **Keyboard Navigation**:
+   - Press `Tab` to focus on the Popover trigger element.
+   - Press `Tab` or `Shift + Tab` to navigate between the trigger element and other focusable elements within the Popover.
+   - Press `Space` or `Enter` to open the Popover when focused on the trigger element.
+   - Press `Escape` to close the Popover when it is open.
+
+2. **Screen Reader Support**:
+   - Ensure the Popover content is announced by screen readers when it is opened.
+   - Use `aria-expanded` and `aria-controls` on the trigger element to indicate the open state and the associated Popover content.
+
+3. **Dismissibility**:
+   - Clicking outside the Popover should close it.
+   - Include a `Popover.Close` element or an equivalent mechanism to allow users to close the Popover.
+
+### Testing
+
+The Popover component should be tested for the following scenarios to ensure its functionality and accessibility:
+
+1. **Popover renders correctly with default props**
+1. **Popover opens when the trigger element is clicked**
+1. **Popover closes when clicking outside the Popover**
+1. **Popover closes when the close element inside the Popover is clicked**
+1. **Popover changes position based on `side` prop**
+1. **Popover aligns correctly based on `align` prop**
+1. **Popover respects `sideOffset` prop for positioning**
+1. **Popover respects `alignOffset` prop for alignment**
+1. **Popover avoids collisions with boundary edges when `avoidCollisions` is true**
+1. **Popover displays a tooltip arrow when `displayTip` is true**
+1. **Popover content is accessible and announced by screen readers when opened**
+1. **Popover trigger element has correct `aria-expanded` attribute when open**
+1. **Popover trigger element has correct `aria-controls` attribute linking to the Popover content**
+1. **Popover focuses correctly when opened using keyboard navigation**
+1. **Popover navigates correctly between focusable elements inside the Popover**
+1. **Popover closes when `Escape` key is pressed**
+1. **Popover supports custom CSS classes via `className` prop**
+1. **Popover updates open state when `onOpenChange` callback is triggered**
+1. **Popover renders with unique `id` when `id` prop is provided**
+1. **Popover respects custom `tabIndex` for keyboard navigation**
+1. **Popover opens on hover when using `Popover.Anchor` with `onMouseEnter` event**
+1. **Popover maintains focus trap within the Popover when open**
+1. **Popover handles dynamic content updates correctly**
+1. **Popover remains open when clicking within its content area**
+1. **Popover supports nested popovers and their interactions correctly**
+
+
+## Define and Rule
+
+This thorough and collaborative approach to defining components ensures they are well-defined,
+robust, and meet both design and development needs. The process enhances communication,
+boosts efficiency, and ensures consistency across our design system. It also makes our
+components scalable and easy to maintain, which is crucial for long-term success.
+
+By taking the time to carefully define our components, we create a clear blueprint that guides
+the development process. This approach integrates seamlessly with Test-Driven Development, allowing
+us to write comprehensive tests early on. These tests catch issues early and serve as living
+documentation, aiding future maintenance and onboarding.
+
+We've successfully used this approach in several projects, and all the cases are detailed on
+our [case studies page](/case-studies/). This method consistently
+leads to higher quality, more maintainable products that align with our design standards and 
+unctional requirements, ensuring a great experience for our users.
+</LayoutBlog>
