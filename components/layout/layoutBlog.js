@@ -5,7 +5,7 @@ import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 
-export default function LayoutBlog({ title, seo, ...props }) {
+export default function LayoutBlog({ title, description, thumb, seo, ...props }) {
   const router = useRouter();
   const currentPath = router.asPath;
 
@@ -20,20 +20,21 @@ export default function LayoutBlog({ title, seo, ...props }) {
   };
 
   const blogPagePath = currentPath ? getParentPath(currentPath) : "./";
+  const thumbPath = thumb ? `${thumb.src}` : `${router.basePath}/images${router.asPath}thumb.png`;
 
   return (
     <>
       <NextSeo
         title={title + " - Blog - Bridge-the-Gap"}
-        description="Sharing our knowledge and experience"
+        description={description}
         openGraph={{
           type: "website",
           locale: "en_US",
-          url: "https://bridge-the-gap.dev/blog",
+          url: `https://bridge-the-gap.dev${currentPath}/`,
           site_name: "Bridge-the-Gap.dev",
           images: [
             {
-              url: `${router.basePath}/images${router.asPath}thumb.png`,
+              url: thumbPath,
               alt: title,
             },
           ],
