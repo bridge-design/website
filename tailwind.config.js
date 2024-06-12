@@ -17,6 +17,7 @@ const config = {
           css: {
             pre: {
               color: "var(--tw-prose-code)",
+              backgroundColor: "#FFF",
               code: {
                 color: "var(--tw-prose-code)",
               },
