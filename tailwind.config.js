@@ -11,6 +11,19 @@ const config = {
   ],
   theme: {
     extend: {
+      // Disable typography plugin for `pre`, `code `elements https://www.skcript.com/blog/disable-tailwind-prose-code/
+      typography: {
+        DEFAULT: {
+          css: {
+            pre: {
+              color: "var(--tw-prose-code)",
+              code: {
+                color: "var(--tw-prose-code)",
+              },
+            },
+          },
+        },
+      },
       container: {
         center: true,
         padding: {
@@ -41,7 +54,7 @@ const config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio"), require('@tailwindcss/typography')],
+  plugins: [require("@tailwindcss/aspect-ratio"), require("@tailwindcss/typography")],
 };
 
 let finalConfig = merge({}, bridgeConfig, config);
