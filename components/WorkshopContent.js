@@ -1,6 +1,6 @@
 import { Timetable } from "@bridge-the-gap/design-system";
-import localTime from "@components/local-time";
-import SectionTitle from "@components/SectionTitle";
+import localTime from "@/components/local-time";
+import SectionTitle from "@/components/SectionTitle";
 
 export default function WorkshopContent() {
   const timetableDay1 = [

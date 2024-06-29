@@ -1,5 +1,6 @@
+"use client";
 import { Button, Text } from "@bridge-the-gap/design-system";
-import SectionTitle from "@components/SectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 
 export default function CustomWorkshop() {
   return (

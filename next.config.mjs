@@ -1,6 +1,6 @@
 import createMDX from "@next/mdx";
-import CopyWebpackPlugin from "copy-webpack-plugin";
-import path from "path";
+// import CopyWebpackPlugin from 'copy-webpack-plugin'
+// import path from 'path'
 import remarkEmbedImages from "remark-embed-images";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkUnwrapImages from "remark-unwrap-images";
@@ -8,18 +8,6 @@ import remarkUnwrapImages from "remark-unwrap-images";
 // import frontmatterPlugin from "./lib/frontmatter.mjs";
 
 const exportPath = process.env.GORIGHT_EXPORT;
-
-const withMDX = createMDX({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [
-      remarkFrontmatter,
-      remarkEmbedImages,
-      remarkUnwrapImages
-    ],
-    providerImportSource: "@mdx-js/react",
-  },
-});
 
 /** @type {import('next').NextConfig} */
 const config = {
@@ -97,5 +85,12 @@ const config = {
     ignoreDuringBuilds: true,
   },
 };
+
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [remarkFrontmatter, remarkEmbedImages, remarkUnwrapImages],
+    rehypePlugins: [],
+  },
+});
 
 export default withMDX(config);

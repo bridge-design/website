@@ -7,18 +7,16 @@
     "dev": "next dev",
     "build": "NODE_ENV=production next build",
     "start": "next start",
-    "lint": "next lint .",
+    "lint": "next lint",
     "deploy": "gh-pages -d ./out"
   },
   "dependencies": {
-    "@bridge-the-gap/design-system": "2.5.0",
+    "@bridge-the-gap/design-system": "^2.5.0",
     "@emotion/react": "^11.11.4",
     "@mdx-js/loader": "^3.0.1",
-    "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.3",
     "@svgr/webpack": "^8.1.0",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.13",
+    "add": "^2.0.6",
     "copy-webpack-plugin": "^12.0.2",
     "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",
@@ -27,7 +25,9 @@
     "lodash": "^4.17.21",
     "next": "14.2.3",
     "next-seo": "^6.5.0",
+    "react": "^18",
     "react-calendly": "^4.3.1",
+    "react-dom": "^18",
     "react-ga": "^3.3.1",
     "remark-embed-images": "^4.0.0",
     "remark-frontmatter": "^5.0.0",
@@ -37,25 +37,27 @@
     "remark-unwrap-images": "^4.0.0",
     "string.prototype.replaceall": "^1.0.10",
     "stringify-object": "^5.0.0",
-    "theme-ui": "0.16.2"
+    "theme-ui": "0.16.2",
+    "yarn": "^1.22.22"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.13",
     "autoprefixer": "^10.4.19",
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "next-export-optimize-images": "^4.4.0",
-    "postcss": "^8.4.38",
+    "next-mdx-remote": "^5.0.0",
+    "postcss": "^8",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.6.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.3"
   },
   "peerDependencies": {
     "react": "18",
     "react-dom": "18"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.22"
 }

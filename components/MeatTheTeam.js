@@ -1,5 +1,4 @@
-import React from "react";
-
+"use client";
 import { ProfileCard, Text } from "@bridge-the-gap/design-system";
 
 export default function MeatTheTeam() {
