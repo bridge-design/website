@@ -1,4 +1,4 @@
-import Link from "@components/link";
+import Link from "@/components/link";
 // import Image from "next/image";
 
 const myLoader = ({ src, width, quality }) => {

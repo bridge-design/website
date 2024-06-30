@@ -1,0 +1,100 @@
+import LayoutHandout from "@/components/layout/layoutHandout";
+
+<LayoutHandout title="Coding practice">
+
+If you didn't set up the repository yet, it's time to do it now! Follow our instructions at the [Repository Setup](../repo-setup) section.
+
+As a developer, you will be working on **version 1** of your library.
+This is a large task, that we will be continuing tomorrow. We split it
+to the following parts:
+
+### Day 1:
+
+1. Update design tokens
+1. Release Storybook
+1. Process the tokens with Style Dictionary
+1. Display design tokens in Storybook
+
+## 1. Updating design tokens
+
+If you want to sync with the design library, build Figma tokens.
+You will use in components and product pages.
+The tokens are exported from Figma in one click with
+[Design Tokens plugin](https://github.com/lukasoppermann/design-tokens). Once
+you got `design-tokens.json` file from your designer, put it to
+`design-system/src/tokens/design-tokens.json`.
+
+Commit the change with some meaningful message :-)
+
+### Under the tokens' hood
+
+The exported is not very convenient for development, so we process
+it with the help of [Style Dictionary](https://amzn.github.io/style-dictionary/).
+You can see the result in `design-system/src/tokens/dist/`. These are the
+the files that will be imported into the components. You don't have to change
+anything there, but it is good to know how
+these things work.
+
+## 2. Release Storybook
+
+Let's show the designers what is your developers' design system image. For that,
+we can release the Storybook so that it has a public URL and you can share it with
+the rest of the team.
+
+### Release
+
+Update === release. You can only update the public version of your Storybook if
+you release a new version of the library. To do so, run
+
+```
+yarn design-system:version --patch
+```
+
+Then, push the branch (`git push origin main`) and wait for a GitHub Action to complete.
+
+### Set up the source
+
+For this toy project, we are using GitHub Pages to host the result of our work. After the
+first release, a `github-pages` branch is created automatically. But you still need to
+set it up as a source of our website(s). Do the following:
+
+1. Navigate to the _Settings_ tab on your repository's page
+1. Scroll a bit down and choose _Pages_ in the sidebar menu
+1. Select `gh-pages` branch as a _Source_ and save
+
+Follow the link in a blue box, and you will see your Storybook public!
+
+You set up the source only once. Now, if you update the library and push, its' public
+Storybook is deployed.
+
+## 3. Process the tokens with Style Dictionary
+
+You can see in `design-system/src/tokens/dist/` how _color_ and _typography_
+tokens are displayed. But as you noticed, the `design-tokens.json` file has much
+more information. For example, space tokens. Before you use them in the library,
+you need a custom processing via Style Dictionary.
+
+**Let's write a custom processing for spacing tokens.**
+
+When new token files appear in your `dist` folder, they should be re-exported from the tokens folder. For example, to re-export spacing, you will need to add the following into `design-system/src/tokens/index.js`:
+
+```
+import * as spacing from "./dist/spacing";
+```
+
+## 4. Display design tokens in Storybook
+
+Now you have spacing tokens as variables. The next step is to make them visible
+in Storybook. Look at the stories for colors and typography as an example.
+
+**Let's display spacing tokens.**
+
+## That's it for today!
+
+You can use the rest of the time to continue with this task. 5 minutes before the
+end of the workshop, will meet at the main room for a quick summary of the first day.
+
+Don't worry if you don't complete it all, we will be coding tomorrow as well. And call us for help if you have any difficulties!
+Or if you finish early, you can look at the [next coding challenge](/hands-on-workshop/handout/preparing-release) and/or code some components.
+
+</ LayoutHandout>

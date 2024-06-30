@@ -1,5 +1,4 @@
-import React from "react";
-
+"use client";
 import { Text } from "@bridge-the-gap/design-system";
 
 import ArrowIcon from "../public/arrow.svg";

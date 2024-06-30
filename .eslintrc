@@ -1,6 +1,11 @@
 {
-  "extends": "next/core-web-vitals",
-  "plugins": ["simple-import-sort"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+  ],
+  "plugins": ["prettier", "simple-import-sort"],
   "rules": {
     "simple-import-sort/imports": [
       "warn",
@@ -20,6 +25,7 @@
     "react/jsx-key": "error",
     "no-unused-expressions": ["warn", { "allowShortCircuit": true, "allowTernary": true }],
     "no-unused-vars": "warn",
+    "no-undef": "error",
   },
   "parserOptions": {
     "sourceType": "module",

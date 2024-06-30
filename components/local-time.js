@@ -4,8 +4,7 @@ const stdTimezoneOffset = function () {
   return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
 };
 
-const isDstObserved = () =>
-  new Date().getTimezoneOffset() < stdTimezoneOffset();
+const isDstObserved = () => new Date().getTimezoneOffset() < stdTimezoneOffset();
 
 function getTimezoneAbbr(tzOffset) {
   switch (tzOffset) {
@@ -21,11 +20,7 @@ function getTimezoneAbbr(tzOffset) {
   }
 }
 
-export default function localTime(
-  start,
-  end,
-  format = "%start%-%end% %timezone%",
-  ) {
+export default function localTime(start, end, format = "%start%-%end% %timezone%") {
   let tzOffset = -new Date().getTimezoneOffset() / 60;
   tzOffset = isDstObserved ? tzOffset - 1 : tzOffset;
 
@@ -35,8 +30,5 @@ export default function localTime(
   }
 
   const zoneAbbr = getTimezoneAbbr(tzOffset);
-  return format
-    .replace("%start%", start)
-    .replace("%end%", end)
-    .replace("%timezone%", zoneAbbr);
+  return format.replace("%start%", start).replace("%end%", end).replace("%timezone%", zoneAbbr);
 }
