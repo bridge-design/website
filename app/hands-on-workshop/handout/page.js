@@ -1,8 +1,9 @@
 "use client";
 import { Badge, Card, Emoji, Text } from "@bridge-the-gap/design-system";
-import Link from "@/components/link";
 import { usePathname } from "next/navigation";
 import { NextSeo } from "next-seo";
+
+import Link from "@/components/link";
 
 export const blocks = [
   {

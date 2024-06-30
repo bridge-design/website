@@ -1,4 +1,5 @@
 import { Text } from "@bridge-the-gap/design-system";
+
 import Link from "@/components/link";
 import PreCode from "@/components/PreCode";
 import TableComponent from "@/components/TableComponent";

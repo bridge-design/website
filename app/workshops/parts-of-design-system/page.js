@@ -1,6 +1,7 @@
 "use client";
-import PartsExercise from "@/components/ds-parts";
 import { ThemeUIProvider } from "theme-ui";
+
+import PartsExercise from "@/components/ds-parts";
 
 import theme from "../../../components/theme-ui-object/index";
 

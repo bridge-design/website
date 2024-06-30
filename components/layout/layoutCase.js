@@ -1,8 +1,9 @@
 "use client";
 import { CtaLink, Text } from "@bridge-the-gap/design-system";
+import { usePathname } from "next/navigation";
+
 import Link from "@/components/link";
 import ProjectTeam from "@/components/ProjectTeam";
-import { usePathname } from "next/navigation";
 
 export default function LayoutCase({ title, team, children }) {
   const pathname = usePathname();

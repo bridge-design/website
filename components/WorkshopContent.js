@@ -1,4 +1,5 @@
 import { Timetable } from "@bridge-the-gap/design-system";
+
 import localTime from "@/components/local-time";
 import SectionTitle from "@/components/SectionTitle";
 

@@ -1,5 +1,6 @@
-import { People } from "@/components/People";
 import { team } from "content/team";
+
+import { People } from "@/components/People";
 
 export const metadata = {
   title: "Bridge-the-Gap team",

@@ -1,6 +1,7 @@
+import { team } from "content/team";
+
 import { People } from "@/components/People";
 import SectionTitle from "@/components/SectionTitle";
-import { team } from "content/team";
 
 export default function WhoAreWe() {
   const people = Object.values(team);

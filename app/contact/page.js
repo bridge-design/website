@@ -3,6 +3,7 @@ import { useState } from "react";
 import { InlineWidget } from "react-calendly";
 
 import { CtaLink, Text } from "@bridge-the-gap/design-system";
+
 import Link from "@/components/link";
 
 import CopyText from "../../public/copy-doc.svg";

@@ -1,7 +1,8 @@
 "use client";
 import { CtaLink, Text } from "@bridge-the-gap/design-system";
-import Link from "@/components/link";
 import { usePathname } from "next/navigation";
+
+import Link from "@/components/link";
 
 export default function LayoutBlog({ title, children }) {
   const pathname = usePathname();

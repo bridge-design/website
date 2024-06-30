@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Text } from "@bridge-the-gap/design-system";
+
 import Link from "@/components/link";
 
 import { getAllPosts } from "../../lib/api";

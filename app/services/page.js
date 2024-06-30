@@ -1,5 +1,6 @@
 "use client";
 import { Advantages, CtaLink, HelpTeams, Testimonial, Text } from "@bridge-the-gap/design-system";
+
 import BreadCrumbsArrows from "@/components/BreadCrumbsArrows";
 import Link from "@/components/link";
 import MeatTheTeam from "@/components/MeatTheTeam";

@@ -1,5 +1,6 @@
 "use client";
 import { Testimonial } from "@bridge-the-gap/design-system";
+
 import SectionTitle from "@/components/SectionTitle";
 
 const testimonials = [

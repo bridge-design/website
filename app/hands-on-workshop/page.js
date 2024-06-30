@@ -1,4 +1,5 @@
 import { Card, Emoji, Text } from "@bridge-the-gap/design-system";
+
 import CustomWorkshop from "@/components/CustomWorkshop";
 import Deliverables from "@/components/Deliverables";
 import Link from "@/components/link";
