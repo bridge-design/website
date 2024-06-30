@@ -3,13 +3,28 @@ import { CtaLink, Text } from "@bridge-the-gap/design-system";
 import Link from "@/components/link";
 
 export const metadata = {
-  title: "Bridge-the-Gap",
+  title: "Bridge-The-Gap - design systems consulting and workshops",
   description: "We team up with designers and developers to build and scale design systems",
-  keywords: "Design system, design system workshop, design system team",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    site_name: "Bridge-the-Gap.dev",
+  keywords:
+    "design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development",
+  // canonical: "https://bridge-the-gap.dev",
+  // openGraph: {
+  //   type: "website",
+  //   locale: "en_US",
+  //   url: "https://bridge-the-gap.dev",
+  //   site_name: "Bridge-the-Gap.dev",
+  //   images: [
+  //     {
+  //       url: "https://bridge-the-gap.dev/seo/thumb.png",
+  //       width: 1000,
+  //       height: 750,
+  //       alt: "Bridge-the-Gap — build and scale design systems",
+  //       type: "image/png",
+  //     },
+  //   ],
+  // },
+  twitter: {
+    cardType: "summary_large_image",
   },
 };
 

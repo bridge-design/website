@@ -1,6 +1,12 @@
 "use client";
+import { useEffect } from "react";
+import ReactGA from "react-ga";
+import Script from "next/script";
+
 import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
+const GA_TRACKING_ID = "UA-185519437-1";
+const OPT_CONTAINER_ID = "OPT-KRWKXQN";
 
 import Footer from "../components/footer";
 import Header from "../components/header";
@@ -8,37 +14,20 @@ import { navItemsCommon, navItemsWorkshop } from "./helpers";
 
 import "./globals.css";
 import "@bridge-the-gap/design-system/dist/styles.css";
-import "tailwindcss/tailwind.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Bridge-The-Gap - design systems consulting and workshops",
-  description: "We team up with designers and developers to build and scale design systems",
-  keywords:
-    "design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development",
-  canonical: "https://bridge-the-gap.dev",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://bridge-the-gap.dev",
-    site_name: "Bridge-the-Gap.dev",
-    images: [
-      {
-        url: "https://bridge-the-gap.dev/images/thumb.png",
-        width: 1000,
-        height: 750,
-        alt: "Bridge-the-Gap — build and scale design systems",
-        type: "image/png",
-      },
-    ],
-  },
-  twitter: {
-    // handle: '@handle',
-    // site: '@goright.io',
-    cardType: "summary_large_image",
-  },
-};
+function trackPageView() {
+  if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+    return;
+  }
+  if (!window.GA_INITIALIZED) {
+    ReactGA.initialize(GA_TRACKING_ID);
+    window.GA_INITIALIZED = true;
+  }
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
+}
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -50,14 +39,37 @@ export default function RootLayout({ children }) {
     : "max-w-full text-light-on-background-900";
   const contentWrapperClass = isWorkshops ? "max-w-5xl p-10 mx-auto" : "";
 
+  useEffect(() => {
+    trackPageView();
+  }, [pathname]);
+
   return (
     <html lang="en">
       <head>
         <title>Bridge-the-Gap</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon?<generated>" type="image/<generated>" sizes="<generated>" />
+        <link
+          rel="apple-touch-icon"
+          href="/apple-icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#131313" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="msapplication-TileColor" content="#d9d9d9" />
         <meta name="msapplication-config" content="/static/browserconfig.xml" />
         <meta name="theme-color" content="#D9D9D9" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#131313" media="(prefers-color-scheme: dark)" />
+        <meta property="og:image" content="<generated>" />
+        <meta property="og:image:type" content="<generated>" />
+        <meta property="og:image:width" content="<generated>" />
+        <meta property="og:image:height" content="<generated>" />
+        <meta name="twitter:image" content="<generated>" />
+        <meta name="twitter:image:type" content="<generated>" />
+        <meta name="twitter:image:width" content="<generated>" />
+        <meta name="twitter:image:height" content="<generated>" />
+        <Script src={`https://www.googleoptimize.com/optimize.js?id=${OPT_CONTAINER_ID}`}></Script>
       </head>
       <body className={inter.className}>
         <div className="container flex flex-col min-h-screen overflow-hidden justify-between">
