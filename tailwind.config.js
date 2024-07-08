@@ -1,67 +1,94 @@
-const designSystem = require("@bridge-the-gap/design-system");
-const bridgeConfig = designSystem.twconfig;
-const { merge } = require("lodash");
+// @ts-check
+const { fontFamily } = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
+const designSystem = require('@bridge-the-gap/design-system')
+const { merge } = require('lodash')
+const bridgeConfig = designSystem.twconfig
 
+/** @type {import("tailwindcss/types").Config } */
 const config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/\\@bridge-the-gap/design-system/dist/**/*.js",
-    "./node_modules/\\@bridge-the-gap/design-system/dist/*.js",
+    './node_modules/pliny/**/*.js',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,tsx}',
+    './components/**/*.{js,ts,tsx}',
+    './layouts/**/*.{js,ts,tsx}',
+    './data/**/*.mdx',
+    './node_modules/\\@bridge-the-gap/design-system/dist/**/*.js',
+    './node_modules/\\@bridge-the-gap/design-system/dist/*.js',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
-      // Disable typography plugin for `pre`, `code `elements https://www.skcript.com/blog/disable-tailwind-prose-code/
-      typography: {
+      lineHeight: {
+        11: '2.75rem',
+        12: '3rem',
+        13: '3.25rem',
+        14: '3.5rem',
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)', ...fontFamily.sans],
+      },
+      // colors: {
+      //   primary: colors.pink,
+      //   gray: colors.gray,
+      // },
+      typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            pre: {
-              color: "var(--tw-prose-code)",
-              backgroundColor: "#FFF",
-              code: {
-                color: "var(--tw-prose-code)",
+            a: {
+              color: theme('colors.primary.500'),
+              '&:hover': {
+                color: `${theme('colors.primary.600')}`,
               },
+              code: { color: theme('colors.primary.400') },
+            },
+            'h1,h2': {
+              fontWeight: '700',
+              letterSpacing: theme('letterSpacing.tight'),
+            },
+            h3: {
+              fontWeight: '600',
+            },
+            code: {
+              color: theme('colors.indigo.500'),
             },
           },
         },
-      },
+        invert: {
+          css: {
+            a: {
+              color: theme('colors.primary.500'),
+              '&:hover': {
+                color: `${theme('colors.primary.400')}`,
+              },
+              code: { color: theme('colors.primary.400') },
+            },
+            'h1,h2,h3,h4,h5,h6': {
+              color: theme('colors.gray.100'),
+            },
+          },
+        },
+      }),
       container: {
         center: true,
         padding: {
-          DEFAULT: "1.5rem",
-          sm: "2rem",
-          lg: "4rem",
-          xl: "5rem",
-          "2xl": "6rem",
+          DEFAULT: '1.5rem',
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem',
         },
-      },
-      keyframes: {
-        fadein: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
-        },
-        reveal: {
-          "0%": { transform: "translateY(25px)", opacity: 0 },
-          "100%": { transform: "translateY(0)", opacity: 1 },
-        },
-      },
-      animation: {
-        fadein: "fadein 2s ease-out ",
-        reveal: "reveal 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both",
-        fadeindelay: "fadein 2s 1s ease-out both",
-      },
-      borderRadius: {
-        image: "3rem",
       },
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio"), require("@tailwindcss/typography")],
-};
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+}
 
-let finalConfig = merge({}, bridgeConfig, config);
+let finalConfig = merge({}, bridgeConfig, config)
 
 // Ensure that finalConfig.content.patterns is an array before adding to it
-finalConfig.content.safelist = finalConfig.content.safelist || [];
-finalConfig.content.safelist.push("bg-6XL");
+finalConfig.content.safelist = finalConfig.content.safelist || []
+finalConfig.content.safelist.push('bg-6XL')
 
-module.exports = finalConfig;
+module.exports = finalConfig
