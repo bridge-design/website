@@ -2,7 +2,7 @@
 import { CtaLink, Text } from "@bridge-the-gap/design-system";
 import { usePathname } from "next/navigation";
 
-import Link from "@/components/link";
+import Link from "@/components/Link";
 
 export const metadata = {
   title: "Handout materials for Hands-on with Design Systems Workshop",
