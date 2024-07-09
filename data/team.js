@@ -68,7 +68,7 @@ export const team = {
     She has been instrumental in various design system projects.
     Her commitment to detail is particularly beneficial in design-system specific tasks, where precision and consistency are key.
     `,
-    linkedin: 'https://www.linkedin.com/in/alexandra-stepanova',
-    github: 'https://github.com/alexandra-stepanova',
+    linkedin: 'https://www.linkedin.com/in/alexandra-urberg/',
+    github: 'https://github.com/alexandra-urberg',
   },
 };
