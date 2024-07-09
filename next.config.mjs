@@ -62,6 +62,10 @@ const securityHeaders = [
 const config = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   return plugins.reduce((acc, next) => next(acc), {
+    output: 'export',
+    distDir: 'out',
+    basePath: process.env.BASEPATH ? process.env.BASEPATH : '',
+    assetPrefix: process.env.BASEPATH ? process.env.BASEPATH + '/' : '',
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
