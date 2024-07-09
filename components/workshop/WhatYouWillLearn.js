@@ -1,13 +1,13 @@
-import { Text } from "@bridge-the-gap/design-system";
+import { Text } from '@bridge-the-gap/design-system'
 
-import SectionTitle from "./SectionTitle";
+import SectionTitle from './SectionTitle'
 
 export default function WhyAttend() {
   return (
-    <div className="flex flex-col max-w-4xl mx-auto md:flex-row mt-28">
+    <div className="mx-auto mt-28 flex max-w-4xl flex-col md:flex-row">
       <SectionTitle
         icon="Education32"
-        className="justify-start flex-shrink-0 w-full md:flex-col md:w-2/5"
+        className="w-full flex-shrink-0 justify-start md:w-2/5 md:flex-col"
         iconClassName="pr-4 mb-4 md:mr-0"
       >
         What you <span className="md:block">will learn?</span>
@@ -36,5 +36,5 @@ export default function WhyAttend() {
         </p>
       </Text>
     </div>
-  );
+  )
 }

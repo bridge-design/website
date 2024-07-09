@@ -31,13 +31,13 @@ export const metadata = {
       },
     ],
   },
-};
+}
 
 export default function Workshop() {
   return (
     <>
       {/***** HERO SECTION *****/}
-      <div className="text-light-on-background-900 text-center leading-normal tracking-normal">
+      <div className="leading-normal tracking-normal text-center text-light-on-background-900">
         <Text as="p" variant="xlMedium" className="mt-24">
           <Emoji symbol="👋 " label="hand" />
           Hands-on
@@ -103,5 +103,5 @@ export default function Workshop() {
       <WhoAreWe />
       <CustomWorkshop />
     </>
-  );
+  )
 }

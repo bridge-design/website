@@ -3,7 +3,7 @@ import { team as btgTeam } from '@/data/team'
 export default function Avatar({ name }) {
   return (
     <div className="flex-column group relative -mr-4 mb-8 flex">
-      <div className="border-light-on-background-300 transition-200 group h-12 w-12 overflow-hidden rounded-full border-2 group-hover:scale-105">
+      <div className="transition-200 group h-12 w-12 overflow-hidden rounded-full border-2 border-light-on-background-300 group-hover:scale-105">
         <img
           src={btgTeam[name].photoUrl}
           title={btgTeam[name].name}
@@ -15,5 +15,5 @@ export default function Avatar({ name }) {
         {btgTeam[name].name}
       </p>
     </div>
-  );
+  )
 }

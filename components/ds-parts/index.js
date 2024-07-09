@@ -1,4 +1,5 @@
-"use client";
+'use client'
+
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 import { Box, Button, Checkbox, Flex, Grid, Label } from 'theme-ui'
@@ -23,10 +24,10 @@ const toBox = (parts) => {
       return acc
     },
     [[]]
-  );
-};
+  )
+}
 
-const partsInBoxes = toBox(parts);
+const partsInBoxes = toBox(parts)
 
 const stages = ['cross-out', 'select', 'pick-up', 'done']
 const crossOutLimit = 5
@@ -35,26 +36,26 @@ const pickUpLimit = 25
 
 const instructions = {
   'cross-out': (
-    <h2 className="text-xlMedium font-xlMedium tracking-xlMedium leading-xlMedium mb-5 mt-5">
+    <h2 className="mb-5 mt-5 font-xlMedium text-xlMedium leading-xlMedium tracking-xlMedium">
       1 of 3: Cross out {crossOutLimit} <em>irrelevant</em> categories.
     </h2>
   ),
   select: (
-    <h2 className="text-xlMedium font-xlMedium tracking-xlMedium leading-xlMedium mb-5 mt-5">
+    <h2 className="mb-5 mt-5 font-xlMedium text-xlMedium leading-xlMedium tracking-xlMedium">
       2 of 3: Select {selectLimit} <em>most-important</em> categories.
     </h2>
   ),
   'pick-up': (
-    <h2 className="text-xlMedium font-xlMedium tracking-xlMedium leading-xlMedium mb-5 mt-5">
+    <h2 className="mb-5 mt-5 font-xlMedium text-xlMedium leading-xlMedium tracking-xlMedium">
       3/3 Check up to <em>{pickUpLimit} important parts</em> in previously selected categories.
     </h2>
   ),
   done: (
-    <h2 className="text-xlMedium font-xlMedium tracking-xlMedium leading-xlMedium mb-5 mt-5">
+    <h2 className="mb-5 mt-5 font-xlMedium text-xlMedium leading-xlMedium tracking-xlMedium">
       Well done!
     </h2>
   ),
-};
+}
 
 export default function PartsExercise() {
   const [stage, setStage] = useState('cross-out')
@@ -72,32 +73,32 @@ export default function PartsExercise() {
             if (part.parts) {
               const allPartsChecked = part.parts.every(
                 (subpart) => pickedUp.indexOf(getInputName(category.title, subpart)) !== -1
-              );
+              )
 
-              const nameChecked = getInputName(category.title, part.title);
+              const nameChecked = getInputName(category.title, part.title)
 
               if (!allPartsChecked) {
                 if (pickedUp.indexOf(nameChecked) !== -1) {
                   const allPartsUnchecked = part.parts.every(
                     (subpart) => pickedUp.indexOf(getInputName(category.title, subpart)) === -1
-                  );
+                  )
 
                   if (allPartsUnchecked) {
-                    setPickedUp((prevState) => prevState.filter((part) => part !== nameChecked));
+                    setPickedUp((prevState) => prevState.filter((part) => part !== nameChecked))
                   }
                 }
               } else if (allPartsChecked) {
                 if (pickedUp.indexOf(nameChecked) === -1) {
                   setPickedUp((prevState) =>
                     prevState.includes(nameChecked) ? prevState : [...prevState, nameChecked]
-                  );
+                  )
                 }
               }
             }
-          });
+          })
         }
-      });
-    };
+      })
+    }
 
     checkParts()
   }, [pickedUp, selected])
@@ -133,7 +134,7 @@ export default function PartsExercise() {
     if (crossedOut.indexOf(categoryId) === -1) {
       if (crossedOut.length === crossOutLimit) {
         // only 5 categories
-        return;
+        return
       }
       setCrossedOut([...crossedOut, categoryId])
     } else {
@@ -158,7 +159,7 @@ export default function PartsExercise() {
   }
 
   const actionButton = () => {
-    let isButtonDisabled, buttonMessage;
+    let isButtonDisabled, buttonMessage
     switch (stage) {
       case 'cross-out':
         isButtonDisabled = crossedOut.length !== crossOutLimit
@@ -172,41 +173,39 @@ export default function PartsExercise() {
           </Button>
         )
       case 'select':
-        isButtonDisabled = selected.length !== selectLimit;
+        isButtonDisabled = selected.length !== selectLimit
         buttonMessage =
           selected.length === selectLimit ? 'Next' : `Select ${selectLimit - selected.length} more`
         return (
           <Button type="submit" disabled={isButtonDisabled}>
             {buttonMessage}
           </Button>
-        );
+        )
       case 'pick-up':
-        isButtonDisabled = pickedUp.length !== pickUpLimit;
+        isButtonDisabled = pickedUp.length !== pickUpLimit
         buttonMessage =
-          pickedUp.length === pickUpLimit
-            ? 'Done'
-            : `Pick up ${pickUpLimit - pickedUp.length} more`;
+          pickedUp.length === pickUpLimit ? 'Done' : `Pick up ${pickUpLimit - pickedUp.length} more`
         return (
           <Button type="submit" disabled={isButtonDisabled}>
             {buttonMessage}
           </Button>
-        );
+        )
       case 'done':
-        buttonMessage = "Save your result as a .png file"
+        buttonMessage = 'Save your result as a .png file'
         return (
           <Button type="button" onClick={handleDownloadPng}>
             {buttonMessage}
           </Button>
-        );
+        )
     }
-  };
+  }
 
   const drawPartItem = (category, categoryId, part, level) => {
     const partTitle = part.title || part
     let disabledCheckbox = true
 
     // allow pick up from selected parts
-    if (stage === "pick-up" && selected.indexOf(categoryId) !== -1) {
+    if (stage === 'pick-up' && selected.indexOf(categoryId) !== -1) {
       disabledCheckbox = false
     }
     // do not allow over limit
@@ -230,7 +229,7 @@ export default function PartsExercise() {
             const subPart = getInputName(category.title, parts)
             setPickedUp((prevState) => prevState.filter((part) => part !== subPart))
             setPickedUp((prevState) => prevState.filter((part) => part !== clickedPart))
-          });
+          })
         }
       } else {
         setPickedUp((prevState) => [...prevState, clickedPart])
@@ -252,7 +251,7 @@ export default function PartsExercise() {
         sx={{
           my: 1,
           pl: 3 * level,
-          color: disabledCheckbox ? "primary" : "text",
+          color: disabledCheckbox ? 'primary' : 'text',
         }}
         key={getInputName(category.title, partTitle)}
       >
@@ -263,14 +262,14 @@ export default function PartsExercise() {
           onChange={handleClick}
           sx={{
             mr: 1,
-            width: "1rem",
-            height: "1.4rem",
+            width: '1rem',
+            height: '1.4rem',
           }}
         />
         {partTitle}
       </Label>
-    );
-  };
+    )
+  }
 
   return (
     <>
@@ -279,7 +278,7 @@ export default function PartsExercise() {
         p={4}
         id="parts-form"
         sx={{
-          flexDirection: "column",
+          flexDirection: 'column',
         }}
       >
         {instructions[stage]}
@@ -287,11 +286,11 @@ export default function PartsExercise() {
           <Grid gap={4}>
             <Flex
               sx={{
-                flexDirection: "column",
-                position: "sticky",
+                flexDirection: 'column',
+                position: 'sticky',
                 bottom: 0,
                 py: 4,
-                bg: "background",
+                bg: 'background',
               }}
             >
               {actionButton()}
@@ -300,26 +299,26 @@ export default function PartsExercise() {
               <Grid key={box.title} gap={4} columns={box.length}>
                 {box.map((category) => {
                   let boxStyle = {
-                    display: stage === "pick-up" ? "none" : "block",
-                    border: "thin",
-                    borderRadius: "medium",
-                    borderColor: "secondary",
-                    transition: "opacity 0.5s ease-in-out",
-                    cursor: "pointer",
-                    ":hover": {
-                      bg: "muted",
+                    display: stage === 'pick-up' ? 'none' : 'block',
+                    border: 'thin',
+                    borderRadius: 'medium',
+                    borderColor: 'secondary',
+                    transition: 'opacity 0.5s ease-in-out',
+                    cursor: 'pointer',
+                    ':hover': {
+                      bg: 'muted',
                     },
-                  };
-                  let legendStyle = {};
+                  }
+                  let legendStyle = {}
 
                   if (crossedOut.indexOf(category.id) !== -1) {
-                    boxStyle.opacity = 0.25;
+                    boxStyle.opacity = 0.25
                   }
 
                   if (selected.indexOf(category.id) !== -1) {
-                    boxStyle.display = "block";
-                    boxStyle.borderColor = "secondary";
-                    boxStyle.bg = stage === "pick-up" ? "background" : "muted";
+                    boxStyle.display = 'block'
+                    boxStyle.borderColor = 'secondary'
+                    boxStyle.bg = stage === 'pick-up' ? 'background' : 'muted'
                   }
 
                   return (
@@ -329,7 +328,7 @@ export default function PartsExercise() {
                       as="fieldset"
                       sx={boxStyle}
                       onClick={(e) => {
-                        boxAction(e, category.id);
+                        boxAction(e, category.id)
                       }}
                     >
                       <legend style={legendStyle}>{category.title}</legend>
@@ -343,29 +342,29 @@ export default function PartsExercise() {
                                   drawPartItem(category, category.id, subpart, 1)
                                 )}
                             </Box>
-                          );
+                          )
                         })}
                       </Grid>
                     </Box>
-                  );
+                  )
                 })}
               </Grid>
             ))}
-            {stage !== "done" ? (
+            {stage !== 'done' ? (
               <Flex
                 sx={{
-                  flexDirection: "column",
-                  position: "sticky",
+                  flexDirection: 'column',
+                  position: 'sticky',
                   bottom: 0,
                   py: 4,
-                  bg: "background",
+                  bg: 'background',
                 }}
               >
                 {actionButton()}
               </Flex>
             ) : null}
             <Box>
-              Based on <a href="https://medium.com/@nathanacurtis">Nathan Curtis</a>&apos;{" "}
+              Based on <a href="https://medium.com/@nathanacurtis">Nathan Curtis</a>&apos;{' '}
               <a href="https://drive.google.com/file/d/1qXMUXKHaEXnLDOu99GCzTMY2XW6NnPe_/view">
                 PDF
               </a>
@@ -375,5 +374,5 @@ export default function PartsExercise() {
         </form>
       </Flex>
     </>
-  );
+  )
 }

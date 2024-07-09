@@ -41,14 +41,14 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
             </div>
           </div>
         </div>
-        <Text variant="6Xl" className="text-light-on-background-900 mb-24 mt-12 w-full text-center">
+        <Text variant="6Xl" className="mb-24 mt-12 w-full text-center text-light-on-background-900">
           {title}
         </Text>
         <div className="prose my-8 px-4 text-justify md:mx-auto">
           <dl className="space-y-10">
             <div>
               <dt className="sr-only">Published on</dt>
-              <dd className="not-prose text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+              <dd className="not-prose font-medium leading-6 text-base text-gray-500 dark:text-gray-400">
                 <time dateTime={date}>
                   {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                 </time>

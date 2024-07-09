@@ -9,7 +9,7 @@ export const metadata = genPageMetadata({
   knowledge we share to streamline your project and ensure consistent brand identity.`,
   keywords: `design system services, digital product development, efficient design systems,
   brand identity, design system consulting, design system workshops, digital product scalability,
-  expert design systems`
+  expert design systems`,
 })
 
 const ServicesPage = () => {

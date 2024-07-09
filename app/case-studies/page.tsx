@@ -23,19 +23,19 @@ const CaseCard = ({ casePost }) => {
     >
       <div
         key={casePost.title}
-        className="align-center bg-light-on-background-100 hover:bg-light-on-background-200 flex flex-col overflow-hidden text-center sm:flex-row"
+        className="align-center flex flex-col overflow-hidden bg-light-on-background-100 text-center hover:bg-light-on-background-200 sm:flex-row"
       >
-        {casePost.logo && <img src={casePost.logo} className="max-w-[140px] mx-auto my-4 px-4" />}
+        {casePost.logo && <img src={casePost.logo} className="mx-auto my-4 max-w-[140px] px-4" />}
         <div className="relative flex flex-row p-4">
           <div
-            className="absolute left-0 top-0 h-full w-full rounded "
+            className="absolute left-0 top-0 h-full w-full rounded"
             // transition-all duration-500 ease-out translate-x-full bg-light-background-100 group-hover:translate-x-0
           />
           <div>
             <Text
               as="h3"
               variant="3Xl"
-              className="text-light-background-100 relative z-10 mb-4 text-left"
+              className="relative z-10 mb-4 text-left text-light-background-100"
               //group-hover:text-light-on-background-50
             >
               {casePost.title}
@@ -55,14 +55,14 @@ const CaseCard = ({ casePost }) => {
         </div>
       </div>
     </Link>
-  );
-};
+  )
+}
 
 export default function CaseStudiesPage() {
   const cases = allCoreContent(sortPosts(allCaseStudies))
 
   return (
-    <div className="text-light-on-background-900 leading-normal tracking-normal">
+    <div className="leading-normal tracking-normal text-light-on-background-900">
       <Text as="h1" variant="6Xl" className="x-auto my-24 mb-12 max-w-3xl text-center">
         Case Studies
       </Text>

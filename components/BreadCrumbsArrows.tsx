@@ -88,5 +88,5 @@ export default function BreadCrumbsArrows() {
         />
       </div>
     </div>
-  );
+  )
 }

@@ -1,4 +1,5 @@
-"use client";
+'use client'
+
 import { ThemeUIProvider } from 'theme-ui'
 
 import PartsExercise from '@/components/ds-parts'
@@ -10,7 +11,7 @@ const PartsOfDesignSystem = () => {
     <ThemeUIProvider theme={theme}>
       <PartsExercise />
     </ThemeUIProvider>
-  );
-};
+  )
+}
 
-export default PartsOfDesignSystem;
+export default PartsOfDesignSystem

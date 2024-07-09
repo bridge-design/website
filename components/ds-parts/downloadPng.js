@@ -6,7 +6,7 @@ export const downloadPng = (ref) => {
     `${format(new Date(), "'PartsOfDesignSystem-'HH-mm-ss")}.${fileType}`
 
   if (ref.current === null) {
-    return;
+    return
   }
 
   toPng(ref.current, { cacheBust: true, backgroundColor: 'white' })
@@ -19,4 +19,4 @@ export const downloadPng = (ref) => {
     .catch((err) => {
       console.log(err)
     })
-};
+}

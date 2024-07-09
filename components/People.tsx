@@ -7,5 +7,5 @@ export function People({ people }) {
         <ProfileCard key={props.name} {...props} />
       ))}
     </div>
-  );
+  )
 }

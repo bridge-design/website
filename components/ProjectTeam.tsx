@@ -7,5 +7,5 @@ export default function ProjectTeam({ team }) {
         <Avatar key={name} name={name} />
       ))}
     </div>
-  );
+  )
 }

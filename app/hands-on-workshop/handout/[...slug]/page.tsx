@@ -5,7 +5,7 @@ import { components } from '@/components/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { coreContent } from 'pliny/utils/contentlayer'
 import { allWorkshopHandouts } from 'contentlayer/generated'
-import HandoutLayout from '@/components/workshop/layoutHandout'
+import HandoutLayout from '@/layouts/WorkshopHandout'
 
 const defaultLayout = 'HandoutLayout'
 const layouts = {
@@ -17,13 +17,17 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   // Filter out drafts in production
 
   const post = allWorkshopHandouts.find((p) => p.slug === slug)
+  // Check if post is undefined and handle accordingly
+  if (!post) {
+    return <div>Post not found</div> // Or any other error handling you prefer
+  }
   const mainContent = coreContent(post)
 
   const Layout = layouts[defaultLayout]
 
   return (
     <>
-      <Layout content={mainContent} team={post.team}>
+      <Layout content={mainContent}>
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout>
     </>

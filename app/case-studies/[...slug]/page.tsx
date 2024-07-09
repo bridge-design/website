@@ -6,9 +6,7 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allCaseStudies } from 'contentlayer/generated'
 import type { CaseStudies } from 'contentlayer/generated'
-import PostSimple from '@/layouts/PostSimple'
 import CaseStudyLayout from '@/layouts/CaseStudyLayout'
-import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
@@ -91,7 +89,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   //   return coreContent(authorResults as Authors)
   // })
   const mainContent = coreContent(post)
-  const jsonLd = post.structuredData
+  // const jsonLd = post.structuredData
   // jsonLd['author'] = authorDetails.map((author) => {
   //   return {
   //     '@type': 'Person',

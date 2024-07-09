@@ -9,7 +9,7 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 
-import { Text } from '@bridge-the-gap/design-system';
+import { Text } from '@bridge-the-gap/design-system'
 
 interface PaginationProps {
   totalPages: number
@@ -82,7 +82,7 @@ export default function ListLayout({
 
   return (
     <>
-      <div className="text-light-on-background-900 leading-normal tracking-normal">
+      <div className="leading-normal tracking-normal text-light-on-background-900">
         <Text as="h1" variant="6Xl" className="mx-auto my-24 mb-12 max-w-3xl text-center">
           {title}
         </Text>
@@ -137,7 +137,7 @@ export default function ListLayout({
 
                     <dl className="inline-flex items-center space-x-4">
                       <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <dd className="font-medium leading-6 text-base text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       </dd>
                     </dl>

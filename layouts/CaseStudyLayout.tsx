@@ -26,8 +26,6 @@ export default function CaseStudyLayout({ content, children, team }: LayoutProps
   const { path, date, title } = content
   const basePath = path.split('/')[0]
 
-  console.log('team', team)
-
   return (
     <>
       {/* <SectionContainer> */}
@@ -42,7 +40,7 @@ export default function CaseStudyLayout({ content, children, team }: LayoutProps
             </div>
           </div>
         </div>
-        <Text variant="6Xl" className="text-light-on-background-900 mb-24 mt-12 w-full text-center">
+        <Text variant="6Xl" className="mb-24 mt-12 w-full text-center text-light-on-background-900">
           {title}
         </Text>
         {team && team.length > 0 && <ProjectTeam team={team} />}
