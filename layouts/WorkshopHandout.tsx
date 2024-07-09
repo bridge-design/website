@@ -29,7 +29,7 @@ export default function LayoutHandout({ content, children }: LayoutProps) {
   return (
     <div className="grow border-b bg-white py-8">
       <div className="min-w-100 flex bg-white">
-        <div className="x-auto mb-8 max-w-2xl py-2 text-left text-xl">
+        <div className="mx-auto mb-8 max-w-2xl py-2 text-left text-xl">
           <CtaLink arrow="start" as={Link} href={mainPagePath} underline={true}>
             Back to the Main page
           </CtaLink>

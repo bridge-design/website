@@ -145,7 +145,7 @@ const Blocks = (props) => {
 export default function Handout({ canonical, baseUrl }) {
   return (
     <>
-      <div className="x-auto container mt-16 max-w-5xl">
+      <div className="container mx-auto mt-16 max-w-5xl">
         <div className="text-center text-light-on-background-900">
           <Text variant="xlBolder" className="mb-6">
             <Emoji symbol="👋 " label="hand" />

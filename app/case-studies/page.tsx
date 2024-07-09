@@ -63,7 +63,7 @@ export default function CaseStudiesPage() {
 
   return (
     <div className="leading-normal tracking-normal text-light-on-background-900">
-      <Text as="h1" variant="6Xl" className="x-auto my-24 mb-12 max-w-3xl text-center">
+      <Text as="h1" variant="6Xl" className="mx-auto my-24 mb-12 max-w-3xl text-center">
         Case Studies
       </Text>
       <div className="grid grid-cols-1 gap-20 px-10 py-11 md:grid-cols-1 lg:grid-cols-1">

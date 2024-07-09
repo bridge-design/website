@@ -6,7 +6,7 @@ import SectionTitle from './SectionTitle'
 
 export default function CustomWorkshop() {
   return (
-    <div className="x-auto mt-28 max-w-4xl">
+    <div className="mx-auto mt-28 max-w-4xl">
       <SectionTitle icon="ChartMarimekko">Want a custom workshop for your team?</SectionTitle>
       <Text variant="xlMedium" className="mt-16 flex">
         Need a custom version? We can tailor this workshop for your company. When focused on your

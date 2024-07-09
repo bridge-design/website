@@ -38,7 +38,7 @@ const sectionHeading = <SectionTitle icon="Forum32">People Say</SectionTitle>
 
 export default function PeopleSay() {
   return (
-    <div className="x-auto relative mt-28 max-w-4xl overflow-x-visible">
+    <div className="relative mx-auto mt-28 max-w-4xl overflow-x-visible">
       <Testimonial title={sectionHeading} testimonials={testimonials} />
     </div>
   )
