@@ -1,1 +1,1 @@
-[] resolve images `![](./my-image.png]`
+[] resolve images `![](./my-image.png]` https://github.com/timlrx/tailwind-nextjs-starter-blog/issues/963
