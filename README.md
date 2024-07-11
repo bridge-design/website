@@ -9,6 +9,10 @@
 - `yarn export` - deprecated at next@14 and higher. Use `yarn build` instead.
 - `yarn deploy` - deploys previously exported static assets. Normally should not be needed, because deploy is handled via Github Actions.
 
+## References
+
+The website is build based on [tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog).
+
 ## Adding new articles to blog
 
 Add a new directory named as the desired slug for the post, into `src/pages/blog` directory. Create `index.mdx` inside that directory and add your content. Any images or other assets can be also stored in the folder.
