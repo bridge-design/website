@@ -192,7 +192,7 @@ export default makeSource({
       remarkGfm,
       remarkCodeTitles,
       remarkMath,
-      remarkImgToJsx,
+      // remarkImgToJsx, Switching off to fix production image URLs
       remarkAlert,
     ],
     rehypePlugins: [
