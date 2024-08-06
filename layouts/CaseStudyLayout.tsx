@@ -31,8 +31,8 @@ export default function CaseStudyLayout({ content, children, team }: LayoutProps
       {/* <SectionContainer> */}
       <ScrollTopAndComment />
       <article>
-        <div className="grow bg-white py-8">
-          <div className="min-w-100 flex bg-white">
+        <div className="grow bg-white py-8 dark:bg-black">
+          <div className="min-w-100 flex bg-white dark:bg-black">
             <div className="mx-auto my-8 mb-8 w-full max-w-2xl px-4 py-2 text-left text-xl">
               <CtaLink arrow="start" as={Link} href={`/${basePath}`}>
                 Back to Case Studies
@@ -40,11 +40,14 @@ export default function CaseStudyLayout({ content, children, team }: LayoutProps
             </div>
           </div>
         </div>
-        <Text variant="6Xl" className="mb-24 mt-12 w-full text-center text-light-on-background-900">
+        <Text
+          variant="6Xl"
+          className="mb-24 mt-12 w-full text-center text-light-on-background-900 dark:text-white"
+        >
           {title}
         </Text>
         {team && team.length > 0 && <ProjectTeam team={team} />}
-        <div className="prose my-8 px-4 text-justify md:mx-auto">{children}</div>
+        <div className="prose my-8 px-4 text-justify dark:prose-invert md:mx-auto">{children}</div>
       </article>
       {/* </SectionContainer> */}
     </>

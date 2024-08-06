@@ -32,8 +32,8 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
       {/* <SectionContainer> */}
       <ScrollTopAndComment />
       <article>
-        <div className="grow bg-white py-8">
-          <div className="min-w-100 flex bg-white">
+        <div className="light:bg-white grow py-8 dark:bg-black">
+          <div className="min-w-100 light:bg-white dark:bg-dark flex">
             <div className="mx-auto my-8 mb-8 w-full max-w-2xl px-4 py-2 text-left text-xl">
               <CtaLink arrow="start" as={Link} href={`/${basePath}`}>
                 Back to the Blog
@@ -41,14 +41,17 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
             </div>
           </div>
         </div>
-        <Text variant="6Xl" className="mb-24 mt-12 w-full text-center text-light-on-background-900">
+        <Text
+          variant="6Xl"
+          className="mb-24 mt-12 w-full text-center text-light-on-background-900 dark:text-white"
+        >
           {title}
         </Text>
-        <div className="prose my-8 px-4 text-justify md:mx-auto">
+        <div className="prose my-8 px-4 text-justify dark:prose-invert md:mx-auto">
           <dl className="space-y-10">
             <div>
               <dt className="sr-only">Published on</dt>
-              <dd className="not-prose font-medium leading-6 text-base text-gray-500 dark:text-gray-400">
+              <dd className="not-prose font-medium leading-6 text-base text-gray-500 dark:text-white">
                 <time dateTime={date}>
                   {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                 </time>
@@ -56,7 +59,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
             </div>
           </dl>
         </div>
-        <div className="prose my-8 px-4 text-justify md:mx-auto">{children}</div>
+        <div className="prose my-8 px-4 text-justify dark:prose-invert md:mx-auto">{children}</div>
       </article>
       {/* </SectionContainer> */}
     </>

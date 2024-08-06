@@ -83,7 +83,11 @@ export default function ListLayout({
   return (
     <>
       <div className="leading-normal tracking-normal text-light-on-background-900">
-        <Text as="h1" variant="6Xl" className="mx-auto my-24 mb-12 max-w-3xl text-center">
+        <Text
+          as="h1"
+          variant="6Xl"
+          className="mx-auto my-24 mb-12 max-w-3xl text-center dark:text-white"
+        >
           {title}
         </Text>
         {showSearch && (
@@ -125,7 +129,7 @@ export default function ListLayout({
                   <Link
                     href={`/blog/${post.slug}`}
                     key={post.title}
-                    className="hover:text-primary-500"
+                    className="hover:text-primary-500 dark:text-white"
                   >
                     <Text as="h3" variant="3Xl" className="mb-4">
                       {post.title}

@@ -81,7 +81,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
               <Header />
-              <main className="max-w-full text-light-on-background-900">{children}</main>
+              <main className="max-w-full text-light-on-background-900 dark:text-white">
+                {children}
+              </main>
             </SearchProvider>
             <Footer />
           </div>
