@@ -23,7 +23,7 @@ const CaseCard = ({ casePost }) => {
     >
       <div
         key={casePost.title}
-        className="align-center flex flex-col overflow-hidden bg-light-on-background-100 text-center hover:bg-light-on-background-200 sm:flex-row"
+        className="align-center flex flex-col overflow-hidden bg-light-on-background-100 text-center hover:bg-light-on-background-200 dark:bg-black dark:text-white sm:flex-row"
       >
         {casePost.logo && <img src={casePost.logo} className="mx-auto my-4 max-w-[140px] px-4" />}
         <div className="relative flex flex-row p-4">
@@ -35,7 +35,7 @@ const CaseCard = ({ casePost }) => {
             <Text
               as="h3"
               variant="3Xl"
-              className="relative z-10 mb-4 text-left text-light-background-100"
+              className="relative z-10 mb-4 text-left text-light-background-100 dark:text-white"
               //group-hover:text-light-on-background-50
             >
               {casePost.title}
@@ -63,7 +63,11 @@ export default function CaseStudiesPage() {
 
   return (
     <div className="leading-normal tracking-normal text-light-on-background-900">
-      <Text as="h1" variant="6Xl" className="mx-auto my-24 mb-12 max-w-3xl text-center">
+      <Text
+        as="h1"
+        variant="6Xl"
+        className="mx-auto my-24 mb-12 max-w-3xl text-center dark:text-white"
+      >
         Case Studies
       </Text>
       <div className="grid grid-cols-1 gap-20 px-10 py-11 md:grid-cols-1 lg:grid-cols-1">

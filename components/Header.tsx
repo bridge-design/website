@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="flex w-full items-center pt-11">
       <Link href="/">
-        <Logo className="r-auto max-w-[250px]" />
+        <Logo className="r-auto full-current max-w-[250px]" />
       </Link>
       <Nav items={headerNavLinks} className="ml-auto" linkComponent={Link} />
     </header>
