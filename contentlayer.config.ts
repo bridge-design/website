@@ -11,9 +11,10 @@ import { remarkAlert } from 'remark-github-blockquote-alert'
 import {
   remarkExtractFrontmatter,
   remarkCodeTitles,
-  remarkImgToJsx,
+  // remarkImgToJsx,
   extractTocHeadings,
 } from 'pliny/mdx-plugins/index.js'
+import { remarkImgToJsx as imgToJsx } from './components/MdxImg'
 // Rehype packages
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -192,6 +193,7 @@ export default makeSource({
       remarkGfm,
       remarkCodeTitles,
       remarkMath,
+      imgToJsx,
       // remarkImgToJsx, Switching off to fix production image URLs
       remarkAlert,
     ],
