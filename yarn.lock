@@ -1682,9 +1682,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bridge-the-gap/design-system@npm:2.6.3":
-  version: 2.6.3
-  resolution: "@bridge-the-gap/design-system@npm:2.6.3"
+"@bridge-the-gap/design-system@npm:2.6.4":
+  version: 2.6.4
+  resolution: "@bridge-the-gap/design-system@npm:2.6.4"
   dependencies:
     "@babel/plugin-proposal-object-rest-spread": 7.20.7
     "@tailwindcss/typography": 0.5.9
@@ -1699,7 +1699,7 @@ __metadata:
   peerDependencies:
     "@tailwindcss/typography": 0.4.1
     swiper: 6.7.5
-  checksum: 36955ff0b95db7aa0f5687492d691f7076a687f7a496901258a82f5b8879208e9c65ec5f00d65c5874ea3d5aa9414811dee8e6c253486107915fc060e38aeb01
+  checksum: b2e68c3ab719db5402b73b429baa1d46b7f47864aa529c43b88c6b9c0edb84de18d2836d4b5122d73546476c79f3418d5b6df99769c911b93627ff682904aff7
   languageName: node
   linkType: hard
 
@@ -1707,7 +1707,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@bridge-the-gap/website@workspace:."
   dependencies:
-    "@bridge-the-gap/design-system": 2.6.3
+    "@bridge-the-gap/design-system": 2.6.4
     "@emotion/react": ^11.11.4
     "@headlessui/react": 1.7.19
     "@next/bundle-analyzer": 14.2.3
