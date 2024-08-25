@@ -3,8 +3,10 @@ const siteMetadata = {
   title: 'Bridge-The-Gap - design systems consulting and workshops',
   author: 'Bridge the Gap',
   x: 'https://twitter.com/varya_en',
-  description: 'We team up with designers and developers to build and scale design systems',
-  keywords: 'design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development',
+  description:
+    'Bridge-The-Gap offers expert design systems consulting and workshops, helping organizations streamline product development with scalable and reusable components. Our consulting services empower teams to maintain brand coherence and scale efficiently.',
+  keywords:
+    'design systems, workshop, team work, ReactJS, Figma, styled-components, Storybook, design, frontend, development',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://bridge-the-gap.dev/',
