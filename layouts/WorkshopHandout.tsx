@@ -38,7 +38,7 @@ export default function LayoutHandout({ content, children }: LayoutProps) {
       <Text variant="6Xl" className="my-2 w-full text-center text-light-on-background-900">
         {title}
       </Text>
-      <div className="rose mx-auto my-8 px-4 text-justify">{children}</div>
+      <div className="prose mx-auto my-8 px-4 text-justify">{children}</div>
     </div>
   )
 }

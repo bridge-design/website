@@ -14,7 +14,7 @@ const layouts = {
 
 export async function generateStaticParams() {
   const paths = allWorkshopHandouts.map((handout) => ({
-    slug: handout.slug.split('/'),
+    slug: handout.slug.split('/').slice(1),
   }))
 
   return paths
@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   return (
     <>
       <Layout content={mainContent}>
-        <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
+        <MDXLayoutRenderer code={post.body.code} components={components} />
       </Layout>
     </>
   )
