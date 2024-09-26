@@ -3,7 +3,7 @@
 module.exports = {
   content: [
     './components-new/**/*.{ts,tsx}', // Ensure Storybook and components are included
-    './stories/**/*.{ts,tsx}',
+    './tokens/**/*.{ts,tsx,md,mdx}',
   ],
   theme: {
     extend: {},

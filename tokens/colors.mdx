@@ -1,6 +1,22 @@
 import { ColorItem, ColorPalette, Meta } from '@storybook/blocks'
+import { useEffect, useState } from 'react'
+import { getColors } from './getColors'
+import '../tokens/colors.css'
 
-import { colors } from './colors'
+export const AllColors = () => {
+  const [colorVariables, setColorVariables] = useState({})
+  useEffect(() => {
+    const fetchedColors = getColors()
+    setColorVariables(fetchedColors)
+  }, [])
+  return (
+    <ColorPalette>
+      {Object.entries(colorVariables).map(([colorType, shades]) => (
+        <ColorItem key={colorType} title={`theme.colors.${colorType}`} colors={shades} />
+      ))}
+    </ColorPalette>
+  )
+}
 
 <Meta title="Tokens/Colors" />
 
@@ -8,16 +24,4 @@ import { colors } from './colors'
 
 ## Base palettes
 
-<ColorPalette>
-  <ColorItem colors={colors.neutral} title="theme.colors.neutral" />
-  <ColorItem colors={colors.grey} title="theme.colors.neutral" />
-  <ColorItem colors={colors.brand} title="theme.colors.brand" />
-</ColorPalette>
-
-## Brand colors
-
-<ColorPalette>
-  <ColorItem colors={colors.primary} title="theme.colors.primary" />
-  <ColorItem colors={colors.accent} title="theme.colors.accent" />
-  <ColorItem colors={colors.highlight} title="theme.colors.highlight" />
-</ColorPalette>
+<AllColors />

@@ -53,11 +53,4 @@
   --btg-color-highlight-400: #d38e3d;
   --btg-color-highlight-500: #e69d45; /* Your specified color */
   --btg-color-highlight-600: #ecba7c; /* Light shade */
-
-  /* Brand Colors */
-  --color-brand-dark: #455054;
-  --color-brand-green: #308695;
-  --color-brand-pink: #d45769;
-  --color-brand-yellow: #e69d45;
-  --color-brand-light: #d4cfc9;
 }
