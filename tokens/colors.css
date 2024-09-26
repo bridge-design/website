@@ -1,0 +1,63 @@
+:root {
+  /* Brand Colors */
+  --btg-color-brand-dark: #455054;
+  --btg-color-brand-green: #308695;
+  --btg-color-brand-pink: #d45769;
+  --btg-color-brand-yellow: #e69d45;
+  --btg-color-brand-light: #d4cfc9;
+
+  /* Neutral Colors */
+  --btg-color-neutral-100: #292621; /* Very dark */
+  --btg-color-neutral-200: #4c453d;
+  --btg-color-neutral-300: #6f6459;
+  --btg-color-neutral-400: #928375;
+  --btg-color-neutral-500: #b5a291;
+  --btg-color-neutral-600: #d4cfc9; /* Your specified middle color */
+  --btg-color-neutral-700: #dfd9d4;
+  --btg-color-neutral-800: #e9e5e0;
+  --btg-color-neutral-900: #f3f0ed;
+  --btg-color-neutral-1000: #fcfbfa; /* Very light */
+
+  /* Grey Colors */
+  --btg-color-grey-100: #0a0c0d; /* Very dark */
+  --btg-color-grey-200: #1c2124;
+  --btg-color-grey-300: #2e363a;
+  --btg-color-grey-400: #3b454a;
+  --btg-color-grey-500: #455054; /* Your specified middle color */
+  --btg-color-grey-600: #5d6a70;
+  --btg-color-grey-700: #798589;
+  --btg-color-grey-800: #99a3a8;
+  --btg-color-grey-900: #bcc3c7;
+  --btg-color-grey-1000: #e6e8ea; /* Very light */
+
+  /* Primary Colors */
+  --btg-color-primary-100: #092023; /* Very dark */
+  --btg-color-primary-200: #164047;
+  --btg-color-primary-300: #23606b;
+  --btg-color-primary-400: #2b737f;
+  --btg-color-primary-500: #308695; /* Your specified color */
+  --btg-color-primary-600: #4daabf; /* Light shade */
+
+  /* Accent Colors */
+  --btg-color-accent-100: #3b1119; /* Very dark */
+  --btg-color-accent-200: #752232;
+  --btg-color-accent-300: #a02e44;
+  --btg-color-accent-400: #c04257;
+  --btg-color-accent-500: #d45769; /* Your specified color */
+  --btg-color-accent-600: #e18091; /* Light shade */
+
+  /* Highlight Colors */
+  --btg-color-highlight-100: #3d2a12; /* Very dark */
+  --btg-color-highlight-200: #7a5424;
+  --btg-color-highlight-300: #b07c35;
+  --btg-color-highlight-400: #d38e3d;
+  --btg-color-highlight-500: #e69d45; /* Your specified color */
+  --btg-color-highlight-600: #ecba7c; /* Light shade */
+
+  /* Brand Colors */
+  --color-brand-dark: #455054;
+  --color-brand-green: #308695;
+  --color-brand-pink: #d45769;
+  --color-brand-yellow: #e69d45;
+  --color-brand-light: #d4cfc9;
+}
