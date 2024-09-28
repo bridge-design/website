@@ -4,6 +4,9 @@ module.exports = {
   content: [
     './components-new/**/*.{ts,tsx}', // Ensure Storybook and components are included
     './tokens/**/*.{ts,tsx,md,mdx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './layouts/**/*.{js,ts,tsx}',
+    './pages/**/*.{js,ts,tsx}',
   ],
   theme: {
     extend: {},
