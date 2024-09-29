@@ -89,6 +89,39 @@ export const Neutral1000: Story = {
   },
 }
 
+export const GradientGreen: Story = {
+  args: {
+    className: 'btg-gradient-green',
+    children: (
+      <p className={textStyle.dark}>
+        This is a Section with Neutral 1000 background and grey styled text.
+      </p>
+    ),
+  },
+}
+
+export const GradientPink: Story = {
+  args: {
+    className: 'btg-gradient-pink',
+    children: (
+      <p className={textStyle.dark}>
+        This is a Section with Neutral 1000 background and grey styled text.
+      </p>
+    ),
+  },
+}
+
+export const GradientYellow: Story = {
+  args: {
+    className: 'btg-gradient-yellow',
+    children: (
+      <p className={textStyle.dark}>
+        This is a Section with Neutral 1000 background and grey styled text.
+      </p>
+    ),
+  },
+}
+
 export const NoBackground: Story = {
   args: {
     children: (
