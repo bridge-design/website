@@ -129,7 +129,7 @@ export default function Services() {
       <Text as="h2" variant="4xl" className="b-10 mt-32">
         How it works
       </Text>
-      <Advantages content={HOW_IT_WORKS} />
+      <Advantages content={HOW_IT_WORKS} colorSchema="dark" />
       <HelpTeams
         className="mt-24"
         photoUrl="/images/meet-the-team/rectangle_14.png"

@@ -32,7 +32,7 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
       {/* <SectionContainer> */}
       <ScrollTopAndComment />
       <article>
-        <div className="light:bg-white grow py-8 dark:bg-black">
+        <div className="light:bg-white grow py-8">
           <div className="min-w-100 light:bg-white dark:bg-dark flex">
             <div className="mx-auto my-8 mb-8 w-full max-w-2xl px-4 py-2 text-left text-xl">
               <CtaLink arrow="start" as={Link} href={`/${basePath}`}>

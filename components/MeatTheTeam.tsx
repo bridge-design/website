@@ -9,7 +9,7 @@ export default function MeatTheTeam() {
       <Text as="h2" variant="4xl" className="animate-reveal mt-32">
         Meet the team
       </Text>
-      <div className="mt-10 flex flex-wrap justify-center gap-10 md:grid md:grid-cols-2 lg:flex lg:flex-col xl:grid xl:grid-cols-2">
+      <div className="mt-10 flex flex-wrap justify-center gap-10 dark:text-black md:grid md:grid-cols-2 lg:flex lg:flex-col xl:grid xl:grid-cols-2">
         {Object.values(team).map((member) => (
           <ProfileCard
             key={member.name}
