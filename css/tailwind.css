@@ -1,32 +1,9 @@
 @import '../tokens/colors.css';
+@import '../tokens/gradients.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer utilities {
-  .btg-gradient-green {
-    background: linear-gradient(
-      147deg,
-      var(--btg-color-brand-green) 0%,
-      var(--btg-color-brand-light) 100%
-    );
-  }
-  .btg-gradient-pink {
-    background: linear-gradient(
-      147deg,
-      var(--btg-color-brand-pink) 0%,
-      var(--btg-color-brand-light) 100%
-    );
-  }
-  .btg-gradient-yellow {
-    background: linear-gradient(
-      147deg,
-      var(--btg-color-brand-yellow) 0%,
-      var(--btg-color-brand-light) 100%
-    );
-  }
-}
 
 .task-list-item::before {
   @apply hidden;

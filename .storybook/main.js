@@ -2,6 +2,7 @@
 const config = {
   stories: [
     '../tokens/**/*.mdx',
+    '../tokens/**/*.stories.@(js|jsx|mjs|ts|tsx)',
     '../components-new/**/*.mdx',
     '../components-new/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],

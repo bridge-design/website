@@ -1,0 +1,57 @@
+@layer utilities {
+  .btg-gradient-green {
+    background: linear-gradient(
+      147deg,
+      var(--btg-color-brand-green) 0%,
+      var(--btg-color-brand-light) 100%
+    );
+  }
+  .btg-gradient-pink {
+    background: linear-gradient(
+      147deg,
+      var(--btg-color-brand-pink) 0%,
+      var(--btg-color-brand-light) 100%
+    );
+  }
+  .btg-gradient-yellow {
+    background: linear-gradient(
+      147deg,
+      var(--btg-color-brand-yellow) 0%,
+      var(--btg-color-brand-light) 100%
+    );
+  }
+
+  /* Gradients for text */
+  .btg-text-gradient-green {
+    background: linear-gradient(
+      147deg,
+      var(--btg-color-brand-green) 0%,
+      var(--btg-color-brand-light) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btg-text-gradient-pink {
+    background: linear-gradient(
+      147deg,
+      var(--btg-color-brand-pink) 0%,
+      var(--btg-color-brand-light) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btg-text-gradient-yellow {
+    background: linear-gradient(
+      147deg,
+      var(--btg-color-brand-yellow) 0%,
+      var(--btg-color-brand-light) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
