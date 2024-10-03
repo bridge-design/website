@@ -19,6 +19,10 @@ const meta: Meta<typeof StepList> = {
       options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
       description: 'Tag used for the step title. Defaults to h3.',
     },
+    showLines: {
+      control: { type: 'boolean' },
+      description: 'Toggle to show or hide lines in the StepList.',
+    },
   },
 }
 
@@ -92,5 +96,28 @@ export const HighlightColor: Story = {
     ],
     color: 'highlight',
     titleTag: 'h3',
+  },
+}
+
+export const WithAndWithoutLines: Story = {
+  args: {
+    steps: [
+      {
+        number: 1,
+        title: 'Foundation',
+        description: 'Establish core design principles and components',
+      },
+      { number: 2, title: 'Expansion', description: 'Add new components and refine existing ones' },
+      { number: 3, title: 'Integration', description: 'Implement across products and teams' },
+    ],
+    color: 'neutral',
+    titleTag: 'h3',
+    showLines: false, // Hide lines initially
+  },
+  argTypes: {
+    showLines: {
+      control: 'boolean',
+      description: 'Toggle to show or hide lines',
+    },
   },
 }
