@@ -13,28 +13,19 @@ module.exports = {
   theme: {
     fontSize: {
       ...defaultTheme.fontSize,
-      '9Xl': '128px',
-      '8Xl': '96px',
-      '7Xl': '72px',
-      '6Xl': '60px',
-      '5Xl': '48px',
-      '4Xl': '36px',
-      '3Xl': '30px',
-      '3XlBold': '30px',
-      '2Xl': '24px',
-      '2XlMedium': '24px',
-      xl: '20px',
-      xlMedium: '20px',
-      lg: '18px',
-      lgItalic: '18px',
-      lgMedium: '18px',
-      lgMediumItalic: '18px',
-      base: '16px',
-      baseMedium: '16px',
-      sm: '14px',
-      smMedium: '14px',
-      xs: '12px',
-      xsMedium: '12px',
+      xxs: 'var(--size-xxs)',
+      xs: 'var(--size-xs)',
+      sm: 'var(--size-sm)',
+      md: 'var(--size-md)',
+      lg: 'var(--size-lg)',
+      xl: 'var(--size-xl)',
+      '2xl': 'var(--size-2xl)',
+      '3xl': 'var(--size-3xl)',
+      '4xl': 'var(--size-4xl)',
+      '5xl': 'var(--size-5xl)',
+      '6xl': 'var(--size-6xl)',
+      '7xl': 'var(--size-7xl)',
+      '8xl': 'var(--size-8xl)',
     },
     fontWeight: {
       '9Xl': 500,
@@ -108,9 +99,34 @@ module.exports = {
       xs: '0em',
       xsMedium: '0em',
     },
-    extend: {},
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            h1: {
+              fontSize: 'var(--size-h1)',
+            },
+            h2: {
+              fontSize: 'var(--size-h2)',
+            },
+            h3: {
+              fontSize: 'var(--size-h3)',
+            },
+            h4: {
+              fontSize: 'var(--size-h4)',
+            },
+            h5: {
+              fontSize: 'var(--size-h5)',
+            },
+            h6: {
+              fontSize: 'var(--size-h6)',
+            },
+          },
+        },
+      }),
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
 
 // const { fontFamily } = require('tailwindcss/defaultTheme')
