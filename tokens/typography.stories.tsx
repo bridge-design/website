@@ -119,11 +119,13 @@ export const GradientTexts: Story = {
     <div>
       <h2 className="font-bold mb-4 text-2xl">Gradient Texts</h2>
 
-      <div className="text-gradient-green font-bold mb-4 text-6xl">
+      <div className="btg-text-gradient-green font-bold mb-4 text-6xl">
         Gradient Green to Light Text
       </div>
-      <div className="text-gradient-pink font-bold mb-4 text-6xl">Gradient Pink to Light Text</div>
-      <div className="text-gradient-yellow font-bold mb-4 text-6xl">
+      <div className="btg-text-gradient-pink font-bold mb-4 text-6xl">
+        Gradient Pink to Light Text
+      </div>
+      <div className="btg-text-gradient-yellow font-bold mb-4 text-6xl">
         Gradient Yellow to Light Text
       </div>
     </div>
