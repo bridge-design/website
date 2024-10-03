@@ -10,6 +10,68 @@ export default meta
 
 type Story = StoryObj
 
+export const Basic: Story = {
+  render: () => (
+    <div className="prose">
+      <h1>Heading 1 (h1)</h1>
+      <p>
+        This is a paragraph following an <strong>h1</strong> heading.
+      </p>
+
+      <h2>Heading 2 (h2)</h2>
+      <p>
+        This is a paragraph following an <strong>h2</strong> heading.
+      </p>
+
+      <h3>Heading 3 (h3)</h3>
+      <p>
+        This is a paragraph following an <strong>h3</strong> heading. You can also include{' '}
+        <em>italic</em> text, or <strong>bold</strong> text.
+      </p>
+
+      <h4>Heading 4 (h4)</h4>
+      <p>
+        This is a paragraph following an <strong>h4</strong> heading.
+      </p>
+
+      <h5>Heading 5 (h5)</h5>
+      <p>
+        This is a paragraph following an <strong>h5</strong> heading.
+      </p>
+
+      <h6>Heading 6 (h6)</h6>
+      <p>
+        This is a paragraph following an <strong>h6</strong> heading.
+      </p>
+
+      <blockquote>
+        This is a blockquote. Use this to highlight quotations or significant text.
+      </blockquote>
+
+      <p>
+        Here is some more text, and you can <strong>bold</strong> or <em>italicize</em> words. There
+        are also inline elements like <a href="#">links</a>.
+      </p>
+
+      <ul>
+        <li>This is an unordered list item</li>
+        <li>Another unordered list item</li>
+      </ul>
+
+      <ol>
+        <li>This is an ordered list item</li>
+        <li>Another ordered list item</li>
+      </ol>
+
+      <pre>
+        <code>{`// This is some preformatted code
+const hello = "world";
+console.log(hello);`}</code>
+      </pre>
+    </div>
+  ),
+}
+
 export const BrandColors: Story = {
   render: () => (
     <div>
