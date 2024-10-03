@@ -38,7 +38,7 @@ ThreeColumnLayout.Column = ({
   selectedColor,
 }: ColumnProps & { selectedColor?: string }) => {
   return (
-    <div className="flex flex-col items-start">
+    <div className="prose flex flex-col items-start">
       {/* Apply the selected color to h3 tags only */}
       {React.Children.map(children, (child) =>
         React.isValidElement(child) && ['h2', 'h3', 'h4', 'h5', 'h6'].includes(child.type)
