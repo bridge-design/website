@@ -1,0 +1,25 @@
+:root {
+  --font-9Xl: 'Inter', sans-serif;
+  --font-8Xl: 'Inter', sans-serif;
+  --font-7Xl: 'Inter', sans-serif;
+  --font-6Xl: 'Inter', sans-serif;
+  --font-5Xl: 'Inter', sans-serif;
+  --font-4Xl: 'Inter', sans-serif;
+  --font-3Xl: 'Inter', sans-serif;
+  --font-3XlBold: 'Inter', sans-serif;
+  --font-2Xl: 'Inter', sans-serif;
+  --font-2XlMedium: 'Inter', sans-serif;
+
+  --font-xl: 'Roboto', sans-serif;
+  --font-xlMedium: 'Roboto', sans-serif;
+  --font-lg: 'Roboto', sans-serif;
+  --font-lgItalic: 'Roboto', sans-serif;
+  --font-lgMedium: 'Roboto', sans-serif;
+  --font-lgMediumItalic: 'Roboto', sans-serif;
+  --font-base: 'Roboto', sans-serif;
+  --font-baseMedium: 'Roboto', sans-serif;
+  --font-sm: 'Roboto', sans-serif;
+  --font-smMedium: 'Roboto', sans-serif;
+  --font-xs: 'Roboto', sans-serif;
+  --font-xsMedium: 'Roboto', sans-serif;
+}
