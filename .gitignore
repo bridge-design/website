@@ -47,3 +47,5 @@ yarn-error.log*
 .contentlayer
 
 *storybook.log
+
+/storybook-static

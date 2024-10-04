@@ -1743,9 +1743,9 @@ __metadata:
     "@storybook/nextjs": ^8.3.2
     "@storybook/react": ^8.3.3
     "@storybook/test": ^8.3.2
-    "@svgr/webpack": ^8.1.0
+    "@svgr/webpack": ^8.0.1
     "@tailwindcss/forms": ^0.5.7
-    "@tailwindcss/typography": ^0.5.12
+    "@tailwindcss/typography": ^0.5.15
     "@types/mdx": ^2.0.12
     "@types/react": ^18.2.73
     "@typescript-eslint/eslint-plugin": ^6.1.0
@@ -4580,7 +4580,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/webpack@npm:^8.1.0":
+"@svgr/webpack@npm:^8.0.1":
   version: 8.1.0
   resolution: "@svgr/webpack@npm:8.1.0"
   dependencies:
@@ -4638,7 +4638,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:^0.5.12":
+"@tailwindcss/typography@npm:^0.5.15":
   version: 0.5.15
   resolution: "@tailwindcss/typography@npm:0.5.15"
   dependencies:
