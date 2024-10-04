@@ -1,9 +1,11 @@
 :root {
-  --font-9Xl: 'Inter', sans-serif;
-  --font-8Xl: 'Inter', sans-serif;
-  --font-7Xl: 'Inter', sans-serif;
-  --font-6Xl: 'Inter', sans-serif;
-  --font-5Xl: 'Inter', sans-serif;
+  /* Merriweather for Large Headings */
+  --font-9Xl: 'Merriweather', serif;
+  --font-8Xl: 'Merriweather', serif;
+  --font-7Xl: 'Merriweather', serif;
+
+  --font-6Xl: 'Merriweather', serif;
+  --font-5Xl: 'Merriweather', serif;
   --font-4Xl: 'Inter', sans-serif;
   --font-3Xl: 'Inter', sans-serif;
   --font-3XlBold: 'Inter', sans-serif;
