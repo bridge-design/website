@@ -54,4 +54,90 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  .btg-gradient-primary-accent {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-primary-500) 5%,
+      var(--btg-color-accent-400) 45%,
+      var(--btg-color-highlight-300) 85%
+    );
+  }
+
+  /* Gradient 2: Neutral to Primary */
+  .btg-gradient-neutral-primary {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-neutral-500) 5%,
+      var(--btg-color-primary-400) 45%,
+      var(--btg-color-highlight-500) 85%
+    );
+  }
+
+  /* Gradient 3: Accent to Highlight */
+  .btg-gradient-accent-highlight {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-accent-500) 5%,
+      var(--btg-color-highlight-400) 45%,
+      var(--btg-color-primary-300) 85%
+    );
+  }
+
+  /* Gradient 4: Brand Dark to Yellow */
+  .btg-gradient-brand-dark-yellow {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-brand-dark) 5%,
+      var(--btg-color-brand-yellow) 45%,
+      var(--btg-color-brand-pink) 85%
+    );
+  }
+
+  /* Gradient 5: Grey to Green */
+  .btg-gradient-grey-green {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-grey-500) 5%,
+      var(--btg-color-brand-green) 45%,
+      var(--btg-color-brand-light) 85%
+    );
+  }
+
+  /* Text Gradient Examples */
+  .btg-text-gradient-primary-accent {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-primary-500) 5%,
+      var(--btg-color-accent-400) 45%,
+      var(--btg-color-highlight-300) 85%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btg-text-gradient-neutral-primary {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-neutral-500) 5%,
+      var(--btg-color-primary-400) 45%,
+      var(--btg-color-highlight-500) 85%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btg-text-gradient-accent-highlight {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-accent-500) 5%,
+      var(--btg-color-highlight-400) 45%,
+      var(--btg-color-primary-300) 85%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
