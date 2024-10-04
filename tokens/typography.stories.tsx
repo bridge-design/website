@@ -72,6 +72,36 @@ console.log(hello);`}</code>
   ),
 }
 
+export const FontFamilyExample: Story = {
+  render: () => (
+    <div className="prose">
+      <h1 className="font-9Xl">Heading 1 with 9Xl Font (Inter)</h1>
+      <h2 className="font-8Xl">Heading 2 with 8Xl Font (Inter)</h2>
+      <h3 className="font-7Xl">Heading 3 with 7Xl Font (Inter)</h3>
+      <h4 className="font-6Xl">Heading 4 with 6Xl Font (Inter)</h4>
+      <h5 className="font-5Xl">Heading 5 with 5Xl Font (Inter)</h5>
+      <h6 className="font-4Xl">Heading 6 with 4Xl Font (Inter)</h6>
+
+      <p className="font-3Xl">Paragraph with 3Xl Font (Inter)</p>
+      <p className="font-2Xl">Paragraph with 2Xl Font (Inter)</p>
+      <p className="font-xl">Paragraph with xl Font (Roboto)</p>
+      <p className="font-lg">Paragraph with lg Font (Roboto)</p>
+      <p className="font-base">Paragraph with base Font (Roboto)</p>
+      <p className="font-sm">Paragraph with sm Font (Roboto)</p>
+      <p className="font-xs">Paragraph with xs Font (Roboto)</p>
+
+      <h3>Medium and Italic Examples:</h3>
+      <p className="font-3XlBold">Paragraph with 3XlBold Font (Inter Bold)</p>
+      <p className="font-2XlMedium">Paragraph with 2XlMedium Font (Inter Medium)</p>
+      <p className="font-xlMedium">Paragraph with xlMedium Font (Roboto Medium)</p>
+      <p className="font-lgItalic italic">Paragraph with lgItalic Font (Roboto Italic)</p>
+      <p className="font-lgMediumItalic italic">
+        Paragraph with lgMediumItalic Font (Roboto Medium Italic)
+      </p>
+    </div>
+  ),
+}
+
 export const BrandColors: Story = {
   render: () => (
     <div>
