@@ -1,3 +1,4 @@
+import path from 'path'
 /** @type { import('@storybook/nextjs').StorybookConfig } */
 const config = {
   stories: [
@@ -6,15 +7,17 @@ const config = {
     '../components-new/**/*.mdx',
     '../components-new/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
-
+  docs: {
+    autodocs: true,
+  },
   addons: [
-    '@storybook/addon-onboarding',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
+    'storybook-addon-pseudo-states',
+    '@storybook/addon-a11y',
   ],
-
   framework: {
     name: '@storybook/nextjs',
     options: {},
@@ -22,7 +25,17 @@ const config = {
 
   staticDirs: ['../public'],
 
-  docs: {},
+  typescript: {
+    check: false,
+    checkOptions: {},
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      tsconfigPath: path.resolve(__dirname, '../../../tsconfig.json'),
+      // Excludes props that are coming from node_modules (for example HTML Attributes)
+      propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
+    },
+  },
 
   webpackFinal: async (config, { configType }) => {
     // Find the existing rule for handling files

@@ -2,7 +2,7 @@ import { addons, type API, type LeafEntry, type HashEntry } from '@storybook/man
 import { styled } from '@storybook/theming';
 import { Fragment, createElement } from 'react';
 
-const SYSTEM_TAGS = ['beta', 'deprecated', 'wip'];
+const SYSTEM_TAGS = ['dev', 'autodocs', 'test'];
 
 const findComponentTags = (stories: LeafEntry[]) => {
   const allTags = stories.flatMap((story) => story.tags);
@@ -56,9 +56,9 @@ addons.setConfig({
         switch (tag) {
           case 'deprecated':
             return createElement(Fragment, null, item.name, createElement(Deprecated, null, tag));
-          case 'draft':
+          case 'wip':
             return createElement(Fragment, null, item.name, createElement(Draft, null, tag));
-          case 'preview':
+          case 'beta':
             return createElement(Fragment, null, item.name, createElement(Preview, null, tag));
           case 'stable':
             return createElement(Fragment, null, item.name, createElement(Stable, null, tag));
