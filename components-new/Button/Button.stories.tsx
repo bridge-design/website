@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Button } from './Button'
+import { Button, buttonVariants, ButtonProps } from './Button'
+import { fn } from '@storybook/test'
 
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
@@ -8,7 +9,7 @@ const meta: Meta<typeof Button> = {
     variant: {
       control: {
         type: 'select',
-        options: ['primary', 'secondary'],
+        options: buttonVariants,
       },
     },
     children: {
@@ -20,16 +21,18 @@ const meta: Meta<typeof Button> = {
 export default meta
 type Story = StoryObj<typeof Button>
 
+const defaultArgs: ButtonProps = {
+  variant: 'primary',
+  children: 'Button',
+  onClick: fn(),
+}
 export const Primary: Story = {
-  args: {
-    variant: 'primary',
-    children: 'Primary Button',
-  },
+  args: defaultArgs,
 }
 
 export const Secondary: Story = {
   args: {
+    ...defaultArgs,
     variant: 'secondary',
-    children: 'Secondary Button',
   },
 }
