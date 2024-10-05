@@ -4,6 +4,7 @@ import { Stepper, StepperProps, stepperVariants, stepperColors, stepperTitleTags
 const meta: Meta<typeof Stepper> = {
   title: 'Components/Stepper',
   component: Stepper,
+  tags: ['wip'],
   argTypes: {
     steps: {
       control: 'object',

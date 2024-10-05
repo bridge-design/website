@@ -6,6 +6,10 @@ interface ArrowListProps {
   titleTag?: keyof JSX.IntrinsicElements
 }
 
+/**
+ * @deprecated
+ * Use [Stepper](/?path=/docs/components-stepper--docs) component
+ */
 export const ArrowList: React.FC<ArrowListProps> = ({
   steps,
   color = 'neutral',
@@ -61,7 +65,7 @@ export const ArrowList: React.FC<ArrowListProps> = ({
           </div>
 
           {/* Step Content */}
-          <div className="ml-4 mt-4">
+          <div className="mt-4 ml-4">
             {/* Customizable Title Tag */}
             <TitleTag className={`font-bold text-xl ${selectedColor.titleText}`}>
               {step.title}

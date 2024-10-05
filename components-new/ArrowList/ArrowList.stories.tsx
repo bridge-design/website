@@ -4,6 +4,7 @@ import { ArrowList } from './ArrowList'
 const meta: Meta<typeof ArrowList> = {
   title: 'Components/ArrowList',
   component: ArrowList,
+  tags: ['deprecated'],
   argTypes: {
     steps: {
       control: 'object',
