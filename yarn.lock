@@ -1738,7 +1738,6 @@ __metadata:
     "@storybook/addon-essentials": ^8.3.2
     "@storybook/addon-interactions": ^8.3.2
     "@storybook/addon-links": ^8.3.2
-    "@storybook/addon-onboarding": ^8.3.2
     "@storybook/blocks": ^8.3.2
     "@storybook/nextjs": ^8.3.2
     "@storybook/react": ^8.3.3
@@ -1793,6 +1792,7 @@ __metadata:
     remark-github-blockquote-alert: ^1.2.1
     remark-math: ^6.0.0
     storybook: ^8.3.2
+    storybook-addon-pseudo-states: ^4.0.2
     style-loader: ^4.0.0
     tailwindcss: ^3.4.3
     theme-ui: 0.16.2
@@ -3805,17 +3805,6 @@ __metadata:
   peerDependencies:
     storybook: ^8.3.2
   checksum: 71537afedf2ba73d6a3d94322dd16933c00855001a918303b0e10e628c2d6b546ed30ef6c7e62809f22472ff5cd31065fafbda31a29cc9d6e71bd2a5cd1e77b0
-  languageName: node
-  linkType: hard
-
-"@storybook/addon-onboarding@npm:^8.3.2":
-  version: 8.3.2
-  resolution: "@storybook/addon-onboarding@npm:8.3.2"
-  dependencies:
-    react-confetti: ^6.1.0
-  peerDependencies:
-    storybook: ^8.3.2
-  checksum: 943819b9eef6ae503c32173db61a641166e36067794d6a96471d7240a7313b731b60a91b062c59ee1c61bc0ac6575fe85fb43fdb4f71ffa893328888d9fbca6f
   languageName: node
   linkType: hard
 
@@ -15518,6 +15507,17 @@ __metadata:
   dependencies:
     internal-slot: ^1.0.4
   checksum: d04173690b2efa40e24ab70e5e51a3ff31d56d699550cfad084104ab3381390daccb36652b25755e420245f3b0737de66c1879eaa2a8d4fc0a78f9bf892fcb42
+  languageName: node
+  linkType: hard
+
+"storybook-addon-pseudo-states@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "storybook-addon-pseudo-states@npm:4.0.2"
+  dependencies:
+    "@storybook/icons": ^1.2.10
+  peerDependencies:
+    storybook: ^8.2.0
+  checksum: bc1bd901b9a9423fd2c443f5e40eb100b705d5a0507d99609b36503dc21b680156e1c81ec11ec50117257b3fa970828842d11a1b184463b3cbd82bccb5bc2864
   languageName: node
   linkType: hard
 
