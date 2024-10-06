@@ -8,6 +8,12 @@ export interface ButtonProps {
   onClick?: () => void
 }
 
+/**
+ * Button description
+ *
+ * [Figma Design](https://www.figma.com)
+ * [Github](https://github.com/bridge-design/website/blob/main/components/Button/Button.tsx)
+ */
 export const Button: React.FC<ButtonProps> = ({ children, variant = 'secondary', onClick }) => {
   const baseStyles = `px-4 py-2 rounded transition-colors duration-200 ease-in-out font-semibold`
   const focusStyles = 'focus:outline-none focus:ring focus:ring-violet-300'
