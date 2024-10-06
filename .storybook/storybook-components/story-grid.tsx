@@ -26,7 +26,7 @@ export const StoryGrid = ({ of }: StoryGridProps) => {
     )
   }, [story.parameters?.backgrounds.values])
 
-  // Filter stories that are ot disabled and not excluded from grid view
+  // Filter stories that are not disabled and not excluded from grid view
   const stories = componentStories().filter((story) => {
     return !story.parameters?.docs?.disable && !story.parameters?.docs?.excludeFromStoryGrid
   })
@@ -38,14 +38,14 @@ export const StoryGrid = ({ of }: StoryGridProps) => {
   return (
     <>
       <Heading>Variants</Heading>
-      <div className="m-b row gutter-2 m-b-xs" style={{ minHeight: 400 }}>
+      <div className="flex flex-wrap m-b m-b-xs" style={{ minHeight: 400 }}>
         {stories.map((story: PreparedStory) => {
           const background = story.parameters?.backgrounds?.default
           const backgroundHex = backgroundOptions[background]
           const storyName = story.name === 'Playground' ? 'Default' : story.name
           return (
             <div
-              className="flex-col col-4 d-flex align-center"
+              className="flex flex-col w-1/3 px-1 align-center"
               key={story.name}
               style={{ background: backgroundHex ?? 'transparent', position: 'relative' }}
             >
