@@ -1,9 +1,15 @@
 import { Meta, StoryObj } from '@storybook/react'
+import React from 'react'
 // import '../tokens/colors.css'
 // import '../tokens/gradients.css'
 
 const meta: Meta = {
   title: 'Tokens/Typography',
+  component: React.Fragment,
+  tags: ['!autodocs'],
+  parameters: {
+    showPanel: false,
+  },
 }
 
 export default meta
@@ -105,7 +111,7 @@ export const FontFamilyExample: Story = {
 export const BrandColors: Story = {
   render: () => (
     <div>
-      <h2 className="font-bold mb-4 text-2xl">Brand Colors</h2>
+      <h2 className="mb-4 text-2xl font-bold">Brand Colors</h2>
 
       <div className="font-bold mb-4 text-5xl text-[var(--btg-color-brand-dark)]">
         Brand Dark Text
@@ -129,7 +135,7 @@ export const BrandColors: Story = {
 export const NeutralColors: Story = {
   render: () => (
     <div>
-      <h2 className="font-bold mb-4 text-2xl">Neutral Colors</h2>
+      <h2 className="mb-4 text-2xl font-bold">Neutral Colors</h2>
 
       <div className="font-bold mb-4 text-5xl text-[var(--btg-color-neutral-100)]">
         Neutral 100 Text
@@ -147,15 +153,15 @@ export const NeutralColors: Story = {
 export const GradientTexts: Story = {
   render: () => (
     <div>
-      <h2 className="font-bold mb-4 text-2xl">Gradient Texts</h2>
+      <h2 className="mb-4 text-2xl font-bold">Gradient Texts</h2>
 
-      <div className="btg-text-gradient-green font-bold mb-4 text-6xl">
+      <div className="mb-4 text-6xl font-bold btg-text-gradient-green">
         Gradient Green to Light Text
       </div>
-      <div className="btg-text-gradient-pink font-bold mb-4 text-6xl">
+      <div className="mb-4 text-6xl font-bold btg-text-gradient-pink">
         Gradient Pink to Light Text
       </div>
-      <div className="btg-text-gradient-yellow font-bold mb-4 text-6xl">
+      <div className="mb-4 text-6xl font-bold btg-text-gradient-yellow">
         Gradient Yellow to Light Text
       </div>
     </div>

@@ -16,7 +16,6 @@ export interface ButtonProps {
 }
 
 /**
- * Button description
  *
  * The classic button, in different colors, sizes, and states
  *

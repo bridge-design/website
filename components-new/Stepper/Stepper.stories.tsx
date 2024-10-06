@@ -4,7 +4,7 @@ import { Stepper, StepperProps, stepperVariants, stepperColors, stepperTitleTags
 const meta: Meta<typeof Stepper> = {
   title: 'Components/Stepper',
   component: Stepper,
-  tags: ['wip'],
+  tags: ['draft'],
   argTypes: {
     steps: {
       control: 'object',
@@ -21,6 +21,9 @@ const meta: Meta<typeof Stepper> = {
       control: { type: 'select' },
       options: stepperTitleTags,
     },
+  },
+  parameters: {
+    storyGridColumns: 1,
   },
 }
 

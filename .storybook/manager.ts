@@ -56,7 +56,7 @@ addons.setConfig({
         switch (tag) {
           case 'deprecated':
             return createElement(Fragment, null, item.name, createElement(Deprecated, null, tag));
-          case 'wip':
+          case 'draft':
             return createElement(Fragment, null, item.name, createElement(Draft, null, tag));
           case 'beta':
             return createElement(Fragment, null, item.name, createElement(Preview, null, tag));

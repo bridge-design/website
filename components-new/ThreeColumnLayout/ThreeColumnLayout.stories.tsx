@@ -4,6 +4,7 @@ import { ThreeColumnLayout } from './ThreeColumnLayout'
 const meta: Meta<typeof ThreeColumnLayout> = {
   title: 'Components/ThreeColumnLayout',
   component: ThreeColumnLayout,
+  tags: ['!autodocs', '!dev'],
   argTypes: {
     color: {
       control: { type: 'select' },
