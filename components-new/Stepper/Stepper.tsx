@@ -45,6 +45,15 @@ const colorClasses = {
 
 const circleClasses = `z-10 h-12 w-12 flex-shrink-0 rounded-full font-bold text-xl`
 const arrowClasses = `h-24 w-24 pt-2`
+
+/**
+ *  The Stepper component displays progress through a sequence of logical and numbered steps.
+ *  It is best used when presenting instructional content that must be conducted in a particular order.
+ *  It requires a title and description to be present and will automatically provide numbers to the steps
+ *
+ * [Figma Design](https://www.figma.com)
+ * [Github](https://github.com/bridge-design/website/blob/main/components/Stepper/Stepper.tsx)
+ */
 export const Stepper: React.FC<StepperProps> = ({
   steps,
   color = 'neutral',

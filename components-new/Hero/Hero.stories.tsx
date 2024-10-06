@@ -8,6 +8,7 @@ const heroImage = require('./hero-image.jpg')
 const meta: Meta<typeof Hero> = {
   title: 'Components/Hero',
   component: Hero,
+  tags: ['!autodocs', '!dev'],
   argTypes: {
     title: { control: 'text' },
     description: { control: 'text' },

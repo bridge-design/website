@@ -32,7 +32,7 @@ const preview = {
       },
       toc: {
         headingSelector: 'h2, [data-include-toc]',
-        ignoreSelector: '[data-skip-toc]',
+        ignoreSelector: '[data-skip-toc], .docs-story h2',
       },
       page: () => {
         return (

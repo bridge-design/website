@@ -14,7 +14,7 @@ interface Background {
 export const StoryGrid = ({ of }: StoryGridProps) => {
   const { componentStories } = useContext(DocsContext)
   const { story } = useOf<'story'>(of ?? 'story')
-
+  const columns = story.parameters?.storyGridColumns ?? 3
   const backgroundOptions: Record<string, string> = useMemo(() => {
     const backgrounds: Background[] = story.parameters?.backgrounds.values
     return backgrounds.reduce(
@@ -45,7 +45,7 @@ export const StoryGrid = ({ of }: StoryGridProps) => {
           const storyName = story.name === 'Playground' ? 'Default' : story.name
           return (
             <div
-              className="flex flex-col w-1/3 px-1 align-center"
+              className={`flex flex-col w-1/${columns} align-center px-1`}
               key={story.name}
               style={{ background: backgroundHex ?? 'transparent', position: 'relative' }}
             >

@@ -4,6 +4,7 @@ import { StepList } from './StepList'
 const meta: Meta<typeof StepList> = {
   title: 'Components/StepList',
   component: StepList,
+  tags: ['!autodocs', '!dev'],
   argTypes: {
     steps: {
       control: 'object',

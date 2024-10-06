@@ -48,7 +48,7 @@ export const StepList: React.FC<StepListProps> = ({
   const selectedColor = colorClasses[color]
 
   return (
-    <div className="relative flex flex-col space-y-8 pb-4">
+    <div className="relative flex flex-col pb-4 space-y-8">
       {/* Vertical Line */}
       {showLines && (
         <div className={`absolute left-6 top-0 z-0 h-full w-px ${selectedColor.lineColor}`}></div>

@@ -15,6 +15,9 @@ const meta: Meta<typeof Logo> = {
       control: 'text',
     },
   },
+  parameters: {
+    storyGridColumns: 2,
+  },
 }
 
 export default meta

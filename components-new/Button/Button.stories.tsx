@@ -5,6 +5,7 @@ import { fn } from '@storybook/test'
 const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
+  tags: ['stable'],
   argTypes: {
     variant: {
       control: {
