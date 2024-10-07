@@ -3,7 +3,10 @@ import { styled } from '@storybook/theming';
 import { Fragment, createElement } from 'react';
 import bridgeTheme from './bridge-theme';
 
-/** Tags */
+/** 
+ * Tags
+ * solution by [jpzwarte](https://github.com/jpzwarte)
+ */
 const SYSTEM_TAGS = ['dev', 'autodocs', 'test'];
 
 const findComponentTags = (stories: LeafEntry[]) => {
