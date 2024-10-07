@@ -1,7 +1,9 @@
 import { addons, type API, type LeafEntry, type HashEntry } from '@storybook/manager-api';
 import { styled } from '@storybook/theming';
 import { Fragment, createElement } from 'react';
+import bridgeTheme from './bridge-theme';
 
+/** Tags */
 const SYSTEM_TAGS = ['dev', 'autodocs', 'test'];
 
 const findComponentTags = (stories: LeafEntry[]) => {
@@ -70,4 +72,11 @@ addons.setConfig({
       }
     },
   }
+});
+
+
+/** Theme */
+
+addons.setConfig({
+  theme: bridgeTheme
 });
