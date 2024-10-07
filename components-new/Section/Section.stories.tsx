@@ -4,6 +4,7 @@ import { Section } from './Section'
 const meta: Meta<typeof Section> = {
   title: 'Components/Section',
   component: Section,
+  tags: ['!autodocs', '!dev'],
   argTypes: {
     backgroundColor: {
       control: {

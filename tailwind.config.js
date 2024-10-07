@@ -9,6 +9,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './layouts/**/*.{js,ts,tsx}',
     './pages/**/*.{js,ts,tsx}',
+    './.storybook/**/*.{js,ts,tsx}',
   ],
   theme: {
     fontSize: {
