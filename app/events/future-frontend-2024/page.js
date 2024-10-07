@@ -50,7 +50,9 @@ export default function FutureFrontendEvent() {
           >
             <div className="mb-8">
               <Text variant="smMedium" className="mb-3">
-                TODO: Slides description
+                Evolution of workflows, transforming a design system into a real product by
+                enhancing communication with high-level stakeholders, engaging peers, and
+                streamlining collaboration.
               </Text>
             </div>
           </Card>
@@ -65,13 +67,14 @@ export default function FutureFrontendEvent() {
           >
             <div className="mb-8">
               <Text variant="smMedium" className="mb-3">
-                TODO: Director's Cut description
+                More detailed insights into engaging peers, streamlining collaboration and working
+                with the in-house design and development community.
               </Text>
             </div>
           </Card>
           <Card
             className="min-h-[240px]"
-            heading="COMPLETE DESIGN"
+            heading="COMPLETE DESIGN SYSTEM"
             link={{
               text: `Miro Board`,
               href: 'https://miro.com/app/board/uXjVLWJrBcQ=/',
@@ -80,7 +83,8 @@ export default function FutureFrontendEvent() {
           >
             <div className="mb-8">
               <Text variant="smMedium" className="mb-3">
-                TODO: Miro board description
+                Compilation of existing design systems, highlighting their features and linking
+                examples.
               </Text>
             </div>
           </Card>
