@@ -44,7 +44,7 @@ export default function FutureFrontendEvent() {
             heading="ORIGINAL SLIDES"
             link={{
               text: 'Slides in PDF',
-              href: 'https://www.eventbrite.ch/e/hands-on-with-design-systems-december-tickets-185528118597',
+              href: 'https://bridge-the-gap.dev/static/talks/ff-october-2024/from-survival-to-growth-design-systems-collaboration.pdf',
             }}
             linkComponent={Link}
           >
@@ -59,7 +59,7 @@ export default function FutureFrontendEvent() {
             heading="DIRECTOR'S CUT"
             link={{
               text: `Even more slides`,
-              href: '',
+              href: 'https://bridge-the-gap.dev/static/talks/ff-october-2024/from-survival-to-growth-design-systems-collaboration-directors-cut.pdf',
             }}
             linkComponent={Link}
           >
@@ -74,7 +74,7 @@ export default function FutureFrontendEvent() {
             heading="COMPLETE DESIGN"
             link={{
               text: `Miro Board`,
-              href: '',
+              href: 'https://miro.com/app/board/uXjVLWJrBcQ=/',
             }}
             linkComponent={Link}
           >
@@ -110,7 +110,10 @@ export default function FutureFrontendEvent() {
             Casual remote breakfast for design systems’ people — designers and developers.
           </p>
           <p></p>
-          <Link href="" className="text-blue-600 hover:underline">
+          <Link
+            href="https://www.linkedin.com/events/casualbreakfastfordesignsystems7249054983411691520/"
+            className="text-blue-600 hover:underline"
+          >
             Date: October 30th, 2023 | Time: 9:30 CET (8:30 GMT / 10:30 EET) @ your laptop
           </Link>
 
