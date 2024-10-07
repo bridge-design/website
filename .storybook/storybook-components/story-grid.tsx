@@ -35,6 +35,24 @@ export const StoryGrid = ({ of }: StoryGridProps) => {
     return null
   }
 
+  const columnsClass = useMemo(() => {
+    /**
+     * tailwind compiler doesn't support dynamic classes, so each of w-1/x styles has to be in the file as a string
+     * https://tailwindcss.com/docs/content-configuration#dynamic-class-names
+     */
+    if (columns === 2) {
+      return 'w-1/2'
+    } else if (columns === 3) {
+      return 'w-1/3'
+    } else if (columns === 4) {
+      return 'w-1/4'
+    } else if (columns === 5) {
+      return 'w-1/5'
+    } else if (columns >= 6) {
+      return 'w-1/6'
+    }
+  }, [columns])
+
   return (
     <>
       <Heading>Variants</Heading>
@@ -45,7 +63,7 @@ export const StoryGrid = ({ of }: StoryGridProps) => {
           const storyName = story.name === 'Playground' ? 'Default' : story.name
           return (
             <div
-              className={`flex flex-col w-1/${columns} align-center px-1`}
+              className={`align-center flex flex-col px-1 ${columnsClass}`}
               key={story.name}
               style={{ background: backgroundHex ?? 'transparent', position: 'relative' }}
             >
