@@ -39,7 +39,8 @@ const defaultArgs: StepperProps = {
     },
     {
       title: 'Strategize',
-      description: 'Develop tailored design system plan',
+      description:
+        'Develop tailored design system plan. Be sure to include all stakeholders! That means you, too. Usually, the plan includes a timeline, budget, and resources.',
     },
     { title: 'Implement', description: 'Build and integrate the design system' },
   ],
