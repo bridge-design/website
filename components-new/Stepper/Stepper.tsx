@@ -12,6 +12,8 @@ export interface StepperProps {
   variant?: (typeof stepperVariants)[number]
   /** Color theme */
   color?: (typeof stepperColors)[number]
+  /** Toggle to show or hide lines in the list */
+  showLines?: boolean
   /** HTML tag used for the title */
   titleTag?: (typeof stepperTitleTags)[number]
 }
@@ -19,25 +21,29 @@ export interface StepperProps {
 const colorClasses = {
   primary: {
     shapeBg: 'bg-[var(--btg-color-primary-400)]',
-    numberText: 'text-[var(--btg-color-neutral-1000)]', // Using --btg-color-neutral-1000 for number text
+    numberText: 'text-[var(--btg-color-neutral-1000)]',
+    lineColor: 'bg-[var(--btg-color-primary-400)]',
     titleText: 'text-[var(--btg-color-primary-300)]',
     descriptionText: 'text-[var(--btg-color-primary-100)]',
   },
   accent: {
     shapeBg: 'bg-[var(--btg-color-accent-400)]',
-    numberText: 'text-[var(--btg-color-neutral-1000)]', // Using --btg-color-neutral-1000 for number text
+    numberText: 'text-[var(--btg-color-neutral-1000)]',
+    lineColor: 'bg-[var(--btg-color-accent-400)]',
     titleText: 'text-[var(--btg-color-accent-300)]',
     descriptionText: 'text-[var(--btg-color-accent-100)]',
   },
   highlight: {
     shapeBg: 'bg-[var(--btg-color-highlight-400)]',
-    numberText: 'text-[var(--btg-color-neutral-1000)]', // Using --btg-color-neutral-1000 for number text
+    numberText: 'text-[var(--btg-color-neutral-1000)]',
+    lineColor: 'bg-[var(--btg-color-highlight-400)]',
     titleText: 'text-[var(--btg-color-highlight-300)]',
     descriptionText: 'text-[var(--btg-color-highlight-100)]',
   },
   neutral: {
     shapeBg: 'bg-[var(--btg-color-neutral-400)]',
-    numberText: 'text-[var(--btg-color-neutral-1000)]', // Using --btg-color-neutral-1000 for number text
+    numberText: 'text-[var(--btg-color-neutral-1000)]',
+    lineColor: 'bg-[var(--btg-color-neutral-400)]',
     titleText: 'text-[var(--btg-color-neutral-300)]',
     descriptionText: 'text-[var(--btg-color-neutral-100)]',
   },
@@ -58,6 +64,7 @@ export const Stepper: React.FC<StepperProps> = ({
   steps,
   color = 'neutral',
   variant = 'arrow',
+  showLines = false,
   titleTag: TitleTag = 'h3',
 }) => {
   // Define the color shades based on the selected color option
@@ -65,7 +72,13 @@ export const Stepper: React.FC<StepperProps> = ({
   const selectedColor = colorClasses[color]
 
   return (
-    <div className="relative flex flex-col gap-2 space-y-0">
+    <div className="relative flex flex-col space-y-8 pb-4">
+      {/* Vertical Line */}
+      {showLines && (
+        <div
+          className={`absolute left-6 top-0 z-0 ${variant === 'arrow' ? 'ml-6' : ''} h-full w-px ${selectedColor.lineColor}`}
+        ></div>
+      )}
       {steps.map((step, index) => (
         <div
           key={`${step.title}-${index}`}
@@ -86,6 +99,11 @@ export const Stepper: React.FC<StepperProps> = ({
               {index + 1}
             </div>
           </div>
+
+          {/* Divider Line */}
+          {showLines && variant === 'circle' && (
+            <div className={`mt-6 h-px w-8 flex-shrink-0 ${selectedColor.lineColor}`}></div>
+          )}
 
           {/* Step Content */}
           <div className="ml-4">

@@ -17,6 +17,9 @@ const meta: Meta<typeof Stepper> = {
       control: { type: 'select' },
       options: stepperVariants,
     },
+    showLines: {
+      control: 'boolean',
+    },
     titleTag: {
       control: { type: 'select' },
       options: stepperTitleTags,
@@ -79,5 +82,13 @@ export const CircleShape = {
   args: {
     ...defaultArgs,
     variant: 'circle',
+  },
+}
+
+export const CircleAndLines = {
+  args: {
+    ...defaultArgs,
+    variant: 'circle',
+    showLines: true,
   },
 }
