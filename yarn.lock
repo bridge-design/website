@@ -1731,6 +1731,7 @@ __metadata:
   resolution: "@bridge-the-gap/website@workspace:."
   dependencies:
     "@bridge-the-gap/design-system": 2.6.4
+    "@carbon/icons-react": ^11.51.0
     "@chromatic-com/storybook": ^1.9.0
     "@emotion/react": ^11.11.4
     "@headlessui/react": 1.7.19
@@ -1802,6 +1803,28 @@ __metadata:
     unist-util-visit: ^5.0.0
   languageName: unknown
   linkType: soft
+
+"@carbon/icon-helpers@npm:^10.53.0":
+  version: 10.53.1
+  resolution: "@carbon/icon-helpers@npm:10.53.1"
+  dependencies:
+    "@ibm/telemetry-js": ^1.5.0
+  checksum: 517e8d1e750171662a556fc28f45dfb106fc825fcb78277aeec6d054df089bf0ba53e5d82a046928c2cec4f9112b67a2f3c21943f31f77824d4b9cd0afdfc7ae
+  languageName: node
+  linkType: hard
+
+"@carbon/icons-react@npm:^11.51.0":
+  version: 11.51.0
+  resolution: "@carbon/icons-react@npm:11.51.0"
+  dependencies:
+    "@carbon/icon-helpers": ^10.53.0
+    "@ibm/telemetry-js": ^1.5.0
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ">=16"
+  checksum: 171a59c04d2937386e79fc5aba7de3e1909302c1ed56c026c37438c2d342a4f320f7838e94406092092d483498671e422e64ca621ea882faadfbc789c2c500ee
+  languageName: node
+  linkType: hard
 
 "@chromatic-com/storybook@npm:^1.9.0":
   version: 1.9.0
@@ -2687,6 +2710,15 @@ __metadata:
   version: 2.0.3
   resolution: "@humanwhocodes/object-schema@npm:2.0.3"
   checksum: d3b78f6c5831888c6ecc899df0d03bcc25d46f3ad26a11d7ea52944dc36a35ef543fad965322174238d677a43d5c694434f6607532cff7077062513ad7022631
+  languageName: node
+  linkType: hard
+
+"@ibm/telemetry-js@npm:^1.5.0":
+  version: 1.6.1
+  resolution: "@ibm/telemetry-js@npm:1.6.1"
+  bin:
+    ibmtelemetry: dist/collect.js
+  checksum: 84c452472d8ced7773e2cc88b50742ea07e8968181e6e0ccbc24519e02a2195d556c1be3ce2ff19ba468e392b4241e931be0a49ba94d376f2ea929307054b63b
   languageName: node
   linkType: hard
 
