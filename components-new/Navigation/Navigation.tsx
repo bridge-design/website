@@ -35,7 +35,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   }, [])
 
   return (
-    <nav className={`${className} relative`}>
+    <nav className={className}>
       <button
         className="ml-auto block lg:hidden"
         onClick={() => setMenuOpen((isOpen) => !isOpen)}
@@ -55,9 +55,13 @@ export const Navigation: React.FC<NavigationProps> = ({
             : 'relative hidden lg:flex'
         }
       >
-        <ul className="flex w-full list-none flex-col justify-end gap-6 text-center lg:flex-row lg:gap-10">
+        <ul className="flex w-full list-none flex-col justify-end gap-10 text-center text-black lg:inline-flex lg:flex-row dark:text-white">
           {items.map((item) => (
-            <li key={item.href} className="px-2 py-2 lg:py-0">
+            <li
+              key={item.href}
+              className="px-2 py-2 lg:py-0"
+              onClick={() => setTimeout(() => setMenuOpen(false), 600)} // Close menu with delay after item click
+            >
               <LinkComponent
                 href={item.href}
                 className="border-b-2 border-transparent transition-colors duration-200 hover:border-black dark:hover:border-white"
