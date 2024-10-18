@@ -55,6 +55,8 @@
     background-clip: text;
   }
 
+  /** 3-color gradients */
+  /* Gradient 1: Primary to Accent */
   .btg-gradient-primary-accent {
     background: linear-gradient(
       139deg,
