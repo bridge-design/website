@@ -23,9 +23,10 @@ type Story = StoryObj<typeof Header>
 export const Default: Story = {
   args: {
     navigationItems: [
-      { name: 'Home', href: '/' },
-      { name: 'About', href: '/about' },
+      { name: 'Case Studies', href: '/case-studies' },
       { name: 'Services', href: '/services' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'About', href: '/about' },
       { name: 'Contact', href: '/contact' },
     ],
   },
