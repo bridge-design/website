@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navigation } from '../Navigation/Navigation'
 import { Logo } from '../Logo/Logo'
+import { Link } from '../Link/Link'
 
 interface HeaderProps {
   navigationItems: { name: string; href: string }[]
@@ -13,7 +14,9 @@ export const Header: React.FC<HeaderProps> = ({ navigationItems, linkComponent }
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}
         <div className="flex items-center">
-          <Logo className="h-8 w-auto text-black dark:text-white" />
+          <Link href="/">
+            <Logo className="h-8 w-auto text-black dark:text-white" />
+          </Link>
         </div>
 
         {/* Navigation */}
