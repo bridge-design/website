@@ -5,9 +5,16 @@ interface HeroProps {
   description: string
   buttons: React.ReactNode
   visual: React.ReactNode
+  children?: React.ReactNode
 }
 
-export const Hero: React.FC<HeroProps> = ({ title, description, buttons, visual = null }) => {
+export const Hero: React.FC<HeroProps> = ({
+  title,
+  description,
+  buttons,
+  visual = null,
+  children,
+}) => {
   return (
     <section className="flex flex-col items-center justify-between px-4 py-8 lg:flex-row lg:items-start lg:px-16">
       {/* Image on mobile goes above the text */}
@@ -21,6 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ title, description, buttons, visual 
         {/* Buttons */}
         <div className="flex space-x-4">{buttons}</div>
       </div>
+      {children}
     </section>
   )
 }
