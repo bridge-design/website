@@ -2,9 +2,8 @@ import { Meta, StoryObj } from '@storybook/react'
 import { ThreeColumnLayout } from './ThreeColumnLayout'
 
 const meta: Meta<typeof ThreeColumnLayout> = {
-  title: 'Components/ThreeColumnLayout',
+  title: 'Layouts/ThreeColumnLayout',
   component: ThreeColumnLayout,
-  tags: ['!autodocs', '!dev'],
   argTypes: {
     color: {
       control: { type: 'select' },

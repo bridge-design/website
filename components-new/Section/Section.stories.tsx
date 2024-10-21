@@ -2,9 +2,8 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Section } from './Section'
 
 const meta: Meta<typeof Section> = {
-  title: 'Components/Section',
+  title: 'Layouts/Section',
   component: Section,
-  tags: ['!autodocs', '!dev'],
   argTypes: {
     backgroundColor: {
       control: {
