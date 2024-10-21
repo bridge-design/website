@@ -11,7 +11,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ navigationItems, linkComponent }) => {
   return (
     <header className="w-full">
-      <div className="mx-auto flex w-full max-w-[1280px] py-6 sm:min-w-full lg:min-w-[1024px]">
+      <div className="mx-auto flex w-full max-w-[1280px] px-8 py-6 sm:min-w-full lg:min-w-[1024px]">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">

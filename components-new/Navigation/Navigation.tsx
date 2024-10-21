@@ -59,7 +59,7 @@ export const Navigation: React.FC<NavigationProps> = ({
           {items.map((item) => (
             <li
               key={item.href}
-              className="px-2 py-2 lg:py-0"
+              className="px-2 py-2 text-lg lg:py-0"
               onClick={() => setTimeout(() => setMenuOpen(false), 600)} // Close menu with delay after item click
             >
               <LinkComponent

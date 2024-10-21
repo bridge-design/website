@@ -12,16 +12,18 @@
   --font-2Xl: 'Inter', sans-serif;
   --font-2XlMedium: 'Inter', sans-serif;
 
-  --font-xl: 'Roboto', sans-serif;
-  --font-xlMedium: 'Roboto', sans-serif;
-  --font-lg: 'Roboto', sans-serif;
-  --font-lgItalic: 'Roboto', sans-serif;
-  --font-lgMedium: 'Roboto', sans-serif;
-  --font-lgMediumItalic: 'Roboto', sans-serif;
-  --font-base: 'Roboto', sans-serif;
-  --font-baseMedium: 'Roboto', sans-serif;
-  --font-sm: 'Roboto', sans-serif;
-  --font-smMedium: 'Roboto', sans-serif;
-  --font-xs: 'Roboto', sans-serif;
-  --font-xsMedium: 'Roboto', sans-serif;
+  --font-xl: 'Inter', sans-serif;
+  --font-xlMedium: 'Inter', sans-serif;
+  --font-lg: 'Inter', sans-serif;
+  --font-lgItalic: 'Inter', sans-serif;
+  --font-lgMedium: 'Inter', sans-serif;
+  --font-lgMediumItalic: 'Inter', sans-serif;
+  --font-base: 'Inter', sans-serif;
+  --font-baseMedium: 'Inter', sans-serif;
+  --font-sm: 'Inter', sans-serif;
+  --font-smMedium: 'Inter', sans-serif;
+  --font-xs: 'Inter', sans-serif;
+  --font-xsMedium: 'Inter', sans-serif;
+
+  --font-interface: 'Helvetica Now Text', sans-serif;
 }
