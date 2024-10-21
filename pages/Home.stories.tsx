@@ -1,9 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react'
 
+import { Header } from '../components-new/Header/Header'
+import { Section } from '../components-new/Section/Section'
+
 const meta: Meta = {
   title: 'Pages/Home',
   component: () => null,
-  tags: ['autodocs', '!dev'],
+  tags: ['autodocs', 'dev'],
   parameters: {
     controls: { hideNoControlsWarning: true },
   },
@@ -13,11 +16,24 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
+const navigationItems = [
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Services', href: '/services' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+]
+
 export const Default: Story = {
   render: () => (
-    <div>
-      <h1 className="font-bold text-2xl">Home</h1>
-      <p className="mt-2">Welcome to the home page.</p>
-    </div>
+    <>
+      <Header navigationItems={navigationItems} />
+      <Section backgroundColor="--btg-color-accent-400">
+        <p>This is the Home page.</p>
+      </Section>
+      <Section backgroundColor="--btg-color-primary-400">
+        <p>It has two sections.</p>
+      </Section>
+    </>
   ),
 }
