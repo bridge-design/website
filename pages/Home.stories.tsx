@@ -39,11 +39,46 @@ export const Default: Story = {
           <p>Action button: "Start a conversation", link to "/contact".</p>
         </Hero>
       </Section>
+      <Section backgroundColor="--btg-color-primary-400">
+        <p>
+          <b>Our services</b>
+        </p>
+        <ul>
+          <li>Design system audits</li>
+          <li>Design system implementation</li>
+          <li>Design system maintenance</li>
+          <li>Design system training</li>
+        </ul>
+      </Section>
+      <Section backgroundColor="--btg-color-highlight-400">
+        <p>
+          <b>Help for busy teams</b>
+        </p>
+        <ul>
+          <li>
+            Added skillset Bring in specialized expertise without extensive training or recruitment.
+          </li>
+          <li>Additional expertise Access knowledge beyond your in-house capabilities.</li>
+          <li>
+            Continuous integration Seamlessly incorporate the design system into your workflow.
+          </li>
+        </ul>
+        <p>Source: draft #3</p>
+      </Section>
       <Section backgroundColor="--btg-color-accent-400">
-        <p>This is the Home page.</p>
+        <p>People say</p>
+        <p>Source: draft #3</p>
       </Section>
       <Section backgroundColor="--btg-color-primary-400">
-        <p>It has two sections.</p>
+        <p>Meet the team</p>
+        <p>Source: draft #3</p>
+      </Section>
+      <Section backgroundColor="--btg-color-accent-400">
+        <p>Case studies</p>
+      </Section>
+      <Section backgroundColor="--btg-color-highlight-400">
+        <p>Start Your Design System Journey</p>
+        <p>Source: draft #3</p>
       </Section>
     </>
   ),
