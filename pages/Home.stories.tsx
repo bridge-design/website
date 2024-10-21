@@ -3,6 +3,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Header } from '../components-new/Header/Header'
 import { Section } from '../components-new/Section/Section'
 import { Hero } from '../components-new/Hero/Hero'
+import { Footer } from '../components-new/Footer/Footer'
 
 const meta: Meta = {
   title: 'Pages/Home',
@@ -80,6 +81,7 @@ export const Default: Story = {
         <p>Start Your Design System Journey</p>
         <p>Source: draft #3</p>
       </Section>
+      <Footer siteTitle="Bridge-The-Gap - design systems consulting and workshops" />
     </>
   ),
 }
