@@ -5,6 +5,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     './components-new/**/*.{ts,tsx}', // Ensure Storybook and components are included
+    './pages/**/*.{ts,tsx}',
     './tokens/**/*.{ts,tsx,md,mdx}',
     './app/**/*.{js,ts,jsx,tsx}',
     './layouts/**/*.{js,ts,tsx}',
@@ -104,6 +105,9 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            p: {
+              fontFamily: theme('fontFamily.base'),
+            },
             h1: {
               fontSize: 'var(--size-h1)',
             },
@@ -126,6 +130,7 @@ module.exports = {
         },
       }),
       fontFamily: {
+        sans: 'var(--font-interface)',
         '9Xl': 'var(--font-9Xl)',
         '8Xl': 'var(--font-8Xl)',
         '7Xl': 'var(--font-7Xl)',

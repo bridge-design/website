@@ -13,7 +13,7 @@ export const Section: React.FC<SectionProps> = ({ children, backgroundColor = ''
       className={classnames('w-full', className)}
       style={{ backgroundColor: `var(${backgroundColor})` }} // Using the CSS variable for background color
     >
-      <div className="mx-auto w-full max-w-[1280px] sm:min-w-full lg:min-w-[1024px]">
+      <div className="mx-auto w-full max-w-[1280px] px-8 sm:min-w-full lg:min-w-[1024px]">
         {children}
       </div>
     </section>
