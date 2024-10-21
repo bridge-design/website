@@ -78,6 +78,25 @@ console.log(hello);`}</code>
   ),
 }
 
+export const ShoutOuts: Story = {
+  render: () => (
+    <>
+      <h1 className="font-black text-9xl">Shout Out to the World</h1>
+      <h1 className="font-black text-8xl">Shout Out to the World</h1>
+      <h1 className="font-black text-7xl">Shout Out to the World</h1>
+      <h1 className="font-black text-6xl">Shout Out to the World</h1>
+      <h2 className="font-bold text-9xl">Shout Out to the World</h2>
+      <h2 className="font-bold text-8xl">Shout Out to the World</h2>
+      <h2 className="font-bold text-7xl">Shout Out to the World</h2>
+      <h2 className="font-bold text-6xl">Shout Out to the World</h2>
+      <h3 className="text-9xl">Shout Out to the World</h3>
+      <h3 className="text-8xl">Shout Out to the World</h3>
+      <h3 className="text-7xl">Shout Out to the World</h3>
+      <h3 className="text-6xl">Shout Out to the World</h3>
+    </>
+  ),
+}
+
 export const FontFamilyExample: Story = {
   render: () => (
     <div className="prose">
