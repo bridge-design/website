@@ -40,7 +40,7 @@ export const Default: Story = {
           <p>Action button: "Start a conversation", link to "/contact".</p>
         </Hero>
       </Section>
-      <Section backgroundColor="--btg-color-primary-400">
+      <Section backgroundColor="--btg-color-primary-700">
         <p>
           <b>Our Expertise</b>
         </p>
@@ -53,7 +53,7 @@ export const Default: Story = {
           team with the knowledge and tools for sustained success."
         </p>
       </Section>
-      <Section backgroundColor="--btg-color-highlight-400">
+      <Section backgroundColor="--btg-color-highlight-700">
         <p>
           <b>Help for busy teams</b>
         </p>
@@ -68,18 +68,18 @@ export const Default: Story = {
         </ul>
         <p>Source: draft #3</p>
       </Section>
-      <Section backgroundColor="--btg-color-accent-400">
+      <Section backgroundColor="--btg-color-accent-700">
         <p>People say</p>
         <p>Source: draft #3</p>
       </Section>
-      <Section backgroundColor="--btg-color-primary-400">
+      <Section backgroundColor="--btg-color-primary-700">
         <p>Meet the team</p>
         <p>Source: draft #3</p>
       </Section>
-      <Section backgroundColor="--btg-color-accent-400">
+      <Section backgroundColor="--btg-color-accent-700">
         <p>Case studies</p>
       </Section>
-      <Section backgroundColor="--btg-color-highlight-400">
+      <Section backgroundColor="--btg-color-highlight-700">
         <p>Start Your Design System Journey</p>
         <p>Source: draft #3</p>
       </Section>
