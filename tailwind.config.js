@@ -30,6 +30,7 @@ module.exports = {
       '8xl': 'var(--size-8xl)',
     },
     fontWeight: {
+      ...defaultTheme.fontWeight,
       '9Xl': 500,
       '8Xl': 500,
       '7Xl': 500,
