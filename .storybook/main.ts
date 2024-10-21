@@ -6,6 +6,8 @@ const config = {
     '../tokens/**/*.stories.@(js|jsx|mjs|ts|tsx)',
     '../components-new/**/*.mdx',
     '../components-new/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../pages/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../pages/**/*.mdx',
   ],
   docs: {
     autodocs: true,
