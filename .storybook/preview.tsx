@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/tailwind.css'
+import { DecoratorFn } from '@storybook/react'
 import { Title, Subtitle, Description, Primary, Controls, Heading } from '@storybook/blocks'
 import { StoryGrid } from './storybook-components/story-grid'
 import { themes } from '@storybook/theming'
@@ -50,6 +51,14 @@ const preview = {
       },
     },
   },
+  decorators: [
+    (Story, context) => {
+      if (context.title.startsWith('Pages/')) {
+        document.body.style.padding = '0'
+      }
+      return <Story />
+    },
+  ],
 }
 
 export default preview
