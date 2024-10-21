@@ -10,8 +10,8 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ navigationItems, linkComponent }) => {
   return (
-    <header className="w-full bg-white shadow-md dark:bg-black">
-      <div className="container mx-auto flex items-center justify-between p-4">
+    <header className="w-full">
+      <div className="mx-auto flex w-full max-w-[1280px] py-6 sm:min-w-full lg:min-w-[1024px]">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({ navigationItems, linkComponent }
         </div>
 
         {/* Navigation */}
-        <Navigation items={navigationItems} linkComponent={linkComponent} />
+        <Navigation className="ml-auto" items={navigationItems} linkComponent={linkComponent} />
       </div>
     </header>
   )
