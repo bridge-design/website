@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import { Header } from '../components-new/Header/Header'
 import { Section } from '../components-new/Section/Section'
+import { Hero } from '../components-new/Hero/Hero'
 
 const meta: Meta = {
   title: 'Pages/Home',
@@ -28,6 +29,16 @@ export const Default: Story = {
   render: () => (
     <>
       <Header navigationItems={navigationItems} />
+      <Section>
+        <Hero>
+          <p>
+            <b>Hero</b>
+          </p>
+
+          <p>Text: We team up with designers and developers to build and scale design systems</p>
+          <p>Action button: "Start a conversation", link to "/contact".</p>
+        </Hero>
+      </Section>
       <Section backgroundColor="--btg-color-accent-400">
         <p>This is the Home page.</p>
       </Section>
