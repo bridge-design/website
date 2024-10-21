@@ -183,15 +183,6 @@ export const GradientTexts: Story = {
       <div className="font-bold btg-text-gradient-neutral-primary mb-4 text-6xl">
         Gradient Neutral to Primary Text
       </div>
-      <div className="font-bold btg-text-gradient-green mb-4 text-6xl">
-        Gradient Green to Light Text
-      </div>
-      <div className="mb-4 text-6xl font-bold btg-text-gradient-pink">
-        Gradient Pink to Light Text
-      </div>
-      <div className="mb-4 text-6xl font-bold btg-text-gradient-yellow">
-        Gradient Yellow to Light Text
-      </div>
     </div>
   ),
 }
