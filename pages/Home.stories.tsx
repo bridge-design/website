@@ -42,14 +42,16 @@ export const Default: Story = {
       </Section>
       <Section backgroundColor="--btg-color-primary-400">
         <p>
-          <b>Our services</b>
+          <b>Our Expertise</b>
         </p>
-        <ul>
-          <li>Design system audits</li>
-          <li>Design system implementation</li>
-          <li>Design system maintenance</li>
-          <li>Design system training</li>
-        </ul>
+        <p>
+          Design System Implementation Brief description: "We build scalable design systems that
+          unify your brand and accelerate development." Technical Consulting Brief description:
+          "Expert advice on integrating design and development processes for optimal efficiency."
+          Process Optimization Brief description: "Streamlining workflows to enhance team
+          collaboration and productivity." Training & Workshops Brief description: "Empowering your
+          team with the knowledge and tools for sustained success."
+        </p>
       </Section>
       <Section backgroundColor="--btg-color-highlight-400">
         <p>
