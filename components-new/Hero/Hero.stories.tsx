@@ -8,11 +8,20 @@ const heroImage = require('./hero-image.jpg')
 const meta: Meta<typeof Hero> = {
   title: 'Components/Hero',
   component: Hero,
-  tags: ['!autodocs', '!dev'],
   argTypes: {
     title: { control: 'text' },
     description: { control: 'text' },
     buttons: { control: 'object' },
+    backgroundColor: {
+      control: 'select',
+      options: [
+        'var(--btg-hero-background-teal)',
+        'var(--btg-hero-background-pink)',
+        'var(--btg-hero-background-blue)',
+        'var(--btg-hero-background-sand)',
+      ],
+      defaultValue: 'var(--btg-hero-background-teal)',
+    },
   },
 }
 
@@ -31,5 +40,26 @@ export const Default: Story = {
       </>
     ),
     visual: <Image src={heroImage} alt="Hero Image" />,
+  },
+}
+
+export const Pink: Story = {
+  args: {
+    ...Default.args,
+    backgroundColor: 'var(--btg-hero-background-pink)',
+  },
+}
+
+export const Blue: Story = {
+  args: {
+    ...Default.args,
+    backgroundColor: 'var(--btg-hero-background-blue)',
+  },
+}
+
+export const Sand: Story = {
+  args: {
+    ...Default.args,
+    backgroundColor: 'var(--btg-hero-background-sand)',
   },
 }

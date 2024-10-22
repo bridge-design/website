@@ -70,4 +70,10 @@
   --btg-color-highlight-800: #008edb;
   --btg-color-highlight-900: #33a8e6;
   --btg-color-highlight-1000: #99d4f2;
+
+  /* Hero Colors */
+  --btg-hero-background-teal: var(--btg-color-primary-700);
+  --btg-hero-background-pink: var(--btg-color-accent-700);
+  --btg-hero-background-blue: var(--btg-color-highlight-800);
+  --btg-hero-background-sand: var(--btg-color-neutral-800);
 }
