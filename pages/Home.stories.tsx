@@ -29,18 +29,16 @@ const navigationItems = [
 export const Default: Story = {
   render: () => (
     <>
-      <Header navigationItems={navigationItems} />
-      <Section>
-        <Hero>
-          <p>
-            <b>Hero</b>
-          </p>
+      <Header backgroundColor="var(--btg-hero-background-teal)" navigationItems={navigationItems} />
+      <Hero backgroundColor="var(--btg-hero-background-teal)">
+        <p>
+          <b>Hero</b>
+        </p>
 
-          <p>Text: We team up with designers and developers to build and scale design systems</p>
-          <p>Action button: "Start a conversation", link to "/contact".</p>
-        </Hero>
-      </Section>
-      <Section backgroundColor="--btg-color-primary-700">
+        <p>Text: We team up with designers and developers to build and scale design systems</p>
+        <p>Action button: "Start a conversation", link to "/contact".</p>
+      </Hero>
+      <Section>
         <p>
           <b>Our Expertise</b>
         </p>
