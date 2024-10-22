@@ -76,4 +76,15 @@
   --btg-hero-background-pink: var(--btg-color-accent-700);
   --btg-hero-background-blue: var(--btg-color-highlight-800);
   --btg-hero-background-sand: var(--btg-color-neutral-800);
+  --btg-hero-text-color: var(--btg-color-neutral-100);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --btg-hero-background-teal: var(--btg-color-primary-500);
+    --btg-hero-background-pink: var(--btg-color-accent-400);
+    --btg-hero-background-blue: var(--btg-color-highlight-400);
+    --btg-hero-background-sand: var(--btg-color-neutral-500);
+    --btg-hero-text-color: var(--btg-color-neutral-1000);
+  }
 }
