@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({
         className={`${styles.hero} flex flex-col items-center justify-between px-4 py-8 pb-20 lg:flex-row lg:items-start lg:px-16`}
         style={
           {
-            '--hero-color': backgroundColor,
+            '--hero-background-color': backgroundColor,
           } as React.CSSProperties
         }
       >
