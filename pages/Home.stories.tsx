@@ -4,6 +4,8 @@ import { Header } from '../components-new/Header/Header'
 import { Section } from '../components-new/Section/Section'
 import { Hero } from '../components-new/Hero/Hero'
 import { Footer } from '../components-new/Footer/Footer'
+import { ThreeColumnLayout } from '../components-new/ThreeColumnLayout/ThreeColumnLayout'
+import { Card } from '../components-new/Card/Card'
 
 const meta: Meta = {
   title: 'Pages/Home',
@@ -39,16 +41,106 @@ export const Default: Story = {
         <p>Action button: "Start a conversation", link to "/contact".</p>
       </Hero>
       <Section>
+        <ThreeColumnLayout>
+          <ThreeColumnLayout.Column>
+            <Card
+              heading="Audit & Strategy"
+              link={{
+                href: '#',
+                text: 'Learn More',
+              }}
+              gradientColor="var(--btg-color-accent-700)"
+              className="border-[transparent]"
+            >
+              <p className="text-base">
+                This is a default card with a heading, text content, and a link.
+              </p>
+            </Card>
+          </ThreeColumnLayout.Column>
+          <ThreeColumnLayout.Column>
+            <Card
+              heading="Coding components"
+              link={{
+                href: '#',
+                text: 'Learn More',
+              }}
+              gradientColor="var(--btg-color-accent-800)"
+              className="border-[transparent]"
+            >
+              <p className="text-base">
+                This is a default card with a heading, text content, and a link.
+              </p>
+            </Card>
+          </ThreeColumnLayout.Column>
+          <ThreeColumnLayout.Column>
+            <Card
+              heading="Architecture"
+              link={{
+                href: '#',
+                text: 'Learn More',
+              }}
+              gradientColor="var(--btg-color-accent-900)"
+              className="border-[transparent]"
+            >
+              <p className="text-base">
+                This is a default card with a heading, text content, and a link.
+              </p>
+            </Card>
+          </ThreeColumnLayout.Column>
+          <ThreeColumnLayout.Column>
+            <Card
+              heading="Design ↔ development streamline"
+              link={{
+                href: '#',
+                text: 'Learn More',
+              }}
+              gradientColor="var(--btg-color-accent-700)"
+              className="border-[transparent]"
+            >
+              <p className="text-base">
+                Streamlined workflows to enhance team collaboration and productivity.
+              </p>
+            </Card>
+          </ThreeColumnLayout.Column>
+          <ThreeColumnLayout.Column>
+            <Card
+              heading="Business value"
+              link={{
+                href: '#',
+                text: 'Learn More',
+              }}
+              gradientColor="var(--btg-color-accent-800)"
+              className="border-[transparent]"
+            >
+              <p className="text-base">Data driven management etc</p>
+            </Card>
+          </ThreeColumnLayout.Column>
+          <ThreeColumnLayout.Column>
+            <Card
+              heading="Trainings"
+              link={{
+                href: '#',
+                text: 'Learn More',
+              }}
+              gradientColor="var(--btg-color-accent-900)"
+              className="border-[transparent]"
+            >
+              <p className="text-base">
+                This is a default card with a heading, text content, and a link.
+              </p>
+            </Card>
+          </ThreeColumnLayout.Column>
+        </ThreeColumnLayout>
         <p>
           <b>Our Expertise</b>
         </p>
         <p>
-          Design System Implementation Brief description: "We build scalable design systems that
-          unify your brand and accelerate development." Technical Consulting Brief description:
-          "Expert advice on integrating design and development processes for optimal efficiency."
+          - Design System Implementation Brief description: "We build scalable design systems that
+          unify your brand and accelerate development." - Technical Consulting Brief description:
+          "Expert advice on integrating design and development processes for optimal efficiency." -
           Process Optimization Brief description: "Streamlining workflows to enhance team
-          collaboration and productivity." Training & Workshops Brief description: "Empowering your
-          team with the knowledge and tools for sustained success."
+          collaboration and productivity." - Training & Workshops Brief description: "Empowering
+          your team with the knowledge and tools for sustained success."
         </p>
       </Section>
       <Section backgroundColor="--btg-color-highlight-700">
