@@ -6,6 +6,7 @@ import { Hero } from '../components-new/Hero/Hero'
 import { Footer } from '../components-new/Footer/Footer'
 import { ThreeColumnLayout } from '../components-new/ThreeColumnLayout/ThreeColumnLayout'
 import { Card } from '../components-new/Card/Card'
+import { Blob } from '../components-new/Blob/Blob'
 
 const meta: Meta = {
   title: 'Pages/Home',
@@ -41,6 +42,9 @@ export const Default: Story = {
         <p>Action button: "Start a conversation", link to "/contact".</p>
       </Hero>
       <Section>
+        <h1 className="font-bold text-2xl">
+          <Blob animate={true} /> I am text
+        </h1>
         <ThreeColumnLayout>
           <ThreeColumnLayout.Column>
             <Card
