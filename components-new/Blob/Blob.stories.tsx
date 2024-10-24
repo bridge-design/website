@@ -24,14 +24,13 @@ type Story = StoryObj<typeof Blob>
 
 export const Default: Story = {
   args: {
-    color: '#4a90e2',
     size: 300,
   },
 }
 
 export const CustomSize: Story = {
   args: {
-    color: '#ff6347',
+    color: 'var(--btg-color-primary-500)',
     size: 500,
   },
 }
