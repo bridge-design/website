@@ -27,12 +27,12 @@
 .blob .blob3 {
   animation: stable 0.5s linear infinite;
 }
-.blob:hover .blob1 {
+.blob.animate .blob1 {
   animation: rotateClockwise 20s linear infinite;
 }
-.blob:hover .blob2 {
+.blob.animate .blob2 {
   animation: rotateCounterClockwise 25s linear infinite;
 }
-.blob:hover .blob3 {
+.blob.animate .blob3 {
   animation: rotateClockwise 30s linear infinite;
 }

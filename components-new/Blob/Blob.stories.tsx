@@ -15,6 +15,7 @@ const meta: Meta<typeof Blob> = {
       description: 'Size of the blob (width and height).',
       defaultValue: 300,
     },
+    animate: { control: 'boolean' },
   },
 }
 
@@ -25,6 +26,7 @@ type Story = StoryObj<typeof Blob>
 export const Default: Story = {
   args: {
     size: 300,
+    animate: false,
   },
 }
 
@@ -32,5 +34,13 @@ export const CustomSize: Story = {
   args: {
     color: 'var(--btg-color-primary-500)',
     size: 500,
+  },
+}
+
+export const Animated: Story = {
+  args: {
+    color: 'var(--btg-color-accent-500)',
+    size: 300,
+    animate: true,
   },
 }

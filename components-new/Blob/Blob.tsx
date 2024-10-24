@@ -4,11 +4,13 @@ import * as styles from './Blob.module.css'
 interface BlobProps {
   color?: string
   size?: number
+  animate?: boolean
 }
 
 export const Blob: React.FC<BlobProps> = ({
   color = 'var(--btg-color-accent-500)',
   size = 300,
+  animate = false,
 }) => {
   return (
     <div className="w-fit" style={{ width: size }}>
@@ -17,7 +19,7 @@ export const Blob: React.FC<BlobProps> = ({
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 100 100"
           style={{ color: color }}
-          className={styles.blob}
+          className={`${styles.blob} ${animate ? styles.animate : ''}`}
         >
           <path
             className={styles.blob1}
