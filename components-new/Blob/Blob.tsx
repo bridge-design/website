@@ -6,14 +6,17 @@ interface BlobProps {
   size?: number
 }
 
-export const Blob: React.FC<BlobProps> = ({ color = '#4a90e2', size = 300 }) => {
+export const Blob: React.FC<BlobProps> = ({
+  color = 'var(--btg-color-accent-500)',
+  size = 300,
+}) => {
   return (
     <div className="w-fit" style={{ width: size }}>
       <div className="group">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 100 100"
-          style={{ color }}
+          style={{ color: color }}
           className={styles.blob}
         >
           <path
