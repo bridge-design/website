@@ -1,22 +1,11 @@
-.blob .blob1,
-.blob .blob2,
-.blob .blob3 {
-  transform-origin: center;
-  transform: translate(50px, 50px);
+@keyframes stable {
+  from {
+    transform: translate(50px, 50px) rotate(0deg);
+  }
+  to {
+    transform: translate(50px, 50px) rotate(0deg);
+  }
 }
-
-.blob:hover .blob1 {
-  animation: rotateClockwise 20s linear infinite;
-}
-
-.blob:hover .blob2 {
-  animation: rotateCounterClockwise 25s linear infinite;
-}
-
-.blob:hover .blob3 {
-  animation: rotateClockwise 30s linear infinite;
-}
-
 @keyframes rotateClockwise {
   from {
     transform: translate(50px, 50px) rotate(0deg);
@@ -25,7 +14,6 @@
     transform: translate(50px, 50px) rotate(360deg);
   }
 }
-
 @keyframes rotateCounterClockwise {
   from {
     transform: translate(50px, 50px) rotate(0deg);
@@ -33,4 +21,18 @@
   to {
     transform: translate(50px, 50px) rotate(-360deg);
   }
+}
+.blob .blob1,
+.blob .blob2,
+.blob .blob3 {
+  animation: stable 0.5s linear infinite;
+}
+.blob:hover .blob1 {
+  animation: rotateClockwise 20s linear infinite;
+}
+.blob:hover .blob2 {
+  animation: rotateCounterClockwise 25s linear infinite;
+}
+.blob:hover .blob3 {
+  animation: rotateClockwise 30s linear infinite;
 }
