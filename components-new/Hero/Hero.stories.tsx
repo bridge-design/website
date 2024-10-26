@@ -32,14 +32,16 @@ type Story = StoryObj<typeof Hero>
 export const Default: Story = {
   args: {
     title: 'Welcome to Our Platform',
-    description: 'Explore our services and products designed to improve your business.',
-    buttons: (
-      <>
-        <Button variant="primary">Get Started</Button>
-        <Button variant="secondary">Learn More</Button>
-      </>
+    children: (
+      <div className="mt-8 text-center">
+        <h1 className="font-6xl leading-hero mx-auto mb-16 text-6xl lg:w-4/5">
+          We team up with designers and developers to build and scale design systems
+        </h1>
+        <a href="/contact" className="text-xl underline">
+          Start a conversation
+        </a>
+      </div>
     ),
-    visual: <Image src={heroImage} alt="Hero Image" />,
   },
 }
 
