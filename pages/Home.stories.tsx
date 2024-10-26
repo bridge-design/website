@@ -34,107 +34,77 @@ export const Default: Story = {
     <>
       <Header backgroundColor="var(--btg-hero-background-teal)" navigationItems={navigationItems} />
       <Hero backgroundColor="var(--btg-hero-background-teal)">
-        <p>
-          <b>Hero</b>
-        </p>
-
-        <p>Text: We team up with designers and developers to build and scale design systems</p>
-        <p>Action button: "Start a conversation", link to "/contact".</p>
+        <div className="mt-8 text-center">
+          <h1 className="font-6xl leading-hero mx-auto mb-16 text-6xl lg:w-4/5">
+            We team up with designers and developers to build and scale design systems
+          </h1>
+          <a href="/contact" className="text-xl underline">
+            Start a conversation
+          </a>
+        </div>
       </Hero>
       <Section>
-        <h1 className="font-bold text-2xl">
-          <Blob animate={true} /> I am text
-        </h1>
+        <h2 className="mb-6 text-center text-3xl">Our Services</h2>
         <ThreeColumnLayout>
           <ThreeColumnLayout.Column>
-            <Card
-              heading="Audit & Strategy"
-              link={{
-                href: '#',
-                text: 'Learn More',
-              }}
-              gradientColor="var(--btg-color-accent-700)"
-              className="border-[transparent]"
-            >
-              <p className="text-base">
-                This is a default card with a heading, text content, and a link.
-              </p>
-            </Card>
+            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+              <Blob animate={true} size={100} color="var(--btg-color-accent-500)" />
+              <span>Audit & Strategy</span>
+            </h3>
+            <p className="prose mb-6 px-3">
+              This is a default card with a heading, text content, and a link.
+            </p>
           </ThreeColumnLayout.Column>
+
           <ThreeColumnLayout.Column>
-            <Card
-              heading="Coding components"
-              link={{
-                href: '#',
-                text: 'Learn More',
-              }}
-              gradientColor="var(--btg-color-accent-800)"
-              className="border-[transparent]"
-            >
-              <p className="text-base">
-                This is a default card with a heading, text content, and a link.
-              </p>
-            </Card>
+            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+              <Blob animate={true} size={100} variant="2" color="var(--btg-color-primary-500)" />
+              <span>Implementation</span>
+            </h3>
+            <p className="prose mb-6 px-3">
+              This is a default card with a heading, text content, and a link.
+            </p>
           </ThreeColumnLayout.Column>
+
           <ThreeColumnLayout.Column>
-            <Card
-              heading="Architecture"
-              link={{
-                href: '#',
-                text: 'Learn More',
-              }}
-              gradientColor="var(--btg-color-accent-900)"
-              className="border-[transparent]"
-            >
-              <p className="text-base">
-                This is a default card with a heading, text content, and a link.
-              </p>
-            </Card>
+            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+              <Blob animate={true} size={100} variant="3" color="var(--btg-color-highlight-700)" />
+              <span>Architecture</span>
+            </h3>
+            <p className="prose mb-6 px-3">
+              This is a default card with a heading, text content, and a link.
+            </p>
           </ThreeColumnLayout.Column>
+
           <ThreeColumnLayout.Column>
-            <Card
-              heading="Design ↔ development streamline"
-              link={{
-                href: '#',
-                text: 'Learn More',
-              }}
-              gradientColor="var(--btg-color-accent-700)"
-              className="border-[transparent]"
-            >
-              <p className="text-base">
-                Streamlined workflows to enhance team collaboration and productivity.
-              </p>
-            </Card>
+            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+              <Blob animate={true} size={100} variant="4" color="var(--btg-color-highlight-1000)" />
+              <span>Streamline</span>
+            </h3>
+            <p className="prose mb-6 px-3">
+              Streamlined workflows to enhance team collaboration and productivity.
+            </p>
           </ThreeColumnLayout.Column>
+
           <ThreeColumnLayout.Column>
-            <Card
-              heading="Business value"
-              link={{
-                href: '#',
-                text: 'Learn More',
-              }}
-              gradientColor="var(--btg-color-accent-800)"
-              className="border-[transparent]"
-            >
-              <p className="text-base">Data driven management etc</p>
-            </Card>
+            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+              <Blob animate={true} size={100} variant="5" color="var(--btg-color-accent-800)" />
+              <span>Business value</span>
+            </h3>
+            <p className="prose mb-6 px-3">Data driven management etc</p>
           </ThreeColumnLayout.Column>
+
           <ThreeColumnLayout.Column>
-            <Card
-              heading="Trainings"
-              link={{
-                href: '#',
-                text: 'Learn More',
-              }}
-              gradientColor="var(--btg-color-accent-900)"
-              className="border-[transparent]"
-            >
-              <p className="text-base">
-                This is a default card with a heading, text content, and a link.
-              </p>
-            </Card>
+            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+              <Blob animate={true} size={100} variant="6" color="var(--btg-color-primary-800)" />
+              <span>Trainings</span>
+            </h3>
+            <p className="prose mb-6 px-3">
+              This is a default card with a heading, text content, and a link.
+            </p>
           </ThreeColumnLayout.Column>
         </ThreeColumnLayout>
+
         <p>
           <b>Our Expertise</b>
         </p>
