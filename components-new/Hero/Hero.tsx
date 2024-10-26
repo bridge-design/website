@@ -29,16 +29,6 @@ export const Hero: React.FC<HeroProps> = ({
           } as React.CSSProperties
         }
       >
-        {/* Image on mobile goes above the text */}
-        <div className="mb-4 w-full lg:order-last lg:mb-0 lg:w-1/2">{visual}</div>
-        {/* Text Content */}
-        <div className="flex w-full flex-col justify-center lg:w-1/2">
-          <h1 className="font-bold mb-4 text-3xl lg:text-5xl">{title}</h1>
-          <p className="mb-6 text-lg lg:text-xl">{description}</p>
-
-          {/* Buttons */}
-          <div className="flex space-x-4">{buttons}</div>
-        </div>
         {children}
       </section>
       <div

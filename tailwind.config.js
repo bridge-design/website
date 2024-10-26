@@ -55,6 +55,7 @@ module.exports = {
       xsMedium: 500,
     },
     lineHeight: {
+      ...defaultTheme.lineHeight,
       '9Xl': '128px',
       '8Xl': '96px',
       '7Xl': '72px',
@@ -154,6 +155,9 @@ module.exports = {
         smMedium: 'var(--font-smMedium)',
         xs: 'var(--font-xs)',
         xsMedium: 'var(--font-xsMedium)',
+      },
+      lineHeight: {
+        hero: '72px',
       },
     },
   },
