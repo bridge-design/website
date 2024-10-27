@@ -1,0 +1,41 @@
+.hero {
+  background-color: var(--hero-background-color);
+  color: var(--btg-hero-text-color);
+}
+.wave {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+.wave svg {
+  position: absolute;
+  width: 120%;
+  height: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .wave svg {
+    height: 155px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .wave {
+    margin-top: -0.1vw;
+  }
+
+  .wave svg {
+    height: 121px;
+  }
+}
+
+@media (min-width: 2100px) {
+  .wave svg {
+    height: calc(2vw + 121px);
+  }
+}
