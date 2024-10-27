@@ -19,6 +19,7 @@ const config = {
     '@storybook/addon-interactions',
     'storybook-addon-pseudo-states',
     '@storybook/addon-a11y',
+    '@storybook/addon-themes',
     {
       name: '@storybook/addon-styling-webpack',
       options: {
