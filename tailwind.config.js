@@ -1,5 +1,5 @@
 // @ts-check
-
+const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -161,7 +161,18 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    plugin(({ addBase, theme }) => {
+      addBase({
+        // or whichever color you'd like
+        html: {
+          color: 'var(--btg-color-text)',
+          backgroundColor: 'var(--btg-color-background)',
+        },
+      })
+    }),
+    require('@tailwindcss/typography'),
+  ],
 }
 
 // const { fontFamily } = require('tailwindcss/defaultTheme')

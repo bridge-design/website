@@ -20,8 +20,8 @@ const preview = {
     },
     backgrounds: {
       values: [
-        { name: 'Light', value: '#FFF' },
-        { name: 'Dark', value: '#000' },
+        { name: 'Light', value: 'var(--btg-color-background)' },
+        { name: 'Dark', value: 'var(--btg-color-background)' },
       ],
     },
 

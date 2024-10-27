@@ -65,6 +65,10 @@
   --btg-color-highlight-900: #33a8e6;
   --btg-color-highlight-1000: #99d4f2;
 
+  /* General Colors */
+  --btg-color-background: var(--btg-color-neutral-1000);
+  --btg-color-text: var(--btg-color-neutral-100);
+
   /* Hero Colors */
   --btg-hero-background-teal: var(--btg-color-primary-700);
   --btg-hero-background-pink: var(--btg-color-accent-700);
@@ -74,6 +78,11 @@
 }
 
 @define-mixin dark-theme {
+  /* General Colors */
+  --btg-color-background: var(--btg-color-neutral-100);
+  --btg-color-text: var(--btg-color-neutral-1000);
+
+  /* Hero Colors */
   --btg-hero-background-teal: var(--btg-color-primary-500);
   --btg-hero-background-pink: var(--btg-color-accent-400);
   --btg-hero-background-blue: var(--btg-color-highlight-400);

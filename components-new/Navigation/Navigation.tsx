@@ -1,5 +1,7 @@
 import React, { useState, useEffect, ReactNode } from 'react'
+import classnames from 'classnames'
 import { Menu, Close } from '@carbon/icons-react'
+import * as styles from './Navigation.module.css'
 
 interface NavigationItem {
   name: string
@@ -42,9 +44,9 @@ export const Navigation: React.FC<NavigationProps> = ({
         aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
       >
         {isMenuOpen ? (
-          <Close size={24} className="m-6 fill-current text-black dark:text-white" />
+          <Close size={24} className="m-6 fill-current" />
         ) : (
-          <Menu size={24} className="m-6 fill-current text-black dark:text-white" />
+          <Menu size={24} className="m-6 fill-current" />
         )}
       </button>
 
@@ -55,7 +57,7 @@ export const Navigation: React.FC<NavigationProps> = ({
             : 'relative hidden lg:flex'
         }
       >
-        <ul className="flex w-full list-none flex-col justify-end gap-10 text-center text-black lg:inline-flex lg:flex-row dark:text-white">
+        <ul className="flex w-full list-none flex-col justify-end gap-10 text-center lg:inline-flex lg:flex-row">
           {items.map((item) => (
             <li
               key={item.href}
@@ -64,7 +66,10 @@ export const Navigation: React.FC<NavigationProps> = ({
             >
               <LinkComponent
                 href={item.href}
-                className="border-b-2 border-transparent transition-colors duration-200 hover:border-black dark:hover:border-white"
+                className={classnames(
+                  styles.link,
+                  'border-b-2 border-transparent transition-colors duration-200'
+                )}
               >
                 {item.name}
               </LinkComponent>

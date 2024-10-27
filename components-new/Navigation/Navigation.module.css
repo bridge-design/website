@@ -1,0 +1,11 @@
+:root {
+  --btg-navigation-link-color: var(--btg-text-color);
+}
+
+.link {
+  color: var(--btg-navigation-link-color);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
