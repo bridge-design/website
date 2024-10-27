@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/">
-            <Logo className="h-8 w-auto text-black dark:text-white" />
+            <Logo className="h-8 w-auto" />
           </Link>
         </div>
 
