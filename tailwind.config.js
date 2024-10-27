@@ -107,6 +107,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            '--tw-prose-body': '--btg-color-text',
             p: {
               fontFamily: theme('fontFamily.base'),
             },
