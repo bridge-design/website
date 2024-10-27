@@ -18,7 +18,6 @@ export const Hero: React.FC<HeroProps> = ({
   backgroundColor = 'var(--btg-hero-background-teal)',
   children,
 }) => {
-  console.log(111, backgroundColor)
   return (
     <>
       <section

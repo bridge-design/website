@@ -1,11 +1,5 @@
 :root {
   /* Brand Colors */
-  /* --btg-color-brand-dark: #455054;
-  --btg-color-brand-green: #308695;
-  --btg-color-brand-pink: #d45769;
-  --btg-color-brand-yellow: #e69d45;
-  --btg-color-brand-light: #d4cfc9; */
-
   --btg-color-brand-sand: #e5ddc8;
   --btg-color-brand-teal: #01949a;
   --btg-color-brand-blue: #004369;
@@ -79,12 +73,20 @@
   --btg-hero-text-color: var(--btg-color-neutral-100);
 }
 
+@define-mixin dark-theme {
+  --btg-hero-background-teal: var(--btg-color-primary-500);
+  --btg-hero-background-pink: var(--btg-color-accent-400);
+  --btg-hero-background-blue: var(--btg-color-highlight-400);
+  --btg-hero-background-sand: var(--btg-color-neutral-500);
+  --btg-hero-text-color: var(--btg-color-neutral-1000);
+}
+
+.dark-theme:root {
+  @mixin dark-theme;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --btg-hero-background-teal: var(--btg-color-primary-500);
-    --btg-hero-background-pink: var(--btg-color-accent-400);
-    --btg-hero-background-blue: var(--btg-color-highlight-400);
-    --btg-hero-background-sand: var(--btg-color-neutral-500);
-    --btg-hero-text-color: var(--btg-color-neutral-1000);
+    @mixin dark-theme;
   }
 }
