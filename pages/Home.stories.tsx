@@ -119,6 +119,11 @@ export const Default: Story = {
             </p>
           </ThreeColumnLayout.Column>
         </ThreeColumnLayout>
+        <div className="mt-4 w-full text-center">
+          <CtaLink to="/services" className="text-2xl" arrow="end">
+            More about our services
+          </CtaLink>
+        </div>
       </Section>
       <Section backgroundColor="--btg-color-highlight-700">
         <p>
