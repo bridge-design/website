@@ -2,19 +2,11 @@ import React from 'react'
 import * as styles from './Hero.module.css'
 
 interface HeroProps {
-  title: string
-  description: string
-  buttons: React.ReactNode
-  visual: React.ReactNode
   backgroundColor?: string
   children?: React.ReactNode
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  title,
-  description,
-  buttons,
-  visual = null,
   backgroundColor = 'var(--btg-hero-background-teal)',
   children,
 }) => {
