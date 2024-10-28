@@ -108,6 +108,12 @@ module.exports = {
         DEFAULT: {
           css: {
             '--tw-prose-body': '--btg-color-text',
+            a: {
+              color: 'var(--btg-color-link)',
+              '&:hover': {
+                color: 'var(--btg-color-link--hover)',
+              },
+            },
             p: {
               fontFamily: theme('fontFamily.base'),
             },
@@ -169,6 +175,12 @@ module.exports = {
         html: {
           color: 'var(--btg-color-text)',
           backgroundColor: 'var(--btg-color-background)',
+        },
+        a: {
+          color: 'var(--btg-color-link)',
+          '&:hover': {
+            color: 'var(--btg-color-link--hover)',
+          },
         },
       })
     }),
