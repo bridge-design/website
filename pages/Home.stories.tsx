@@ -43,8 +43,7 @@ export const Default: Story = {
             to="/contact"
             underline={true}
             className="text-xl"
-            color="var(--btg-hero-text-color)"
-            colorHover="var(--btg-hero-text-color)"
+            borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
           >
             Start a conversation
           </CtaLink>
