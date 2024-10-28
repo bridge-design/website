@@ -2,6 +2,15 @@
   background-color: var(--hero-background-color);
   color: var(--btg-hero-text-color);
 }
+
+.hero a {
+  color: var(--btg-hero-text-color);
+}
+
+.hero a:hover {
+  color: var(--btg-hero-text-color);
+}
+
 .wave {
   position: relative;
   width: 100%;

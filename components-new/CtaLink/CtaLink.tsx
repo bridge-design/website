@@ -5,6 +5,8 @@ interface CtaLinkProps {
   to: string
   as?: ElementType
   children: ReactNode
+  color?: string
+  colorHover?: string
   className?: string
   borderClassName?: string
   arrow?: 'start' | 'end' | 'no'
@@ -17,8 +19,10 @@ export const CtaLink = forwardRef<HTMLElement, CtaLinkProps>(
       to,
       as: Component = 'a',
       children,
-      className,
-      borderClassName,
+      color = 'var(--btg-color-link)',
+      colorHover = 'var(--btg-color-link--hover)',
+      className = '',
+      borderClassName = '',
       arrow = 'no',
       underline = false,
       ...props
@@ -40,7 +44,7 @@ export const CtaLink = forwardRef<HTMLElement, CtaLinkProps>(
         <span
           className={
             underline
-              ? `border-b-2 border-[var(--btg-color-link)] pb-2 hover:border-[var(--btg-color-link--hover)] ${borderClassName}`
+              ? `border-b-2 border-[${color || 'var(--btg-hero-text-color)'}] pb-2 hover:border-[${colorHover}] ${borderClassName}`
               : ''
           }
         >

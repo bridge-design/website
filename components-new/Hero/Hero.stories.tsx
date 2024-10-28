@@ -1,17 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Hero } from './Hero'
-import { Button } from '../Button/Button'
-import { Image } from '../Image/Image'
-
-const heroImage = require('./hero-image.jpg')
+import { CtaLink } from '../CtaLink/CtaLink'
 
 const meta: Meta<typeof Hero> = {
   title: 'Components/Hero',
   component: Hero,
   argTypes: {
-    title: { control: 'text' },
-    description: { control: 'text' },
-    buttons: { control: 'object' },
     backgroundColor: {
       control: 'select',
       options: [
@@ -37,9 +31,15 @@ export const Default: Story = {
         <h1 className="font-6xl leading-hero mx-auto mb-16 text-6xl lg:w-4/5">
           We team up with designers and developers to build and scale design systems
         </h1>
-        <a href="/contact" className="text-xl underline">
+        <CtaLink
+          to="/contact"
+          underline={true}
+          className="text-xl"
+          color="var(--btg-hero-text-color)"
+          colorHover="var(--btg-hero-text-color)"
+        >
           Start a conversation
-        </a>
+        </CtaLink>
       </div>
     ),
   },

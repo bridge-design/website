@@ -7,5 +7,6 @@
 }
 
 .link:hover {
+  color: var(--btg-navigation-link-color);
   text-decoration: underline;
 }

@@ -1,3 +1,7 @@
 .header {
   background-color: var(--header-color);
 }
+
+.header a {
+  color: var(--btg-color-text);
+}

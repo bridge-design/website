@@ -3,6 +3,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { Header } from '../components-new/Header/Header'
 import { Section } from '../components-new/Section/Section'
 import { Hero } from '../components-new/Hero/Hero'
+import { CtaLink } from '../components-new/CtaLink/CtaLink'
 import { Footer } from '../components-new/Footer/Footer'
 import { ThreeColumnLayout } from '../components-new/ThreeColumnLayout/ThreeColumnLayout'
 import { Card } from '../components-new/Card/Card'
@@ -38,9 +39,15 @@ export const Default: Story = {
           <h1 className="font-6xl leading-hero mx-auto mb-16 text-6xl lg:w-4/5">
             We team up with designers and developers to build and scale design systems
           </h1>
-          <a href="/contact" className="text-xl underline">
+          <CtaLink
+            to="/contact"
+            underline={true}
+            className="text-xl"
+            color="var(--btg-hero-text-color)"
+            colorHover="var(--btg-hero-text-color)"
+          >
             Start a conversation
-          </a>
+          </CtaLink>
         </div>
       </Hero>
       <Section className="pb-12">
