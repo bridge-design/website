@@ -91,7 +91,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title })
   }, [handleResize])
 
   const getArrowColor = (isDisabled: boolean) =>
-    isDisabled ? 'text-gray-300' : 'text-[var(--btg-color-text)]'
+    isDisabled ? 'text-[var(--btg-color-text--disabled)]' : 'text-[var(--btg-color-text)]'
 
   return (
     <div>

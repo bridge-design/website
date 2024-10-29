@@ -68,6 +68,7 @@
   /* General Colors */
   --btg-color-background: var(--btg-color-neutral-1000);
   --btg-color-text: var(--btg-color-neutral-100);
+  --btg-color-text--disabled: var(--btg-color-neutral-600);
   --btg-color-link: var(--btg-color-primary-300);
   --btg-color-link--hover: var(--btg-color-primary-500);
 
@@ -83,6 +84,7 @@
   /* General Colors */
   --btg-color-background: var(--btg-color-neutral-100);
   --btg-color-text: var(--btg-color-neutral-1000);
+  --btg-color-text--disabled: var(--btg-color-neutral-400);
   --btg-color-link: var(--btg-color-primary-700);
   --btg-color-link--hover: var(--btg-color-primary-900);
 
