@@ -6,6 +6,23 @@ export const TESTIMONIALS = [
     colors: 'bg-[var(--btg-color-accent-800)] text-[var(--btg-color-neutral-100)]',
   },
   {
+    name: 'Alexander Toporov — DS Lead at Yara',
+    text: `Varya possesses a unique blend of technical skills and creative vision, which allows her to translate complex design concepts into practical, scalable solutions. Her work on the Yara Design System has significantly enhanced the overall quality and streamlined the developer experience. I wholeheartedly recommend her to any organization seeking strong engineering and design system leadership.`,
+    colors: 'bg-[var(--btg-color-accent-500)] text-[var(--btg-color-neutral-1000)]',
+  },
+  {
+    name: 'Camila Ribeiro — Product Designer',
+    text: `During the time I worked with Alexandra, her talent in front-end development really stood out.
+What really caught my attention was her eye for detail and how she handled every task with care, ensuring nothing was missed. Alexandra's ability to communicate complex ideas in simple terms made team discussions smoother and more productive.`,
+    colors: 'bg-[var(--btg-color-accent-300)] text-[var(--btg-color-neutral-1000)]',
+  },
+  {
+    name: 'Daniel Miebach — Head of UX at METRO',
+    text: `I had the pleasure of supervising Varya's work on a design system project over many months and I am impressed with her thought leadership and extensive knowledge of the design system space. She skillfully supported a team of engineers and designers and steered them to the successful delivery of a design system that was integrated into hundreds of products within an organization.
+`,
+    colors: 'bg-[var(--btg-color-accent-800)] text-[var(--btg-color-neutral-100)]',
+  },
+  {
     name: 'David Teissier - Directeur Général Publicom',
     avatar: '',
     text: 'Sherif was a true professional in his business. Great skills in web design and UX. CSS has no secrets for him also. We worked together on web projects to large sizes.',
