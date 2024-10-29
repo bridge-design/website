@@ -8,6 +8,9 @@ import { Footer } from '../components-new/Footer/Footer'
 import { ThreeColumnLayout } from '../components-new/ThreeColumnLayout/ThreeColumnLayout'
 import { Card } from '../components-new/Card/Card'
 import { Blob } from '../components-new/Blob/Blob'
+import { Testimonial } from '../components-new/Testimonial/Testimonial'
+
+import { TESTIMONIALS } from './data'
 
 const meta: Meta = {
   title: 'Pages/Home',
@@ -139,9 +142,8 @@ export const Default: Story = {
         </ul>
         <p>Source: draft #3</p>
       </Section>
-      <Section backgroundColor="--btg-color-accent-700">
-        <p>People say</p>
-        <p>Source: draft #3</p>
+      <Section className="py-12">
+        <Testimonial title={<h2 className="text-3xl">People Say</h2>} testimonials={TESTIMONIALS} />
       </Section>
       <Section backgroundColor="--btg-color-primary-700">
         <p>Meet the team</p>
