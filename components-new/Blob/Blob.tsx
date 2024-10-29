@@ -8,6 +8,9 @@ interface BlobProps {
   variant?: 1 | 2 | 3 | 4 | 5 | 6
 }
 
+/**
+ * Blob shapes are created with https://www.softr.io/tools/svg-shape-generator
+ */
 export const Blob: React.FC<BlobProps> = ({
   color = 'var(--btg-color-accent-500)',
   size = 200,
