@@ -40,14 +40,4 @@ What really caught my attention was her eye for detail and how she handled every
     text: 'Sherif is a proactive and tireless contributor who would make a great addition to any team. He completed his assignments on time and never failed to add a creative touch when appropriate.',
     colors: 'bg-[var(--btg-color-accent-800)] text-[var(--btg-color-neutral-100)]',
   },
-  {
-    name: 'Alexander Petrovskiy',
-    avatar: '',
-    text: `
-        Varya is a highly skilled professional designer and developer. Along with these qualities,
-        she is a great leader, a team player, and a business partner! She is a valuable asset to
-        any team when it comes to solving complex business problems! I'm glad to recommend her!
-      `,
-    colors: 'bg-[var(--btg-color-accent-500)] text-[var(--btg-color-neutral-1000)]',
-  },
 ]
