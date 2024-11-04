@@ -10,7 +10,7 @@ import { Blob } from '../components-new/Blob/Blob'
 import { Testimonial } from '../components-new/Testimonial/Testimonial'
 import { ProfileCard } from '../components-new/ProfileCard/ProfileCard'
 
-import { TESTIMONIALS } from './data'
+import { TESTIMONIALS } from '../data/testimonials'
 import { team } from '../data/team'
 
 const meta: Meta = {
