@@ -6,11 +6,12 @@ import { Hero } from '../components-new/Hero/Hero'
 import { CtaLink } from '../components-new/CtaLink/CtaLink'
 import { Footer } from '../components-new/Footer/Footer'
 import { ThreeColumnLayout } from '../components-new/ThreeColumnLayout/ThreeColumnLayout'
-import { Card } from '../components-new/Card/Card'
 import { Blob } from '../components-new/Blob/Blob'
 import { Testimonial } from '../components-new/Testimonial/Testimonial'
+import { ProfileCard } from '../components-new/ProfileCard/ProfileCard'
 
 import { TESTIMONIALS } from './data'
+import { team } from '../data/team'
 
 const meta: Meta = {
   title: 'Pages/Home',
@@ -39,7 +40,7 @@ export const Default: Story = {
       <Header backgroundColor="var(--btg-hero-background-teal)" navigationItems={navigationItems} />
       <Hero backgroundColor="var(--btg-hero-background-teal)">
         <div className="mt-8 text-center">
-          <h1 className="font-6xl leading-hero mx-auto mb-16 text-6xl lg:w-4/5">
+          <h1 className="font-6xl mx-auto mb-16 text-6xl leading-hero lg:w-4/5">
             We team up with designers and developers to build and scale design systems
           </h1>
           <CtaLink
@@ -56,7 +57,7 @@ export const Default: Story = {
         <h2 className="mb-6 text-center text-4xl">Our Design Systems Expertise</h2>
         <ThreeColumnLayout>
           <ThreeColumnLayout.Column>
-            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+            <h3 className="flex items-center space-x-2 text-2xl font-bold">
               <Blob animate={true} size={100} color="var(--btg-color-accent-500)" />
               <span>Audit & Strategy</span>
             </h3>
@@ -67,7 +68,7 @@ export const Default: Story = {
           </ThreeColumnLayout.Column>
 
           <ThreeColumnLayout.Column>
-            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+            <h3 className="flex items-center space-x-2 text-2xl font-bold">
               <Blob animate={true} size={100} variant="2" color="var(--btg-color-primary-500)" />
               <span>Implementation</span>
             </h3>
@@ -78,7 +79,7 @@ export const Default: Story = {
           </ThreeColumnLayout.Column>
 
           <ThreeColumnLayout.Column>
-            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+            <h3 className="flex items-center space-x-2 text-2xl font-bold">
               <Blob animate={true} size={100} variant="3" color="var(--btg-color-highlight-700)" />
               <span>Architecture</span>
             </h3>
@@ -89,7 +90,7 @@ export const Default: Story = {
           </ThreeColumnLayout.Column>
 
           <ThreeColumnLayout.Column>
-            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+            <h3 className="flex items-center space-x-2 text-2xl font-bold">
               <Blob animate={true} size={100} variant="4" color="var(--btg-color-highlight-1000)" />
               <span>Workflows</span>
             </h3>
@@ -100,7 +101,7 @@ export const Default: Story = {
           </ThreeColumnLayout.Column>
 
           <ThreeColumnLayout.Column>
-            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+            <h3 className="flex items-center space-x-2 text-2xl font-bold">
               <Blob animate={true} size={100} variant="5" color="var(--btg-color-accent-800)" />
               <span>Business value</span>
             </h3>
@@ -111,7 +112,7 @@ export const Default: Story = {
           </ThreeColumnLayout.Column>
 
           <ThreeColumnLayout.Column>
-            <h3 className="font-bold flex items-center space-x-2 text-2xl">
+            <h3 className="flex items-center space-x-2 text-2xl font-bold">
               <Blob animate={true} size={100} variant="6" color="var(--btg-color-primary-800)" />
               <span>Trainings</span>
             </h3>
@@ -127,29 +128,26 @@ export const Default: Story = {
           </CtaLink>
         </div>
       </Section>
-      <Section backgroundColor="--btg-color-highlight-700">
-        <p>
-          <b>Help for busy teams</b>
-        </p>
-        <ul>
-          <li>
-            Added skillset Bring in specialized expertise without extensive training or recruitment.
-          </li>
-          <li>Additional expertise Access knowledge beyond your in-house capabilities.</li>
-          <li>
-            Continuous integration Seamlessly incorporate the design system into your workflow.
-          </li>
-        </ul>
-        <p>Source: draft #3</p>
+      <Section className="py-12">
+        <h2 className="mb-6 text-center text-4xl">Meet the Team</h2>
+        <div className="mt-10 flex flex-wrap justify-center gap-10 md:grid md:grid-cols-2 lg:flex lg:flex-col xl:grid xl:grid-cols-2">
+          {Object.values(team).map((member) => (
+            <ProfileCard
+              key={member.name}
+              photoUrl={member.photoUrl}
+              name={member.name}
+              role={member.role}
+              twitter={member.twitter}
+              linkedin={member.linkedin}
+              github={member.github}
+            />
+          ))}
+        </div>
       </Section>
       <Section className="py-12">
         <Testimonial title={<h2 className="text-3xl">People Say</h2>} testimonials={TESTIMONIALS} />
       </Section>
-      <Section backgroundColor="--btg-color-primary-700">
-        <p>Meet the team</p>
-        <p>Source: draft #3</p>
-      </Section>
-      <Section backgroundColor="--btg-color-accent-700">
+      <Section>
         <p>Case studies</p>
       </Section>
       <Section backgroundColor="--btg-color-highlight-700">
