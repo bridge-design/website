@@ -21,7 +21,7 @@ export const LogosCloud: React.FC<LogosCloudProps> = ({ logos }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={logo.src} alt={logo.alt} className="h-16 w-auto" />
+          <img src={logo.src} alt={logo.alt} className="h-16 w-auto lg:h-24" />
         </a>
       ))}
     </div>
