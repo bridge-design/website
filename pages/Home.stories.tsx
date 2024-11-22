@@ -12,6 +12,14 @@ import { ProfileCard } from '../components-new/ProfileCard/ProfileCard'
 
 import { TESTIMONIALS } from '../data/testimonials'
 import { team } from '../data/team'
+import { caseStudiesExamples } from '../data/case-studies-examples'
+import { LogosCloud } from '../components-new/LogosCloud/LogosCloud'
+
+const caseLogos = caseStudiesExamples.map((post) => ({
+  src: post.logo.src,
+  alt: post.logo.alt,
+  link: `/case-studies/${post.slug}`,
+}))
 
 const meta: Meta = {
   title: 'Pages/Home',
@@ -145,10 +153,17 @@ export const Default: Story = {
         </div>
       </Section>
       <Section className="py-12">
-        <Testimonial title={<h2 className="text-3xl">People Say</h2>} testimonials={TESTIMONIALS} />
+        <Testimonial title={<h2 className="text-4xl">People Say</h2>} testimonials={TESTIMONIALS} />
       </Section>
-      <Section>
-        <p>Case studies</p>
+      <Section className="py-12">
+        <h2 className="mb-6 hidden text-4xl">Case Studies</h2>
+        {/* <CaseStudiesTeaser casePosts={caseStudiesExamples} /> */}
+        <LogosCloud logos={caseLogos} />
+        <div className="mt-4 w-full text-center">
+          <CtaLink to="/case-studies" className="text-2xl" arrow="end">
+            Explore our case studies
+          </CtaLink>
+        </div>
       </Section>
       <Section backgroundColor="--btg-color-highlight-700">
         <p>Start Your Design System Journey</p>
