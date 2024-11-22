@@ -28,7 +28,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
   return (
     <div
       className={classNames(
-        'flex min-w-min flex-col items-start justify-between gap-4 overflow-hidden rounded-lg bg-[var(--btg-color-highlight-500)] px-4 py-4 text-[var(--btg-color-neutral-1000)] sm:px-0 sm:py-0',
+        'flex min-w-min flex-col items-start justify-between gap-4 overflow-hidden rounded-lg bg-[var(--btg-color-highlight-1000)] px-4 py-4 text-[var(--btg-color-neutral-100)] sm:px-0 sm:py-0',
         {
           'sm:flex-row-reverse sm:pl-4 lg:pl-6': reverse,
           'sm:flex-row': !reverse,
@@ -49,17 +49,17 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
             )}
           >
             {twitter && (
-              <a href={twitter} className="hover:text-[var(--btg-color-neutral-800)]">
+              <a href={twitter} className="hover:text-[var(--btg-color-neutral-300)]">
                 <LogoTwitter size={32} />
               </a>
             )}
             {linkedin && (
-              <a href={linkedin} className="hover:text-[var(--btg-color-neutral-800)]">
+              <a href={linkedin} className="hover:text-[var(--btg-color-neutral-300)]">
                 <LogoLinkedin size={32} />
               </a>
             )}
             {github && (
-              <a href={github} className="hover:text-[var(--btg-color-neutral-800)]">
+              <a href={github} className="hover:text-[var(--btg-color-neutral-300)]">
                 <LogoGithub size={32} />
               </a>
             )}
