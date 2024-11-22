@@ -9,11 +9,12 @@ import { ThreeColumnLayout } from '../components-new/ThreeColumnLayout/ThreeColu
 import { Blob } from '../components-new/Blob/Blob'
 import { Testimonial } from '../components-new/Testimonial/Testimonial'
 import { ProfileCard } from '../components-new/ProfileCard/ProfileCard'
+import { LogosCloud } from '../components-new/LogosCloud/LogosCloud'
+import { Outro } from '../components-new/Outro/Outro'
 
 import { TESTIMONIALS } from '../data/testimonials'
 import { team } from '../data/team'
 import { caseStudiesExamples } from '../data/case-studies-examples'
-import { LogosCloud } from '../components-new/LogosCloud/LogosCloud'
 
 const caseLogos = caseStudiesExamples.map((post) => ({
   src: post.logo.src,
@@ -159,16 +160,27 @@ export const Default: Story = {
         <h2 className="mb-6 hidden text-4xl">Case Studies</h2>
         {/* <CaseStudiesTeaser casePosts={caseStudiesExamples} /> */}
         <LogosCloud logos={caseLogos} />
-        <div className="mt-4 w-full text-center">
+        <div className="mt-12 w-full text-center">
           <CtaLink to="/case-studies" className="text-2xl" arrow="end">
             Explore our case studies
           </CtaLink>
         </div>
       </Section>
-      <Section backgroundColor="--btg-color-highlight-700">
-        <p>Start Your Design System Journey</p>
-        <p>Source: draft #3</p>
-      </Section>
+      <Outro backgroundColor="var(--btg-hero-background-teal)">
+        <div className="text-center">
+          <h1 className="font-4xl mx-auto mb-10 text-4xl lg:w-4/5">
+            Want to start your design system journey with us?
+          </h1>
+          <CtaLink
+            to="/contact"
+            underline={true}
+            className="text-xl"
+            borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
+          >
+            Let's talk!
+          </CtaLink>
+        </div>
+      </Outro>
       <Footer siteTitle="Bridge-The-Gap - design systems consulting and workshops" />
     </>
   ),
