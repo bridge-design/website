@@ -35,11 +35,11 @@
   --btg-color-primary-300: #006268;
   --btg-color-primary-400: #007b82;
   --btg-color-primary-500: #01949a;
-  --btg-color-primary-600: #00adb3;
-  --btg-color-primary-700: #00c6cc;
-  --btg-color-primary-800: #00dfe6;
-  --btg-color-primary-900: #33f2f9;
-  --btg-color-primary-1000: #99f8fc;
+  --btg-color-primary-600: #009da3;
+  --btg-color-primary-700: #00b4ba;
+  --btg-color-primary-800: #00cdd4;
+  --btg-color-primary-900: #33dde4;
+  --btg-color-primary-1000: #8de4e8;
 
   /* Accent Colors */
   --btg-color-accent-100: #3d0614;
@@ -47,11 +47,11 @@
   --btg-color-accent-300: #7b0e28;
   --btg-color-accent-400: #9a1232;
   --btg-color-accent-500: #db1f48;
-  --btg-color-accent-600: #e34468;
-  --btg-color-accent-700: #e86a87;
-  --btg-color-accent-800: #ee90a6;
-  --btg-color-accent-900: #f3b6c5;
-  --btg-color-accent-1000: #f9dce4;
+  --btg-color-accent-600: #d94163;
+  --btg-color-accent-700: #d9627f;
+  --btg-color-accent-800: #e88299;
+  --btg-color-accent-900: #e9a6b5;
+  --btg-color-accent-1000: #e9ccd4;
 
   /* Highlight Colors */
   --btg-color-highlight-100: #001a2a;
@@ -59,11 +59,11 @@
   --btg-color-highlight-300: #003055;
   --btg-color-highlight-400: #003b6b;
   --btg-color-highlight-500: #004369;
-  --btg-color-highlight-600: #005c8f;
-  --btg-color-highlight-700: #0075b5;
-  --btg-color-highlight-800: #008edb;
-  --btg-color-highlight-900: #33a8e6;
-  --btg-color-highlight-1000: #99d4f2;
+  --btg-color-highlight-600: #005582;
+  --btg-color-highlight-700: #006ca4;
+  --btg-color-highlight-800: #0084c4;
+  --btg-color-highlight-900: #3399d1;
+  --btg-color-highlight-1000: #8bc2e2;
 
   /* General Colors */
   --btg-color-background: var(--btg-color-neutral-1000);
