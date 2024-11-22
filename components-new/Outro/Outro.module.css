@@ -1,0 +1,12 @@
+.outro {
+  background-color: var(--outro-background-color);
+  color: var(--btg-hero-text-color);
+}
+
+.outro a {
+  color: var(--btg-hero-text-color);
+}
+
+.outro a:hover {
+  color: var(--btg-hero-text-color);
+}
