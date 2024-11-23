@@ -33,7 +33,7 @@ export const Logo: React.FC<LogoProps> = ({ className, variant = 'dark' }) => {
 
   return (
     <div className={`${baseStyles} ${variantStyles} ${className}`}>
-      <BridgeLogo className="fill-current" />
+      <BridgeLogo className="fill-current" style={{ width: '100%' }} />
     </div>
   )
 }

@@ -53,7 +53,7 @@ export const Navigation: React.FC<NavigationProps> = ({
       <div
         className={
           isMenuOpen
-            ? 'absolute left-0 right-0 top-24 z-50 flex flex-col bg-white p-20 dark:bg-black'
+            ? `${styles.navigation__dropdown} absolute left-0 right-0 top-24 z-50 mx-4 flex flex-col bg-white p-10 dark:bg-black`
             : 'relative hidden lg:flex'
         }
       >
@@ -61,14 +61,15 @@ export const Navigation: React.FC<NavigationProps> = ({
           {items.map((item) => (
             <li
               key={item.href}
-              className="px-2 py-2 text-lg lg:py-0"
+              className="px-2 py-0 text-lg"
               onClick={() => setTimeout(() => setMenuOpen(false), 600)} // Close menu with delay after item click
             >
               <LinkComponent
                 href={item.href}
                 className={classnames(
                   styles.link,
-                  'border-b-2 border-transparent transition-colors duration-200'
+                  'border-transparent transition-colors duration-200',
+                  ''
                 )}
               >
                 {item.name}
