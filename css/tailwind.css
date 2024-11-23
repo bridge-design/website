@@ -1,5 +1,5 @@
 @import '../tokens/colors.css';
-/* @import '../tokens/gradients.css'; */
+@import '../tokens/gradients.css';
 @import '../tokens/sizes.css';
 @import '../tokens/typography.css';
 
