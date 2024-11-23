@@ -48,8 +48,8 @@ export const Default: Story = {
     <>
       <Header backgroundColor="var(--btg-hero-background-teal)" navigationItems={navigationItems} />
       <Hero backgroundColor="var(--btg-hero-background-teal)">
-        <div className="mt-8 text-center">
-          <h1 className="font-6xl mx-auto mb-16 text-6xl leading-hero lg:w-4/5">
+        <div className="text-center lg:mt-8">
+          <h1 className="font-6xl mx-auto mb-16 text-4xl leading-hero lg:w-4/5 lg:text-6xl">
             We team up with designers and developers to build and scale design systems
           </h1>
           <CtaLink
