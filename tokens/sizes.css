@@ -25,3 +25,9 @@
   /* Shoutout sizes */
   --size-shoutout: var(--size-6xl);
 }
+
+@media (max-width: 568px) {
+  :root {
+    --size-4xl: 2rem;
+  }
+}
