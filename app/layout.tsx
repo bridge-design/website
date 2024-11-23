@@ -1,12 +1,9 @@
 import 'css/tailwind.css'
-import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
 import { Inter } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
-import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
-import SectionContainer from '@/components/SectionContainer'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
@@ -77,17 +74,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
-          {/* <SectionContainer> */}
           <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
-            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <main className="max-w-full text-light-on-background-900 dark:text-white">
-                {children}
-              </main>
-            </SearchProvider>
+            <Header />
+            <main className="text-light-on-background-900 max-w-full dark:text-white">
+              {children}
+            </main>
             <Footer />
           </div>
-          {/* </SectionContainer> */}
         </ThemeProviders>
       </body>
     </html>
