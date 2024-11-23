@@ -1,6 +1,7 @@
 // @ts-check
 
 const defaultTheme = require('tailwindcss/defaultTheme')
+const plugin = require('tailwindcss/plugin')
 
 /** @type {import("tailwindcss/types").Config } */
 const config = {
@@ -173,7 +174,23 @@ const config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addBase, theme }) => {
+      addBase({
+        // or whichever color you'd like
+        html: {
+          color: 'var(--btg-color-text)',
+          backgroundColor: 'var(--btg-color-background)',
+        },
+        a: {
+          color: 'var(--btg-color-link)',
+          '&:hover': {
+            color: 'var(--btg-color-link--hover)',
+          },
+        },
+      })
+    }),
+  ],
 }
 
 module.exports = config
