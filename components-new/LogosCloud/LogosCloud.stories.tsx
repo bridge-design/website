@@ -24,6 +24,11 @@ export const Default: Story = {
       { src: '/logo/f-secure-logo.svg', alt: 'Logo 3', link: '#' },
       { src: '/logo/metro-logo.svg', alt: 'Logo 4', link: '#' },
       { src: '/logo/elisa-logo.svg', alt: 'Logo 5', link: '#' },
+      { src: '/logo/appomni-logo.svg', alt: 'Logo 1', link: '#' },
+      { src: '/logo/yara-logo.svg', alt: 'Logo 2', link: '#' },
+      { src: '/logo/f-secure-logo.svg', alt: 'Logo 3', link: '#' },
+      { src: '/logo/metro-logo.svg', alt: 'Logo 4', link: '#' },
+      { src: '/logo/elisa-logo.svg', alt: 'Logo 5', link: '#' },
     ],
   },
 }
