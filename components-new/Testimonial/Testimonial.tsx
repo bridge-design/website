@@ -95,18 +95,18 @@ export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title })
 
   return (
     <div>
-      <div className="flex items-baseline justify-between">
+      <div className="flex items-center justify-between lg:items-baseline">
         <div>{title}</div>
-        <div className="ml-auto hidden md:flex">
+        <div className="ml-auto flex">
           <button
             ref={swiperNavigationPrevRef}
-            className={classNames(getArrowColor(isPrevButtonDisabled), 'mr-12')}
+            className={classNames(getArrowColor(isPrevButtonDisabled), 'mr-2 lg:mr-12')}
           >
             <ArrowLeft size={32} />
           </button>
           <button
             ref={swiperNavigationNextRef}
-            className={classNames(getArrowColor(isNextButtonDisabled), 'mr-12')}
+            className={classNames(getArrowColor(isNextButtonDisabled), 'mr-2 lg:mr-12')}
           >
             <ArrowRight size={32} />
           </button>
