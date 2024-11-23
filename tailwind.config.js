@@ -3,9 +3,12 @@
 /** @type {import("tailwindcss/types").Config } */
 const config = {
   content: [
-    './node_modules/pliny/**/*.js',
+    './components-new/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx}',
+    './tokens/**/*.{ts,tsx,md,mdx}',
+    './.storybook/**/*.{js,ts,tsx}',
+
     './app/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,tsx}',
     './components/**/*.{js,ts,tsx}',
     './layouts/**/*.{js,ts,tsx}',
     './data/**/*.mdx',
