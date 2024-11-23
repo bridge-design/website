@@ -29,10 +29,6 @@ const config = {
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
       },
-      // colors: {
-      //   primary: colors.pink,
-      //   gray: colors.gray,
-      // },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
