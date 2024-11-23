@@ -64,6 +64,9 @@
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^9.0.0",
     "lint-staged": "^13.0.0",
+    "postcss-import": "^16.1.0",
+    "postcss-loader": "^8.1.1",
+    "postcss-mixins": "^11.0.3",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.6.1",
     "typescript": "^5.1.3"
