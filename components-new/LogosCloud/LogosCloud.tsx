@@ -27,7 +27,6 @@ export const LogosCloud: React.FC<LogosCloudProps> = ({ logos }) => {
               src={logo.src}
               alt={logo.alt}
               className="h-16 w-auto max-w-none object-cover lg:h-24"
-              style={{ minWidth: '120px' }}
             />
           </a>
         ))}
@@ -43,8 +42,7 @@ export const LogosCloud: React.FC<LogosCloudProps> = ({ logos }) => {
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-16 w-auto max-w-none object-cover lg:h-24"
-              style={{ minWidth: '120px' }}
+              className="h-20 w-auto max-w-none object-cover lg:h-24"
             />
           </a>
         ))}
