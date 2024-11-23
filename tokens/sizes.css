@@ -1,0 +1,33 @@
+:root {
+  /* Size Palette */
+  --size-xxs: 0.75rem; /* 12px */
+  --size-xs: 0.875rem; /* 14px */
+  --size-sm: 1rem; /* 16px */
+  --size-md: 1.125rem; /* 18px */
+  --size-lg: 1.25rem; /* 20px */
+  --size-xl: 1.5rem; /* 24px */
+  --size-2xl: 1.875rem; /* 30px */
+  --size-3xl: 2.25rem; /* 36px */
+  --size-4xl: 3rem; /* 48px */
+  --size-5xl: 3.75rem; /* 60px */
+  --size-6xl: 4.5rem; /* 72px */
+  --size-7xl: 6rem; /* 96px */
+  --size-8xl: 8rem; /* 128px */
+
+  /* Sizes for Headings */
+  --size-h1: var(--size-5xl);
+  --size-h2: var(--size-4xl);
+  --size-h3: var(--size-3xl);
+  --size-h4: var(--size-2xl);
+  --size-h5: var(--size-xl);
+  --size-h6: var(--size-lg);
+
+  /* Shoutout sizes */
+  --size-shoutout: var(--size-6xl);
+}
+
+@media (max-width: 568px) {
+  :root {
+    --size-4xl: 2rem;
+  }
+}
