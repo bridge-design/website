@@ -25,8 +25,8 @@ export const Footer: React.FC<FooterProps> = ({
       }
     >
       <div className="mx-auto flex w-full max-w-[1280px] px-8 py-6 sm:min-w-full lg:min-w-[1024px]">
-        <div className="mt-8 flex w-full items-center justify-center">
-          <div>{`© ${new Date().getFullYear()} `}</div>
+        <div className="mt-8 w-full justify-center text-center">
+          <span>{`© ${new Date().getFullYear()} `}</span>
           {'\u00A0'}
           <Link
             href="/"
