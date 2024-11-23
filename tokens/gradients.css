@@ -1,0 +1,69 @@
+@layer utilities {
+  /** 3-color gradients */
+  /* Gradient 1: Primary to Accent */
+  .btg-gradient-primary-accent {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-primary-500) 5%,
+      var(--btg-color-accent-400) 45%,
+      var(--btg-color-highlight-300) 85%
+    );
+  }
+
+  /* Gradient 2: Neutral to Primary */
+  .btg-gradient-neutral-primary {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-neutral-500) 5%,
+      var(--btg-color-primary-400) 45%,
+      var(--btg-color-highlight-500) 85%
+    );
+  }
+
+  /* Gradient 3: Accent to Highlight */
+  .btg-gradient-accent-highlight {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-accent-500) 5%,
+      var(--btg-color-highlight-400) 45%,
+      var(--btg-color-primary-300) 85%
+    );
+  }
+
+  /* Text Gradient Examples */
+  .btg-text-gradient-primary-accent {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-primary-500) 5%,
+      var(--btg-color-accent-400) 45%,
+      var(--btg-color-highlight-300) 85%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btg-text-gradient-neutral-primary {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-neutral-500) 5%,
+      var(--btg-color-primary-400) 45%,
+      var(--btg-color-highlight-500) 85%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btg-text-gradient-accent-highlight {
+    background: linear-gradient(
+      139deg,
+      var(--btg-color-accent-500) 5%,
+      var(--btg-color-highlight-400) 45%,
+      var(--btg-color-primary-300) 85%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
