@@ -5,6 +5,7 @@ import { CtaLink } from './CtaLink'
 const meta: Meta<typeof CtaLink> = {
   title: 'Components/CtaLink',
   component: CtaLink,
+  tags: ['beta'],
   argTypes: {
     to: { control: 'text', description: 'Link destination URL' },
     arrow: {

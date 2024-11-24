@@ -4,6 +4,7 @@ import { HorizontalWave } from './HorizontalWave'
 const meta: Meta<typeof HorizontalWave> = {
   title: 'Components/HorizontalWave',
   component: HorizontalWave,
+  tags: ['beta'],
   argTypes: {
     direction: {
       control: { type: 'radio' },

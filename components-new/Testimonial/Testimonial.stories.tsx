@@ -6,6 +6,7 @@ import { TESTIMONIALS } from '../../data/testimonials'
 const meta: Meta<typeof Testimonial> = {
   title: 'Components/Testimonial',
   component: Testimonial,
+  tags: ['beta'],
   argTypes: {
     title: {
       control: 'text',

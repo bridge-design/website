@@ -4,6 +4,7 @@ import { Header } from './Header'
 const meta: Meta<typeof Header> = {
   title: 'Components/Header',
   component: Header,
+  tags: ['beta'],
   argTypes: {
     navigationItems: {
       control: 'object',

@@ -4,11 +4,11 @@ import React, { useLayoutEffect, useRef, useState, useCallback } from 'react'
 import classNames from 'classnames'
 import { ArrowRight, ArrowLeft } from '@carbon/icons-react'
 import Swiper from 'swiper'
-import { Scrollbar, Navigation } from 'swiper/modules'
+import { Scrollbar, Navigation, FreeMode } from 'swiper/modules'
 import { useDebouncedCallback } from 'use-debounce'
 import QuotationIcon from './quotation-icon.svg'
 
-Swiper.use([Scrollbar, Navigation])
+Swiper.use([Scrollbar, Navigation, FreeMode])
 
 interface TestimonialItemProps {
   name: string
@@ -58,9 +58,13 @@ export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title })
   )
 
   useLayoutEffect(() => {
+    if (!swiperContainerRef.current) return
+
     const swiper = new Swiper(swiperContainerRef.current, {
-      freeMode: true,
-      freeModeMomentum: false,
+      freeMode: {
+        enabled: true,
+        momentum: false,
+      },
       watchOverflow: true,
       speed: 600,
       spaceBetween: 0,
@@ -77,7 +81,6 @@ export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title })
           setNextButtonDisabled(isEnd)
         },
       },
-      breakpointsInverse: true,
       breakpoints: {
         1024: {
           freeMode: false,

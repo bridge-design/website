@@ -4,6 +4,7 @@ import { Navigation } from './Navigation'
 const meta: Meta<typeof Navigation> = {
   title: 'Components/Navigation',
   component: Navigation,
+  tags: ['beta'],
   argTypes: {
     items: {
       control: 'object',

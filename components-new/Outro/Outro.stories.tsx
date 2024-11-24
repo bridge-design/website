@@ -4,6 +4,7 @@ import { Outro } from './Outro'
 const meta: Meta<typeof Outro> = {
   title: 'Components/Outro',
   component: Outro,
+  tags: ['beta'],
   argTypes: {
     backgroundColor: {
       control: 'color',
