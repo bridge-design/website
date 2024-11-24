@@ -2,6 +2,7 @@ import {
   Blob,
   CtaLink,
   Hero,
+  LogosCloud,
   ProfileCard,
   Section,
   Testimonial,
@@ -10,6 +11,13 @@ import {
 
 import { team } from '@/data/team'
 import { TESTIMONIALS } from '@/data/testimonials'
+import { allCaseStudies } from 'contentlayer/generated'
+
+const caseLogos = allCaseStudies.map((post) => ({
+  src: post.logo,
+  alt: post.title,
+  link: `/case-studies/${post.slug}`,
+}))
 
 export default async function Page() {
   return (
@@ -126,6 +134,16 @@ export default async function Page() {
             title={<h2 className="text-4xl">People Say</h2>}
             testimonials={TESTIMONIALS}
           />
+        </div>
+      </Section>
+      <Section className="py-12">
+        <h2 className="mb-6 hidden text-4xl">Case Studies</h2>
+        {/* <CaseStudiesTeaser casePosts={caseStudiesExamples} /> */}
+        <LogosCloud logos={caseLogos} />
+        <div className="mt-12 w-full text-center">
+          <CtaLink to="/case-studies" className="text-2xl" arrow="end">
+            Explore our case studies
+          </CtaLink>
         </div>
       </Section>
     </>
