@@ -3,6 +3,7 @@ import {
   CtaLink,
   Hero,
   LogosCloud,
+  Outro,
   ProfileCard,
   Section,
   Testimonial,
@@ -146,6 +147,21 @@ export default async function Page() {
           </CtaLink>
         </div>
       </Section>
+      <Outro backgroundColor="var(--btg-hero-background-teal)">
+        <div className="text-center">
+          <h1 className="font-4xl mx-auto mb-10 text-4xl lg:w-4/5">
+            Want to start your design system journey with us?
+          </h1>
+          <CtaLink
+            to="/contact"
+            underline={true}
+            className="text-xl"
+            borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
+          >
+            Let's talk!
+          </CtaLink>
+        </div>
+      </Outro>
     </>
   )
 }
