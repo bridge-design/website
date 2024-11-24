@@ -1,0 +1,4 @@
+.case a,
+a.case {
+  color: var(--btg-color-neutral-100);
+}

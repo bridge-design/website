@@ -28,6 +28,8 @@
 
 @media (max-width: 568px) {
   :root {
+    --size-3xl: 1.75rem;
     --size-4xl: 2rem;
+    --size-5xl: 2.5rem;
   }
 }
