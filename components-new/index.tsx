@@ -8,6 +8,7 @@ export { Logo } from './Logo/Logo'
 export { Navigation } from './Navigation/Navigation'
 export { ProfileCard } from './ProfileCard/ProfileCard'
 export { Section } from './Section/Section'
+export { Testimonial } from './Testimonial/Testimonial'
 export { ThreeColumnLayout } from './ThreeColumnLayout/ThreeColumnLayout'
 
 export default {}

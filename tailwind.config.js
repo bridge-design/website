@@ -14,7 +14,7 @@ const config = {
     './app/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,tsx}',
     './layouts/**/*.{js,ts,tsx}',
-    './data/**/*.mdx',
+    './data/**/*.{mdx,tsx}',
     './node_modules/\\@bridge-the-gap/design-system/dist/**/*.js',
     './node_modules/\\@bridge-the-gap/design-system/dist/*.js',
   ],
