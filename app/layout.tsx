@@ -3,7 +3,7 @@ import 'remark-github-blockquote-alert/alert.css'
 
 import { Inter } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
-import { Header, Footer } from '@/components-new/index.tsx'
+import { Header, Footer } from '@/components-new/index'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
