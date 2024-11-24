@@ -1,5 +1,6 @@
 export { Blob } from './Blob/Blob'
 export { CtaLink } from './CtaLink/CtaLink'
+export { Footer } from './Footer/Footer'
 export { Header } from './Header/Header'
 export { Hero } from './Hero/Hero'
 export { HorizontalWave } from './HorizontalWave/HorizontalWave'

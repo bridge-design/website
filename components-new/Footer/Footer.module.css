@@ -1,0 +1,7 @@
+.footer {
+  background-color: var(--footer-color);
+}
+
+.footer a {
+  color: var(--btg-hero-text-color);
+}
