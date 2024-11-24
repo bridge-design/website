@@ -4,10 +4,12 @@ import {
   Hero,
   ProfileCard,
   Section,
+  Testimonial,
   ThreeColumnLayout,
 } from '@/components-new/index.tsx'
 
 import { team } from '@/data/team'
+import { TESTIMONIALS } from '@/data/testimonials'
 
 export default async function Page() {
   return (
@@ -116,6 +118,14 @@ export default async function Page() {
               github={member.github}
             />
           ))}
+        </div>
+      </Section>
+      <Section className="py-12">
+        <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
+          <Testimonial
+            title={<h2 className="text-4xl">People Say</h2>}
+            testimonials={TESTIMONIALS}
+          />
         </div>
       </Section>
     </>
