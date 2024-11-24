@@ -80,9 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             backgroundColor="var(--btg-hero-background-teal)"
             navigationItems={navigationItems}
           />
-          <main className="text-light-on-background-900 max-w-full dark:text-white">
-            {children}
-          </main>
+          {children}
         </ThemeProviders>
       </body>
     </html>
