@@ -3,11 +3,13 @@ import 'remark-github-blockquote-alert/alert.css'
 
 import { Inter } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
-import Header from '@/components/Header'
+import { Header } from '@/components-new/index.tsx'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
+
+import navigationItems from '@/data/headerNavLinks'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -74,13 +76,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
-          <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
-            <Header />
-            <main className="text-light-on-background-900 max-w-full dark:text-white">
-              {children}
-            </main>
-            <Footer />
-          </div>
+          <Header
+            backgroundColor="var(--btg-hero-background-teal)"
+            navigationItems={navigationItems}
+          />
+          <main className="text-light-on-background-900 max-w-full dark:text-white">
+            {children}
+          </main>
         </ThemeProviders>
       </body>
     </html>
