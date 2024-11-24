@@ -6,6 +6,7 @@ import { Footer } from './Footer'
 const meta: Meta<typeof Footer> = {
   title: 'Components/Footer',
   component: Footer,
+  tags: ['beta'],
   argTypes: {
     siteTitle: {
       control: 'text',

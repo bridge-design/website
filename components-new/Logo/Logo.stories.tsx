@@ -4,6 +4,7 @@ import { Logo } from './Logo'
 const meta: Meta<typeof Logo> = {
   title: 'Components/Logo',
   component: Logo,
+  tags: ['beta'],
   argTypes: {
     variant: {
       control: {

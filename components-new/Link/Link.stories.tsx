@@ -4,6 +4,7 @@ import { Link } from './Link'
 const meta: Meta<typeof Link> = {
   title: 'Components/Link',
   component: Link,
+  tags: ['beta'],
   argTypes: {
     href: {
       control: 'text',

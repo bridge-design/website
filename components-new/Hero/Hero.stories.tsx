@@ -5,6 +5,7 @@ import { CtaLink } from '../CtaLink/CtaLink'
 const meta: Meta<typeof Hero> = {
   title: 'Components/Hero',
   component: Hero,
+  tags: ['beta'],
   argTypes: {
     backgroundColor: {
       control: 'select',

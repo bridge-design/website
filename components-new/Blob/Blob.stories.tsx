@@ -4,6 +4,7 @@ import { Blob } from './Blob'
 const meta: Meta<typeof Blob> = {
   title: 'Components/Blob',
   component: Blob,
+  tags: ['beta'],
   argTypes: {
     color: {
       control: 'color',

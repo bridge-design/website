@@ -4,6 +4,7 @@ import { ProfileCard } from './ProfileCard'
 const meta: Meta<typeof ProfileCard> = {
   title: 'Components/ProfileCard',
   component: ProfileCard,
+  tags: ['beta'],
   parameters: {
     docs: {
       description: {

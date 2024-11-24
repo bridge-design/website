@@ -25,7 +25,7 @@ const caseLogos = caseStudiesExamples.map((post) => ({
 const meta: Meta = {
   title: 'Templates/Home',
   component: () => null,
-  tags: ['autodocs', 'dev'],
+  tags: ['autodocs', 'dev', 'stable'],
   parameters: {
     controls: { hideNoControlsWarning: true },
   },

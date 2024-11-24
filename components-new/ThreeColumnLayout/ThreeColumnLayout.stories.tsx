@@ -4,6 +4,7 @@ import { ThreeColumnLayout } from './ThreeColumnLayout'
 const meta: Meta<typeof ThreeColumnLayout> = {
   title: 'Layouts/ThreeColumnLayout',
   component: ThreeColumnLayout,
+  tags: ['beta'],
   argTypes: {},
 }
 

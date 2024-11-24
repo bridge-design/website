@@ -4,6 +4,7 @@ import { Section } from './Section'
 const meta: Meta<typeof Section> = {
   title: 'Layouts/Section',
   component: Section,
+  tags: ['beta'],
   argTypes: {
     backgroundColor: {
       control: {
