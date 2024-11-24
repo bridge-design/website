@@ -1,4 +1,13 @@
-import { Blob, CtaLink, Hero, Section, ThreeColumnLayout } from '@/components-new/index.tsx'
+import {
+  Blob,
+  CtaLink,
+  Hero,
+  ProfileCard,
+  Section,
+  ThreeColumnLayout,
+} from '@/components-new/index.tsx'
+
+import { team } from '@/data/team'
 
 export default async function Page() {
   return (
@@ -91,6 +100,22 @@ export default async function Page() {
           <CtaLink to="/services" className="text-2xl" arrow="end">
             More about our services
           </CtaLink>
+        </div>
+      </Section>
+      <Section className="py-12">
+        <h2 className="mb-6 text-center text-4xl">Meet the Team</h2>
+        <div className="mt-10 flex flex-wrap justify-center gap-10 md:grid md:grid-cols-2 lg:flex lg:flex-col xl:grid xl:grid-cols-2">
+          {Object.values(team).map((member) => (
+            <ProfileCard
+              key={member.name}
+              photoUrl={member.photoUrl}
+              name={member.name}
+              role={member.role}
+              twitter={member.twitter}
+              linkedin={member.linkedin}
+              github={member.github}
+            />
+          ))}
         </div>
       </Section>
     </>
