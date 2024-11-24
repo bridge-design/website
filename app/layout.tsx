@@ -3,8 +3,7 @@ import 'remark-github-blockquote-alert/alert.css'
 
 import { Inter } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
-import { Header } from '@/components-new/index.tsx'
-import Footer from '@/components/Footer'
+import { Header, Footer } from '@/components-new/index.tsx'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
@@ -81,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             navigationItems={navigationItems}
           />
           {children}
+          <Footer siteTitle="Bridge-The-Gap - design systems consulting and workshops" />
         </ThemeProviders>
       </body>
     </html>
