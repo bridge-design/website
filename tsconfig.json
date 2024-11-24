@@ -17,7 +17,6 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
       "@/components-new/*": ["components-new/*"],
       "@/data/*": ["data/*"],
       "@/layouts/*": ["layouts/*"],
@@ -32,7 +31,6 @@
     "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts",
     "**/*.js",
     "**/*.mjs",
     "**/*.ts",
@@ -43,5 +41,5 @@
     ".next/types/**/*.ts",
     "out/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "components-new/**/*.stories.tsx", "app_", "layouts_", "tailwind.config.js"]
 }

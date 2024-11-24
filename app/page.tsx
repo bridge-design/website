@@ -8,17 +8,19 @@ import {
   Section,
   Testimonial,
   ThreeColumnLayout,
-} from '@/components-new/index.tsx'
+} from '@/components-new/index'
 
 import { team } from '@/data/team'
 import { TESTIMONIALS } from '@/data/testimonials'
 import { allCaseStudies } from 'contentlayer/generated'
 
-const caseLogos = allCaseStudies.map((post) => ({
-  src: post.logo,
-  alt: post.title,
-  link: `/case-studies/${post.slug}`,
-}))
+const caseLogos = allCaseStudies
+  .filter((post): post is typeof post & { logo: string } => !!post.logo)
+  .map((post) => ({
+    src: post.logo,
+    alt: post.title,
+    link: `/case-studies/${post.slug}`,
+  }))
 
 export default async function Page() {
   return (

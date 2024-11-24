@@ -5,7 +5,7 @@ interface BlobProps {
   color?: string
   size?: number
   animate?: boolean
-  variant?: 1 | 2 | 3 | 4 | 5 | 6
+  variant?: '1' | '2' | '3' | '4' | '5' | '6' | undefined
 }
 
 /**

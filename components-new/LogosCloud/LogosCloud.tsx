@@ -2,7 +2,7 @@ import React from 'react'
 import * as styles from './LogosCloud.module.css'
 
 interface Logo {
-  src: string
+  src: string | undefined
   alt: string
   link: string
 }
@@ -12,10 +12,12 @@ interface LogosCloudProps {
 }
 
 export const LogosCloud: React.FC<LogosCloudProps> = ({ logos }) => {
+  const validLogos = logos.filter((logo): logo is Logo & { src: string } => !!logo.src)
+
   return (
     <div className={`${styles.container} relative overflow-hidden`}>
       <div className={`${styles.scroller} flex gap-12`}>
-        {logos.map((logo, index) => (
+        {validLogos.map((logo, index) => (
           <a
             href={logo.link}
             key={index}
@@ -31,7 +33,7 @@ export const LogosCloud: React.FC<LogosCloudProps> = ({ logos }) => {
           </a>
         ))}
         {/* Repeat the logos for seamless scrolling */}
-        {logos.map((logo, index) => (
+        {validLogos.map((logo, index) => (
           <a
             href={logo.link}
             key={`duplicate-${index}`}

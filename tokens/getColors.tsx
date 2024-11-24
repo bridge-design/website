@@ -1,6 +1,16 @@
-const isStyleRule = (rule) => rule.type === 1
+interface StyleRule extends CSSRule {
+  type: number
+  style: CSSStyleDeclaration
+}
 
-const isSameDomain = (styleSheet) => {
+interface CustomStyleSheet extends StyleSheet {
+  href: string | null // Changed from href?: string
+  cssRules: CSSRuleList
+}
+
+const isStyleRule = (rule: CSSRule): rule is StyleRule => rule.type === 1
+
+const isSameDomain = (styleSheet: CustomStyleSheet): boolean => {
   if (!styleSheet.href) {
     return true
   }
@@ -8,38 +18,48 @@ const isSameDomain = (styleSheet) => {
   return styleSheet.href.indexOf(window.location.origin) === 0
 }
 
-const getCSSCustomPropIndex = () =>
-  [...document.styleSheets].filter(isSameDomain).reduce(
+type ColorProperty = [string, string] // [propertyName, propertyValue]
+
+const getCSSCustomPropIndex = (): ColorProperty[] =>
+  [...document.styleSheets].filter(isSameDomain).reduce<ColorProperty[]>(
     (finalArr, sheet) =>
       finalArr.concat(
-        [...sheet.cssRules].filter(isStyleRule).reduce((propValArr, rule) => {
-          const props = [...rule.style]
-            .map((propName) => [propName.trim(), rule.style.getPropertyValue(propName).trim()])
-            .filter(([propName]) => propName.indexOf('--btg') === 0)
+        [...(sheet as CustomStyleSheet).cssRules]
+          .filter(isStyleRule)
+          .reduce<ColorProperty[]>((propValArr, rule) => {
+            const props = [...rule.style]
+              .map(
+                (propName) =>
+                  [propName.trim(), rule.style.getPropertyValue(propName).trim()] as ColorProperty
+              )
+              .filter(([propName]) => propName.indexOf('--btg') === 0)
 
-          return [...propValArr, ...props]
-        }, [])
+            return [...propValArr, ...props]
+          }, [])
       ),
     []
   )
 
-export const getColors = () => {
-  const colorsArray = getCSSCustomPropIndex()
-  const colorVariables = {}
-  colorsArray.forEach(([varName, colorValue]) => {
-    // Remove the prefix '--btg-color-' to get the remaining part (e.g., 'brand-dark', 'brand-green')
-    const strippedName = varName.replace('--btg-color-', '')
+interface ColorVariables {
+  [colorType: string]: {
+    [shade: string]: string
+  }
+}
 
-    // Split by '-' to separate the type (e.g., 'brand') and the shade (e.g., 'dark', 'green')
+export const getColors = (): ColorVariables => {
+  const colorsArray = getCSSCustomPropIndex()
+  const colorVariables: ColorVariables = {}
+
+  colorsArray.forEach(([varName, colorValue]) => {
+    const strippedName = varName.replace('--btg-color-', '')
     const [colorType, colorShade] = strippedName.split('-')
 
-    // Initialize the color type if it doesn't exist
     if (!colorVariables[colorType]) {
       colorVariables[colorType] = {}
     }
 
-    // Assign the color value to the appropriate color type and shade
     colorVariables[colorType][colorShade] = colorValue
   })
+
   return colorVariables
 }
