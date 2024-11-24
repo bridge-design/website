@@ -1,8 +1,6 @@
 import React from 'react'
 import BridgeLogo from './bridge_logo.svg'
 
-console.log(222, BridgeLogo)
-
 interface LogoProps {
   className?: string
   variant?: 'dark' | 'green' | 'pink' | 'yellow' | 'light'
