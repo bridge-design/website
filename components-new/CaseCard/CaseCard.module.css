@@ -1,4 +1,6 @@
 .case a,
-a.case {
+.case a:hover,
+a.case,
+a.case:hover {
   color: var(--btg-color-neutral-100);
 }

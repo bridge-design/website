@@ -75,10 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
-          <Header
-            backgroundColor="var(--btg-hero-background-teal)"
-            navigationItems={navigationItems}
-          />
+          <Header navigationItems={navigationItems} />
           {children}
           <Footer siteTitle="Bridge-The-Gap - design systems consulting and workshops" />
         </ThemeProviders>

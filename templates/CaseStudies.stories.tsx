@@ -85,19 +85,6 @@ export const ACase = () => (
           {caseStudiesExamples[0].description}
         </div>
       </article>
-      {/* <div className="grid grid-cols-1 gap-10 lg:gap-20 lg:px-10 lg:py-11">
-        <CaseCard
-          casePost={{
-            slug: 'example-case',
-            title: 'Example Case Study',
-            description: 'This is a description for the example case study.',
-            logo: {
-              src: 'https://via.placeholder.com/140',
-              alt: 'Example Logo',
-            },
-          }}
-        />
-      </div> */}
     </Section>
     <Outro backgroundColor="var(--btg-hero-background-pink)">
       <div className="text-center">

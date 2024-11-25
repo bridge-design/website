@@ -11,7 +11,7 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  backgroundColor = 'var(--btg-hero-background-teal)',
+  backgroundColor = 'var(--btg-hero-background)',
   navigationItems,
   linkComponent,
 }) => {

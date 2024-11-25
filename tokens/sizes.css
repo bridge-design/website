@@ -16,11 +16,11 @@
 
   /* Sizes for Headings */
   --size-h1: var(--size-5xl);
-  --size-h2: var(--size-4xl);
-  --size-h3: var(--size-3xl);
-  --size-h4: var(--size-2xl);
-  --size-h5: var(--size-xl);
-  --size-h6: var(--size-lg);
+  --size-h2: var(--size-3xl);
+  --size-h3: var(--size-2xl);
+  --size-h4: var(--size-xl);
+  --size-h5: var(--size-lg);
+  --size-h6: var(--size-md);
 
   /* Shoutout sizes */
   --size-shoutout: var(--size-6xl);

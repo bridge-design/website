@@ -10,7 +10,7 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  backgroundColor = 'var(--btg-hero-background-teal)',
+  backgroundColor = 'var(--btg-hero-background)',
   children,
 }) => {
   return (

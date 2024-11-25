@@ -22,10 +22,7 @@ export const Default: Story = {
       slug: 'example-case',
       title: 'Example Case Study',
       description: 'This is a description for the example case study.',
-      logo: {
-        src: 'https://via.placeholder.com/140',
-        alt: 'Example Logo',
-      },
+      logo: 'https://via.placeholder.com/140',
     },
   },
 }
@@ -35,10 +32,7 @@ export const WithoutDescription: Story = {
     casePost: {
       slug: 'example-case-no-description',
       title: 'Example Case Without Description',
-      logo: {
-        src: 'https://via.placeholder.com/140',
-        alt: 'Example Logo',
-      },
+      logo: 'https://via.placeholder.com/140',
     },
   },
 }
@@ -60,10 +54,7 @@ export const ManyCases = () => (
         slug: 'example-case-1',
         title: 'Example Case Study 1',
         description: 'This is a description for example case study 1.',
-        logo: {
-          src: 'https://via.placeholder.com/140',
-          alt: 'Example Logo 1',
-        },
+        logo: 'https://via.placeholder.com/140',
       }}
     />
     <CaseCard
@@ -71,10 +62,7 @@ export const ManyCases = () => (
         slug: 'example-case-2',
         title: 'Example Case Study 2',
         description: 'This is a description for example case study 2.',
-        logo: {
-          src: 'https://via.placeholder.com/140',
-          alt: 'Example Logo 2',
-        },
+        logo: 'https://via.placeholder.com/140',
       }}
     />
     <CaseCard
@@ -82,10 +70,7 @@ export const ManyCases = () => (
         slug: 'example-case-3',
         title: 'Example Case Study 3',
         description: 'This is a description for example case study 3.',
-        logo: {
-          src: 'https://via.placeholder.com/140',
-          alt: 'Example Logo 3',
-        },
+        logo: 'https://via.placeholder.com/140',
       }}
     />
   </>

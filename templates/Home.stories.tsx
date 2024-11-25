@@ -17,8 +17,8 @@ import { team } from '../data/team'
 import { caseStudiesExamples } from '../data/case-studies-examples'
 
 const caseLogos = caseStudiesExamples.map((post) => ({
-  src: post.logo.src,
-  alt: post.logo.alt,
+  src: post.logo,
+  alt: post.title,
   link: `/case-studies/${post.slug}`,
 }))
 

@@ -25,6 +25,7 @@ const caseLogos = allCaseStudies
 export default async function Page() {
   return (
     <>
+      <style>{`:root { --btg-hero-background: var(--btg-hero-background-teal); }`}</style>
       <Hero backgroundColor="var(--btg-hero-background-teal)">
         <div className="text-center lg:mt-8">
           <h1 className="font-6xl mx-auto mb-16 text-4xl leading-hero lg:w-4/5 lg:text-6xl">

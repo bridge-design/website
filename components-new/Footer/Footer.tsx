@@ -10,7 +10,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({
   siteTitle,
-  backgroundColor = 'var(--btg-hero-background-teal)',
+  backgroundColor = 'var(--btg-hero-background)',
   className = '',
 }) => {
   return (

@@ -1,20 +1,23 @@
-import 'css/prism.css'
+// TODO: check if needed
+// import 'css/prism.css'
 import 'katex/dist/katex.css'
 
-import { components } from '@/components/MDXComponents'
+import { components } from '@/components-new/MDXComponents'
+import {
+  CtaLink,
+  HorizontalWave,
+  ProjectTeam,
+  ScrollTopAndComment,
+  Section,
+} from '@/components-new/index'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allCaseStudies } from 'contentlayer/generated'
 import type { CaseStudies } from 'contentlayer/generated'
-import CaseStudyLayout from '@/layouts/CaseStudyLayout'
+// import CaseStudyLayout from '@/layouts/CaseStudyLayout'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
-
-const defaultLayout = 'CaseStudyLayout'
-const layouts = {
-  CaseStudyLayout,
-}
 
 export async function generateMetadata({
   params,
@@ -97,13 +100,25 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   //   }
   // })
 
-  const Layout = layouts[post.layout || defaultLayout]
-
   return (
     <>
-      <Layout content={mainContent} team={post.team}>
-        <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
-      </Layout>
+      <style>{`:root { --btg-hero-background: var(--btg-hero-background-pink); }`}</style>
+      <HorizontalWave color="var(--btg-hero-background)" />
+      <ScrollTopAndComment />
+      <Section>
+        <div className="mx-auto max-w-[80ch]">
+          <CtaLink to="/case-studies" arrow="start" className="text-xl">
+            Back to all case studies
+          </CtaLink>
+        </div>
+        <article className="grow">
+          <h1 className="font-5xl mb-16 text-center text-5xl">{post.title}</h1>
+          <ProjectTeam team={post.team} />
+          <div className="prose mx-auto my-12 text-justify dark:prose-invert">
+            <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
+          </div>
+        </article>
+      </Section>
     </>
   )
 }
