@@ -114,6 +114,7 @@ const config = {
         DEFAULT: {
           css: {
             '--tw-prose-body': '--btg-color-text',
+            maxWidth: '80ch',
             a: {
               color: 'var(--btg-color-link)',
               '&:hover': {
