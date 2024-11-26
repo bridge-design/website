@@ -6,7 +6,7 @@ interface BlogPost {
   path: string
   date: string
   title: string
-  description: string
+  description?: string
   tags?: string[]
 }
 
