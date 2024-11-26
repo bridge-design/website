@@ -4,16 +4,22 @@ import { Link } from '../Link/Link'
 interface PaginationProps {
   totalPages: number
   currentPage: number
+  basePath?: string
 }
 
 /**
  * Pagination component for navigating between paginated pages.
  */
-export const Pagination: React.FC<PaginationProps> = ({ totalPages, currentPage }) => {
+export const Pagination: React.FC<PaginationProps> = ({
+  totalPages,
+  currentPage,
+  basePath = '/',
+}) => {
   const prevPage = currentPage - 1 > 0
   const nextPage = currentPage + 1 <= totalPages
 
-  const generatePageLink = (page: number) => (page === 1 ? '/' : `/page/${page}`)
+  const generatePageLink = (page: number) =>
+    page === 1 ? `/${basePath}` : `/${basePath}/page/${page}`
 
   return (
     <div className="mx-auto mb-12 mt-4 w-full max-w-3xl">

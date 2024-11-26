@@ -30,7 +30,7 @@ export const BlogListItem: React.FC<BlogListItemProps> = ({ post }) => {
     <li className="py-4">
       <hr className="mb-8" />
       <article>
-        <Link href={`/blog/${path}`} className="hover:text-[var(--btg-color-link)]">
+        <Link href={`/${path}`} className="hover:text-[var(--btg-color-link)]">
           <h3 className="mb-4 text-3xl font-semibold">{title}</h3>
           <p className="mb-4 text-lg text-gray-600 dark:text-gray-300">{description}</p>
           <span className="font-semibold">Read →</span>
