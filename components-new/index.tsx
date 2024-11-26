@@ -1,5 +1,6 @@
 export { Avatar } from './Avatar/Avatar'
 export { Blob } from './Blob/Blob'
+export { BlogList } from './BlogList/BlogList'
 export { CaseCard } from './CaseCard/CaseCard'
 export { CtaLink } from './CtaLink/CtaLink'
 export { Footer } from './Footer/Footer'
