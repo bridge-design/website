@@ -12,7 +12,20 @@ import {
 
 import { team } from '@/data/team'
 import { TESTIMONIALS } from '@/data/testimonials'
+import { EXPERTISE } from '@/data/services'
 import { allCaseStudies } from 'contentlayer/generated'
+
+const EXPERTISE_COLORS_AND_VARIANTS: Array<{
+  color: string
+  variant: '1' | '2' | '3' | '4' | '5' | '6'
+}> = [
+  { color: 'var(--btg-color-accent-500)', variant: '1' },
+  { color: 'var(--btg-color-primary-500)', variant: '2' },
+  { color: 'var(--btg-color-highlight-700)', variant: '3' },
+  { color: 'var(--btg-color-highlight-1000)', variant: '4' },
+  { color: 'var(--btg-color-accent-800)', variant: '5' },
+  { color: 'var(--btg-color-primary-800)', variant: '6' },
+]
 
 const caseLogos = allCaseStudies
   .filter((post): post is typeof post & { logo: string } => !!post.logo)
@@ -44,71 +57,20 @@ export default async function Page() {
       <Section className="pb-12">
         <h2 className="mb-6 text-center text-4xl">Our Design Systems Expertise</h2>
         <ThreeColumnLayout>
-          <ThreeColumnLayout.Column>
-            <h3 className="flex items-center space-x-2 text-2xl font-bold">
-              <Blob animate={true} size={100} color="var(--btg-color-accent-500)" />
-              <span>Audit & Strategy</span>
-            </h3>
-            <p className="prose mb-6 px-3 text-lg">
-              We assess your current workflows, libraries, and team setups to analyse and craft
-              strategy and roadmap to achive your next goals
-            </p>
-          </ThreeColumnLayout.Column>
-
-          <ThreeColumnLayout.Column>
-            <h3 className="flex items-center space-x-2 text-2xl font-bold">
-              <Blob animate={true} size={100} variant="2" color="var(--btg-color-primary-500)" />
-              <span>Implementation</span>
-            </h3>
-            <p className="prose mb-6 px-3 text-lg">
-              We collaborate with your team to build scalable components and ensure seamless
-              integration with your existing technology stack
-            </p>
-          </ThreeColumnLayout.Column>
-
-          <ThreeColumnLayout.Column>
-            <h3 className="flex items-center space-x-2 text-2xl font-bold">
-              <Blob animate={true} size={100} variant="3" color="var(--btg-color-highlight-700)" />
-              <span>Architecture</span>
-            </h3>
-            <p className="prose mb-6 px-3 text-lg">
-              Drawing from our extensive experience with diverse design systems, we find flexible
-              and scalable solutions for your architecture.
-            </p>
-          </ThreeColumnLayout.Column>
-
-          <ThreeColumnLayout.Column>
-            <h3 className="flex items-center space-x-2 text-2xl font-bold">
-              <Blob animate={true} size={100} variant="4" color="var(--btg-color-highlight-1000)" />
-              <span>Workflows</span>
-            </h3>
-            <p className="prose mb-6 px-3 text-lg">
-              We ensure efficient workflows with design&development streamline, automated testing,
-              tuned CI, and data-based decision making.
-            </p>
-          </ThreeColumnLayout.Column>
-
-          <ThreeColumnLayout.Column>
-            <h3 className="flex items-center space-x-2 text-2xl font-bold">
-              <Blob animate={true} size={100} variant="5" color="var(--btg-color-accent-800)" />
-              <span>Business value</span>
-            </h3>
-            <p className="prose mb-6 px-3 text-lg">
-              We transform design systems into measurable assets to ensure that their impact is
-              aligned with core business objectives.
-            </p>
-          </ThreeColumnLayout.Column>
-
-          <ThreeColumnLayout.Column>
-            <h3 className="flex items-center space-x-2 text-2xl font-bold">
-              <Blob animate={true} size={100} variant="6" color="var(--btg-color-primary-800)" />
-              <span>Trainings</span>
-            </h3>
-            <p className="prose mb-6 px-3 text-lg">
-              Our workshops and tranings cover core principles, component building, and governance
-              to empower teams for long-term success and autonomy.
-            </p>
-          </ThreeColumnLayout.Column>
+          {EXPERTISE.map((item, index) => (
+            <ThreeColumnLayout.Column key={index}>
+              <h3 className="flex items-center space-x-2 text-2xl font-bold">
+                <Blob
+                  animate={true}
+                  size={100}
+                  color={EXPERTISE_COLORS_AND_VARIANTS[index].color}
+                  variant={EXPERTISE_COLORS_AND_VARIANTS[index].variant}
+                />
+                <span>{item.titleShort}</span>
+              </h3>
+              <p className="prose mb-6 px-3 text-lg">{item.descriptionShort}</p>
+            </ThreeColumnLayout.Column>
+          ))}
         </ThreeColumnLayout>
         <div className="mt-4 w-full text-center">
           <CtaLink to="/services" className="text-2xl" arrow="end">
