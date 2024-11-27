@@ -23,7 +23,7 @@ type Story = StoryObj<typeof Link>
 
 export const InternalLink: Story = {
   args: {
-    href: '/about',
+    href: '/team',
     children: 'Internal Link',
   },
 }

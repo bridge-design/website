@@ -27,7 +27,7 @@ export const Default: Story = {
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Services', href: '/services' },
       { name: 'Blog', href: '/blog' },
-      { name: 'About', href: '/about' },
+      { name: 'Team', href: '/team' },
       { name: 'Contact', href: '/contact' },
     ],
   },
@@ -37,7 +37,7 @@ export const WithCustomLinkComponent: Story = {
   args: {
     navigationItems: [
       { name: 'Home', href: '/' },
-      { name: 'About', href: '/about' },
+      { name: 'Team', href: '/team' },
       { name: 'Services', href: '/services' },
       { name: 'Contact', href: '/contact' },
     ],

@@ -33,7 +33,7 @@ export const Default: Story = {
   args: {
     items: [
       { name: 'Home', href: '/' },
-      { name: 'About', href: '/about' },
+      { name: 'Team', href: '/team' },
       { name: 'Services', href: '/services' },
       { name: 'Contact', href: '/contact' },
     ],
@@ -44,7 +44,7 @@ export const WithCustomLinkComponent: Story = {
   args: {
     items: [
       { name: 'Home', href: '/' },
-      { name: 'About', href: '/about' },
+      { name: 'Team', href: '/team' },
       { name: 'Services', href: '/services' },
       { name: 'Contact', href: '/contact' },
     ],
@@ -60,7 +60,7 @@ export const WithChildren: Story = {
   args: {
     items: [
       { name: 'Home', href: '/' },
-      { name: 'About', href: '/about' },
+      { name: 'Team', href: '/team' },
       { name: 'Services', href: '/services' },
       { name: 'Contact', href: '/contact' },
     ],
