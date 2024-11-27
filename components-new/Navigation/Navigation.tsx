@@ -17,6 +17,8 @@ interface NavigationProps {
   children?: ReactNode
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 export const Navigation: React.FC<NavigationProps> = ({
   items,
   linkComponent: LinkComponent = 'a',
@@ -67,7 +69,7 @@ export const Navigation: React.FC<NavigationProps> = ({
               onClick={() => setTimeout(() => setMenuOpen(false), 600)} // Close menu with delay after item click
             >
               <LinkComponent
-                href={item.href}
+                href={`${basePath}${item.href}`}
                 className={classnames(
                   styles.link,
                   'border-transparent transition-colors duration-200',

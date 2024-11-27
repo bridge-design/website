@@ -127,7 +127,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
       <ScrollTopAndComment />
       <Section>
         <div className="mx-auto max-w-[80ch]">
-          <CtaLink to="/case-studies" arrow="start" className="text-xl">
+          <CtaLink to="/blog" arrow="start" className="text-xl">
             Back to all posts
           </CtaLink>
         </div>
