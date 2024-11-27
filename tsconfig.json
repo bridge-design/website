@@ -43,5 +43,11 @@
     ".next/types/**/*.ts",
     "out/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "components-new/**/*.stories.tsx", "app_", "layouts_", "tailwind.config.js"]
+  "exclude": [
+    "node_modules",
+    "components-new/**/*.stories.tsx",
+    "app_",
+    "layouts_",
+    "tailwind.config.js"
+  ]
 }

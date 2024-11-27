@@ -6,7 +6,7 @@ import type { WorkshopHandout } from 'contentlayer/generated'
 import { CtaLink, Text } from '@bridge-the-gap/design-system'
 import { usePathname } from 'next/navigation'
 
-import Link from '@/components/Link'
+import { Link } from '@/components-new/index'
 
 interface LayoutProps {
   content: CoreContent<WorkshopHandout>
@@ -35,7 +35,7 @@ export default function LayoutHandout({ content, children }: LayoutProps) {
           </CtaLink>
         </div>
       </div>
-      <Text variant="6Xl" className="my-2 w-full text-center text-light-on-background-900">
+      <Text variant="6Xl" className="text-light-on-background-900 my-2 w-full text-center">
         {title}
       </Text>
       <div className="prose mx-auto my-8 px-4 text-justify">{children}</div>
