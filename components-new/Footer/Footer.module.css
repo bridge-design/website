@@ -2,6 +2,7 @@
   background-color: var(--footer-color);
 }
 
-.footer a {
+.footer a,
+.footer a:hover {
   color: var(--btg-hero-text-color);
 }
