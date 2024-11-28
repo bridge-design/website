@@ -74,32 +74,34 @@ export const Default: Story = {
       <Section className="py-12">
         <h2 className="mb-6 text-center text-4xl">What we Do</h2>
 
-        {EXPERTISE.map((item, index) => (
-          <div key={index}>
-            <h3 className="flex items-center space-x-2 text-2xl font-bold">
-              {index % 2 == 0 && (
+        <div className="space-y-12">
+          {EXPERTISE.map((item, index) => (
+            <div
+              key={index}
+              className={`lg:grid lg:grid-cols-[250px_1fr] lg:gap-8 ${
+                index % 2 === 1 ? 'lg:grid-cols-[1fr_250px]' : ''
+              }`}
+            >
+              <div
+                className={`flex justify-center lg:block ${index % 2 === 1 ? 'lg:order-last' : ''}`}
+              >
                 <Blob
                   animate={true}
-                  size={200}
+                  size={250}
                   color={EXPERTISE_COLORS_AND_VARIANTS[index].color}
                   variant={EXPERTISE_COLORS_AND_VARIANTS[index].variant}
                 />
-              )}
-              <span>{item.title}</span>
-              {index % 2 != 0 && (
-                <Blob
-                  animate={true}
-                  size={200}
-                  color={EXPERTISE_COLORS_AND_VARIANTS[index].color}
-                  variant={EXPERTISE_COLORS_AND_VARIANTS[index].variant}
-                />
-              )}
-            </h3>
-            <div className="mx-auto w-full">
-              <p className="prose mx-auto text-justify dark:prose-invert">{item.description}</p>
+              </div>
+
+              <div>
+                <h3 className="mb-4 text-center text-2xl font-bold lg:text-left">{item.title}</h3>
+                <p className="prose max-w-none text-justify dark:prose-invert">
+                  {item.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </Section>
       <Outro backgroundColor="var(--btg-hero-background)">
         <div className="text-center">
