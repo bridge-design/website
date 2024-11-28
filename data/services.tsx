@@ -38,7 +38,7 @@ export const EXPERTISE = [
     titleShort: 'Implementation',
     descriptionShort: `We collaborate with your team to build scalable components and ensure seamless integration with your existing technology stack`,
     title: 'Efficient implementation of scalable components and their adoption to the products',
-    description: `Our team partners with yours to design and implement and adopt into product reusable and scalable components. We keep in mind your current technology ecosystem to ensure seamless integration. We collaborate with your product teams to check that the implementation aligns with your business goals and enhances your product development process.`,
+    description: `Our team partners with yours to design and implement reusable and scalable components and adopt them into product. We keep in mind your current technology ecosystem to ensure seamless integration. We collaborate with your product teams and business stakeholders to check that the implementation matches the technical needs, aligns with your business goals and enhances your product development process.`,
   },
   {
     titleShort: 'Architecture',
