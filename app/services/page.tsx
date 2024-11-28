@@ -59,8 +59,8 @@ export default async function ServicesPage() {
           {EXPERTISE.map((item, index) => (
             <div
               key={index}
-              className={`lg:grid lg:grid-cols-[250px_1fr] lg:gap-8 ${
-                index % 2 === 1 ? 'lg:grid-cols-[1fr_250px]' : ''
+              className={`lg:grid lg:gap-8 ${
+                index % 2 === 1 ? 'lg:grid-cols-[1fr_250px]' : 'lg:grid-cols-[250px_1fr]'
               }`}
             >
               <div

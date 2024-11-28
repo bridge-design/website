@@ -73,13 +73,12 @@ export const Default: Story = {
       </Section>
       <Section className="py-12">
         <h2 className="mb-6 text-center text-4xl">What we Do</h2>
-
         <div className="space-y-12">
           {EXPERTISE.map((item, index) => (
             <div
               key={index}
-              className={`lg:grid lg:grid-cols-[250px_1fr] lg:gap-8 ${
-                index % 2 === 1 ? 'lg:grid-cols-[1fr_250px]' : ''
+              className={`lg:grid lg:gap-8 ${
+                index % 2 === 1 ? 'lg:grid-cols-[1fr_250px]' : 'lg:grid-cols-[250px_1fr]'
               }`}
             >
               <div
