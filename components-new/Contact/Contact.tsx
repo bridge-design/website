@@ -23,7 +23,7 @@ export const Contact: React.FC = () => {
         Book a 30-minute session with our design system architect Varya to discuss your project.
       </p>
       <InlineWidget
-        styles={{ minWidth: '320px', height: '660px' }}
+        styles={{ minWidth: '320px', height: '660px', width: '100%' }}
         url="https://calendly.com/var_ya/30min"
       />
       <p className="py-8 text-center text-xl">Or send an email with your request</p>
