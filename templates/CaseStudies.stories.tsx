@@ -18,6 +18,7 @@ const meta: Meta = {
   tags: ['autodocs', 'dev', 'draft'],
   parameters: {
     controls: { hideNoControlsWarning: true },
+    layout: 'fullscreen',
   },
 }
 
