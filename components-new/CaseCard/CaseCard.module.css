@@ -2,5 +2,5 @@
 .case a:hover,
 a.case,
 a.case:hover {
-  color: var(--btg-color-neutral-100);
+  color: var(--btg-case-card-text);
 }
