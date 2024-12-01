@@ -1,5 +1,0 @@
-User-Agent: *
-Allow: /
-
-Host: https://bridge-the-gap.dev/
-Sitemap: https://bridge-the-gap.dev//sitemap.xml
