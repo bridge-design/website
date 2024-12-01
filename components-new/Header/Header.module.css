@@ -1,0 +1,8 @@
+.header {
+  background-color: var(--header-color);
+}
+
+.header a,
+.header a:hover {
+  color: var(--btg-hero-text-color);
+}

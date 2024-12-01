@@ -1,0 +1,16 @@
+/* :root {
+  --btg-navigation-link-color: var(--btg-text-color);
+} */
+
+.link {
+  color: var(--btg-navigation-link-color);
+}
+
+.link:hover {
+  color: var(--btg-navigation-link-color);
+  text-decoration: underline;
+}
+
+.navigation__dropdown {
+  background-color: var(--btg-hero-background);
+}

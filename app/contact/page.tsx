@@ -1,6 +1,6 @@
 import { genPageMetadata } from 'app/seo'
 
-import Contact from '@/components/Contact'
+import { Contact, HorizontalWave, Section } from '@/components-new/index'
 
 export const metadata = genPageMetadata({
   title: 'Contact',
@@ -10,7 +10,15 @@ export const metadata = genPageMetadata({
 })
 
 const ContactPage = () => {
-  return <Contact />
+  return (
+    <>
+      <style>{`:root { --btg-hero-background: var(--btg-hero-background-blue); }`}</style>
+      <HorizontalWave color="var(--btg-hero-background)" />
+      <Section className="py-12">
+        <Contact />
+      </Section>
+    </>
+  )
 }
 
 export default ContactPage

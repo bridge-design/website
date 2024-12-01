@@ -1,25 +1,25 @@
 import 'css/prism.css'
 import 'katex/dist/katex.css'
 
-import PageTitle from '@/components/PageTitle'
-import { components } from '@/components/MDXComponents'
+import { components } from '@/components-new/MDXComponents'
+import { CtaLink, HorizontalWave, ScrollTopAndComment, Section } from '@/components-new/index'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs, allAuthors } from 'contentlayer/generated'
 import type { Authors, Blog } from 'contentlayer/generated'
-import PostSimple from '@/layouts/PostSimple'
-import PostLayout from '@/layouts/PostLayout'
-import PostBanner from '@/layouts/PostBanner'
+// import PostSimple from '@/layouts/PostSimple'
+// import PostLayout from '@/layouts/PostLayout'
+// import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 
-const defaultLayout = 'PostLayout'
-const layouts = {
-  PostSimple,
-  PostLayout,
-  PostBanner,
-}
+// const defaultLayout = 'PostLayout'
+// const layouts = {
+//   PostSimple,
+//   PostLayout,
+//   PostBanner,
+// }
 
 export async function generateMetadata({
   params,
@@ -81,6 +81,13 @@ export const generateStaticParams = async () => {
   return allBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
 }
 
+const postDateTemplate: Intl.DateTimeFormatOptions = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}
+
 export default async function Page({ params }: { params: { slug: string[] } }) {
   const slug = decodeURI(params.slug.join('/'))
   // Filter out drafts in production
@@ -107,17 +114,45 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
     }
   })
 
-  const Layout = layouts[post.layout || defaultLayout]
+  // const Layout = layouts[post.layout || defaultLayout]
 
   return (
     <>
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
+      /> */}
+      <style>{`:root { --btg-hero-background: var(--btg-hero-background-teal); }`}</style>
+      <HorizontalWave color="var(--btg-hero-background)" />
+      <ScrollTopAndComment />
+      <Section>
+        <div className="mx-auto max-w-[80ch]">
+          <CtaLink to="/blog" arrow="start" className="text-xl">
+            Back to all posts
+          </CtaLink>
+        </div>
+        <article className="grow">
+          <h1 className="font-5xl mb-16 text-center text-5xl">{post.title}</h1>
+          <div className="prose mx-auto my-12 text-justify dark:prose-invert">
+            <div className="my-8 text-justify dark:prose-invert md:mx-auto">
+              <dl className="space-y-10">
+                <div>
+                  <dt className="sr-only">Published on</dt>
+                  <dd className="not-prose text-base font-medium leading-6 text-gray-500 dark:text-white">
+                    <time dateTime={post.date}>
+                      {new Date(post.date).toLocaleDateString('en-US', postDateTemplate)}
+                    </time>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
+          </div>
+        </article>
+      </Section>
+      {/* <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
-      </Layout>
+      </Layout> */}
     </>
   )
 }

@@ -12,8 +12,8 @@ const headerNavLinks = [
     href: '/blog',
   },
   {
-    name: 'About',
-    href: '/about',
+    name: 'Team',
+    href: '/team',
   },
   {
     name: 'Contact',

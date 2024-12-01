@@ -1,4 +1,4 @@
-import Handout from '@/components/workshop/Handout'
+import Handout from '@/components-old/workshop/Handout'
 
 export const metadata = {
   title: 'Handout for the workshop "Hands-on with Design Systems"',
