@@ -73,7 +73,7 @@ export const Default: Story = {
       <Header navigationItems={navigationItems} />
       <HorizontalWave color="var(--btg-hero-background-teal)" />
       <Section>
-        <h1 className="font-5xl mb-16 text-center text-5xl">The klowledge we share</h1>
+        <h1 className="font-5xl mb-16 text-center text-5xl">The knowledge we share</h1>
         <div className="grid grid-cols-1 gap-10 lg:gap-20 lg:px-10 lg:py-11">
           <BlogList posts={blogPosts} />
           <Pagination currentPage={2} totalPages={10} />
