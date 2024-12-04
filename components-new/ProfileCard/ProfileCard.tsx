@@ -34,6 +34,11 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
   --btg-profile-card-icon-hover: var(--btg-color-neutral-300);
 }
 
+.dark-theme:root {
+  --btg-profile-card-background: var(--btg-color-highlight-400);
+  --btg-profile-card-text: var(--btg-color-neutral-1000);
+  --btg-profile-card-icon-hover: var(--btg-color-neutral-800);
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --btg-profile-card-background: var(--btg-color-highlight-400);
