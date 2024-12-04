@@ -4,7 +4,7 @@ import { ScrollTopAndComment } from './ScrollTopAndComment'
 const meta: Meta<typeof ScrollTopAndComment> = {
   title: 'Components/ScrollTopAndComment',
   component: ScrollTopAndComment,
-  tags: ['draft'],
+  tags: ['beta'],
   argTypes: {
     commentId: {
       control: 'text',

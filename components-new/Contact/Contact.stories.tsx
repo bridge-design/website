@@ -3,7 +3,7 @@ import { Contact } from './Contact'
 
 const meta: Meta<typeof Contact> = {
   title: 'Components/Contact',
-  tags: ['draft'],
+  tags: ['beta'],
   component: Contact,
   parameters: {
     layout: 'centered',

@@ -5,7 +5,7 @@ import { team as teamData } from '@/data/team'
 const meta: Meta<typeof ProjectTeam> = {
   title: 'Components/ProjectTeam',
   component: ProjectTeam,
-  tags: ['draft'],
+  tags: ['beta'],
   argTypes: {
     team: {
       control: 'array',

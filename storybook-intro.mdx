@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks'
+import { Link } from './components-new/index'
+import { LogoGithub, Box, ArrowRight } from '@carbon/icons-react'
+export const packageInfo = require('./package.json')
+
+<Meta title="Intro" />
+
+<div className="text-light-on-background-900 sb-unstyled mt-8 text-center">
+  <h1 className="font-6xl my-8 text-6xl">Bridge-the-Gap Design System</h1>
+  <h2 className="font-3xl mb-4 text-3xl text-gray-600">
+    Design foundations and components library
+  </h2>
+  <p className="my-8 font-xl text-xl">
+    Current library version: <span>{packageInfo.version}</span>
+  </p>
+  <div className="mt-8 flex justify-center gap-8">
+    <Link
+      size="big"
+      as="a"
+      className="inline-flex items-center"
+      href="https://github.com/bridge-design/website"
+      target="_blank"
+      rel="noopener"
+    >
+      <LogoGithub size="32" className="mr-4" />
+      Our Github
+    </Link>
+    <Link
+      size="big"
+      as="a"
+      className="inline-flex items-center"
+      href="https:/bridge-the-gap.dev"
+      target="_blank"
+      rel="noopener"
+    >
+      <ArrowRight size="32" className="mr-4" />
+      Our Website
+    </Link>
+  </div>
+</div>

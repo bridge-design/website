@@ -32,11 +32,13 @@ export const BlogListItem: React.FC<BlogListItemProps> = ({ post }) => {
       <article>
         <Link href={`/${path}`} className="hover:text-[var(--btg-color-link)]">
           <h3 className="mb-4 text-3xl font-semibold">{title}</h3>
-          <p className="mb-4 text-lg text-gray-600 dark:text-gray-300">{description}</p>
+          <p className="mb-4 text-lg text-[var(--btg-bloglistitem-description-color)]">
+            {description}
+          </p>
           <span className="font-semibold">Read →</span>
           <dl className="mt-2 inline-flex items-center space-x-4">
             <dt className="sr-only">Published on</dt>
-            <dd className="font-medium text-gray-500 dark:text-gray-400">
+            <dd className="font-medium text-[var(--btg-bloglistitem-date-color)]">
               <time dateTime={date}>{formattedDate}</time>
             </dd>
           </dl>

@@ -25,7 +25,7 @@ const CONTENT = [
 const meta: Meta<typeof Advantages> = {
   title: 'Components/Advantages',
   component: Advantages,
-  tags: ['draft'],
+  tags: ['beta'],
   argTypes: {
     colorSchema: {
       control: { type: 'radio' },

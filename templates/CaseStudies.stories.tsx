@@ -15,7 +15,7 @@ import { caseStudiesExamples } from '../data/case-studies-examples'
 const meta: Meta = {
   title: 'Templates/Case Studies',
   component: () => null,
-  tags: ['autodocs', 'dev', 'draft'],
+  tags: ['autodocs', 'dev', 'stable'],
   parameters: {
     controls: { hideNoControlsWarning: true },
     layout: 'fullscreen',

@@ -28,7 +28,7 @@ export const LogosCloud: React.FC<LogosCloudProps> = ({ logos }) => {
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-16 w-auto max-w-none object-cover lg:h-24"
+              className="h-16 w-auto max-w-none object-cover lg:h-24 dark:invert dark:filter"
             />
           </a>
         ))}
@@ -41,10 +41,11 @@ export const LogosCloud: React.FC<LogosCloudProps> = ({ logos }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
+            233
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-20 w-auto max-w-none object-cover lg:h-24"
+              className="h-20 w-auto max-w-none object-cover lg:h-24 dark:invert dark:filter"
             />
           </a>
         ))}
