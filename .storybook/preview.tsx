@@ -20,7 +20,7 @@ const preview = {
     },
     options: {
       storySort: {
-        order: ['Tokens', 'Components', 'Layouts', 'Apps', 'Templates'],
+        order: ['Intro', 'Tokens', 'Components', 'Layouts', 'Apps', 'Templates'],
       },
     },
     backgrounds: {

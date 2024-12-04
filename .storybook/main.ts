@@ -2,6 +2,7 @@ import path from 'path'
 /** @type { import('@storybook/nextjs').StorybookConfig } */
 const config = {
   stories: [
+    '../storybook-intro.mdx',
     '../tokens/**/*.mdx',
     '../tokens/**/*.stories.@(js|jsx|mjs|ts|tsx)',
     '../components-new/**/*.mdx',
