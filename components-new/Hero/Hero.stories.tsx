@@ -18,6 +18,14 @@ const meta: Meta<typeof Hero> = {
       defaultValue: 'var(--btg-hero-background-teal)',
     },
   },
+  decorators: [
+    (Story) => (
+      <>
+        <style>{`:root { --btg-hero-background: var(--btg-hero-background-teal); }`}</style>
+        <Story />
+      </>
+    ),
+  ],
 }
 
 export default meta

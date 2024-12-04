@@ -22,50 +22,70 @@ export const Pagination: React.FC<PaginationProps> = ({
     page === 1 ? `/${basePath}` : `/${basePath}/page/${page}`
 
   return (
-    <div className="mx-auto mb-12 mt-4 w-full max-w-3xl">
-      <nav className="flex items-center justify-between">
-        {/* Previous Button */}
-        {!prevPage ? (
-          <button
-            className="cursor-not-allowed text-sm font-medium text-gray-500 opacity-50"
-            disabled
-          >
-            Previous
-          </button>
-        ) : (
-          <Link
-            href={generatePageLink(currentPage - 1)}
-            rel="prev"
-            className="text-sm font-medium text-[var(--btg-color-link)] hover:underline"
-          >
-            Previous
-          </Link>
-        )}
+    <>
+      <style>{`
+:root {
+--btg-color-pagination-text: var(--btg-color-neutral-200);
+--btg-color-pagination-button: var(--btg-color-neutral-400);
+}
 
-        {/* Current Page Information */}
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-          Page {currentPage} of {totalPages}
-        </span>
+.dark-theme:root {
+  --btg-color-pagination-text: var(--btg-color-neutral-900);
+  --btg-color-pagination-button: var(--btg-color-neutral-700);
+}
 
-        {/* Next Button */}
-        {!nextPage ? (
-          <button
-            className="cursor-not-allowed text-sm font-medium text-gray-500 opacity-50"
-            disabled
-          >
-            Next
-          </button>
-        ) : (
-          <Link
-            href={generatePageLink(currentPage + 1)}
-            rel="next"
-            className="text-sm font-medium text-[var(--btg-color-link)] hover:underline"
-          >
-            Next
-          </Link>
-        )}
-      </nav>
-    </div>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --btg-color-pagination-text: var(--btg-color-neutral-900);
+    --btg-color-pagination-button: var(--btg-color-neutral-700);
+  }
+}
+    `}</style>
+      <div className="mx-auto mb-12 mt-4 w-full max-w-3xl">
+        <nav className="flex items-center justify-between">
+          {/* Previous Button */}
+          {!prevPage ? (
+            <button
+              className="cursor-not-allowed text-sm font-medium text-[var(--btg-color-pagination-button)] opacity-50"
+              disabled
+            >
+              Previous
+            </button>
+          ) : (
+            <Link
+              href={generatePageLink(currentPage - 1)}
+              rel="prev"
+              className="text-sm font-medium text-[var(--btg-color-link)] hover:underline"
+            >
+              Previous
+            </Link>
+          )}
+
+          {/* Current Page Information */}
+          <span className="text-sm font-medium text-[var(--btg-color-pagination-text)]">
+            Page {currentPage} of {totalPages}
+          </span>
+
+          {/* Next Button */}
+          {!nextPage ? (
+            <button
+              className="cursor-not-allowed text-sm font-medium text-[var(--btg-color-pagination-button)] opacity-50"
+              disabled
+            >
+              Next
+            </button>
+          ) : (
+            <Link
+              href={generatePageLink(currentPage + 1)}
+              rel="next"
+              className="text-sm font-medium text-[var(--btg-color-link)] hover:underline"
+            >
+              Next
+            </Link>
+          )}
+        </nav>
+      </div>
+    </>
   )
 }
 
