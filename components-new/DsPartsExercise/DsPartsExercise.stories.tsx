@@ -4,6 +4,7 @@ import { DsPartsExercise } from './DsPartsExercise'
 const meta: Meta<typeof DsPartsExercise> = {
   title: 'Components/DsPartsExercise',
   component: DsPartsExercise,
+  tags: ['draft'],
   parameters: {
     layout: 'fullscreen',
   },

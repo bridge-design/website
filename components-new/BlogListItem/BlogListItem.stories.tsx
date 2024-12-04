@@ -4,7 +4,7 @@ import { BlogListItem } from './BlogListItem'
 const meta: Meta<typeof BlogListItem> = {
   title: 'Components/BlogListItem',
   component: BlogListItem,
-  tags: ['draft'],
+  tags: ['beta'],
   argTypes: {
     post: {
       control: 'object',

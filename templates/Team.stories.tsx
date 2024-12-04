@@ -13,7 +13,7 @@ import { team } from '../data/team'
 const meta: Meta = {
   title: 'Templates/Team',
   component: () => null,
-  tags: ['autodocs', 'dev', 'draft'],
+  tags: ['autodocs', 'dev', 'stable'],
   parameters: {
     controls: { hideNoControlsWarning: true },
     layout: 'fullscreen',

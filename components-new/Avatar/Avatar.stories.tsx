@@ -4,7 +4,7 @@ import { Avatar } from './Avatar'
 const meta: Meta<typeof Avatar> = {
   title: 'Components/Avatar',
   component: Avatar,
-  tags: ['draft'],
+  tags: ['beta'],
   argTypes: {
     member: {
       control: 'object',

@@ -12,7 +12,7 @@ import { Section } from '../components-new/Section/Section'
 const meta: Meta = {
   title: 'Templates/Blog',
   component: () => null,
-  tags: ['autodocs', 'dev', 'draft'],
+  tags: ['autodocs', 'dev', 'stable'],
   parameters: {
     controls: { hideNoControlsWarning: true },
     layout: 'fullscreen',

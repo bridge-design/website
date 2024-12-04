@@ -26,7 +26,7 @@ const EXPERTISE_COLORS_AND_VARIANTS: Array<{
 const meta: Meta = {
   title: 'Templates/Services',
   component: () => null,
-  tags: ['autodocs', 'dev', 'draft'],
+  tags: ['autodocs', 'dev', 'stable'],
   parameters: {
     controls: { hideNoControlsWarning: true },
     layout: 'fullscreen',
