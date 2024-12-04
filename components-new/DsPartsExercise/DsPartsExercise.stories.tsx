@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { DsPartsExercise } from './DsPartsExercise'
 
 const meta: Meta<typeof DsPartsExercise> = {
-  title: 'Components/DsPartsExercise',
+  title: 'Apps/DsPartsExercise',
   component: DsPartsExercise,
   tags: ['draft'],
   parameters: {

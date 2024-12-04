@@ -18,6 +18,11 @@ const preview = {
       },
       expanded: true,
     },
+    options: {
+      storySort: {
+        order: ['Tokens', 'Components', 'Layouts', 'Apps', 'Templates'],
+      },
+    },
     backgrounds: {
       values: [
         { name: 'Light', value: 'var(--btg-color-background)' },
