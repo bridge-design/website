@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { CaseCard } from './CaseCard'
 
 const meta: Meta<typeof CaseCard> = {
-  title: 'Components/CaseCard',
+  title: 'Components/Cards/CaseCard',
   component: CaseCard,
   argTypes: {
     casePost: {

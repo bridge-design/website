@@ -1,0 +1,7 @@
+a.card,
+.card a,
+.card a:hover,
+a.card,
+a.card:hover {
+  color: var(--btg-card-text);
+}

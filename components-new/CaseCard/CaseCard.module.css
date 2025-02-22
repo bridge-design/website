@@ -1,6 +1,0 @@
-.case a,
-.case a:hover,
-a.case,
-a.case:hover {
-  color: var(--btg-case-card-text);
-}
