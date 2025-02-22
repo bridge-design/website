@@ -13,6 +13,7 @@ interface ProfileCardProps {
   linkedin?: string
   github?: string
   reverse?: boolean
+  className?: string
 }
 
 export const ProfileCard: React.FC<ProfileCardProps> = ({
@@ -24,6 +25,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
   linkedin,
   github,
   reverse = false,
+  className,
 }) => {
   return (
     <>
@@ -54,7 +56,8 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
             'sm:flex-row-reverse sm:pl-4 lg:pl-6': reverse,
             'sm:flex-row': !reverse,
           },
-          styles['profile-card']
+          styles['profile-card'],
+          className
         )}
       >
         <img src={photoUrl} alt={name} className="max-w-[306px] rounded-l-lg object-contain" />
