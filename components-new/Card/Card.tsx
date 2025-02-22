@@ -9,6 +9,14 @@ interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = ({ href, className, children }) => {
+  const cardContent = (
+    <div
+      className={`rounded-lg bg-[var(--btg-card-background)] p-4 text-center shadow-sm transition hover:bg-[var(--btg-card-background--hover)] sm:flex-row sm:text-left ${className}`}
+    >
+      {children}
+    </div>
+  )
+
   return (
     <>
       <style>{`
@@ -33,16 +41,16 @@ export const Card: React.FC<CardProps> = ({ href, className, children }) => {
       }
 
       `}</style>
-      <Link
-        href={href}
-        className={`${styles.card} group block transition-transform hover:translate-x-0`}
-      >
-        <div
-          className={`rounded-lg bg-[var(--btg-card-background)] p-4 text-center shadow-sm transition hover:bg-[var(--btg-card-background--hover)] sm:flex-row sm:text-left ${className}`}
+      {href ? (
+        <Link
+          href={href}
+          className={`${styles.card} group block transition-transform hover:translate-x-0`}
         >
-          {children}
-        </div>
-      </Link>
+          {cardContent}
+        </Link>
+      ) : (
+        cardContent
+      )}
     </>
   )
 }

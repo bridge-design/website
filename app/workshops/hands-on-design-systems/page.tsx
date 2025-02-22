@@ -1,6 +1,16 @@
 import { genPageMetadata } from 'app/seo'
 
-import { HorizontalWave, Section, DsPartsExercise } from '@/components-new/index'
+import {
+  CtaLink,
+  HorizontalWave,
+  Outro,
+  ProfileCard,
+  Section,
+  Testimonial,
+} from '@/components-new/index'
+
+import { TESTIMONIALS } from '@/data/testimonials'
+import { team } from '@/data/team'
 
 export const metadata = genPageMetadata({
   title: 'Hands-on with Design Systems',
@@ -281,21 +291,21 @@ const HandsOnDesignSystemsPage = () => {
           </tbody>
         </table>
       </Section>
-      <Section>
+      <Section className="mb-20">
         <h2 className="font-4xl text-center text-4xl">Deliverables</h2>
         <p className="font-lg text-lg leading-lg tracking-lg">
           By the end of the workshop, each team has a ready-to-use component library, an end product
           built out of that, and a tuned process to ensure smooth updates.
         </p>
         <figure className="mt-10">
-          <div className="relative mx-auto max-w-4xl w-full" style={{ paddingBottom: '56.25%' }}>
+          <div className="relative mx-auto w-full max-w-4xl" style={{ paddingBottom: '56.25%' }}>
             <iframe
               title="Deliverables"
               width="888"
               src="https://www.youtube.com/embed/RWECCt6rDPU"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen=""
+              allowFullScreen={true}
               className="absolute inset-0 h-full w-full"
             ></iframe>
           </div>
@@ -305,6 +315,88 @@ const HandsOnDesignSystemsPage = () => {
           </figcaption>
         </figure>
       </Section>
+      <Section className="mb-20">
+        <h2 className="font-4xl text-center text-4xl">Why Attend</h2>
+        <div className="flex items-start">
+          <h2 className="text-3Xl sm:text-6Xl font-3Xl leading-3Xl tracking-3Xl sm:font-6Xl sm:leading-6Xl sm:tracking-6Xl">
+            Why Attend
+          </h2>
+        </div>
+        <div className="mt-10 grid grid-cols-1 gap-x-20 gap-y-16 md:grid-cols-2">
+          <div className="">
+            <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Designer</h3>
+            <ul className="list mt-6 list-inside list-disc">
+              <li>Practice UI inventory</li>
+              <li className="mt-3">Run brand-changes in nearly zero time</li>
+              <li className="mt-3">Learn how to organize the components in Figma</li>
+            </ul>
+          </div>
+          <div className="">
+            <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Developer</h3>
+            <ul className="list mt-6 list-inside list-disc">
+              <li>Practice component-driven development</li>
+              <li className="mt-3">Learn tips and tricks of making a pattern library</li>
+              <li className="mt-3">Practice React, Storybook, and styled-components</li>
+            </ul>
+          </div>
+          <div className="">
+            <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Team</h3>
+            <ul className="list mt-6 list-inside list-disc">
+              <li>Automate design and development processes</li>
+              <li className="mt-3">Learn to work with a design system in a multifunctional team</li>
+              <li className="mt-3">
+                Practice DS development cycle: create, maintain and keep coherent
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+      <Section className="mb-20">
+        <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
+          <Testimonial
+            title={<h2 className="text-4xl">People Say</h2>}
+            testimonials={TESTIMONIALS}
+          />
+        </div>
+      </Section>
+      <Section className="mb-20">
+        <h2 className="font-4xl mb-10 text-center text-4xl">Who We Are</h2>
+        {['varya', 'irina', 'sherif'].map((key) => {
+          const member = team[key]
+          return (
+            <ProfileCard
+              key={member.name}
+              photoUrl={member.photoUrl}
+              name={member.name}
+              role={member.role}
+              twitter={member.twitter}
+              linkedin={member.linkedin}
+              github={member.github}
+              description={member.description}
+              className="mb-10"
+            />
+          )
+        })}
+      </Section>
+      <Section className="mb-20">
+        <h2 className="font-4xl mb-10 text-center text-4xl">
+          Want a custom workshop for your team?
+        </h2>
+        <p className="mb-10 font-lg text-lg leading-lg tracking-lg">
+          Need a custom version? We can tailor this workshop for your company. When focused on your
+          product and taking into account your team shape, the workshop outcome is not only a
+          training session but also your design system's kick-off. We'll walk through the design
+          system process, how to get started and how to fit it into your existing design processes.
+          There will be an opportunity for the team to discuss questions they might have about
+          implementing a design system.
+        </p>
+        <div className="text-center">
+          <CtaLink to="/contact" className="text-2xl" arrow="end" underline={true}>
+            Let's talk
+          </CtaLink>
+        </div>
+      </Section>
+      <Outro backgroundColor="var(--btg-hero-background-blue)" />
     </>
   )
 }
