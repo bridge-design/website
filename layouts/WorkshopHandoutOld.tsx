@@ -2,14 +2,14 @@
 
 import React, { ReactNode } from 'react'
 import { CoreContent } from 'pliny/utils/contentlayer'
-import type { WorkshopHandout } from 'contentlayer/generated'
+import type { WorkshopHandoutOld } from 'contentlayer/generated'
 import { CtaLink, Text } from '@bridge-the-gap/design-system'
 import { usePathname } from 'next/navigation'
 
 import { Link } from '@/components-new/index'
 
 interface LayoutProps {
-  content: CoreContent<WorkshopHandout>
+  content: CoreContent<WorkshopHandoutOld>
   children: ReactNode
 }
 

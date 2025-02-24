@@ -4,8 +4,10 @@ import 'katex/dist/katex.css'
 import { components } from '@/components-new/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { coreContent } from 'pliny/utils/contentlayer'
-import { allWorkshopHandoutOlds as allWorkshopHandouts } from 'contentlayer/generated'
-import HandoutLayout from '@/layouts/WorkshopHandoutOld'
+import { allHandsOnWorkshopHandouts as allWorkshopHandouts } from 'contentlayer/generated'
+import HandoutLayout from '@/layouts/HandsOnWorkshopHandout'
+
+import { HorizontalWave } from '@/components-new/index'
 
 const defaultLayout = 'HandoutLayout'
 const layouts = {
@@ -35,6 +37,8 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
 
   return (
     <>
+      <style>{`:root { --btg-hero-background: var(--btg-hero-background-pink); }`}</style>
+      <HorizontalWave color="var(--btg-hero-background)" />
       <Layout content={mainContent}>
         <MDXLayoutRenderer code={post.body.code} components={components} />
       </Layout>

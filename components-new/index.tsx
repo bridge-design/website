@@ -27,4 +27,6 @@ export { TableWrapper } from './TableWrapper/TableWrapper'
 export { Testimonial } from './Testimonial/Testimonial'
 export { ThreeColumnLayout } from './ThreeColumnLayout/ThreeColumnLayout'
 
+export { Handout } from './workshop/Handout/Handout'
+
 export default {}
