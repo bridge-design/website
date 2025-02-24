@@ -1,5 +1,5 @@
 import React from 'react'
-import Handout from '@/components-old/workshop/Handout'
+import { Handout } from '@/components-new/workshop/Handout'
 
 export const metadata = {
   title: 'Handout for the workshop "Hands-on with Design Systems"',

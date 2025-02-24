@@ -4,20 +4,30 @@ import React from 'react'
 import { Badge, Card } from '@bridge-the-gap/design-system'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { handoutBlocks } from '@/data/workshops/hands-on-design-systems/handout'
 
-interface HandoutProps {}
+interface HandoutBlock {
+  title: string
+  slug: string
+  roles: ('designer' | 'developer')[]
+  day: number
+  url?: string
+}
+
+interface HandoutProps {
+  blocks: HandoutBlock[]
+}
 
 interface BlocksProps {
   day: number | 'all'
+  blocks: HandoutBlock[]
 }
 
-const Blocks: React.FC<BlocksProps> = ({ day }) => {
+const Blocks: React.FC<BlocksProps> = ({ day, blocks }) => {
   const pathPrefix = usePathname()
 
   return (
     <>
-      {handoutBlocks.map((block) => {
+      {blocks.map((block) => {
         const link = block.url ? block.url : `${pathPrefix}/${block.slug}`
         const enabled = block.day === day || day === 'all'
 
@@ -49,7 +59,7 @@ const Blocks: React.FC<BlocksProps> = ({ day }) => {
   )
 }
 
-export const Handout: React.FC<HandoutProps> = () => {
+export const Handout: React.FC<HandoutProps> = ({ blocks }) => {
   return (
     <div className="container mx-auto mt-16 max-w-5xl">
       <div className="text-light-on-background-900 text-center">
@@ -58,7 +68,7 @@ export const Handout: React.FC<HandoutProps> = () => {
         <h2 className="mb-6 text-xl font-bold">What's next 👇</h2>
       </div>
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
-        <Blocks day={'all'} />
+        <Blocks day={'all'} blocks={blocks} />
       </div>
     </div>
   )
