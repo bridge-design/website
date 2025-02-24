@@ -1,12 +1,13 @@
-import React from 'react'
 import 'css/prism.css'
 import 'katex/dist/katex.css'
 
 import { components } from '@/components-new/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { coreContent } from 'pliny/utils/contentlayer'
-import { allHandsOnWorkshopHandouts } from 'contentlayer/generated'
+import { allHandsOnWorkshopHandouts as allWorkshopHandouts } from 'contentlayer/generated'
 import HandoutLayout from '@/layouts/HandsOnWorkshopHandout'
+
+import { HorizontalWave } from '@/components-new/index'
 
 const defaultLayout = 'HandoutLayout'
 const layouts = {
@@ -14,7 +15,7 @@ const layouts = {
 }
 
 export async function generateStaticParams() {
-  const paths = allHandsOnWorkshopHandouts.map((handout) => ({
+  const paths = allWorkshopHandouts.map((handout) => ({
     slug: handout.slug.split('/').slice(1),
   }))
 
@@ -36,6 +37,8 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
 
   return (
     <>
+      <style>{`:root { --btg-hero-background: var(--btg-hero-background-pink); }`}</style>
+      <HorizontalWave color="var(--btg-hero-background)" />
       <Layout content={mainContent}>
         <MDXLayoutRenderer code={post.body.code} components={components} />
       </Layout>

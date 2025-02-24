@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Handout } from '.'
-import { handoutBlocks } from '@/data/workshops/hands-on-design-systems/handout'
+import { handoutBlocks } from '@/data/hands-on-design-systems/handout/blocks'
 
 const meta = {
   title: 'Components/Workshop/Handout',

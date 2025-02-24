@@ -117,7 +117,7 @@ export const WorkshopHandoutOld = defineDocumentType(() => ({
 
 export const HandsOnWorkshopHandout = defineDocumentType(() => ({
   name: 'HandsOnWorkshopHandout',
-  filePathPattern: 'workshops/hands-on-design-systems/handout/**/*.mdx',
+  filePathPattern: 'hands-on-design-systems/handout/**/*.mdx',
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },

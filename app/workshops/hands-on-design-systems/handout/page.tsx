@@ -1,11 +1,17 @@
 import React from 'react'
-import { Handout } from '@/components-new/workshop/Handout'
-import { handoutBlocks } from '@/data/workshops/hands-on-design-systems/handout'
+import { Handout, HorizontalWave } from '@/components-new/index'
+import { handoutBlocks } from '@/data/hands-on-design-systems/handout/blocks'
 
 export const metadata = {
   title: 'Handout for the workshop "Hands-on with Design Systems"',
 }
 
 export default function HandoutPage() {
-  return <Handout blocks={handoutBlocks} />
+  return (
+    <>
+      <style>{`:root { --btg-hero-background: var(--btg-hero-background-pink); }`}</style>
+      <HorizontalWave color="var(--btg-hero-background)" />
+      <Handout blocks={handoutBlocks} />
+    </>
+  )
 }

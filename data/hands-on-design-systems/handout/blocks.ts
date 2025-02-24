@@ -1,4 +1,14 @@
-export const handoutBlocks = [
+type Role = 'designer' | 'developer'
+
+interface HandoutBlock {
+  title: string
+  slug: string
+  roles: Role[]
+  day: number
+  url?: string
+}
+
+export const handoutBlocks: HandoutBlock[] = [
   {
     title: 'Workshop flow',
     slug: 'workshop-flow',
