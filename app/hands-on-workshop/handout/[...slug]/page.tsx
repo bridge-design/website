@@ -4,8 +4,8 @@ import 'katex/dist/katex.css'
 import { components } from '@/components-new/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { coreContent } from 'pliny/utils/contentlayer'
-import { allWorkshopHandouts } from 'contentlayer/generated'
-import HandoutLayout from '@/layouts/WorkshopHandout'
+import { allWorkshopHandoutOlds as allWorkshopHandouts } from 'contentlayer/generated'
+import HandoutLayout from '@/layouts/WorkshopHandoutOld'
 
 const defaultLayout = 'HandoutLayout'
 const layouts = {

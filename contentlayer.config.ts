@@ -96,21 +96,21 @@ export const CaseStudies = defineDocumentType(() => ({
   computedFields,
 }))
 
-export const WorkshopHandout = defineDocumentType(() => ({
-  name: 'WorkshopHandout',
+export const WorkshopHandoutOld = defineDocumentType(() => ({
+  name: 'WorkshopHandoutOld',
   filePathPattern: 'hands-on-workshop/handout/**/*.mdx',
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
-  //   date: { type: 'date', required: true },
-  //   lastmod: { type: 'date' },
-  //   description: { type: 'string' },
-  //   logo: { type: 'string' },
-  //   summary: { type: 'string' },
-  //   images: { type: 'json' },
-  //   team: { type: 'list', of: { type: 'string' } },
-  //   layout: { type: 'string' },
-  //   canonicalUrl: { type: 'string' },
+    //   date: { type: 'date', required: true },
+    //   lastmod: { type: 'date' },
+    //   description: { type: 'string' },
+    //   logo: { type: 'string' },
+    //   summary: { type: 'string' },
+    //   images: { type: 'json' },
+    //   team: { type: 'list', of: { type: 'string' } },
+    //   layout: { type: 'string' },
+    //   canonicalUrl: { type: 'string' },
   },
   computedFields,
 }))
@@ -184,7 +184,7 @@ export const Authors = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors, CaseStudies, WorkshopHandout],
+  documentTypes: [Blog, Authors, CaseStudies, WorkshopHandoutOld],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
