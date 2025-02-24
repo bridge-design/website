@@ -115,6 +115,16 @@ export const WorkshopHandoutOld = defineDocumentType(() => ({
   computedFields,
 }))
 
+export const HandsOnWorkshopHandout = defineDocumentType(() => ({
+  name: 'HandsOnWorkshopHandout',
+  filePathPattern: 'workshops/hands-on-design-systems/handout/**/*.mdx',
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+  },
+  computedFields,
+}))
+
 function createSearchIndex(allBlogs) {
   if (
     siteMetadata?.search?.provider === 'kbar' &&
@@ -184,7 +194,7 @@ export const Authors = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors, CaseStudies, WorkshopHandoutOld],
+  documentTypes: [Blog, Authors, CaseStudies, WorkshopHandoutOld, HandsOnWorkshopHandout],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
