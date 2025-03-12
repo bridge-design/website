@@ -2,6 +2,7 @@ import { genPageMetadata } from 'app/seo'
 
 import {
   Card,
+  Contact,
   CtaLink,
   HorizontalWave,
   Outro,
@@ -117,6 +118,18 @@ const HandsOnDesignSystemsPage = () => {
             </ul>
           </div>
         </div>
+      </Section>
+      <Section className="mb-20" narrow={true}>
+        <h2 className="font-4xl text-center text-4xl">Book a Call</h2>
+        <Contact
+          header={
+            <p className="mt-4 text-center font-lg text-lg leading-lg tracking-lg">
+              Have questions about the workshop? Book a free 30-minute call with Varya to discuss
+              your expectations and how this workshop can benefit your team.
+            </p>
+          }
+          footer={' '}
+        />
       </Section>
       <Section className="mb-20" narrow={true}>
         <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
