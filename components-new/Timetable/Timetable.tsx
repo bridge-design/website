@@ -12,11 +12,17 @@ export interface TimetableItem {
 export interface TimetableProps {
   items: TimetableItem[]
   className?: string
+  caption?: React.ReactNode
 }
 
-export const Timetable: React.FC<TimetableProps> = ({ items, className }) => {
+export const Timetable: React.FC<TimetableProps> = ({ items, className, caption }) => {
   return (
     <table className={classNames("text-light-on-background-900 mt-16 w-full table-auto font-lg text-lg leading-lg tracking-lg", className)}>
+      {caption && (
+        <caption className="text-2Xl sm:text-smMedium mb-2 text-left font-2Xl leading-2Xl tracking-2Xl sm:font-smMedium sm:leading-smMedium sm:tracking-smMedium md:mb-5">
+          {caption}
+        </caption>
+      )}
       <tbody>
         {items.map((item, index) => (
           <tr key={index} className="border-light-on-background-900 flex border-b py-3 md:py-6">
