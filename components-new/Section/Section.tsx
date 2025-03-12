@@ -21,7 +21,7 @@ export const Section: React.FC<SectionProps> = ({
       className={classnames('w-full', className)}
       style={{ backgroundColor: `var(${backgroundColor})`, color: `var(${color})` }}
     >
-      <div 
+      <div
         className={classnames(
           'mx-auto w-full px-8',
           narrow ? 'max-w-[768px]' : 'max-w-[1280px] sm:min-w-full lg:min-w-[1024px]'
