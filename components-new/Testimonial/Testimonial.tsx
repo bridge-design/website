@@ -14,7 +14,7 @@ interface TestimonialItemProps {
   name: string
   text: string
   avatar?: string
-  colors: string
+  colors?: string
 }
 
 const TestimonialItem: React.FC<TestimonialItemProps> = ({ name, text, avatar, colors }) => (
