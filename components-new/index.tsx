@@ -26,6 +26,7 @@ export { Section } from './Section/Section'
 export { TableWrapper } from './TableWrapper/TableWrapper'
 export { Testimonial } from './Testimonial/Testimonial'
 export { ThreeColumnLayout } from './ThreeColumnLayout/ThreeColumnLayout'
+export { Timetable } from './Timetable/Timetable'
 
 export { Handout } from './workshop/Handout/Handout'
 

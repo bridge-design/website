@@ -6,6 +6,7 @@ interface SectionProps {
   backgroundColor?: string
   color?: string
   className?: string
+  narrow?: boolean
 }
 
 export const Section: React.FC<SectionProps> = ({
@@ -13,13 +14,19 @@ export const Section: React.FC<SectionProps> = ({
   backgroundColor = '',
   color = '',
   className,
+  narrow = false,
 }) => {
   return (
     <section
       className={classnames('w-full', className)}
       style={{ backgroundColor: `var(${backgroundColor})`, color: `var(${color})` }}
     >
-      <div className="mx-auto w-full max-w-[1280px] px-8 sm:min-w-full lg:min-w-[1024px]">
+      <div
+        className={classnames(
+          'mx-auto w-full px-8',
+          narrow ? 'max-w-[768px]' : 'max-w-[1280px] sm:min-w-full lg:min-w-[1024px]'
+        )}
+      >
         {children}
       </div>
     </section>

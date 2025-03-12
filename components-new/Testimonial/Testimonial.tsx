@@ -14,7 +14,7 @@ interface TestimonialItemProps {
   name: string
   text: string
   avatar?: string
-  colors: string
+  colors?: string
 }
 
 const TestimonialItem: React.FC<TestimonialItemProps> = ({ name, text, avatar, colors }) => (
@@ -98,6 +98,12 @@ export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title })
   const getArrowColor = (isDisabled: boolean) =>
     isDisabled ? 'text-[var(--btg-color-text--disabled)]' : 'text-[var(--btg-color-text)]'
 
+  const colorClasses = [
+    'bg-[var(--btg-color-accent-800)] text-[var(--btg-color-neutral-100)]',
+    'bg-[var(--btg-color-accent-500)] text-[var(--btg-color-neutral-1000)]',
+    'bg-[var(--btg-color-accent-300)] text-[var(--btg-color-neutral-1000)]',
+  ]
+
   return (
     <div>
       <div className="flex items-center justify-between lg:items-baseline">
@@ -120,7 +126,8 @@ export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title })
       <div ref={swiperContainerRef} className="swiper-container mt-10">
         <div className="swiper-wrapper ease-out-back flex transition-transform">
           {testimonials.map((item, i) => {
-            return <TestimonialItem key={item.name + i} {...item} />
+            const colors = colorClasses[i % colorClasses.length]
+            return <TestimonialItem key={item.name + i} {...item} colors={colors} />
           })}
         </div>
       </div>
