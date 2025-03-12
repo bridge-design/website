@@ -21,6 +21,10 @@ const meta: Meta<typeof Section> = {
         ],
       },
     },
+    narrow: {
+      control: 'boolean',
+      description: 'Use narrow width container (max-width: 768px)',
+    },
     children: {
       control: 'text',
     },
@@ -42,6 +46,20 @@ export const BrandDark: Story = {
       <p className={textStyle.light}>
         This is a Section with Brand Dark background and grey styled text.
       </p>
+    ),
+  },
+}
+
+export const NarrowSection: Story = {
+  args: {
+    backgroundColor: '--btg-color-neutral-600',
+    narrow: true,
+    children: (
+      <div className={textStyle.dark}>
+        <p className="border border-dashed border-white p-4 text-center">
+          This is a narrow Section with max-width of 768px
+        </p>
+      </div>
     ),
   },
 }

@@ -22,14 +22,14 @@ const HandsOnDesignSystemsPage = () => {
     <>
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-blue); }`}</style>
       <HorizontalWave color="var(--btg-hero-background)" />
-      <Section>
+      <Section narrow={true}>
         <p className="text-center text-5xl">👋 Hands-on</p>
         <h1 className="font-5xl mb-16 text-center text-5xl">
           2-day workshop on building <span className="md:block">a design system</span>
           <span className="md:block">with Figma and React</span>
         </h1>
       </Section>
-      <Section className="mb-20">
+      <Section className="mb-20" narrow={true}>
         <div className="flex flex-col md:flex-row">
           <div className="flex w-full flex-shrink-0 items-start justify-start md:w-2/5 md:flex-col">
             <h2 className="font-3xl leading-3xl tracking-3xl sm:font-6xl sm:leading-6xl sm:tracking-6xl text-3xl sm:text-6xl">
@@ -55,7 +55,7 @@ const HandsOnDesignSystemsPage = () => {
           </div>
         </div>
       </Section>
-      <Section className="mb-20">
+      <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-center text-4xl">Workshop content</h2>
 
         <table className="text-light-on-background-900 mt-16 w-full table-auto font-lg text-lg leading-lg tracking-lg">
@@ -291,7 +291,7 @@ const HandsOnDesignSystemsPage = () => {
           </tbody>
         </table>
       </Section>
-      <Section className="mb-20">
+      <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-center text-4xl">Deliverables</h2>
         <p className="font-lg text-lg leading-lg tracking-lg">
           By the end of the workshop, each team has a ready-to-use component library, an end product
@@ -315,7 +315,7 @@ const HandsOnDesignSystemsPage = () => {
           </figcaption>
         </figure>
       </Section>
-      <Section className="mb-20">
+      <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-center text-4xl">Why Attend</h2>
         <div className="flex items-start">
           <h2 className="text-3Xl sm:text-6Xl font-3Xl leading-3Xl tracking-3Xl sm:font-6Xl sm:leading-6Xl sm:tracking-6Xl">
@@ -351,7 +351,7 @@ const HandsOnDesignSystemsPage = () => {
           </div>
         </div>
       </Section>
-      <Section className="mb-20">
+      <Section className="mb-20" narrow={true}>
         <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
           <Testimonial
             title={<h2 className="text-4xl">People Say</h2>}
@@ -359,7 +359,7 @@ const HandsOnDesignSystemsPage = () => {
           />
         </div>
       </Section>
-      <Section className="mb-20">
+      <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl mb-10 text-center text-4xl">Who We Are</h2>
         {['varya', 'irina', 'sherif'].map((key) => {
           const member = team[key]
@@ -378,7 +378,7 @@ const HandsOnDesignSystemsPage = () => {
           )
         })}
       </Section>
-      <Section className="mb-20">
+      <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl mb-10 text-center text-4xl">
           Want a custom workshop for your team?
         </h2>
