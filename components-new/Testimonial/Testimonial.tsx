@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useLayoutEffect, useRef, useState, useCallback } from 'react'
-import classNames from 'classnames'
+import classnames from 'classnames'
 import { ArrowRight, ArrowLeft } from '@carbon/icons-react'
 import Swiper from 'swiper'
 import { Scrollbar, Navigation, FreeMode } from 'swiper/modules'
@@ -15,22 +15,23 @@ interface TestimonialItemProps {
   text: string
   avatar?: string
   colors?: string
+  narrow?: boolean
 }
 
-const TestimonialItem: React.FC<TestimonialItemProps> = ({ name, text, avatar, colors }) => (
+const TestimonialItem: React.FC<TestimonialItemProps> = ({ name, text, avatar, colors, narrow }) => (
   <div className="swiper-slide mr-4 transform transition duration-300 ease-out last:mr-0 motion-safe:hover:scale-105 md:mr-8">
     <div
-      className={classNames(
+      className={classnames(
         'flex h-full w-[280px] select-none flex-col rounded-[4px] p-3 sm:w-[380px] md:p-6',
         colors
       )}
     >
       <QuotationIcon className="mb-4 h-8 w-8" />
       <div className="-mt-5 px-3 pb-3 md:px-4 md:pb-4">
-        <p className="mb-6 text-xl">{text}</p>
+        <p className={classnames('mb-6', narrow ? 'text-lg' : 'text-xl')}>{text}</p>
         <div className="mt-auto flex items-center">
           {avatar && <img src={avatar} alt={name} className="mr-3 h-12 w-12 rounded-lg" />}
-          <p className="text-xl">{name}</p>
+          <p className={narrow ? 'text-lg' : 'text-xl'}>{name}</p>
         </div>
       </div>
     </div>
@@ -40,9 +41,10 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({ name, text, avatar, c
 interface TestimonialProps {
   testimonials: TestimonialItemProps[]
   title: React.ReactNode
+  narrow?: boolean
 }
 
-export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title }) => {
+export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title, narrow }) => {
   const swiperNavigationPrevRef = useRef(null)
   const swiperNavigationNextRef = useRef(null)
   const swiperContainerRef = useRef(null)
@@ -106,18 +108,23 @@ export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title })
 
   return (
     <div>
-      <div className="flex items-center justify-between lg:items-baseline">
+      <div
+        className={classnames('flex items-center justify-between lg:items-baseline', {
+          'max-w-[768px]': narrow,
+          'max-w-[1280px] sm:min-w-full lg:min-w-[1024px]': !narrow,
+        })}
+      >
         <div>{title}</div>
         <div className="ml-auto flex">
           <button
             ref={swiperNavigationPrevRef}
-            className={classNames(getArrowColor(isPrevButtonDisabled), 'mr-2 lg:mr-12')}
+            className={classnames(getArrowColor(isPrevButtonDisabled), 'mr-2 lg:mr-12')}
           >
             <ArrowLeft size={32} />
           </button>
           <button
             ref={swiperNavigationNextRef}
-            className={classNames(getArrowColor(isNextButtonDisabled), 'mr-2 lg:mr-12')}
+            className={classnames(getArrowColor(isNextButtonDisabled), 'mr-2 lg:mr-12')}
           >
             <ArrowRight size={32} />
           </button>
@@ -127,7 +134,12 @@ export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title })
         <div className="swiper-wrapper ease-out-back flex transition-transform">
           {testimonials.map((item, i) => {
             const colors = colorClasses[i % colorClasses.length]
-            return <TestimonialItem key={item.name + i} {...item} colors={colors} />
+            return <TestimonialItem 
+              key={item.name + i} 
+              {...item} 
+              colors={colors} 
+              narrow={narrow}
+            />
           })}
         </div>
       </div>

@@ -130,9 +130,10 @@ const HandsOnDesignSystemsPage = () => {
           footer={' '}
         />
       </Section>
-      <Section className="mb-20" narrow={true}>
+      <Section className="mb-20" narrow={true} expandRight={true}>
         <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
           <Testimonial
+            narrow={true}
             title={<h2 className="text-4xl">People Say</h2>}
             testimonials={filteredTestimonials}
           />
