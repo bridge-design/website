@@ -1,6 +1,7 @@
 import { genPageMetadata } from 'app/seo'
 
 import {
+  Advantages,
   Card,
   Contact,
   CtaLink,
@@ -27,6 +28,28 @@ const HandsOnDesignSystemsPage = () => {
     ['workshop', 'varya', 'sherif', 'irina'].includes(testimonial.category)
   )
 
+  // Workshop advantages/highlights
+  const workshopAdvantages = [
+    {
+      title: 'Real-World Experience',
+      description:
+        'Work on a realistic design system project with practical challenges and solutions that translate directly to your daily work.',
+      icon: 'Tools',
+    },
+    {
+      title: 'Cross-Disciplinary',
+      description:
+        'Experience the power of designers and developers working together to create a cohesive design system that works for everyone.',
+      icon: 'Partnership',
+    },
+    {
+      title: 'Personalized Follow-Up',
+      description:
+        'Includes a 1-hour individual consultation within two months after the workshop to address your specific questions.',
+      icon: 'MagicWand',
+    },
+  ]
+
   return (
     <>
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-blue); }`}</style>
@@ -42,25 +65,32 @@ const HandsOnDesignSystemsPage = () => {
         <Card>
           <div className="mt-16 font-lg text-lg leading-lg tracking-lg md:mt-0">
             <p className="mb-6">
-              This workshop helps you learn and practice design systems while working in a team. You
-              can join as a designer or developer, engaging in multidisciplinary work.
+              This workshop helps you learn and practice design systems on a real project. You can
+              join as a designer or developer, engaging in multidisciplinary work.
             </p>
             <p className="mb-6">
               Participants will work on a design system example, simulating a real project
-              environment. Designers will define visual design language by creating a{' '}
-              <b>tokens system</b> and themeable Figma components, while developers build a{' '}
+              environment. Designers create a <b>tokens system</b> and{' '}
+              <b>themeable Figma components</b>, while developers build a{' '}
               <b>component library with React</b> and <b>Storybook</b>. You'll contribute to a
               shared result, gaining hands-on experience in collaborative design and development. .
             </p>
             <p className="mb-6">
               By the end of the workshop, you'll have contributed to a design system with real tasks
-              that touch token system, components, and documentation. You'll also receive one hour
-              of individual consultation within the next two months to address specific questions
-              and deepen your understanding.
+              that touch token system, components, and documentation. You'll also receive{' '}
+              <b>one hour of individual consultation</b> within the next two months to address
+              specific questions and deepen your understanding.
             </p>
           </div>
         </Card>
       </Section>
+
+      {/* Workshop Highlights Section */}
+      <Section className="mb-20" narrow={true}>
+        <h2 className="font-4xl mb-10 text-center text-4xl">Workshop Highlights</h2>
+        <Advantages content={workshopAdvantages} />
+      </Section>
+
       <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-center text-4xl">Workshop content</h2>
         <Timetable items={timetableItems} />
@@ -131,7 +161,7 @@ const HandsOnDesignSystemsPage = () => {
         />
       </Section>
       <Section className="mb-20" narrow={true} expandRight={true}>
-        <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
+        <div className="container flex flex-col justify-between overflow-hidden">
           <Testimonial
             narrow={true}
             title={<h2 className="text-4xl">People Say</h2>}
