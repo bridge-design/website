@@ -43,19 +43,20 @@ const HandsOnDesignSystemsPage = () => {
           <div className="mt-16 font-lg text-lg leading-lg tracking-lg md:mt-0">
             <p className="mb-6">
               This workshop helps you learn and practice design systems while working in a team. You
-              can join as a designer or developer.
+              can join as a designer or developer, engaging in multidisciplinary work.
             </p>
             <p className="mb-6">
-              The designers define visual design language by creating a <b>tokens system</b> and
-              design <b>theamable Figma components</b>. At the same time, the developers create the{' '}
-              <b>component library with React</b> and <b>Storybook</b>. You practice iterative
-              component-driven design and development and create documentation along with making the
-              product. The exercise contains managing collaborative updates and keeping the code in
-              sync with the design reality.
+              Participants will work on a design system example, simulating a real project
+              environment. Designers will define visual design language by creating a{' '}
+              <b>tokens system</b> and themeable Figma components, while developers build a{' '}
+              <b>component library with React</b> and <b>Storybook</b>. You'll contribute to a
+              shared result, gaining hands-on experience in collaborative design and development. .
             </p>
-            <p>
-              By the end of the workshop, each team will have a ready-to-use component library, an
-              end product built from it, and a refined process to ensure smooth updates.
+            <p className="mb-6">
+              By the end of the workshop, you'll have contributed to a design system with real tasks
+              that touch token system, components, and documentation. You'll also receive one hour
+              of individual consultation within the next two months to address specific questions
+              and deepen your understanding.
             </p>
           </div>
         </Card>
@@ -95,26 +96,24 @@ const HandsOnDesignSystemsPage = () => {
             <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Designer</h3>
             <ul className="list mt-6 list-inside list-disc">
               <li>Practice UI inventory</li>
-              <li className="mt-3">Lean how to create a scalable tokens system</li>
-              <li className="mt-3">Learn how to organize the components in Figma</li>
+              <li className="mt-3">Learn how to create a scalable tokens system</li>
+              <li className="mt-3">Organize components in Figma</li>
             </ul>
           </div>
           <div className="">
             <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Developer</h3>
             <ul className="list mt-6 list-inside list-disc">
-              <li>Practice component-driven development</li>
-              <li className="mt-3">Learn tips and tricks of making a pattern library</li>
-              <li className="mt-3">Practice React, and customize Storybook</li>
+              <li>Engage in component-driven development</li>
+              <li className="mt-3">Document components in Storybook</li>
+              <li className="mt-3">Improve design&development workflows</li>
             </ul>
           </div>
           <div className="">
             <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Team</h3>
             <ul className="list mt-6 list-inside list-disc">
-              <li>Automate design and development processes</li>
-              <li className="mt-3">Learn to work with a design system in a multifunctional team</li>
-              <li className="mt-3">
-                Practice DS development cycle: create, maintain and keep coherent
-              </li>
+              <li>Collaborate on a shared project with real-life tasks</li>
+              <li className="mt-3">Experience a full design system lifecycle</li>
+              <li className="mt-3">Enhance team communication and collaboration</li>
             </ul>
           </div>
         </div>
@@ -163,12 +162,10 @@ const HandsOnDesignSystemsPage = () => {
           Want a custom workshop for your team?
         </h2>
         <p className="mb-10 font-lg text-lg leading-lg tracking-lg">
-          Need a custom version? We can tailor this workshop for your company. When focused on your
-          product and taking into account your team shape, the workshop outcome is not only a
-          training session but also your design system's kick-off. We'll walk through the design
-          system process, how to get started and how to fit it into your existing design processes.
-          There will be an opportunity for the team to discuss questions they might have about
-          implementing a design system.
+          Need a custom version? We can tailor a design system workshop for your company. We'll walk
+          through the design system process, how to get started and how to fit it into your existing
+          design processes. There will be an opportunity for the team to discuss questions they
+          might have about implementing a design system.
         </p>
         <div className="text-center">
           <CtaLink to="/contact" className="text-2xl" arrow="end" underline={true}>
