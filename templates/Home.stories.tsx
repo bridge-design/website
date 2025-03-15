@@ -117,7 +117,7 @@ export const Default: Story = {
           ))}
         </div>
       </Section>
-      <Section className="py-12">
+      <Section className="py-12" expandRight={true}>
         <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
           <Testimonial
             title={<h2 className="text-4xl">People Say</h2>}

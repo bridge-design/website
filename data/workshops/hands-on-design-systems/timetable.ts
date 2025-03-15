@@ -33,22 +33,22 @@ export const timetableItems: TimetableItem[] = [
   },
   {
     time: '13:00 — 13:30',
-    title: 'Designing and building the library',
-    description: 'Hands-on practice',
+    title: 'Design system lifecycle',
+    description: `Design system lifecycle: hands-on practice,${' '} updates, versioning`,
   },
   {
-    time: '13:30 — 14:30',
+    time: '13:30 — 15:00',
     title: 'Designing and building the library',
     description: 'Coding and documenting the components. New design challenge',
   },
   {
-    time: '14:30 — 15:30',
-    title: 'Design system lifecycle',
-    description: 'Versioning, design update, and release',
+    time: '15:00 — 15:30',
+    title: 'Designing and building the library',
+    description: 'The magic of instant product update',
   },
   {
     time: '15:30 — 16:00',
     title: 'Recap',
     description: 'Q&A session and discussion',
   },
-] 
+]
