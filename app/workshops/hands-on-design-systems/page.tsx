@@ -19,8 +19,12 @@ import { team } from '@/data/team'
 import { timetableItems } from '@/data/workshops/hands-on-design-systems/timetable'
 
 export const metadata = genPageMetadata({
-  title: 'Hands-on with Design Systems',
-  description: `workshop on building a design system with Figma, React, and Storybook`,
+  title: 'Hands-on workshop on building a design system with Figma, React, and Storybook',
+  description:
+    'Join our interactive workshop and learn how to create a design system from scratch. Gain practical experience with Figma, React, and Storybook while collaborating in a multidisciplinary team. Includes 1-hour individual consultation.',
+  openGraph: {
+    images: ['/images/workshops/hands-on-design-systems/cover.jpg'],
+  },
 })
 
 const HandsOnDesignSystemsPage = () => {
