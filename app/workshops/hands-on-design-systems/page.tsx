@@ -6,6 +6,7 @@ import {
   Contact,
   CtaLink,
   HorizontalWave,
+  Icon,
   Outro,
   ProfileCard,
   Section,
@@ -60,6 +61,25 @@ const HandsOnDesignSystemsPage = () => {
           workshop on building <span className="md:block">a design system</span>
           <span className="md:block">with Figma, React, and Storybook</span>
         </h1>
+      </Section>
+      <Section className="mb-20" narrow={true}>
+        <h3 className="text-center text-2xl">9th of April, 2025, 9:00 AM - 5:00 PM CEST</h3>
+        <p className="flex items-center justify-center text-xl">
+          <Icon name="Video" size={32} /> on Zoom
+        </p>
+        <p className="text-center text-xl">
+          Available tickets: <b>20</b>, starting from €350+VAT
+        </p>
+        <p className="mt-4 text-center text-xl">
+          <CtaLink
+            to="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
+            className="text-2xl"
+            arrow="end"
+            underline={true}
+          >
+            Grab your ticket
+          </CtaLink>
+        </p>
       </Section>
       <Section className="mb-20" narrow={true}>
         <Card>

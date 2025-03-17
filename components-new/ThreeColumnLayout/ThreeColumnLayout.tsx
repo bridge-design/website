@@ -30,3 +30,5 @@ ThreeColumnLayout.Column = ({
 }: ColumnProps & { selectedColor?: string }) => {
   return <div className="flex flex-col items-start">{children}</div>
 }
+
+ThreeColumnLayout.Column.displayName = 'ThreeColumnLayout.Column'
