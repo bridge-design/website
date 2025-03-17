@@ -6,12 +6,20 @@ interface CardProps {
   href?: string
   className?: string
   children?: React.ReactNode
+  to?: string
+  rounded?: boolean
 }
 
-export const Card: React.FC<CardProps> = ({ href, className, children }) => {
+export const Card: React.FC<CardProps> = ({ 
+  href, 
+  className, 
+  children, 
+  to,
+  rounded = true 
+}) => {
   const cardContent = (
     <div
-      className={`rounded-lg bg-[var(--btg-card-background)] p-4 text-center shadow-sm transition hover:bg-[var(--btg-card-background--hover)] sm:flex-row sm:text-left ${className}`}
+      className={`${rounded ? 'rounded-lg' : ''} bg-[var(--btg-card-background)] p-4 text-center shadow-sm transition hover:bg-[var(--btg-card-background--hover)] sm:flex-row sm:text-left ${className}`}
     >
       {children}
     </div>
