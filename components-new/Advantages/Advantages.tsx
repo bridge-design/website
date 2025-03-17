@@ -39,7 +39,7 @@ export const Advantages: React.FC<AdvantagesProps> = ({
       {title}
       <div className={gridClass}>
         {content.map((item, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
+          <div key={index} className="flex flex-col">
             <Icon name={item.icon} className={iconClass} size={32} />
             <span className="font-2xl mb-4 mt-6 text-2xl">{item.title}</span>
             <span className="font-lg text-lg">{item.description}</span>
