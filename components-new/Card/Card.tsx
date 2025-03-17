@@ -6,14 +6,38 @@ interface CardProps {
   href?: string
   className?: string
   children?: React.ReactNode
+  to?: string
+  rounded?: boolean
+  footer?: React.ReactNode
+  textColorVar?: string
+  textColorVarDark?: string
+  backgroundColorVar?: string
+  backgroundColorVarDark?: string
+  backgroundColorVarHover?: string
+  backgroundColorVarHoverDark?: string
 }
 
-export const Card: React.FC<CardProps> = ({ href, className, children }) => {
+export const Card: React.FC<CardProps> = ({
+  href,
+  className,
+  children,
+  rounded = true,
+  footer,
+  textColorVar = '--btg-color-neutral-100',
+  textColorVarDark = '--btg-color-neutral-1000',
+  backgroundColorVar = '--btg-color-neutral-900',
+  backgroundColorVarDark = '--btg-color-neutral-400',
+  backgroundColorVarHover = '--btg-color-neutral-800',
+  backgroundColorVarHoverDark = '--btg-color-neutral-500',
+}) => {
   const cardContent = (
     <div
-      className={`rounded-lg bg-[var(--btg-card-background)] p-4 text-center shadow-sm transition hover:bg-[var(--btg-card-background--hover)] sm:flex-row sm:text-left ${className}`}
+      className={`${rounded ? 'rounded-lg' : ''} bg-[var(--btg-card-background)] p-4 text-center shadow-sm transition hover:bg-[var(--btg-card-background--hover)] sm:flex-row sm:text-left ${className}`}
     >
-      {children}
+      <div className="flex h-full flex-col">
+        <div className="flex-grow">{children}</div>
+        {footer}
+      </div>
     </div>
   )
 
@@ -21,22 +45,22 @@ export const Card: React.FC<CardProps> = ({ href, className, children }) => {
     <>
       <style>{`
       :root {
-        --btg-card-background: var(--btg-color-neutral-900);
-        --btg-card-background--hover: var(--btg-color-neutral-800);
-        --btg-card-text: var(--btg-color-neutral-100);
+        --btg-card-background: var(${backgroundColorVar});
+        --btg-card-background--hover: var(${backgroundColorVarHover});
+        --btg-card-text: var(${textColorVar});
       }
 
       .dark-theme:root {
-        --btg-card-background: var(--btg-color-neutral-400);
-        --btg-card-background--hover: var(--btg-color-neutral-500);
-        --btg-card-text: var(--btg-color-neutral-1000);
+        --btg-card-background: var(${backgroundColorVarDark});
+        --btg-card-background--hover: var(${backgroundColorVarHoverDark});
+        --btg-card-text: var(${textColorVarDark});
       }
 
       @media (prefers-color-scheme: dark) {
         :root {
-          --btg-card-background: var(--btg-color-neutral-400);
-          --btg-card-background--hover: var(--btg-color-neutral-500);
-          --btg-card-text: var(--btg-color-neutral-1000);
+          --btg-card-background: var(${backgroundColorVarDark});
+          --btg-card-background--hover: var(${backgroundColorVarHoverDark});
+          --btg-card-text: var(${textColorVarDark});
         }
       }
 

@@ -43,6 +43,8 @@ export default async function ServicesPage() {
             to="/contact"
             underline={true}
             className="mt-10 text-xl"
+            colorVar="var(--btg-hero-text-color)"
+            colorHoverVar="var(--btg-hero-text-color)"
             borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
           >
             Start a conversation

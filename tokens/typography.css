@@ -25,5 +25,6 @@
   --font-xs: 'Inter', sans-serif;
   --font-xsMedium: 'Inter', sans-serif;
 
-  --font-interface: 'Helvetica Now Text', sans-serif;
+  --font-interface: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 }

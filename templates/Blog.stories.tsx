@@ -91,8 +91,14 @@ export const APost = () => (
     <HorizontalWave color="var(--btg-hero-background-teal)" />
     <ScrollTopAndComment />
     <Section>
-      <CtaLink to="/case-studies" arrow="start" className="text-xl">
-        Back to all case studies
+      <CtaLink
+        to="/case-studies"
+        arrow="start"
+        className="text-xl"
+        colorVar="var(--btg-hero-text-color)"
+        colorHoverVar="var(--btg-hero-text-color)"
+      >
+        Back to all posts
       </CtaLink>
       <article className="grow">
         <h1 className="font-5xl mb-16 text-center text-5xl">{blogPosts[0].title}</h1>

@@ -127,7 +127,13 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
       <ScrollTopAndComment />
       <Section>
         <div className="mx-auto max-w-[80ch]">
-          <CtaLink to="/blog" arrow="start" className="text-xl">
+          <CtaLink
+            to="/blog"
+            arrow="start"
+            className="text-xl"
+            colorVar="var(--btg-hero-text-color)"
+            colorHoverVar="var(--btg-hero-text-color)"
+          >
             Back to all posts
           </CtaLink>
         </div>

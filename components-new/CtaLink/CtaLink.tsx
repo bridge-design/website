@@ -29,24 +29,38 @@ export const CtaLink = forwardRef<HTMLElement, CtaLinkProps>(
     },
     ref
   ) => {
+    // Create a dynamic style object with CSS custom properties
+    const linkStyle = {
+      '--link-color': `var(${colorVar})`,
+      '--link-hover-color': `var(${colorHoverVar})`,
+    } as React.CSSProperties
+    
     const classes = classNames(
-      'cursor-pointer inline-flex items-center group bg-no-repeat text-xl font-medium tracking-wide leading-snug',
-      `text-[color:${colorVar}] hover:text-[color:${colorHoverVar}]`,
+      'cursor-pointer inline-flex items-center group bg-no-repeat font-medium tracking-wide leading-snug',
       className
     )
+    
     return (
-      <Component href={to} className={classes} ref={ref} {...props}>
+      <Component 
+        href={to} 
+        className={classes} 
+        ref={ref} 
+        style={linkStyle}
+        {...props}
+      >
         {arrow === 'start' && (
           <span className="transform no-underline transition duration-200 group-hover:-translate-x-1 motion-reduce:transform-none">
             ←{'\u2004'}
           </span>
         )}
         <span
-          className={
-            underline
-              ? `border-b-2 border-[var[--btg-color-accent-700]] pb-2 hover:border-[var(--btg-color-accent-700)] ${borderClassName}`
-              : ''
-          }
+          className={classNames(
+            'text-[var(--link-color)] hover:text-[var(--link-hover-color)]',
+            {
+              'border-b-2 pb-2': underline,
+              [`border-[var(--link-color)] hover:border-[var(--link-hover-color)] ${borderClassName}`]: underline,
+            }
+          )}
         >
           {children}
         </span>

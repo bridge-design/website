@@ -71,6 +71,8 @@ export const Default: Story = {
             to="/contact"
             underline={true}
             className="text-xl"
+            colorVar="var(--btg-hero-text-color)"
+            colorHoverVar="var(--btg-hero-text-color)"
             borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
           >
             Start a conversation
@@ -96,7 +98,14 @@ export const Default: Story = {
           ))}
         </ThreeColumnLayout>
         <div className="mt-4 w-full text-center">
-          <CtaLink to="/services" className="text-2xl" arrow="end">
+          <CtaLink
+            to="/services"
+            className="text-2xl"
+            arrow="end"
+            colorVar="var(--btg-hero-text-color)"
+            colorHoverVar="var(--btg-hero-text-color)"
+            borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
+          >
             More about our services
           </CtaLink>
         </div>
@@ -130,7 +139,14 @@ export const Default: Story = {
         {/* <CaseStudiesTeaser casePosts={caseStudiesExamples} /> */}
         <LogosCloud logos={caseLogos} />
         <div className="mt-12 w-full text-center">
-          <CtaLink to="/case-studies" className="text-2xl" arrow="end">
+          <CtaLink
+            to="/case-studies"
+            className="text-2xl"
+            arrow="end"
+            colorVar="var(--btg-hero-text-color)"
+            colorHoverVar="var(--btg-hero-text-color)"
+            borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
+          >
             Explore our case studies
           </CtaLink>
         </div>
@@ -144,6 +160,8 @@ export const Default: Story = {
             to="/contact"
             underline={true}
             className="text-xl"
+            colorVar="var(--btg-hero-text-color)"
+            colorHoverVar="var(--btg-hero-text-color)"
             borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
           >
             Let's talk!
