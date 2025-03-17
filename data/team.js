@@ -9,7 +9,6 @@ export const team = {
     consultant, Varya specializes in helping companies launch and enhance their design systems
     Her work focuses on bridging the gap between designers, developers, and business specialists,
     leveraging her extensive experience in component-driven UI development and her background in design.`,
-    twitter: 'https://twitter.com/varya_en',
     linkedin: 'https://www.linkedin.com/in/varyastepanova/',
     github: 'https://github.com/varya',
   },
@@ -25,7 +24,6 @@ export const team = {
     skills shine in her ability to effectively guide and mentor other engineers, making her an invaluable
     asset to any team.`,
     reverse: true,
-    twitter: 'https://twitter.com/illustrova',
     linkedin: 'https://www.linkedin.com/in/illustrova/',
     github: 'https://github.com/Illustrova',
   },
@@ -71,4 +69,4 @@ export const team = {
     linkedin: 'https://www.linkedin.com/in/alexandra-urberg/',
     github: 'https://github.com/alexandra-urberg',
   },
-};
+}

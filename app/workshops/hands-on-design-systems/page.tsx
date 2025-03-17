@@ -59,12 +59,13 @@ const HandsOnDesignSystemsPage = () => {
     <>
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-blue); }`}</style>
       <HorizontalWave color="var(--btg-hero-background)" />
-      <Section narrow={true}>
-        <p className="text-center text-2xl">👋 Hands-on workshop</p>
-        <h1 className="font-4xl mb-16 text-center text-4xl">
+      <Section narrow={true} className="mb-4">
+        <p className="mb-4 text-center text-lg">👋 Hands-on workshop</p>
+        <h1 className="font-4xl mb-8 text-center text-4xl leading-[1.125]">
           Building <span className="md:block">a design system</span>
           <span className="md:block">with Figma, React, and Storybook</span>
         </h1>
+        <p className="mt-8 text-center text-lg">Get your spot workshops 👇</p>
       </Section>
 
       <Section narrow={true} className="mb-20">
@@ -115,66 +116,50 @@ const HandsOnDesignSystemsPage = () => {
         </div>
       </Section>
 
-      <Section className="mb-20" narrow={true}>
-        <Card>
-          <div className="mt-16 font-lg text-lg leading-lg tracking-lg md:mt-0">
-            <p className="mb-6">
-              This workshop helps you learn and practice design systems on a real project. You can
-              join as a designer or developer, engaging in multidisciplinary work.
-            </p>
-            <p className="mb-6">
+      <Section className="mb-20">
+        <h2 className="font-4xl mb-10 text-4xl">What you will learn?</h2>
+        <p className="font-lg text-xl">
+          Learn and practice design systems on a real project. You can join as a designer or
+          developer, engaging in multidisciplinary work.
+        </p>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {/* First column */}
+          <div className="mt-8">
+            <p className="text-lg">
               Participants will work on a design system example, simulating a real project
-              environment. Designers create a <b>tokens system</b> and{' '}
-              <b>themeable Figma components</b>, while developers build a{' '}
-              <b>component library with React</b> and <b>Storybook</b>. You'll contribute to a
-              shared result, gaining hands-on experience in collaborative design and development. .
-            </p>
-            <p className="mb-6">
-              By the end of the workshop, you'll have contributed to a design system with real tasks
-              that touch token system, components, and documentation. You'll also receive{' '}
-              <b>one hour of individual consultation</b> within the next two months to address
-              specific questions and deepen your understanding.
+              environment. Designers create a tokens system and themeable Figma components, while
+              developers build a component library with React and Storybook. You'll contribute to a
+              shared result, gaining hands-on experience in collaborative design and development.
             </p>
           </div>
-        </Card>
-      </Section>
 
-      {/* Workshop Highlights Section */}
-      <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl mb-10 text-center text-4xl">Workshop Highlights</h2>
-        <Advantages content={workshopAdvantages} />
+          {/* Second column */}
+          <div className="mt-8">
+            <p className="text-lg">
+              By the end of the workshop, you'll have contributed to a design system with real tasks
+              that touch token system, components, and documentation. You'll also receive one hour
+              of individual consultation within the next two months to address specific questions
+              and deepen your understanding.
+            </p>
+          </div>
+        </div>
       </Section>
 
       <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-center text-4xl">Workshop content</h2>
         <Timetable items={timetableItems} />
       </Section>
-      {/* <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl text-center text-4xl">Deliverables</h2>
-        <p className="font-lg text-lg leading-lg tracking-lg">
-          By the end of the workshop, each team has a ready-to-use component library, an end product
-          built out of that, and a tuned process to ensure smooth updates.
-        </p>
-        <figure className="mt-10">
-          <div className="relative mx-auto w-full max-w-4xl" style={{ paddingBottom: '56.25%' }}>
-            <iframe
-              title="Deliverables"
-              width="888"
-              src="https://www.youtube.com/embed/RWECCt6rDPU"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen={true}
-              className="absolute inset-0 h-full w-full"
-            ></iframe>
-          </div>
-          <figcaption className="text-light-on-background-500 mt-2 text-center font-sm text-sm leading-sm tracking-sm">
-            Sneak peek: Changes in Figma design tokens are automatically reflected in the components
-            and exported to code.
-          </figcaption>
-        </figure>
-      </Section> */}
+
+      {/* Workshop Highlights Section */}
+      <Section className="mb-20">
+        <Advantages
+          title={<h2 className="font-4xl mb-10 text-4xl">Workshop Highlights</h2>}
+          content={workshopAdvantages}
+        />
+      </Section>
+
       <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl text-center text-4xl">Why Attend</h2>
+        <h2 className="font-4xl text-4xl">Why Attend</h2>
         <div className="mt-10 grid grid-cols-1 gap-x-20 gap-y-16 md:grid-cols-2">
           <div className="">
             <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Designer</h3>
@@ -203,7 +188,7 @@ const HandsOnDesignSystemsPage = () => {
         </div>
       </Section>
       <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl text-center text-4xl">Book a Call</h2>
+        <h2 className="font-4xl text-4xl">Book a Call</h2>
         <Contact
           header={
             <p className="mt-4 text-center font-lg text-lg leading-lg tracking-lg">
@@ -214,17 +199,9 @@ const HandsOnDesignSystemsPage = () => {
           footer={' '}
         />
       </Section>
-      <Section className="mb-20" narrow={true} expandRight={true}>
-        <div className="container flex flex-col justify-between overflow-hidden">
-          <Testimonial
-            narrow={true}
-            title={<h2 className="text-4xl">People Say</h2>}
-            testimonials={filteredTestimonials}
-          />
-        </div>
-      </Section>
+
       <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl mb-10 text-center text-4xl">Who We Are</h2>
+        <h2 className="font-4xl mb-10 text-4xl">Who We Are</h2>
         {['varya', 'sherif', 'irina'].map((key) => {
           const member = team[key]
           return (
@@ -238,26 +215,24 @@ const HandsOnDesignSystemsPage = () => {
               github={member.github}
               description={member.description}
               className="mb-10"
+              backgroundColorVar="var(--btg-color-neutral-1000)"
+              textColorVar="var(--btg-color-neutral-100)"
+              rounded={false}
             />
           )
         })}
       </Section>
-      <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl mb-10 text-center text-4xl">
-          Want a custom workshop for your team?
-        </h2>
-        <p className="mb-10 font-lg text-lg leading-lg tracking-lg">
-          Need a custom version? We can tailor a design system workshop for your company. We'll walk
-          through the design system process, how to get started and how to fit it into your existing
-          design processes. There will be an opportunity for the team to discuss questions they
-          might have about implementing a design system.
-        </p>
-        <div className="text-center">
-          <CtaLink to="/contact" className="text-2xl" arrow="end" underline={true}>
-            Let's talk
-          </CtaLink>
+
+      <Section className="mb-20" narrow={true} expandRight={true}>
+        <div className="container flex flex-col justify-between overflow-hidden">
+          <Testimonial
+            narrow={true}
+            title={<h2 className="text-4xl">People Say</h2>}
+            testimonials={filteredTestimonials}
+          />
         </div>
       </Section>
+
       <Outro backgroundColor="var(--btg-hero-background-blue)" />
     </>
   )
