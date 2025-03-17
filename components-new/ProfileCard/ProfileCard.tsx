@@ -94,12 +94,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
           <p className="mb-6 text-base">{role}</p>
           <div className="flex flex-1 flex-col justify-between">
             {description && <p className="mb-2 flex-1 text-base">{description}</p>}
-            <div
-              className={classNames(
-                'flex gap-4 justify-self-end',
-                description ? 'justify-center lg:justify-start' : 'justify-start'
-              )}
-            >
+            <div className={classNames('flex gap-4 justify-self-end', 'justify-start')}>
               {twitter && (
                 <a
                   href={twitter}
