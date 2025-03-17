@@ -1,6 +1,7 @@
 import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
 import { Card } from './Card'
+import { CtaLink } from '../CtaLink/CtaLink'
 
 const meta: Meta<typeof Card> = {
   title: 'Components/Cards/Card',
@@ -57,6 +58,22 @@ export const WithCustomStyling: Story = {
         <h3 className="mb-2 text-xl font-bold">Custom Styled Card</h3>
         <p>This card has custom background and border styling applied through className.</p>
       </div>
+    ),
+  },
+}
+
+export const WithFooter: Story = {
+  args: {
+    children: (
+      <div className="p-4">
+        <h3 className="mb-2 text-xl font-bold">Card with Footer</h3>
+        <p>This card has a footer section that's separated from the main content.</p>
+      </div>
+    ),
+    footer: (
+      <CtaLink to="/example" className="text-lg" arrow="end">
+        Learn more
+      </CtaLink>
     ),
   },
 }

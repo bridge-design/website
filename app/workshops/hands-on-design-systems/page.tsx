@@ -60,31 +60,61 @@ const HandsOnDesignSystemsPage = () => {
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-blue); }`}</style>
       <HorizontalWave color="var(--btg-hero-background)" />
       <Section narrow={true}>
-        <p className="text-center text-5xl">👋 Hands-on</p>
+        <p className="text-center text-2xl">👋 Hands-on workshop</p>
         <h1 className="font-4xl mb-16 text-center text-4xl">
-          workshop on building <span className="md:block">a design system</span>
+          Building <span className="md:block">a design system</span>
           <span className="md:block">with Figma, React, and Storybook</span>
         </h1>
       </Section>
-      <Section className="mb-20" narrow={true}>
-        <h3 className="text-center text-2xl">9th of April, 2025, 9:00 AM - 5:00 PM CEST</h3>
-        <p className="flex items-center justify-center text-xl">
-          <Icon name="Video" size={32} /> on Zoom
-        </p>
-        <p className="text-center text-xl">
-          Available tickets: <b>20</b>, starting from €350+VAT
-        </p>
-        <p className="mt-4 text-center text-xl">
-          <CtaLink
-            to="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
-            className="text-2xl"
-            arrow="end"
-            underline={true}
+
+      <Section narrow={true} className="mb-20">
+        {/* Two cards side by side with equal height */}
+        <div className="mx-auto grid w-full max-w-[80%] grid-cols-1 md:grid-cols-2">
+          <Card
+            rounded={false}
+            className="h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
+            href="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
+            footer={
+              <CtaLink
+                to="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
+                className="px-2 text-lg font-medium"
+                colorVar="--btg-color-neutral-1000"
+                colorHoverVar="--btg-color-neutral-900"
+              >
+                Book your spot →
+              </CtaLink>
+            }
           >
-            Grab your ticket
-          </CtaLink>
-        </p>
+            <div className="px-2 py-6">
+              <p className="text-lg font-bold">9th of April, 2025</p>
+              <p className="mb-2 text-lg font-bold">9:00 AM - 5:00 PM CEST</p>
+              <p className="mt-16">Location: on Zoom</p>
+              <p className="mb-12">Secure payment: Eventbrite</p>
+            </div>
+          </Card>
+
+          <Card
+            rounded={false}
+            className="h-full bg-[var(--btg-color-neutral-100)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-neutral-200)]"
+            href="/contact"
+            footer={
+              <CtaLink
+                to="/contact"
+                className="px-2 text-lg font-medium"
+                colorVar="--btg-color-neutral-1000"
+                colorHoverVar="--btg-color-neutral-900"
+              >
+                Let's talk →
+              </CtaLink>
+            }
+          >
+            <div className="px-2 py-6">
+              <p className="text-lg font-bold">Need a custom workshop for your team?</p>
+            </div>
+          </Card>
+        </div>
       </Section>
+
       <Section className="mb-20" narrow={true}>
         <Card>
           <div className="mt-16 font-lg text-lg leading-lg tracking-lg md:mt-0">

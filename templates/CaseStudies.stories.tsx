@@ -76,7 +76,13 @@ export const ACase = () => (
     <HorizontalWave color="var(--btg-hero-background-pink)" />
     <ScrollTopAndComment />
     <Section>
-      <CtaLink to="/case-studies" arrow="start" className="text-xl">
+      <CtaLink
+        to="/case-studies"
+        arrow="start"
+        className="text-xl"
+        colorVar="var(--btg-hero-text-color)"
+        colorHoverVar="var(--btg-hero-text-color)"
+      >
         Back to all case studies
       </CtaLink>
       <article className="grow">

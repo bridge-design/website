@@ -31,7 +31,7 @@ export default function LayoutHandsOnWorkshopHandout({ content, children }: Layo
     <div className="grow border-b bg-white py-8">
       <div className="min-w-100 flex bg-white">
         <div className="mx-auto mb-8 max-w-2xl py-2 text-left text-xl">
-          <CtaLink arrow="start" as={Link} to={mainPagePath} underline={true}>
+          <CtaLink arrow="start" as={Link} to={mainPagePath} underline={true} className="text-xl">
             Back to the Main page
           </CtaLink>
         </div>

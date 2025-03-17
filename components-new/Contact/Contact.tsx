@@ -39,7 +39,13 @@ export const Contact: React.FC<ContactProps> = ({ header, footer }) => {
         <>
           <p className="py-8 text-center text-xl">Or send an email with your request</p>
           <div className="flex items-center gap-5">
-            <CtaLink to="mailto:mail@bridge-the-gap.dev" underline>
+            <CtaLink
+              to="mailto:mail@bridge-the-gap.dev"
+              className="text-xl"
+              underline
+              colorVar="var(--btg-hero-text-color)"
+              colorHoverVar="var(--btg-hero-text-color)"
+            >
               mail@bridge-the-gap.dev
             </CtaLink>
             <CopyIcon
