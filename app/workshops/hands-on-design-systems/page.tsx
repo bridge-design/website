@@ -62,7 +62,7 @@ const HandsOnDesignSystemsPage = () => {
       <Section narrow={true} className="mb-4">
         <p className="mb-4 text-center text-lg">👋 Hands-on workshop</p>
         <h1 className="font-4xl mb-8 text-center text-4xl leading-[1.125]">
-          Building <span className="md:block">a design system</span>
+          <span className="md:block">Building a design system</span>
           <span className="md:block">with Figma, React, and Storybook</span>
         </h1>
         <p className="mt-8 text-center text-lg">Get your spot workshops 👇</p>
@@ -127,8 +127,8 @@ const HandsOnDesignSystemsPage = () => {
           <div className="mt-8">
             <p className="text-lg">
               Participants will work on a design system example, simulating a real project
-              environment. Designers create a tokens system and themeable Figma components, while
-              developers build a component library with React and Storybook. You'll contribute to a
+              environment. Designers create a tokens system and themeable Figma components, while
+              developers build a component library with React and Storybook. You'll contribute to a
               shared result, gaining hands-on experience in collaborative design and development.
             </p>
           </div>
@@ -137,8 +137,8 @@ const HandsOnDesignSystemsPage = () => {
           <div className="mt-8">
             <p className="text-lg">
               By the end of the workshop, you'll have contributed to a design system with real tasks
-              that touch token system, components, and documentation. You'll also receive one hour
-              of individual consultation within the next two months to address specific questions
+              that touch token system, components, and documentation. You'll also receive one hour
+              of individual consultation within the next two months to address specific questions
               and deepen your understanding.
             </p>
           </div>
