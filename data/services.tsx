@@ -2,27 +2,27 @@ export const HOW_IT_WORKS = [
   {
     icon: 'UserMultiple',
     title: 'Meet the team',
-    description: 'Hiring an agency brings additional expertise and knowledge to your business',
+    description: 'Gain insights and strategies from our experienced team to elevate your business',
   },
   {
     icon: 'Cursor_1',
     title: 'Workshop together',
-    description: 'Hiring an agency brings additional expertise and knowledge to your business',
+    description: 'Collaborate in workshops to harness collective expertise and drive innovation',
   },
   {
     icon: 'Network_3Reference',
-    title: 'Regular alignement',
-    description: 'Hiring an agency brings additional expertise and knowledge to your business',
+    title: 'Regular alignment',
+    description: 'Ensure consistent progress and alignment with regular check-ins and updates',
   },
   {
     icon: 'CircleDash',
     title: 'Iterations',
-    description: 'Hiring an agency brings additional expertise and knowledge to your business',
+    description: 'Refine and improve through iterative processes tailored to your needs',
   },
   {
     icon: 'Task',
     title: 'Agile',
-    description: 'Hiring an agency brings additional expertise and knowledge to your business',
+    description: 'Adopt agile methodologies for flexible and efficient project management',
   },
 ]
 
