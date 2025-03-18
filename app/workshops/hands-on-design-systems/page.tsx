@@ -217,6 +217,7 @@ const HandsOnDesignSystemsPage = () => {
               className="mb-10"
               backgroundColorVar="var(--btg-color-neutral-1000)"
               textColorVar="var(--btg-color-neutral-100)"
+              backgroundColorVarDark="var(--btg-color-neutral-100)"
               rounded={false}
             />
           )
