@@ -1,5 +1,6 @@
 import {
   Blob,
+  Card,
   CtaLink,
   Hero,
   LogosCloud,
@@ -56,6 +57,31 @@ export default async function Page() {
           </CtaLink>
         </div>
       </Hero>
+
+      {/* Workshop Promotion Section */}
+      <Section className="mb-20 bg-[var(--btg-color-accent-600)] py-12">
+        <Card className="mx-auto max-w-4xl" href="/workshops/hands-on-design-systems">
+          <div className="flex flex-col items-center justify-between md:flex-row">
+            <div className="mb-6 md:mb-0 md:mr-8">
+              <h2 className="mb-2 text-2xl font-bold md:text-3xl">
+                Hands-on Design Systems Workshop
+              </h2>
+              <p className="mb-2 text-lg">9th April, 2025 • 9:00-16:00 CEST • Online</p>
+              <p className="mb-4">
+                Join our interactive workshop and learn how to build a design system with Figma,
+                React, and Storybook.
+              </p>
+              <CtaLink to="/workshops/hands-on-design-systems" className="text-xl" arrow="end">
+                Get tickets
+              </CtaLink>
+            </div>
+            <div className="flex h-32 w-32 flex-shrink-0 items-center justify-center rounded-full bg-[var(--btg-color-accent-600)] md:h-40 md:w-40">
+              <span className="text-5xl text-white">🚀</span>
+            </div>
+          </div>
+        </Card>
+      </Section>
+
       <Section className="pb-12">
         <h2 className="mb-6 text-center text-4xl">Our Design Systems Expertise</h2>
         <ThreeColumnLayout>
