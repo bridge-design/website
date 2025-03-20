@@ -34,8 +34,8 @@ export const Card: React.FC<CardProps> = ({
     <div
       className={`${rounded ? 'rounded-lg' : ''} bg-[var(--btg-card-background)] p-4 shadow-sm transition hover:bg-[var(--btg-card-background--hover)] ${className}`}
     >
-      <div className="flex h-full flex-col">
-        <div className="flex-grow sm:flex sm:flex-row">{children}</div>
+      <div className="flex h-full flex-col justify-between">
+        {children}
         {footer}
       </div>
     </div>

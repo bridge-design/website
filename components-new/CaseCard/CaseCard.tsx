@@ -37,20 +37,19 @@ export const CaseCard: React.FC<CaseCardProps> = ({ casePost }) => {
       }
 
       `}</style>
-      <Card
-        href={`/case-studies/${casePost.slug}`}
-        className="flex flex-col items-center overflow-hidden"
-      >
-        {casePost.logo && (
-          <img
-            src={casePost.logo}
-            alt={casePost.title}
-            className="mb-4 max-w-[140px] px-4 sm:mb-0 sm:mr-4 dark:invert dark:filter"
-          />
-        )}
-        <div className="relative flex flex-col">
-          <h3 className="font-3xl mb-2 text-3xl">{casePost.title}</h3>
-          {casePost.description && <p className="font-lg text-lg">{casePost.description}</p>}
+      <Card href={`/case-studies/${casePost.slug}`} className="flex flex-col overflow-hidden">
+        <div className="flex-grow sm:flex sm:flex-row">
+          {casePost.logo && (
+            <img
+              src={casePost.logo}
+              alt={casePost.title}
+              className="mb-4 max-w-[140px] px-4 sm:mb-0 sm:mr-4 dark:invert dark:filter"
+            />
+          )}
+          <div className="relative flex flex-col">
+            <h3 className="font-3xl mb-2 text-3xl">{casePost.title}</h3>
+            {casePost.description && <p className="font-lg text-lg">{casePost.description}</p>}
+          </div>
         </div>
       </Card>
     </>
