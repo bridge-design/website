@@ -87,7 +87,7 @@ const HandsOnDesignSystemsPage = () => {
             }
           >
             <div className="px-2 py-6">
-              <p className="text-lg font-bold">9th of April, 2025</p>
+              <p className="text-lg font-bold">23rd of May, 2025</p>
               <p className="mb-2 text-lg font-bold">9:00 AM - 5:00 PM CEST</p>
               <p className="mt-16">Location: on Zoom</p>
               <p className="mb-12">Secure payment: Eventbrite</p>
