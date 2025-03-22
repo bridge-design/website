@@ -36,7 +36,7 @@ export default function LayoutHandsOnWorkshopHandout({ content, children }: Layo
           </CtaLink>
         </div>
       </div>
-      <div className="font-4xl my-2 w-full text-center text-4xl">{title}</div>
+      <div className="my-2 w-full text-center font-4xl text-4xl">{title}</div>
       <div className="prose mx-auto my-8 px-4 text-justify">{children}</div>
     </div>
   )

@@ -33,10 +33,10 @@ export default async function ServicesPage() {
       <HorizontalWave color="var(--btg-hero-background-blue)" />
       <Section className="py-12">
         <div className="text-center lg:mt-8">
-          <h1 className="font-6xl animate-reveal mx-auto text-center text-6xl">
+          <h1 className="animate-reveal mx-auto text-center font-6xl text-6xl">
             Design system speeds building digital products and time to market
           </h1>
-          <h3 className="font-2xl animate-reveal mx-auto mt-10 text-center text-2xl">
+          <h3 className="animate-reveal mx-auto mt-10 text-center font-2xl text-2xl">
             A reusable components library enabling organization teams to build products efficiently.
           </h3>
           <CtaLink
@@ -88,7 +88,7 @@ export default async function ServicesPage() {
       </Section>
       <Outro backgroundColor="var(--btg-hero-background)">
         <div className="text-center">
-          <h1 className="font-4xl mx-auto mb-10 text-4xl lg:w-4/5">
+          <h1 className="mx-auto mb-10 font-4xl text-4xl lg:w-4/5">
             Want to start your design system journey with us?
           </h1>
           <CtaLink

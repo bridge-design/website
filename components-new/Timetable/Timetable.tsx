@@ -94,7 +94,7 @@ export const Timetable: React.FC<TimetableProps> = ({ items, className, caption 
         )}
       >
         {caption && (
-          <caption className="text-2Xl sm:text-smMedium mb-2 text-left font-2Xl leading-2Xl tracking-2Xl sm:font-smMedium sm:leading-smMedium sm:tracking-smMedium md:mb-5">
+          <caption className="sm:text-smMedium font-2xl leading-2xl tracking-2xl mb-2 text-left text-2xl sm:font-smMedium sm:leading-smMedium sm:tracking-smMedium md:mb-5">
             {caption}
           </caption>
         )}
@@ -105,7 +105,10 @@ export const Timetable: React.FC<TimetableProps> = ({ items, className, caption 
               timezone === 'CEST' ? item.time : convertTime(item.time, 'CEST', timezone)
 
             return (
-              <tr key={index} className="border-light-on-background-900 flex flex-col border-b py-3 sm:flex-row sm:py-6">
+              <tr
+                key={index}
+                className="border-light-on-background-900 flex flex-col border-b py-3 sm:flex-row sm:py-6"
+              >
                 <td className="w-full pb-2 text-left sm:w-auto sm:min-w-[120px] sm:max-w-[180px] sm:pb-0 sm:pr-4">
                   <span className="text-xsMedium sm:text-smMedium bg-light-on-background-900 text-light-on-background-50 inline-block p-1 font-xsMedium leading-xsMedium tracking-xsMedium sm:whitespace-nowrap sm:font-smMedium sm:leading-smMedium sm:tracking-smMedium">
                     {displayTime}

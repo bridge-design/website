@@ -45,15 +45,15 @@ export default function Workshop() {
               </span>
               Hands-on
             </p>
-            <h1 className="text-5Xl mx-auto mt-4 max-w-3xl font-5Xl">
+            <h1 className="mx-auto mt-4 max-w-3xl font-5xl text-5xl">
               2-day workshop on &nbsp; building &nbsp; a design system with{' '}
               <span className="md:block">
-                <span className="text-6Xl font-6Xl leading-6Xl tracking-6Xl" highlight="yellow-100">
+                <span className="font-6xl text-6xl leading-6xl tracking-6xl" highlight="yellow-100">
                   Figma
                 </span>{' '}
                 and{' '}
                 <span
-                  className="text-6Xl font-6Xl leading-6Xl tracking-6Xl"
+                  className="font-6xl text-6xl leading-6xl tracking-6xl"
                   highlight="primary-100"
                 >
                   React
@@ -63,7 +63,7 @@ export default function Workshop() {
             </h1>
             <div className="mt-24 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
               <div className="border-light-on-background-900 hover:bg-primary-50 text-light-on-background-900 hover:!bg-neutral-30 [&amp;_a]:!cursor-default [&amp;_a]:!text-gray-600 [&amp;_span]:!transform-none flex h-full flex-col rounded-lg border bg-neutral-300 p-6 text-left opacity-70 hover:!cursor-default hover:cursor-pointer">
-                <h3 className="text-2Xl mb-6 text-left font-2Xl leading-2Xl tracking-2Xl">
+                <h3 className="mb-6 text-left font-2xl text-2xl leading-2xl tracking-2xl">
                   2 &amp; 3 DECEMBER 9-13 PST
                 </h3>
                 <div className="mb-8">
@@ -80,7 +80,7 @@ export default function Workshop() {
                 </div>
               </div>
               <div className="border-light-on-background-900 hover:bg-primary-50 text-light-on-background-900 flex h-full min-h-[240px] flex-col rounded-lg border p-6 text-left hover:cursor-pointer">
-                <h3 className="text-2Xl mb-6 text-left font-2Xl leading-2Xl tracking-2Xl">
+                <h3 className="mb-6 text-left font-2xl text-2xl leading-2xl tracking-2xl">
                   Need a custom workshop for your team?
                 </h3>
                 <div className="mb-8">
@@ -103,7 +103,7 @@ export default function Workshop() {
           </div>
           <div className="mx-auto mt-28 flex max-w-4xl flex-col md:flex-row">
             <div className="flex w-full flex-shrink-0 items-start justify-start md:w-2/5 md:flex-col">
-              <h2 className="text-3Xl sm:text-6Xl font-3Xl leading-3Xl tracking-3Xl sm:font-6Xl sm:leading-6Xl sm:tracking-6Xl">
+              <h2 className="font-3xl text-3xl leading-3xl tracking-3xl sm:font-6xl sm:text-6xl sm:leading-6xl sm:tracking-6xl">
                 What you <span className="md:block">will learn?</span>
               </h2>
             </div>
@@ -127,12 +127,12 @@ export default function Workshop() {
           </div>
           <div className="mx-auto mt-28 max-w-4xl">
             <div className="flex items-start">
-              <h2 className="text-3Xl sm:text-6Xl font-3Xl leading-3Xl tracking-3Xl sm:font-6Xl sm:leading-6Xl sm:tracking-6Xl">
+              <h2 className="font-3xl text-3xl leading-3xl tracking-3xl sm:font-6xl sm:text-6xl sm:leading-6xl sm:tracking-6xl">
                 Workshop content
               </h2>
             </div>
             <table className="text-light-on-background-900 mt-16 w-full table-auto font-lg text-lg leading-lg tracking-lg">
-              <caption className="text-2Xl sm:text-smMedium mb-2 text-left font-2Xl leading-2Xl tracking-2Xl sm:font-smMedium sm:leading-smMedium sm:tracking-smMedium md:mb-5">
+              <caption className="sm:text-smMedium mb-2 text-left font-2xl text-2xl leading-2xl tracking-2xl sm:font-smMedium sm:leading-smMedium sm:tracking-smMedium md:mb-5">
                 Day 1
               </caption>
               <tbody>
@@ -273,7 +273,7 @@ export default function Workshop() {
               </tbody>
             </table>
             <table className="text-light-on-background-900 mt-16 w-full table-auto font-lg text-lg leading-lg tracking-lg">
-              <caption className="text-2Xl sm:text-smMedium mb-2 text-left font-2Xl leading-2Xl tracking-2Xl sm:font-smMedium sm:leading-smMedium sm:tracking-smMedium md:mb-5">
+              <caption className="sm:text-smMedium mb-2 text-left font-2xl text-2xl leading-2xl tracking-2xl sm:font-smMedium sm:leading-smMedium sm:tracking-smMedium md:mb-5">
                 Day 2
               </caption>
               <tbody>
@@ -365,7 +365,7 @@ export default function Workshop() {
           </div>
           <div className="mx-auto mt-28 max-w-4xl">
             <div className="flex items-start">
-              <h2 className="text-3Xl sm:text-6Xl font-3Xl leading-3Xl tracking-3Xl sm:font-6Xl sm:leading-6Xl sm:tracking-6Xl">
+              <h2 className="font-3xl text-3xl leading-3xl tracking-3xl sm:font-6xl sm:text-6xl sm:leading-6xl sm:tracking-6xl">
                 Deliverables
               </h2>
             </div>
@@ -393,13 +393,13 @@ export default function Workshop() {
           </div>
           <div className="mx-auto mt-28 max-w-4xl">
             <div className="flex items-start">
-              <h2 className="text-3Xl sm:text-6Xl font-3Xl leading-3Xl tracking-3Xl sm:font-6Xl sm:leading-6Xl sm:tracking-6Xl">
+              <h2 className="font-3xl text-3xl leading-3xl tracking-3xl sm:font-6xl sm:text-6xl sm:leading-6xl sm:tracking-6xl">
                 Why Attend
               </h2>
             </div>
             <div className="mt-10 grid grid-cols-1 gap-x-20 gap-y-16 md:grid-cols-2">
               <div className="">
-                <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Designer</h3>
+                <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Designer</h3>
                 <ul className="list mt-6 list-inside list-disc">
                   <li>Practice UI inventory</li>
                   <li className="mt-3">Run brand-changes in nearly zero time</li>
@@ -407,7 +407,7 @@ export default function Workshop() {
                 </ul>
               </div>
               <div className="">
-                <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Developer</h3>
+                <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Developer</h3>
                 <ul className="list mt-6 list-inside list-disc">
                   <li>Practice component-driven development</li>
                   <li className="mt-3">Learn tips and tricks of making a pattern library</li>
@@ -415,7 +415,7 @@ export default function Workshop() {
                 </ul>
               </div>
               <div className="">
-                <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Team</h3>
+                <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Team</h3>
                 <ul className="list mt-6 list-inside list-disc">
                   <li>Automate design and development processes</li>
                   <li className="mt-3">
@@ -433,7 +433,7 @@ export default function Workshop() {
           </div>
           <div className="mx-auto mt-28 max-w-4xl">
             <div className="flex items-start">
-              <h2 className="text-3Xl sm:text-6Xl font-3Xl leading-3Xl tracking-3Xl sm:font-6Xl sm:leading-6Xl sm:tracking-6Xl">
+              <h2 className="font-3xl text-3xl leading-3xl tracking-3xl sm:font-6xl sm:text-6xl sm:leading-6xl sm:tracking-6xl">
                 Who We Are
               </h2>
             </div>
@@ -445,7 +445,7 @@ export default function Workshop() {
                   className="max-w-[306px] rounded-l-[4px] object-contain"
                 />
                 <div className="flex w-full flex-col justify-between sm:py-4 lg:min-h-[342px] lg:pl-6 lg:pr-10 xl:py-10">
-                  <p className="text-2XlMedium text-2XlMedium mb-2 font-2XlMedium leading-2XlMedium tracking-2XlMedium">
+                  <p className="text-2xlMedium text-2xlMedium mb-2 font-2xlMedium leading-2xlMedium tracking-2xlMedium">
                     Varya Stepanova
                   </p>
                   <p className="mb-6 font-base text-base leading-base tracking-base">
@@ -528,7 +528,7 @@ export default function Workshop() {
                   className="max-w-[306px] rounded-l-[4px] object-contain"
                 />
                 <div className="flex w-full flex-col justify-between sm:py-4 lg:min-h-[342px] lg:pl-6 lg:pr-10 xl:py-10">
-                  <p className="text-2XlMedium text-2XlMedium mb-2 font-2XlMedium leading-2XlMedium tracking-2XlMedium">
+                  <p className="text-2xlMedium text-2xlMedium mb-2 font-2xlMedium leading-2xlMedium tracking-2xlMedium">
                     Irina Illustrova
                   </p>
                   <p className="mb-6 font-base text-base leading-base tracking-base">
@@ -611,7 +611,7 @@ export default function Workshop() {
                   className="max-w-[306px] rounded-l-[4px] object-contain"
                 />
                 <div className="flex w-full flex-col justify-between sm:py-4 lg:min-h-[342px] lg:pl-6 lg:pr-10 xl:py-10">
-                  <p className="text-2XlMedium text-2XlMedium mb-2 font-2XlMedium leading-2XlMedium tracking-2XlMedium">
+                  <p className="text-2xlMedium text-2xlMedium mb-2 font-2xlMedium leading-2xlMedium tracking-2xlMedium">
                     Sherif Saleh
                   </p>
                   <p className="mb-6 font-base text-base leading-base tracking-base">
@@ -670,7 +670,7 @@ export default function Workshop() {
           </div>
           <div className="mx-auto mt-28 max-w-4xl">
             <div className="flex items-start">
-              <h2 className="text-3Xl sm:text-6Xl font-3Xl leading-3Xl tracking-3Xl sm:font-6Xl sm:leading-6Xl sm:tracking-6Xl">
+              <h2 className="font-3xl text-3xl leading-3xl tracking-3xl sm:font-6xl sm:text-6xl sm:leading-6xl sm:tracking-6xl">
                 Want a custom workshop for your team?
               </h2>
             </div>

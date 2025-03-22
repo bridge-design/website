@@ -1,16 +1,21 @@
 :root {
   /* Merriweather for Large Headings */
-  --font-9Xl: 'Merriweather', serif;
-  --font-8Xl: 'Merriweather', serif;
-  --font-7Xl: 'Merriweather', serif;
+  --font-9xl: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-8xl: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-7xl: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 
-  --font-6Xl: 'Merriweather', serif;
-  --font-5Xl: 'Merriweather', serif;
-  --font-4Xl: 'Inter', sans-serif;
-  --font-3Xl: 'Inter', sans-serif;
-  --font-3XlBold: 'Inter', sans-serif;
-  --font-2Xl: 'Inter', sans-serif;
-  --font-2XlMedium: 'Inter', sans-serif;
+  --font-6xl: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-5xl: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-4xl: 'Inter', sans-serif;
+  --font-3xl: 'Inter', sans-serif;
+  --font-3xlBold: 'Inter', sans-serif;
+  --font-2xl: 'Inter', sans-serif;
+  --font-2xlMedium: 'Inter', sans-serif;
 
   --font-xl: 'Inter', sans-serif;
   --font-xlMedium: 'Inter', sans-serif;
