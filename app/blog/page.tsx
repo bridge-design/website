@@ -30,7 +30,7 @@ export default function BlogPage() {
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-teal); }`}</style>
       <HorizontalWave color="var(--btg-hero-background)" />
       <Section>
-        <h1 className="font-5xl mb-16 text-center text-5xl">The knowledge we share</h1>
+        <h1 className="mb-16 text-center font-5xl text-5xl">The knowledge we share</h1>
         <div className="grid grid-cols-1 gap-10 lg:gap-20 lg:px-10 lg:py-11">
           <BlogList posts={initialDisplayPosts} />
           <Pagination

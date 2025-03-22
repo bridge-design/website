@@ -98,15 +98,15 @@ export const ShoutOuts: Story = {
 export const FontFamilyExample: Story = {
   render: () => (
     <div className="prose">
-      <h1 className="font-9Xl">Heading 1 with 9Xl Font (Inter)</h1>
-      <h2 className="font-8Xl">Heading 2 with 8Xl Font (Inter)</h2>
-      <h3 className="font-7Xl">Heading 3 with 7Xl Font (Inter)</h3>
-      <h4 className="font-6Xl">Heading 4 with 6Xl Font (Inter)</h4>
-      <h5 className="font-5Xl">Heading 5 with 5Xl Font (Inter)</h5>
-      <h6 className="font-4Xl">Heading 6 with 4Xl Font (Inter)</h6>
+      <h1 className="font-9xl">Heading 1 with 9xl Font (Inter)</h1>
+      <h2 className="font-8xl">Heading 2 with 8xl Font (Inter)</h2>
+      <h3 className="font-7xl">Heading 3 with 7xl Font (Inter)</h3>
+      <h4 className="font-6xl">Heading 4 with 6xl Font (Inter)</h4>
+      <h5 className="font-5xl">Heading 5 with 5xl Font (Inter)</h5>
+      <h6 className="font-4xl">Heading 6 with 4xl Font (Inter)</h6>
 
-      <p className="font-3Xl">Paragraph with 3Xl Font (Inter)</p>
-      <p className="font-2Xl">Paragraph with 2Xl Font (Inter)</p>
+      <p className="font-3xl">Paragraph with 3xl Font (Inter)</p>
+      <p className="font-2xl">Paragraph with 2xl Font (Inter)</p>
       <p className="font-xl">Paragraph with xl Font (Roboto)</p>
       <p className="font-lg">Paragraph with lg Font (Roboto)</p>
       <p className="font-base">Paragraph with base Font (Roboto)</p>
@@ -114,8 +114,8 @@ export const FontFamilyExample: Story = {
       <p className="font-xs">Paragraph with xs Font (Roboto)</p>
 
       <h3>Medium and Italic Examples:</h3>
-      <p className="font-3XlBold">Paragraph with 3XlBold Font (Inter Bold)</p>
-      <p className="font-2XlMedium">Paragraph with 2XlMedium Font (Inter Medium)</p>
+      <p className="font-3xlBold">Paragraph with 3xlBold Font (Inter Bold)</p>
+      <p className="font-2xlMedium">Paragraph with 2xlMedium Font (Inter Medium)</p>
       <p className="font-xlMedium">Paragraph with xlMedium Font (Roboto Medium)</p>
       <p className="font-lgItalic italic">Paragraph with lgItalic Font (Roboto Italic)</p>
       <p className="font-lgMediumItalic italic">

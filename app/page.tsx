@@ -41,7 +41,7 @@ export default async function Page() {
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-teal); }`}</style>
       <Hero backgroundColor="var(--btg-hero-background-teal)">
         <div className="text-center lg:mt-8">
-          <h1 className="font-6xl mx-auto mb-16 text-4xl leading-hero lg:w-4/5 lg:text-6xl">
+          <h1 className="mx-auto mb-16 font-2xl text-4xl leading-hero lg:w-4/5 lg:text-6xl">
             We team up with designers and developers to build and scale design systems
           </h1>
           <CtaLink
@@ -128,7 +128,7 @@ export default async function Page() {
       </Section>
       <Outro backgroundColor="var(--btg-hero-background-teal)">
         <div className="text-center">
-          <h1 className="font-4xl mx-auto mb-10 text-4xl lg:w-4/5">
+          <h1 className="mx-auto mb-10 font-4xl text-4xl lg:w-4/5">
             Want to start your design system journey with us?
           </h1>
           <CtaLink

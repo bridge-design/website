@@ -117,7 +117,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
           </CtaLink>
         </div>
         <article className="grow">
-          <h1 className="font-5xl mb-16 text-center text-5xl">{post.title}</h1>
+          <h1 className="mb-16 text-center font-5xl text-5xl">{post.title}</h1>
           <ProjectTeam team={post.team} />
           <div className="prose mx-auto my-12 text-justify dark:prose-invert">
             <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />

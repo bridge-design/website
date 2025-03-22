@@ -35,8 +35,8 @@ export default function FutureFrontendEvent() {
             <Emoji symbol="👋 " label="hand" />
             talk materials
           </p>
-          <h1 className="font-4xl mx-auto mt-4 max-w-3xl text-4xl">From Survival to Growth</h1>
-          <h2 className="font-3xl mx-auto mt-4 max-w-3xl text-3xl">
+          <h1 className="mx-auto mt-4 max-w-3xl font-4xl text-4xl">From Survival to Growth</h1>
+          <h2 className="mx-auto mt-4 max-w-3xl font-3xl text-3xl">
             Enhancing Design Systems via Seamless Collaboration
           </h2>
 
@@ -100,7 +100,7 @@ export default function FutureFrontendEvent() {
         <div className="text-light-on-background-900 dark:text-light-on-background-100 mx-auto mb-20 mt-28 flex max-w-4xl flex-col md:flex-row">
           <SectionTitle
             icon="Education32"
-            className="font-3xl w-full flex-shrink-0 justify-start text-3xl md:w-2/5 md:flex-col"
+            className="w-full flex-shrink-0 justify-start font-3xl text-3xl md:w-2/5 md:flex-col"
             iconClassName="pr-4 mb-4 md:mr-0"
           >
             More about design systems?
@@ -112,7 +112,7 @@ export default function FutureFrontendEvent() {
               remote breakfast.
             </p>
             <p className="mb-6">
-              Casual remote breakfast for design systems’ people — designers and developers.
+              Casual remote breakfast for design systems' people — designers and developers.
             </p>
             <p></p>
             <Link

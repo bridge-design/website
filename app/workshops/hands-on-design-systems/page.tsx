@@ -61,7 +61,7 @@ const HandsOnDesignSystemsPage = () => {
       <HorizontalWave color="var(--btg-hero-background)" />
       <Section narrow={true} className="mb-4">
         <p className="mb-4 text-center text-lg">👋 Hands-on workshop</p>
-        <h1 className="font-4xl mb-8 text-center text-4xl leading-[1.125]">
+        <h1 className="mb-8 text-center font-4xl text-4xl leading-[1.125]">
           <span className="md:block">Building a design system</span>
           <span className="md:block">with Figma, React, and Storybook</span>
         </h1>
@@ -117,7 +117,7 @@ const HandsOnDesignSystemsPage = () => {
       </Section>
 
       <Section className="mb-20">
-        <h2 className="font-4xl mb-10 text-4xl">What you will learn?</h2>
+        <h2 className="mb-10 font-4xl text-4xl">What you will learn?</h2>
         <p className="font-lg text-xl">
           Learn and practice design systems on a real project. You can join as a designer or
           developer, engaging in multidisciplinary work.
@@ -146,14 +146,14 @@ const HandsOnDesignSystemsPage = () => {
       </Section>
 
       <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl text-center text-4xl">Workshop content</h2>
+        <h2 className="text-center font-4xl text-4xl">Workshop content</h2>
         <Timetable items={timetableItems} />
       </Section>
 
       {/* Workshop Highlights Section */}
       <Section className="mb-20">
         <Advantages
-          title={<h2 className="font-4xl mb-10 text-4xl">Workshop Highlights</h2>}
+          title={<h2 className="mb-10 font-4xl text-4xl">Workshop Highlights</h2>}
           content={workshopAdvantages}
         />
       </Section>
@@ -162,7 +162,7 @@ const HandsOnDesignSystemsPage = () => {
         <h2 className="font-4xl text-4xl">Why Attend</h2>
         <div className="mt-10 grid grid-cols-1 gap-x-20 gap-y-16 md:grid-cols-2">
           <div className="">
-            <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Designer</h3>
+            <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Designer</h3>
             <ul className="list mt-6 list-inside list-disc">
               <li>Practice UI inventory</li>
               <li className="mt-3">Learn how to create a scalable tokens system</li>
@@ -170,7 +170,7 @@ const HandsOnDesignSystemsPage = () => {
             </ul>
           </div>
           <div className="">
-            <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Developer</h3>
+            <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Developer</h3>
             <ul className="list mt-6 list-inside list-disc">
               <li>Engage in component-driven development</li>
               <li className="mt-3">Document components in Storybook</li>
@@ -178,7 +178,7 @@ const HandsOnDesignSystemsPage = () => {
             </ul>
           </div>
           <div className="">
-            <h3 className="text-2Xl font-2Xl leading-2Xl tracking-2Xl">As a Team</h3>
+            <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Team</h3>
             <ul className="list mt-6 list-inside list-disc">
               <li>Collaborate on a shared project with real-life tasks</li>
               <li className="mt-3">Experience a full design system lifecycle</li>
@@ -201,7 +201,7 @@ const HandsOnDesignSystemsPage = () => {
       </Section>
 
       <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl mb-10 text-4xl">Who We Are</h2>
+        <h2 className="mb-10 font-4xl text-4xl">Who We Are</h2>
         {['varya', 'sherif', 'irina'].map((key) => {
           const member = team[key]
           return (

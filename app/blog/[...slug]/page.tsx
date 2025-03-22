@@ -138,7 +138,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
           </CtaLink>
         </div>
         <article className="grow">
-          <h1 className="font-5xl mb-16 text-center text-5xl">{post.title}</h1>
+          <h1 className="mb-16 text-center font-5xl text-5xl">{post.title}</h1>
           <div className="prose mx-auto my-12 text-justify dark:prose-invert">
             <div className="my-8 text-justify dark:prose-invert md:mx-auto">
               <dl className="space-y-10">

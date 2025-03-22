@@ -21,11 +21,11 @@ export default function WorkshopsPage() {
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-blue); }`}</style>
       <HorizontalWave color="var(--btg-hero-background)" />
       <Section>
-        <h1 className="font-5xl mb-16 text-center text-5xl">Workshops</h1>
+        <h1 className="mb-16 text-center font-5xl text-5xl">Workshops</h1>
         <div className="grid grid-cols-1 gap-10 lg:gap-20 lg:px-10 lg:py-11">
           {workshops.map((workshop) => (
             <Card key={workshop.href} href={workshop.href}>
-              <h2 className="font-3xl mb-2 text-3xl">{workshop.title}</h2>
+              <h2 className="mb-2 font-3xl text-3xl">{workshop.title}</h2>
               <p className="font-lg text-lg">{workshop.description}</p>
             </Card>
           ))}
