@@ -41,7 +41,7 @@ export const Advantages: React.FC<AdvantagesProps> = ({
         {content.map((item, index) => (
           <div key={index} className="flex flex-col">
             <Icon name={item.icon} className={iconClass} size={32} />
-            <span className="font-2xl mb-4 mt-6 text-2xl">{item.title}</span>
+            <h2 className="mb-4 mt-6 font-2xl text-2xl">{item.title}</h2>
             <span className="font-lg text-lg">{item.description}</span>
           </div>
         ))}
