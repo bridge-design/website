@@ -189,19 +189,16 @@ const HandsOnDesignSystemsPage = () => {
           </div>
         </div>
       </Section>
-      <Section className="mb-20" narrow={true}>
+      <Section className="" narrow={true}>
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Book a Call</h2>
-        <Contact
-          header={
-            <p className="mt-4 text-center font-lg text-lg leading-lg tracking-lg">
-              Have questions about the workshop? Book a free 30-minute call with Varya to discuss
-              your expectations and how this workshop can benefit your team.
-            </p>
-          }
-          footer={' '}
-        />
+        <p className="mt-4 font-lg text-lg leading-lg tracking-lg">
+          Have questions about the workshop? Book a free 30-minute call with Varya to discuss your
+          expectations and how this workshop can benefit your team.
+        </p>
       </Section>
-
+      <Section className="mb-20">
+        <Contact header={' '} footer={' '} />
+      </Section>
       <Section className="mb-20" narrow={true}>
         <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">Who We Are</h2>
         {['varya', 'sherif', 'irina'].map((key) => {
