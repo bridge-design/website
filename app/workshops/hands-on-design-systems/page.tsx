@@ -226,13 +226,15 @@ const HandsOnDesignSystemsPage = () => {
         })}
       </Section>
 
-      <Section className="mb-20" narrow={true} expandRight={true}>
-        <div className="container flex flex-col justify-between overflow-hidden">
-          <Testimonial
-            narrow={true}
-            title={<h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">People Say</h2>}
-            testimonials={filteredTestimonials}
-          />
+      <Section className="overflow-x-hidden" narrow={true}>
+        <div className="relative">
+          <div className="relative mt-28 overflow-x-visible">
+            <Testimonial
+              title={<h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">People Say</h2>}
+              narrow={true}
+              testimonials={TESTIMONIALS}
+            />
+          </div>
         </div>
       </Section>
 

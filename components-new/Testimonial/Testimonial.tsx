@@ -18,7 +18,13 @@ interface TestimonialItemProps {
   narrow?: boolean
 }
 
-const TestimonialItem: React.FC<TestimonialItemProps> = ({ name, text, avatar, colors, narrow }) => (
+const TestimonialItem: React.FC<TestimonialItemProps> = ({
+  name,
+  text,
+  avatar,
+  colors,
+  narrow,
+}) => (
   <div className="swiper-slide mr-4 transform transition duration-300 ease-out last:mr-0 motion-safe:hover:scale-105 md:mr-8">
     <div
       className={classnames(
@@ -134,12 +140,7 @@ export const Testimonial: React.FC<TestimonialProps> = ({ testimonials, title, n
         <div className="swiper-wrapper ease-out-back flex transition-transform">
           {testimonials.map((item, i) => {
             const colors = colorClasses[i % colorClasses.length]
-            return <TestimonialItem 
-              key={item.name + i} 
-              {...item} 
-              colors={colors} 
-              narrow={narrow}
-            />
+            return <TestimonialItem key={item.name + i} {...item} colors={colors} narrow={narrow} />
           })}
         </div>
       </div>

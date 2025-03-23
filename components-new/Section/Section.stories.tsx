@@ -25,10 +25,6 @@ const meta: Meta<typeof Section> = {
       control: 'boolean',
       description: 'Use narrow width container (max-width: 768px)',
     },
-    expandRight: {
-      control: 'boolean',
-      description: 'Allow content to expand to the right edge of the screen',
-    },
     children: {
       control: 'text',
     },
@@ -62,29 +58,6 @@ export const NarrowSection: Story = {
       <div className={textStyle.dark}>
         <p className="border border-dashed border-white p-4 text-center">
           This is a narrow Section with max-width of 768px
-        </p>
-      </div>
-    ),
-  },
-}
-
-export const ExpandRightSection: Story = {
-  args: {
-    backgroundColor: '--btg-color-brand-green',
-    expandRight: true,
-    children: (
-      <div className={textStyle.light}>
-        <h3 className="mb-4">Right-expanded section</h3>
-        <div className="flex overflow-x-auto pb-4">
-          <div className="flex-shrink-0 w-64 h-40 bg-white/20 mr-4 p-4 rounded">Card 1</div>
-          <div className="flex-shrink-0 w-64 h-40 bg-white/20 mr-4 p-4 rounded">Card 2</div>
-          <div className="flex-shrink-0 w-64 h-40 bg-white/20 mr-4 p-4 rounded">Card 3</div>
-          <div className="flex-shrink-0 w-64 h-40 bg-white/20 mr-4 p-4 rounded">Card 4</div>
-          <div className="flex-shrink-0 w-64 h-40 bg-white/20 mr-4 p-4 rounded">Card 5</div>
-          <div className="flex-shrink-0 w-64 h-40 bg-white/20 mr-4 p-4 rounded">Card 6</div>
-        </div>
-        <p className="mt-4">
-          This section maintains the same left alignment as other sections but expands to the right edge of the screen, allowing for horizontal scrolling content.
         </p>
       </div>
     ),

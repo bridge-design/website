@@ -102,12 +102,14 @@ export default async function Page() {
           ))}
         </div>
       </Section>
-      <Section className="py-12" expandRight={true}>
-        <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
-          <Testimonial
-            title={<h2 className="text-4xl">People Say</h2>}
-            testimonials={TESTIMONIALS}
-          />
+      <Section className="overflow-x-hidden">
+        <div className="relative">
+          <div className="relative mt-28 overflow-x-visible">
+            <Testimonial
+              title={<h2 className="text-4xl">People Say</h2>}
+              testimonials={TESTIMONIALS}
+            />
+          </div>
         </div>
       </Section>
       <Section className="py-12">
