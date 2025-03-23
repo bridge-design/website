@@ -118,7 +118,7 @@ const HandsOnDesignSystemsPage = () => {
 
       <Section className="mb-20">
         <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">What you will learn?</h2>
-        <p className="font-lg text-xl">
+        <p className="font-lg text-xl lg:max-w-[1000px]">
           Learn and practice design systems on a real project. You can join as a designer or
           developer, engaging in multidisciplinary work.
         </p>
@@ -146,7 +146,7 @@ const HandsOnDesignSystemsPage = () => {
       </Section>
 
       <Section className="mb-20" narrow={true}>
-        <h2 className="text-center font-4xl text-4xl lg:font-5xl lg:text-5xl">Workshop content</h2>
+        <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Workshop content</h2>
         <Timetable items={timetableItems} />
       </Section>
 
