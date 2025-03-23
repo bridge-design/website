@@ -65,7 +65,7 @@ const HandsOnDesignSystemsPage = () => {
           <span className="md:block">Building a design system</span>
           <span className="md:block">with Figma, React, and Storybook</span>
         </h1>
-        <p className="mt-8 text-center text-lg">Get your spot workshops 👇</p>
+        <p className="mt-8 text-center text-lg">Get your workshop spot 👇</p>
       </Section>
 
       <Section narrow={true} className="mb-20">
