@@ -27,6 +27,58 @@ export const metadata = genPageMetadata({
   },
 })
 
+const WorkshopTiles = () => {
+  return (
+    <>
+      <p className="mb-6 mt-8 text-center text-lg">Get your workshop spot 👇</p>
+      <div className="mx-auto grid w-full max-w-[80%] grid-cols-1 md:grid-cols-2">
+        <Card
+          rounded={false}
+          className="h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
+          href="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
+          footer={
+            <CtaLink
+              to="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
+              className="px-2 text-lg font-medium"
+              colorVar="--btg-color-neutral-1000"
+              colorHoverVar="--btg-color-neutral-900"
+            >
+              Book your spot →
+            </CtaLink>
+          }
+        >
+          <div className="px-2 py-6">
+            <p className="text-lg font-bold">23rd of May, 2025</p>
+            <p className="mb-2 text-lg font-bold">9:00 AM - 5:00 PM CEST</p>
+            <p className="mt-16">Location: on Zoom</p>
+            <p className="mb-12">Secure payment: Eventbrite</p>
+          </div>
+        </Card>
+
+        <Card
+          rounded={false}
+          className="h-full bg-[var(--btg-color-neutral-100)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-neutral-200)]"
+          href="/contact"
+          footer={
+            <CtaLink
+              to="/contact"
+              className="px-2 text-lg font-medium"
+              colorVar="--btg-color-neutral-1000"
+              colorHoverVar="--btg-color-neutral-900"
+            >
+              Let's talk →
+            </CtaLink>
+          }
+        >
+          <div className="px-2 py-6">
+            <p className="text-lg font-bold">Need a custom workshop for your team?</p>
+          </div>
+        </Card>
+      </div>
+    </>
+  )
+}
+
 const HandsOnDesignSystemsPage = () => {
   // Filter testimonials by specific categories
   const filteredTestimonials = TESTIMONIALS.filter((testimonial) =>
@@ -59,61 +111,16 @@ const HandsOnDesignSystemsPage = () => {
     <>
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-blue); }`}</style>
       <HorizontalWave color="var(--btg-hero-background)" />
-      <Section narrow={true} className="mb-4">
+      <Section narrow={true} className="mb-10">
         <p className="mb-4 text-center text-lg">👋 Hands-on workshop</p>
         <h1 className="mb-8 text-center font-4xl text-4xl leading-[1.125]">
           <span className="md:block">Building a design system</span>
           <span className="md:block">with Figma, React, and Storybook</span>
         </h1>
-        <p className="mt-8 text-center text-lg">Get your workshop spot 👇</p>
       </Section>
 
       <Section narrow={true} className="mb-20">
-        {/* Two cards side by side with equal height */}
-        <div className="mx-auto grid w-full max-w-[80%] grid-cols-1 md:grid-cols-2">
-          <Card
-            rounded={false}
-            className="h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
-            href="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
-            footer={
-              <CtaLink
-                to="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
-                className="px-2 text-lg font-medium"
-                colorVar="--btg-color-neutral-1000"
-                colorHoverVar="--btg-color-neutral-900"
-              >
-                Book your spot →
-              </CtaLink>
-            }
-          >
-            <div className="px-2 py-6">
-              <p className="text-lg font-bold">23rd of May, 2025</p>
-              <p className="mb-2 text-lg font-bold">9:00 AM - 5:00 PM CEST</p>
-              <p className="mt-16">Location: on Zoom</p>
-              <p className="mb-12">Secure payment: Eventbrite</p>
-            </div>
-          </Card>
-
-          <Card
-            rounded={false}
-            className="h-full bg-[var(--btg-color-neutral-100)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-neutral-200)]"
-            href="/contact"
-            footer={
-              <CtaLink
-                to="/contact"
-                className="px-2 text-lg font-medium"
-                colorVar="--btg-color-neutral-1000"
-                colorHoverVar="--btg-color-neutral-900"
-              >
-                Let's talk →
-              </CtaLink>
-            }
-          >
-            <div className="px-2 py-6">
-              <p className="text-lg font-bold">Need a custom workshop for your team?</p>
-            </div>
-          </Card>
-        </div>
+        <WorkshopTiles />
       </Section>
 
       <Section className="mb-20">
@@ -234,6 +241,10 @@ const HandsOnDesignSystemsPage = () => {
             />
           )
         })}
+      </Section>
+
+      <Section narrow={true} className="mb-20">
+        <WorkshopTiles />
       </Section>
 
       <Outro backgroundColor="var(--btg-hero-background-blue)" />
