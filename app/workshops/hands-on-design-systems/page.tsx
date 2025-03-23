@@ -164,24 +164,24 @@ const HandsOnDesignSystemsPage = () => {
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Why Attend</h2>
         <div className="mt-10 grid grid-cols-1 gap-x-20 gap-y-16 md:grid-cols-2">
           <div className="">
-            <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Designer</h3>
-            <ul className="list mt-6 list-inside list-disc">
+            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">As a Designer</h2>
+            <ul className="list mt-6 list-disc">
               <li>Practice UI inventory</li>
               <li className="mt-3">Learn how to create a scalable tokens system</li>
               <li className="mt-3">Organize components in Figma</li>
             </ul>
           </div>
           <div className="">
-            <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Developer</h3>
-            <ul className="list mt-6 list-inside list-disc">
+            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">As a Developer</h2>
+            <ul className="list mt-6 list-disc">
               <li>Engage in component-driven development</li>
               <li className="mt-3">Document components in Storybook</li>
               <li className="mt-3">Improve design&development workflows</li>
             </ul>
           </div>
           <div className="">
-            <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Team</h3>
-            <ul className="list mt-6 list-inside list-disc">
+            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">As a Team</h2>
+            <ul className="list mt-6 list-disc">
               <li>Collaborate on a shared project with real-life tasks</li>
               <li className="mt-3">Experience a full design system lifecycle</li>
               <li className="mt-3">Enhance team communication and collaboration</li>
