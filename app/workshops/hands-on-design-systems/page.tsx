@@ -27,6 +27,58 @@ export const metadata = genPageMetadata({
   },
 })
 
+const WorkshopTiles = () => {
+  return (
+    <>
+      <p className="mb-6 mt-8 text-center text-lg">Get your workshop spot 👇</p>
+      <div className="mx-auto grid w-full max-w-[80%] grid-cols-1 md:grid-cols-2">
+        <Card
+          rounded={false}
+          className="h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
+          href="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
+          footer={
+            <CtaLink
+              to="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
+              className="px-2 text-lg font-medium"
+              colorVar="--btg-color-neutral-1000"
+              colorHoverVar="--btg-color-neutral-900"
+            >
+              Book your spot →
+            </CtaLink>
+          }
+        >
+          <div className="px-2 py-6">
+            <p className="text-lg font-bold">23rd of May, 2025</p>
+            <p className="mb-2 text-lg font-bold">9:00 AM - 5:00 PM CEST</p>
+            <p className="mt-16">Location: on Zoom</p>
+            <p className="mb-12">Secure payment: Eventbrite</p>
+          </div>
+        </Card>
+
+        <Card
+          rounded={false}
+          className="h-full bg-[var(--btg-color-neutral-100)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-neutral-200)]"
+          href="/contact"
+          footer={
+            <CtaLink
+              to="/contact"
+              className="px-2 text-lg font-medium"
+              colorVar="--btg-color-neutral-1000"
+              colorHoverVar="--btg-color-neutral-900"
+            >
+              Let's talk →
+            </CtaLink>
+          }
+        >
+          <div className="px-2 py-6">
+            <p className="text-lg font-bold">Need a custom workshop for your team?</p>
+          </div>
+        </Card>
+      </div>
+    </>
+  )
+}
+
 const HandsOnDesignSystemsPage = () => {
   // Filter testimonials by specific categories
   const filteredTestimonials = TESTIMONIALS.filter((testimonial) =>
@@ -59,66 +111,21 @@ const HandsOnDesignSystemsPage = () => {
     <>
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-blue); }`}</style>
       <HorizontalWave color="var(--btg-hero-background)" />
-      <Section narrow={true} className="mb-4">
+      <Section narrow={true} className="mb-10">
         <p className="mb-4 text-center text-lg">👋 Hands-on workshop</p>
         <h1 className="mb-8 text-center font-4xl text-4xl leading-[1.125]">
           <span className="md:block">Building a design system</span>
           <span className="md:block">with Figma, React, and Storybook</span>
         </h1>
-        <p className="mt-8 text-center text-lg">Get your workshop spot 👇</p>
       </Section>
 
       <Section narrow={true} className="mb-20">
-        {/* Two cards side by side with equal height */}
-        <div className="mx-auto grid w-full max-w-[80%] grid-cols-1 md:grid-cols-2">
-          <Card
-            rounded={false}
-            className="h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
-            href="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
-            footer={
-              <CtaLink
-                to="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
-                className="px-2 text-lg font-medium"
-                colorVar="--btg-color-neutral-1000"
-                colorHoverVar="--btg-color-neutral-900"
-              >
-                Book your spot →
-              </CtaLink>
-            }
-          >
-            <div className="px-2 py-6">
-              <p className="text-lg font-bold">23rd of May, 2025</p>
-              <p className="mb-2 text-lg font-bold">9:00 AM - 5:00 PM CEST</p>
-              <p className="mt-16">Location: on Zoom</p>
-              <p className="mb-12">Secure payment: Eventbrite</p>
-            </div>
-          </Card>
-
-          <Card
-            rounded={false}
-            className="h-full bg-[var(--btg-color-neutral-100)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-neutral-200)]"
-            href="/contact"
-            footer={
-              <CtaLink
-                to="/contact"
-                className="px-2 text-lg font-medium"
-                colorVar="--btg-color-neutral-1000"
-                colorHoverVar="--btg-color-neutral-900"
-              >
-                Let's talk →
-              </CtaLink>
-            }
-          >
-            <div className="px-2 py-6">
-              <p className="text-lg font-bold">Need a custom workshop for your team?</p>
-            </div>
-          </Card>
-        </div>
+        <WorkshopTiles />
       </Section>
 
       <Section className="mb-20">
-        <h2 className="mb-10 font-4xl text-4xl">What you will learn?</h2>
-        <p className="font-lg text-xl">
+        <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">What you will learn?</h2>
+        <p className="font-lg text-xl lg:max-w-[1000px]">
           Learn and practice design systems on a real project. You can join as a designer or
           developer, engaging in multidisciplinary work.
         </p>
@@ -146,40 +153,42 @@ const HandsOnDesignSystemsPage = () => {
       </Section>
 
       <Section className="mb-20" narrow={true}>
-        <h2 className="text-center font-4xl text-4xl">Workshop content</h2>
+        <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Workshop content</h2>
         <Timetable items={timetableItems} />
       </Section>
 
       {/* Workshop Highlights Section */}
       <Section className="mb-20">
         <Advantages
-          title={<h2 className="mb-10 font-4xl text-4xl">Workshop Highlights</h2>}
+          title={
+            <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">Workshop Highlights</h2>
+          }
           content={workshopAdvantages}
         />
       </Section>
 
       <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl text-4xl">Why Attend</h2>
+        <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Why Attend</h2>
         <div className="mt-10 grid grid-cols-1 gap-x-20 gap-y-16 md:grid-cols-2">
           <div className="">
-            <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Designer</h3>
-            <ul className="list mt-6 list-inside list-disc">
+            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">As a Designer</h2>
+            <ul className="list mt-6 list-disc">
               <li>Practice UI inventory</li>
               <li className="mt-3">Learn how to create a scalable tokens system</li>
               <li className="mt-3">Organize components in Figma</li>
             </ul>
           </div>
           <div className="">
-            <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Developer</h3>
-            <ul className="list mt-6 list-inside list-disc">
+            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">As a Developer</h2>
+            <ul className="list mt-6 list-disc">
               <li>Engage in component-driven development</li>
               <li className="mt-3">Document components in Storybook</li>
               <li className="mt-3">Improve design&development workflows</li>
             </ul>
           </div>
           <div className="">
-            <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Team</h3>
-            <ul className="list mt-6 list-inside list-disc">
+            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">As a Team</h2>
+            <ul className="list mt-6 list-disc">
               <li>Collaborate on a shared project with real-life tasks</li>
               <li className="mt-3">Experience a full design system lifecycle</li>
               <li className="mt-3">Enhance team communication and collaboration</li>
@@ -187,21 +196,31 @@ const HandsOnDesignSystemsPage = () => {
           </div>
         </div>
       </Section>
-      <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl text-4xl">Book a Call</h2>
-        <Contact
-          header={
-            <p className="mt-4 text-center font-lg text-lg leading-lg tracking-lg">
-              Have questions about the workshop? Book a free 30-minute call with Varya to discuss
-              your expectations and how this workshop can benefit your team.
-            </p>
-          }
-          footer={' '}
-        />
+      <Section className="mb-0" narrow={true}>
+        <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Book a Call</h2>
+        <p className="mt-4 font-lg text-lg leading-lg tracking-lg">
+          Have questions about the workshop? Book a free 30-minute call with Varya to discuss your
+          expectations and how this workshop can benefit your team.
+        </p>
+      </Section>
+      <Section className="mb-20">
+        <Contact header={' '} footer={' '} />
+      </Section>
+
+      <Section className="mb-20 overflow-x-hidden" narrow={true}>
+        <div className="relative">
+          <div className="relative overflow-x-visible">
+            <Testimonial
+              title={<h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">People Say</h2>}
+              narrow={true}
+              testimonials={TESTIMONIALS}
+            />
+          </div>
+        </div>
       </Section>
 
       <Section className="mb-20" narrow={true}>
-        <h2 className="mb-10 font-4xl text-4xl">Who We Are</h2>
+        <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">Who We Are</h2>
         {['varya', 'sherif', 'irina'].map((key) => {
           const member = team[key]
           return (
@@ -224,14 +243,8 @@ const HandsOnDesignSystemsPage = () => {
         })}
       </Section>
 
-      <Section className="mb-20" narrow={true} expandRight={true}>
-        <div className="container flex flex-col justify-between overflow-hidden">
-          <Testimonial
-            narrow={true}
-            title={<h2 className="text-4xl">People Say</h2>}
-            testimonials={filteredTestimonials}
-          />
-        </div>
+      <Section narrow={true} className="mb-20">
+        <WorkshopTiles />
       </Section>
 
       <Outro backgroundColor="var(--btg-hero-background-blue)" />

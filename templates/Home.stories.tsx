@@ -64,7 +64,7 @@ export const Default: Story = {
       <Header navigationItems={navigationItems} />
       <Hero backgroundColor="var(--btg-hero-background)">
         <div className="text-center lg:mt-8">
-          <h1 className="font-2xl mx-auto mb-16 text-4xl leading-hero lg:w-4/5 lg:text-6xl">
+          <h1 className="mx-auto mb-16 font-2xl text-4xl leading-hero lg:w-4/5 lg:text-6xl">
             We team up with designers and developers to build and scale design systems
           </h1>
           <CtaLink
@@ -126,12 +126,14 @@ export const Default: Story = {
           ))}
         </div>
       </Section>
-      <Section className="py-12" expandRight={true}>
-        <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
-          <Testimonial
-            title={<h2 className="text-4xl">People Say</h2>}
-            testimonials={TESTIMONIALS}
-          />
+      <Section className="mb-10 overflow-x-hidden">
+        <div className="relative">
+          <div className="relative overflow-x-visible">
+            <Testimonial
+              title={<h2 className="text-4xl">People Say</h2>}
+              testimonials={TESTIMONIALS}
+            />
+          </div>
         </div>
       </Section>
       <Section className="py-12">
@@ -153,7 +155,7 @@ export const Default: Story = {
       </Section>
       <Outro backgroundColor="var(--btg-hero-background-teal)">
         <div className="text-center">
-          <h1 className="font-4xl mx-auto mb-10 text-4xl lg:w-4/5">
+          <h1 className="mx-auto mb-10 font-4xl text-4xl lg:w-4/5">
             Want to start your design system journey with us?
           </h1>
           <CtaLink

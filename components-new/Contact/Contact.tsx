@@ -31,7 +31,7 @@ export const Contact: React.FC<ContactProps> = ({ header, footer }) => {
       )}
 
       <InlineWidget
-        styles={{ minWidth: '320px', height: '660px', width: '100%' }}
+        styles={{ minWidth: '320px', height: '690px', width: '100%' }}
         url="https://calendly.com/var_ya/30min"
       />
 
