@@ -189,7 +189,7 @@ const HandsOnDesignSystemsPage = () => {
           </div>
         </div>
       </Section>
-      <Section className="" narrow={true}>
+      <Section className="mb-0" narrow={true}>
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Book a Call</h2>
         <p className="mt-4 font-lg text-lg leading-lg tracking-lg">
           Have questions about the workshop? Book a free 30-minute call with Varya to discuss your
@@ -199,6 +199,19 @@ const HandsOnDesignSystemsPage = () => {
       <Section className="mb-20">
         <Contact header={' '} footer={' '} />
       </Section>
+
+      <Section className="mb-20 overflow-x-hidden" narrow={true}>
+        <div className="relative">
+          <div className="relative overflow-x-visible">
+            <Testimonial
+              title={<h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">People Say</h2>}
+              narrow={true}
+              testimonials={TESTIMONIALS}
+            />
+          </div>
+        </div>
+      </Section>
+
       <Section className="mb-20" narrow={true}>
         <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">Who We Are</h2>
         {['varya', 'sherif', 'irina'].map((key) => {
@@ -221,18 +234,6 @@ const HandsOnDesignSystemsPage = () => {
             />
           )
         })}
-      </Section>
-
-      <Section className="overflow-x-hidden" narrow={true}>
-        <div className="relative">
-          <div className="relative mt-28 overflow-x-visible">
-            <Testimonial
-              title={<h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">People Say</h2>}
-              narrow={true}
-              testimonials={TESTIMONIALS}
-            />
-          </div>
-        </div>
       </Section>
 
       <Outro backgroundColor="var(--btg-hero-background-blue)" />

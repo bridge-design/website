@@ -86,7 +86,7 @@ export default async function Page() {
           </CtaLink>
         </div>
       </Section>
-      <Section className="py-12">
+      <Section className="mb-10 py-12">
         <h2 className="mb-6 text-center text-4xl">Meet the Team</h2>
         <div className="mt-10 flex flex-wrap justify-center gap-10 md:grid md:grid-cols-2 lg:flex lg:flex-col xl:grid xl:grid-cols-2">
           {Object.values(team).map((member) => (
@@ -102,9 +102,9 @@ export default async function Page() {
           ))}
         </div>
       </Section>
-      <Section className="overflow-x-hidden">
+      <Section className="mb-10 overflow-x-hidden">
         <div className="relative">
-          <div className="relative mt-28 overflow-x-visible">
+          <div className="relative overflow-x-visible">
             <Testimonial
               title={<h2 className="text-4xl">People Say</h2>}
               testimonials={TESTIMONIALS}
