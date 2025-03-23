@@ -70,21 +70,21 @@ export const Timetable: React.FC<TimetableProps> = ({ items, className, caption 
   return (
     <div>
       <div className="mb-4 mt-4 flex justify-start">
-        <div className="flex items-center">
-          <label htmlFor="timezone-select" className="mr-2 text-sm">
+        <h3 className="flex items-center text-3xl">
+          <label htmlFor="timezone-select" className="mr-2">
             Timezone:
           </label>
           <select
             id="timezone-select"
             value={timezone}
             onChange={handleTimezoneChange}
-            className="rounded border p-1 text-sm"
+            className="mt-2 rounded border p-1 text-sm"
           >
             <option value="CEST">CEST (Central European Summer Time)</option>
             <option value="BST">BST (British Summer Time)</option>
             <option value="EEST">EEST (Eastern European Summer Time)</option>
           </select>
-        </div>
+        </h3>
       </div>
 
       <table
@@ -94,7 +94,7 @@ export const Timetable: React.FC<TimetableProps> = ({ items, className, caption 
         )}
       >
         {caption && (
-          <caption className="sm:text-smMedium font-2xl leading-2xl tracking-2xl mb-2 text-left text-2xl sm:font-smMedium sm:leading-smMedium sm:tracking-smMedium md:mb-5">
+          <caption className="sm:text-smMedium mb-2 text-left font-2xl text-2xl leading-2xl tracking-2xl sm:font-smMedium sm:leading-smMedium sm:tracking-smMedium md:mb-5">
             {caption}
           </caption>
         )}
