@@ -117,7 +117,7 @@ const HandsOnDesignSystemsPage = () => {
       </Section>
 
       <Section className="mb-20">
-        <h2 className="mb-10 font-4xl text-4xl">What you will learn?</h2>
+        <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">What you will learn?</h2>
         <p className="font-lg text-xl">
           Learn and practice design systems on a real project. You can join as a designer or
           developer, engaging in multidisciplinary work.
@@ -146,20 +146,22 @@ const HandsOnDesignSystemsPage = () => {
       </Section>
 
       <Section className="mb-20" narrow={true}>
-        <h2 className="text-center font-4xl text-4xl">Workshop content</h2>
+        <h2 className="text-center font-4xl text-4xl lg:font-5xl lg:text-5xl">Workshop content</h2>
         <Timetable items={timetableItems} />
       </Section>
 
       {/* Workshop Highlights Section */}
       <Section className="mb-20">
         <Advantages
-          title={<h2 className="mb-10 font-4xl text-4xl">Workshop Highlights</h2>}
+          title={
+            <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">Workshop Highlights</h2>
+          }
           content={workshopAdvantages}
         />
       </Section>
 
       <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl text-4xl">Why Attend</h2>
+        <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Why Attend</h2>
         <div className="mt-10 grid grid-cols-1 gap-x-20 gap-y-16 md:grid-cols-2">
           <div className="">
             <h3 className="font-2xl text-2xl leading-2xl tracking-2xl">As a Designer</h3>
@@ -188,7 +190,7 @@ const HandsOnDesignSystemsPage = () => {
         </div>
       </Section>
       <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl text-4xl">Book a Call</h2>
+        <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Book a Call</h2>
         <Contact
           header={
             <p className="mt-4 text-center font-lg text-lg leading-lg tracking-lg">
@@ -201,7 +203,7 @@ const HandsOnDesignSystemsPage = () => {
       </Section>
 
       <Section className="mb-20" narrow={true}>
-        <h2 className="mb-10 font-4xl text-4xl">Who We Are</h2>
+        <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">Who We Are</h2>
         {['varya', 'sherif', 'irina'].map((key) => {
           const member = team[key]
           return (
@@ -228,7 +230,7 @@ const HandsOnDesignSystemsPage = () => {
         <div className="container flex flex-col justify-between overflow-hidden">
           <Testimonial
             narrow={true}
-            title={<h2 className="text-4xl">People Say</h2>}
+            title={<h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">People Say</h2>}
             testimonials={filteredTestimonials}
           />
         </div>
