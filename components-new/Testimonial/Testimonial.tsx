@@ -7,6 +7,7 @@ import Swiper from 'swiper'
 import { Scrollbar, Navigation, FreeMode } from 'swiper/modules'
 import { useDebouncedCallback } from 'use-debounce'
 import QuotationIcon from './quotation-icon.svg'
+import { Avatar } from '../Avatar/Avatar'
 
 Swiper.use([Scrollbar, Navigation, FreeMode])
 
@@ -14,6 +15,7 @@ interface TestimonialItemProps {
   name: string
   text: string
   avatar?: string
+  position?: string
   colors?: string
   narrow?: boolean
 }
@@ -22,6 +24,7 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({
   name,
   text,
   avatar,
+  position,
   colors,
   narrow,
 }) => (
@@ -34,10 +37,15 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({
     >
       <QuotationIcon className="mb-4 h-8 w-8" />
       <div className="-mt-5 px-3 pb-3 md:px-4 md:pb-4">
-        <p className={classnames('mb-6', narrow ? 'text-lg' : 'text-xl')}>{text}</p>
-        <div className="mt-auto flex items-center">
-          {avatar && <img src={avatar} alt={name} className="mr-3 h-12 w-12 rounded-lg" />}
-          <p className={narrow ? 'text-lg' : 'text-xl'}>{name}</p>
+        <p className={classnames('', narrow ? 'text-lg' : 'text-xl')}>{text}</p>
+        <div className="mt-6 flex items-center gap-4">
+          {avatar && <Avatar member={{ photoUrl: avatar }} />}
+          <div>
+            <div className="font-bold">{name}</div>
+            {position && (
+              <div className="text-btg-color-text--disabled -mt-1 text-sm">{position}</div>
+            )}
+          </div>
         </div>
       </div>
     </div>
