@@ -18,7 +18,7 @@ What really caught my attention was her eye for detail and how she handled every
   },
   {
     name: 'Daniel Miebach — Head of UX at METRO',
-    text: `I had the pleasure of supervising Varya's work on a design system project over many months and I am impressed with her thought leadership and extensive knowledge of the design system space. She skillfully supported a team of engineers and designers and steered them to the successful delivery of a design system that was integrated into hundreds of products within an organization.
+    text: `I had the pleasure of supervising Varya's work on a design system project over many months and I am impressed with her thought leadership and extensive knowledge of the design system space. She skillfully supported a team of engineers and designers. She helped successful to deliver a design system that was integrated into hundreds of products within an organization.
 `,
     category: 'varya',
   },
