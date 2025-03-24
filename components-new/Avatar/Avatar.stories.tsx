@@ -20,7 +20,7 @@ type Story = StoryObj<typeof Avatar>
 export const Default: Story = {
   args: {
     member: {
-      photoUrl: 'https://via.placeholder.com/150',
+      photoUrl: 'https://i.pravatar.cc/150',
       name: 'Alice Doe',
       role: 'UI engineer',
     },

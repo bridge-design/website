@@ -13,7 +13,7 @@ export const ProjectTeam: React.FC<ProjectTeamProps> = ({ team }) => {
         team.map((id) => {
           const member = teamData[id]
           if (!member) return null
-          return <Avatar member={member} />
+          return <Avatar member={member} className="-mr-4 mb-8" />
         })}
     </div>
   )
