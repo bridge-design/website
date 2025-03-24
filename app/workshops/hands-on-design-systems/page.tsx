@@ -213,7 +213,7 @@ const HandsOnDesignSystemsPage = () => {
             <Testimonial
               title={<h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">People Say</h2>}
               narrow={true}
-              testimonials={TESTIMONIALS}
+              testimonials={filteredTestimonials}
             />
           </div>
         </div>
