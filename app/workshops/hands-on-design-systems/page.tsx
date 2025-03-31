@@ -51,7 +51,7 @@ const WorkshopTiles = () => {
             <p className="text-lg font-bold">23rd of May, 2025</p>
             <p className="mb-2 text-lg font-bold">9:00 AM - 5:00 PM CEST</p>
             <p className="mt-16">Location: on Zoom</p>
-            <p className="mb-12">Secure payment: Eventbrite</p>
+            <p className="mb-12">Price: from €350 + VAT</p>
           </div>
         </Card>
 
