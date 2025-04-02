@@ -7,6 +7,15 @@ export const TESTIMONIALS = [
     position: 'Tech Lead at pcode',
   },
   {
+    name: 'Pierre-Yves Vignau',
+    position: 'Design System Tech Lead at France Télévisions',
+    category: 'workshop',
+    avatar: '/images/testimonials/avatars/pierre-yves-vignau.jpeg',
+    text: `A few years ago, I attended a workshop called Hands-on Design Systems with Varya Stepanova.
+ It was a true turning point in my career — it sparked my journey into Design Systems and gave me a solid grasp of Design Tokens.
+If you're working on (or curious about) Design Systems, this is definitely worth your time!`,
+  },
+  {
     name: 'Alexander Toporov',
     position: 'DS Lead at Yara',
     avatar: '/images/testimonials/avatars/alexander-toporov.jpeg',
