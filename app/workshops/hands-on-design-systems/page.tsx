@@ -35,17 +35,7 @@ const WorkshopTiles = () => {
         <Card
           rounded={false}
           className="h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
-          href="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
-          footer={
-            <CtaLink
-              to="https://www.eventbrite.fi/e/hands-on-workshop-on-building-a-design-system-tickets-1289513131489"
-              className="px-2 text-lg font-medium"
-              colorVar="--btg-color-neutral-1000"
-              colorHoverVar="--btg-color-neutral-900"
-            >
-              Book your spot →
-            </CtaLink>
-          }
+          footer={<span className="px-2 text-lg font-medium">SOLD OUT</span>}
         >
           <div className="px-2 py-6">
             <p className="text-lg font-bold">23rd of May, 2025</p>
