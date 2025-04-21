@@ -59,7 +59,7 @@ export default async function Page() {
       </Hero>
 
       {/* Workshop Promotion Section */}
-      <Section className="mb-20 bg-[var(--btg-color-accent-600)] py-12">
+      {/* <Section className="mb-20 bg-[var(--btg-color-accent-600)] py-12">
         <Card className="mx-auto max-w-4xl" href="/workshops/hands-on-design-systems">
           <div className="flex flex-col items-center justify-between md:flex-row">
             <div className="mb-6 md:mb-0 md:mr-8">
@@ -80,7 +80,7 @@ export default async function Page() {
             </div>
           </div>
         </Card>
-      </Section>
+      </Section> */}
 
       <Section className="pb-12">
         <h2 className="mb-6 text-center text-4xl">Our Design Systems Expertise</h2>
