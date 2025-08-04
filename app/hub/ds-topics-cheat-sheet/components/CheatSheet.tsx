@@ -3,22 +3,14 @@ import React from 'react'
 type TopicProps = {
   title: string
   items: string[]
-  colorClass: string
 }
 
-const Topic = ({ title, items, colorClass }: TopicProps) => (
-  <div className="mb-6">
-    <div className={`text-base font-bold py-2 px-4 rounded-lg mb-3 ${colorClass}`}>
-      {title}
-    </div>
+const Topic = ({ title, items }: TopicProps) => (
+  <div className="prose mb-6">
+    <h5>{title}</h5>
     <ul className="space-y-2 pl-5">
       {items.map((item, index) => (
-        <li
-          key={index}
-          className="text-gray-600 dark:text-gray-300 relative before:content-['▸'] before:absolute before:left-[-1rem] before:text-primary-500 before:font-bold"
-        >
-          {item}
-        </li>
+        <li key={index}>{item}</li>
       ))}
     </ul>
   </div>
@@ -28,7 +20,6 @@ export default function CheatSheet() {
   const designTopics = [
     {
       title: 'Foundations & Principles',
-      colorClass: 'bg-primary-500 text-white',
       items: [
         'Core design values: clarity, consistency, accessibility, efficiency',
         'Visual language: color, typography, iconography, spacing',
@@ -38,7 +29,6 @@ export default function CheatSheet() {
     },
     {
       title: 'Tokens & Theming',
-      colorClass: 'bg-amber-500 text-black',
       items: [
         'Token taxonomy: global, semantic, component-level tokens',
         'Theming strategy: light/dark, brand, seasonal themes',
@@ -48,7 +38,6 @@ export default function CheatSheet() {
     },
     {
       title: 'Component Design & UX Patterns',
-      colorClass: 'bg-pink-500 text-black',
       items: [
         'Component anatomy: slots, states, variants, extensibility',
         'UX patterns: navigation, input, feedback, data display',
@@ -59,7 +48,6 @@ export default function CheatSheet() {
     },
     {
       title: 'Design System Operations',
-      colorClass: 'bg-purple-500 text-black',
       items: [
         'Contribution model: open/closed, design reviews',
         'Governance: design council, working groups, decision logs',
@@ -69,7 +57,6 @@ export default function CheatSheet() {
     },
     {
       title: 'Tooling & Documentation',
-      colorClass: 'bg-blue-500 text-black',
       items: [
         'Living documentation: automated previews, guidelines',
         'Figma plugins: token sync, linting, accessibility checks',
@@ -82,7 +69,6 @@ export default function CheatSheet() {
   const engineeringTopics = [
     {
       title: 'Architecture & Infrastructure',
-      colorClass: 'bg-blue-500 text-black',
       items: [
         'Monorepo structure: packages, utilities, shared configs',
         'Distribution: npm, CDN, private registries, tokens pipeline',
@@ -93,7 +79,6 @@ export default function CheatSheet() {
     },
     {
       title: 'Component Engineering',
-      colorClass: 'bg-lime-500 text-black',
       items: [
         'API design: composability, controlled/uncontrolled',
         'Extensibility: slots, overrides, custom renderers',
@@ -104,7 +89,6 @@ export default function CheatSheet() {
     },
     {
       title: 'Automation & Tooling',
-      colorClass: 'bg-teal-500 text-black',
       items: [
         'Automated releases: semantic versioning, changelogs',
         'Code quality: linting, static analysis, type safety',
@@ -115,7 +99,6 @@ export default function CheatSheet() {
     },
     {
       title: 'Maintenance & Support',
-      colorClass: 'bg-yellow-500 text-black',
       items: [
         'Issue triage: bug templates, support SLAs',
         'Deprecation policy: sunset timelines, migration paths',
@@ -125,7 +108,6 @@ export default function CheatSheet() {
     },
     {
       title: 'Governance & Collaboration',
-      colorClass: 'bg-rose-500 text-black',
       items: [
         'Contribution workflow: PR templates, code owners',
         'RFC process: proposal, discussion, implementation',
@@ -136,39 +118,41 @@ export default function CheatSheet() {
   ]
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <>
       {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Design Systems Cheat Sheet
-        </h1>
-        <div className="text-xl text-gray-600 dark:text-gray-300">
+      <div className="mb-12 text-center">
+        <h1 className="mb-6 text-center text-4xl">Design Systems Cheat Sheet</h1>
+        <h3 className="animate-reveal mx-auto mt-10 text-center font-2xl text-2xl">
           Everything you need to know about Design Systems
-        </div>
+        </h3>
       </div>
 
       {/* Main Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid gap-8 md:grid-cols-2">
         {/* Design Column */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-          <div className="text-xl font-bold mb-6 text-center py-2 px-4 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 text-white">
-            🎨 Design Perspective
+        <div className="rounded-2xl bg-white dark:bg-gray-800">
+          <h4 className="mb-6 rounded-lg bg-[var(--btg-color-accent-500)] px-4 py-2 text-xl text-white">
+            Design Perspective
+          </h4>
+          <div className="p-6">
+            {designTopics.map((topic, index) => (
+              <Topic key={index} {...topic} />
+            ))}
           </div>
-          {designTopics.map((topic, index) => (
-            <Topic key={index} {...topic} />
-          ))}
         </div>
 
         {/* Engineering Column */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-          <div className="text-xl font-bold mb-6 text-center py-2 px-4 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white">
-            ⚙️ Engineering Perspective
+        <div className="rounded-2xl bg-white dark:bg-gray-800">
+          <h4 className="mb-6 rounded-lg bg-[var(--btg-color-highlight-700)] px-4 py-2 text-xl text-white">
+            Engineering Perspective
+          </h4>
+          <div className="p-6">
+            {engineeringTopics.map((topic, index) => (
+              <Topic key={index} {...topic} />
+            ))}
           </div>
-          {engineeringTopics.map((topic, index) => (
-            <Topic key={index} {...topic} />
-          ))}
         </div>
       </div>
-    </div>
+    </>
   )
-} 
+}
