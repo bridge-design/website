@@ -125,6 +125,23 @@ export const HandsOnWorkshopHandout = defineDocumentType(() => ({
   computedFields,
 }))
 
+export const Events = defineDocumentType(() => ({
+  name: 'Events',
+  filePathPattern: 'events/**/*.mdx',
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+    date: { type: 'date', required: true },
+    lastmod: { type: 'date' },
+    description: { type: 'string' },
+    summary: { type: 'string' },
+    images: { type: 'json' },
+    slug: { type: 'string' },
+    toc: { type: 'boolean', default: true },
+  },
+  computedFields,
+}))
+
 function createSearchIndex(allBlogs) {
   if (
     siteMetadata?.search?.provider === 'kbar' &&
@@ -194,7 +211,7 @@ export const Authors = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors, CaseStudies, WorkshopHandoutOld, HandsOnWorkshopHandout],
+  documentTypes: [Blog, Authors, CaseStudies, WorkshopHandoutOld, HandsOnWorkshopHandout, Events],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
