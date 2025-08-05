@@ -5,6 +5,7 @@ import CheatSheet from './components/CheatSheet'
 export const metadata = genPageMetadata({
   title: 'Design Systems Topics Cheat Sheet',
   description: `Quick reference guide for design systems topics and concepts`,
+  image: '/hub/ds-topics-cheat-sheet/thumb.png',
 })
 
 const DsTopicsCheatSheetPage = () => {
