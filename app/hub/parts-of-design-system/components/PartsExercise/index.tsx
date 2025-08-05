@@ -1,19 +1,39 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { ThemeUIProvider } from 'theme-ui'
-
+import { ThemeUIProvider, ThemeUIStyleObject } from 'theme-ui'
 import { Box, Button, Checkbox, Flex, Grid, Label } from 'theme-ui'
 
 import { getInputName, parts } from './data'
 import { downloadPng } from './downloadPng'
 import theme from './theme-ui-object'
 
-const toBox = (parts) => {
+interface Part {
+  title: string
+  parts?: string[]
+}
+
+interface Category {
+  title: string
+  innerColumns?: number
+  size?: number
+  category?: boolean
+  parts: (string | Part)[]
+  id?: number
+}
+
+type BoxStyle = ThemeUIStyleObject & {
+  opacity?: number
+  bg?: string
+}
+
+const toBox = (parts: Category[]) => {
   return parts.reduce(
-    (acc, category, i) => {
+    (acc: Category[][], category, i) => {
       const newBox = acc[acc.length - 1]
-      let inBox = newBox.map((c) => c.size || 1).reduce((a, b) => a + b, 0)
+      let inBox = newBox
+        .map((c: Category) => c.size || 1)
+        .reduce((a: number, b: number) => a + b, 0)
       category.id = i
       const size = category.size || 1
       if (inBox + size <= 4) {
@@ -29,9 +49,11 @@ const toBox = (parts) => {
   )
 }
 
-const partsInBoxes = toBox(parts)
+const partsInBoxes = toBox(parts as Omit<Category, 'id'>[])
 
-const stages = ['cross-out', 'select', 'pick-up', 'done']
+const stages = ['cross-out', 'select', 'pick-up', 'done'] as const
+type Stage = (typeof stages)[number]
+
 const crossOutLimit = 5
 const selectLimit = 5
 const pickUpLimit = 25
@@ -55,22 +77,22 @@ const instructions = {
   done: <h2 className="mb-5 mt-5 font-lg text-lg">Well done!</h2>,
 }
 
-export function DsPartsExercise() {
-  const [stage, setStage] = useState('cross-out')
-  const [crossedOut, setCrossedOut] = useState([])
-  const [selected, setSelected] = useState([])
-  const [pickedUp, setPickedUp] = useState([])
-  const ref = useRef(null)
+export default function PartsExercise() {
+  const [stage, setStage] = useState<Stage>('cross-out')
+  const [crossedOut, setCrossedOut] = useState<number[]>([])
+  const [selected, setSelected] = useState<number[]>([])
+  const [pickedUp, setPickedUp] = useState<string[]>([])
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Check if any parts values are unchecked and uncheck the corresponding name
     const checkParts = () => {
-      parts.forEach((category) => {
-        if (selected.indexOf(category.id) !== -1) {
-          category.parts.forEach((part) => {
-            if (part.parts) {
+      ;(parts as Category[]).forEach((category) => {
+        if (selected.indexOf(category.id!) !== -1) {
+          category.parts.forEach((part: Part | string) => {
+            if (typeof part === 'object' && part.parts) {
               const allPartsChecked = part.parts.every(
-                (subpart) => pickedUp.indexOf(getInputName(category.title, subpart)) !== -1
+                (subpart: string) => pickedUp.indexOf(getInputName(category.title, subpart)) !== -1
               )
 
               const nameChecked = getInputName(category.title, part.title)
@@ -78,7 +100,8 @@ export function DsPartsExercise() {
               if (!allPartsChecked) {
                 if (pickedUp.indexOf(nameChecked) !== -1) {
                   const allPartsUnchecked = part.parts.every(
-                    (subpart) => pickedUp.indexOf(getInputName(category.title, subpart)) === -1
+                    (subpart: string) =>
+                      pickedUp.indexOf(getInputName(category.title, subpart)) === -1
                   )
 
                   if (allPartsUnchecked) {
@@ -105,11 +128,11 @@ export function DsPartsExercise() {
     downloadPng(ref)
   }, [ref])
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
     setTimeout(() => {
-      document.querySelector('#parts-form').scrollIntoView({
+      document.querySelector('#parts-form')?.scrollIntoView({
         behavior: 'smooth',
       })
     }, 100)
@@ -117,7 +140,7 @@ export function DsPartsExercise() {
     setStage(stages[stages.indexOf(stage) + 1])
   }
 
-  const boxAction = (e, categoryId) => {
+  const boxAction = (e: React.MouseEvent, categoryId: number) => {
     switch (stage) {
       case 'cross-out':
         toggleCategoryCrossOut(categoryId)
@@ -128,7 +151,7 @@ export function DsPartsExercise() {
     }
   }
 
-  const toggleCategoryCrossOut = (categoryId) => {
+  const toggleCategoryCrossOut = (categoryId: number) => {
     if (crossedOut.indexOf(categoryId) === -1) {
       if (crossedOut.length === crossOutLimit) {
         // only 5 categories
@@ -140,7 +163,7 @@ export function DsPartsExercise() {
     }
   }
 
-  const toggleCategorySelect = (categoryId) => {
+  const toggleCategorySelect = (categoryId: number) => {
     if (crossedOut.indexOf(categoryId) !== -1) {
       // not for crossed out categories
       return
@@ -198,8 +221,13 @@ export function DsPartsExercise() {
     }
   }
 
-  const drawPartItem = (category, categoryId, part, level) => {
-    const partTitle = part.title || part
+  const drawPartItem = (
+    category: Category,
+    categoryId: number,
+    part: Part | string,
+    level: number
+  ) => {
+    const partTitle = typeof part === 'object' ? part.title : part
     let disabledCheckbox = true
 
     // allow pick up from selected parts
@@ -217,13 +245,13 @@ export function DsPartsExercise() {
 
     const handleClick = () => {
       const clickedPart = getInputName(category.title, partTitle)
-      const clickedParts = part.parts
+      const clickedParts = typeof part === 'object' ? part.parts : undefined
       const partIndex = pickedUp.indexOf(clickedPart)
 
       if (partIndex !== -1) {
         setPickedUp((prevState) => prevState.filter((part) => part !== clickedPart))
         if (clickedParts) {
-          clickedParts.forEach((parts) => {
+          clickedParts.forEach((parts: string) => {
             const subPart = getInputName(category.title, parts)
             setPickedUp((prevState) => prevState.filter((part) => part !== subPart))
             setPickedUp((prevState) => prevState.filter((part) => part !== clickedPart))
@@ -232,7 +260,7 @@ export function DsPartsExercise() {
       } else {
         setPickedUp((prevState) => [...prevState, clickedPart])
         if (clickedParts) {
-          clickedParts.forEach((parts) => {
+          clickedParts.forEach((parts: string) => {
             const subPart = getInputName(category.title, parts)
             setPickedUp((prevState) =>
               prevState.includes(subPart) ? prevState : [...prevState, subPart]
@@ -294,10 +322,10 @@ export function DsPartsExercise() {
               >
                 {actionButton()}
               </Flex>
-              {partsInBoxes.map((box) => (
-                <Grid key={box.title} gap={4} columns={box.length}>
+              {partsInBoxes.map((box: Category[]) => (
+                <Grid key={box[0]?.title} gap={4} columns={box.length}>
                   {box.map((category) => {
-                    let boxStyle = {
+                    const boxStyle: BoxStyle = {
                       display: stage === 'pick-up' ? 'none' : 'block',
                       border: 'thin',
                       borderRadius: 'medium',
@@ -308,13 +336,13 @@ export function DsPartsExercise() {
                         bg: 'muted',
                       },
                     }
-                    let legendStyle = {}
+                    const legendStyle = {}
 
-                    if (crossedOut.indexOf(category.id) !== -1) {
+                    if (crossedOut.indexOf(category.id!) !== -1) {
                       boxStyle.opacity = 0.25
                     }
 
-                    if (selected.indexOf(category.id) !== -1) {
+                    if (selected.indexOf(category.id!) !== -1) {
                       boxStyle.display = 'block'
                       boxStyle.borderColor = 'grey'
                       boxStyle.bg = stage === 'pick-up' ? 'background' : 'muted'
@@ -327,18 +355,20 @@ export function DsPartsExercise() {
                         as="fieldset"
                         sx={boxStyle}
                         onClick={(e) => {
-                          boxAction(e, category.id)
+                          boxAction(e, category.id!)
                         }}
                       >
                         <legend style={legendStyle}>{category.title}</legend>
                         <Grid gap={0} columns={category.innerColumns || 1}>
-                          {category.parts.map((part) => {
+                          {category.parts.map((part: Part | string) => {
+                            const partKey = typeof part === 'object' ? part.title : part
                             return (
-                              <Box key={part.title}>
-                                {drawPartItem(category, category.id, part, 0)}
-                                {part.parts &&
-                                  part.parts.map((subpart) =>
-                                    drawPartItem(category, category.id, subpart, 1)
+                              <Box key={partKey}>
+                                {drawPartItem(category, category.id!, part, 0)}
+                                {typeof part === 'object' &&
+                                  part.parts &&
+                                  part.parts.map((subpart: string) =>
+                                    drawPartItem(category, category.id!, subpart, 1)
                                   )}
                               </Box>
                             )

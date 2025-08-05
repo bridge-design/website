@@ -1,8 +1,8 @@
-import format from 'date-fns/format'
+import { format } from 'date-fns'
 import { toPng } from 'html-to-image'
 
-export const downloadPng = (ref) => {
-  const getFileName = (fileType) =>
+export const downloadPng = (ref: React.RefObject<HTMLElement>) => {
+  const getFileName = (fileType: string) =>
     `${format(new Date(), "'PartsOfDesignSystem-'HH-mm-ss")}.${fileType}`
 
   if (ref.current === null) {
