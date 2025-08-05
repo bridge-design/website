@@ -7,6 +7,7 @@ const config = {
     '../tokens/**/*.stories.@(js|jsx|mjs|ts|tsx)',
     '../components-new/**/*.mdx',
     '../components-new/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../app/**/*.stories.@(js|jsx|mjs|ts|tsx)',
     '../templates/**/*.stories.@(js|jsx|mjs|ts|tsx)',
     '../templates/**/*.mdx',
   ],

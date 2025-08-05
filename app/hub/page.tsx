@@ -13,6 +13,11 @@ const hubPages = [
     description: `Quick reference guide for design systems topics and concepts.`,
     href: '/hub/ds-topics-cheat-sheet',
   },
+  {
+    title: 'Parts of Design System Exercise',
+    description: `Interactive exercise to explore and understand different parts of a design system.`,
+    href: '/hub/parts-of-design-system',
+  },
 ]
 
 export default function HubPage() {

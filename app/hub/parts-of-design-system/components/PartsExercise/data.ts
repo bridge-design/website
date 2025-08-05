@@ -277,6 +277,6 @@ export const parts = [
   },
 ]
 
-export const getInputName = (str1, str2) => {
+export const getInputName = (str1: string, str2: string): string => {
   return [str1, '_', str2].map((str) => str.replace(/\s/g, '-')).join('')
 }
