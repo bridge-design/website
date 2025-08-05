@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { BlogList } from './BlogList'
 
 const meta: Meta<typeof BlogList> = {
-  title: 'Components/BlogList',
+  title: 'Components/Lists/BlogList',
   component: BlogList,
   tags: ['beta'],
   argTypes: {
