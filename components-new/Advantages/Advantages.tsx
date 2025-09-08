@@ -5,13 +5,11 @@ import { Desk } from '../Desk/Desk'
 
 interface AdvantageItem {
   icon: string
-  title: string
   description: string
 }
 
 interface AdvantagesProps {
   content: AdvantageItem[]
-  title?: React.ReactNode
 }
 
 /**
@@ -19,12 +17,10 @@ interface AdvantagesProps {
  * Now uses the Desk component internally for consistency.
  */
 export const Advantages: React.FC<AdvantagesProps> = ({
-  title,
   content,
 }) => {
   return (
     <Desk
-      title={title}
       content={content}
       backgroundColor="var(--btg-color-accent-400)"
       textColor="var(--btg-color-neutral-1000)"
