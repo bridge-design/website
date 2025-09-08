@@ -2,6 +2,29 @@
 
 const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
+const fs = require('fs')
+const path = require('path')
+
+// Generate safelist from colors.css
+const generateColorSafelist = () => {
+  const colorsPath = path.join(__dirname, 'tokens/colors.css')
+  const colorsContent = fs.readFileSync(colorsPath, 'utf8')
+  
+  // Extract all --btg-color-* variables
+  const colorVariables = colorsContent.match(/--btg-color-[\w-]+/g) || []
+  
+  // Generate classes for all color variables and common utilities
+  const utilities = ['bg', 'text', 'border', 'ring', 'outline']
+  const safelist = []
+  
+  colorVariables.forEach(colorVar => {
+    utilities.forEach(util => {
+      safelist.push(`${util}-[var(${colorVar})]`)
+    })
+  })
+  
+  return safelist
+}
 
 /** @type {import("tailwindcss/types").Config } */
 const config = {
@@ -17,6 +40,15 @@ const config = {
     './data/**/*.{mdx,tsx}',
     './node_modules/\\@bridge-the-gap/design-system/dist/**/*.js',
     './node_modules/\\@bridge-the-gap/design-system/dist/*.js',
+  ],
+  safelist: [
+    // Protect CSS custom property classes from being purged
+    {
+      pattern: /^(bg|text|border|ring|outline)-\[var\(--btg-color-.+\)\]$/,
+      variants: ['hover', 'focus', 'active', 'group-hover', 'group-focus'],
+    },
+    // Automatically generated classes for all color variables
+    ...generateColorSafelist(),
   ],
   theme: {
     fontSize: {
