@@ -7,8 +7,8 @@ import { Icon } from '../Icon/Icon'
 
 export interface DeskItem {
   icon: string
-  title: string
-  description: string
+  title?: string
+  description?: string
   url?: string
 }
 
