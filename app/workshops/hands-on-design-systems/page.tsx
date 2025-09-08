@@ -1,7 +1,7 @@
 import { genPageMetadata } from 'app/seo'
 
 import {
-  Advantages,
+  Desk,
   Card,
   Contact,
   CtaLink,
@@ -149,7 +149,7 @@ const HandsOnDesignSystemsPage = () => {
 
       {/* Workshop Highlights Section */}
       <Section className="mb-20">
-        <Advantages
+        <Desk
           title={
             <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">Workshop Highlights</h2>
           }
