@@ -2,8 +2,15 @@ import { genPageMetadata } from 'app/seo'
 
 import { team } from '@/data/team'
 import { TESTIMONIALS } from '@/data/testimonials'
+import { EVENTS_BANNER, EVENTS_BANNER_TITLE } from '@/data/events'
 
-import { HorizontalWave, ProfileCard, Section, Testimonial } from '@/components-new/index'
+import {
+  HorizontalWave,
+  ProfileCard,
+  Section,
+  Testimonial,
+  EventsBanner,
+} from '@/components-new/index'
 
 export const metadata = genPageMetadata({
   title: 'Meet Our Expert Team',
@@ -39,13 +46,18 @@ export default async function TeamPage() {
           ))}
         </div>
       </Section>
-      <Section className="py-12">
-        <div className="container flex min-h-screen flex-col justify-between overflow-hidden">
-          <Testimonial
-            title={<h2 className="text-4xl">People Say</h2>}
-            testimonials={TESTIMONIALS}
-          />
+      <Section className="mb-10 overflow-x-hidden">
+        <div className="relative">
+          <div className="relative overflow-x-visible">
+            <Testimonial
+              title={<h2 className="text-4xl">People Say</h2>}
+              testimonials={TESTIMONIALS}
+            />
+          </div>
         </div>
+      </Section>
+      <Section className="py-12">
+        <EventsBanner content={EVENTS_BANNER} title={EVENTS_BANNER_TITLE} />
       </Section>
     </>
   )

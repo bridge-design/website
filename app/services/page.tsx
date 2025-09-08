@@ -1,8 +1,17 @@
 import { genPageMetadata } from 'app/seo'
 
-import { Advantages, Blob, CtaLink, HorizontalWave, Outro, Section } from '@/components-new/index'
+import {
+  Advantages,
+  Blob,
+  CtaLink,
+  EventsBanner,
+  HorizontalWave,
+  Outro,
+  Section,
+} from '@/components-new/index'
 
 import { EXPERTISE, HOW_IT_WORKS } from '@/data/services'
+import { EVENTS_BANNER, EVENTS_BANNER_TITLE } from '@/data/events'
 
 const EXPERTISE_COLORS_AND_VARIANTS: Array<{
   color: string
@@ -85,6 +94,9 @@ export default async function ServicesPage() {
             </div>
           ))}
         </div>
+      </Section>
+      <Section className="py-12">
+        <EventsBanner content={EVENTS_BANNER} title={EVENTS_BANNER_TITLE} />
       </Section>
       <Outro backgroundColor="var(--btg-hero-background)">
         <div className="text-center">
