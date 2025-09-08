@@ -4,7 +4,13 @@ import { team } from '@/data/team'
 import { TESTIMONIALS } from '@/data/testimonials'
 import { EVENTS_BANNER, EVENTS_BANNER_TITLE } from '@/data/events'
 
-import { HorizontalWave, ProfileCard, Section, Testimonial, EventsBanner } from '@/components-new/index'
+import {
+  HorizontalWave,
+  ProfileCard,
+  Section,
+  Testimonial,
+  EventsBanner,
+} from '@/components-new/index'
 
 export const metadata = genPageMetadata({
   title: 'Meet Our Expert Team',
@@ -51,10 +57,7 @@ export default async function TeamPage() {
         </div>
       </Section>
       <Section className="py-12">
-        <EventsBanner 
-          content={EVENTS_BANNER}
-          title={EVENTS_BANNER_TITLE}
-        />
+        <EventsBanner content={EVENTS_BANNER} title={EVENTS_BANNER_TITLE} />
       </Section>
     </>
   )
