@@ -40,12 +40,14 @@ export default async function TeamPage() {
           ))}
         </div>
       </Section>
-      <Section className="py-12">
-        <div className="container flex flex-col justify-between overflow-hidden">
-          <Testimonial
-            title={<h2 className="text-4xl">People Say</h2>}
-            testimonials={TESTIMONIALS}
-          />
+      <Section className="mb-10 overflow-x-hidden">
+        <div className="relative">
+          <div className="relative overflow-x-visible">
+            <Testimonial
+              title={<h2 className="text-4xl">People Say</h2>}
+              testimonials={TESTIMONIALS}
+            />
+          </div>
         </div>
       </Section>
       <Section className="py-12">
