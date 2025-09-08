@@ -22,42 +22,46 @@ const meta: Meta<typeof EventsBanner> = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const defaultContent = [
-  {
-    icon: 'Calendar',
-    title: 'Design Systems Breakfast',
-    description: 'Join our casual morning meetups where UX designers and UI developers share coffee, ideas, and insights about design systems.',
-  },
-  {
-    icon: 'UserSpeaker',
-    title: 'Speaking Engagements',
-    description: 'We speak at conferences, meetups, and company events sharing insights about design systems and team collaboration.',
-  },
-]
-
 export const Default: Story = {
   args: {
-    content: defaultContent,
-    title: (
-      <div className="mb-10 text-center">
-        <h2 className="mb-6 font-4xl text-4xl">Our Events and Events with Us</h2>
-      </div>
-    ),
+    // Uses default content and title
   },
 }
 
 export const WithoutTitle: Story = {
   args: {
-    content: defaultContent,
+    title: undefined,
+    // Uses default content
+  },
+}
+
+export const CustomTitle: Story = {
+  args: {
+    title: (
+      <div className="mb-10 text-center">
+        <h2 className="mb-6 font-4xl text-4xl">Join Our Community Events</h2>
+        <p className="text-lg opacity-80">Connect with design systems professionals</p>
+      </div>
+    ),
+    // Uses default content
   },
 }
 
 export const ThreeItems: Story = {
   args: {
     content: [
-      ...defaultContent,
+      {
+        icon: 'Cafe',
+        title: 'Design Systems Breakfast',
+        description: 'Our casual morning meetups where UX designers and UI developers share coffee, ideas, and insights about design systems.',
+      },
       {
         icon: 'UserSpeaker',
+        title: 'Speaking Engagements',
+        description: 'We speak at conferences, meetups, and company events sharing insights about design systems and team collaboration.',
+      },
+      {
+        icon: 'Users',
         title: 'Community Events',
         description: 'Connect with the design systems community through workshops, panels, and networking opportunities.',
       },

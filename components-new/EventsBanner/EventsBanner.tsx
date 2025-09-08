@@ -22,9 +22,14 @@ export const EventsBanner: React.FC<EventsBannerProps> = ({
   title,
   content,
 }) => {
+  const titleContainer = title ? (
+    <div className="mb-10 text-center">
+      <h2 className="mb-6 font-4xl text-4xl">{title}</h2>
+    </div>
+  ) : null
   return (
     <Desk
-      title={title}
+      title={titleContainer}
       content={content}
       backgroundColor="var(--btg-color-highlight-600)"
       textColor="var(--btg-color-neutral-1000)"
