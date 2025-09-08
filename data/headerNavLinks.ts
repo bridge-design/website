@@ -8,10 +8,6 @@ const headerNavLinks = [
     href: '/services',
   },
   {
-    name: 'Events',
-    href: '/events',
-  },
-  {
     name: 'Blog',
     href: '/blog',
   },
