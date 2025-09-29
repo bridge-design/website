@@ -8,6 +8,7 @@ export const metadata = genPageMetadata({
   title: 'Design Systems Breakfast',
   description: `Casual morning gatherings for design system professionals to network, learn, and exchange experiences over coffee`,
   keywords: `design systems breakfast, networking, meetup, design systems community`,
+  image: '/images/events/breakfasts/thumb.jpg',
 })
 
 export default async function BreakfastsPage() {
