@@ -1,5 +1,7 @@
-import { HorizontalWave, Section, Outro, CtaLink } from '@/components-new/index'
+import { HorizontalWave, Section, PageList, Outro, CtaLink } from '@/components-new/index'
 import { genPageMetadata } from 'app/seo'
+import { allEvents } from 'contentlayer/generated'
+import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
 
 export const metadata = genPageMetadata({
   title: 'Design Systems Breakfast',
@@ -8,6 +10,22 @@ export const metadata = genPageMetadata({
 })
 
 export default async function BreakfastsPage() {
+  // Get all events from MDX files and sort them by date
+  const sortedMdxEvents = allCoreContent(sortPosts(allEvents))
+
+  // Filter only breakfast events and transform to match PageList format
+  const breakfastEventPages = sortedMdxEvents
+    .filter((event) => event.slug.startsWith('breakfast-'))
+    .map((event) => ({
+      path: `events/${event.slug}`,
+      title: event.title,
+      description: event.description || event.summary,
+      date: event.date,
+    }))
+    .sort((a, b) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime()
+    })
+
   return (
     <>
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-pink); }`}</style>
@@ -66,6 +84,10 @@ export default async function BreakfastsPage() {
               </li>
               <li><strong>🙀 We don't record</strong> (That's a feature)</li>
             </ul>
+          </div>
+          
+          <div className="my-16">
+            <PageList pages={breakfastEventPages} />
           </div>
         </article>
       </Section>
