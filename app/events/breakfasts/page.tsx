@@ -2,6 +2,7 @@ import { HorizontalWave, Section, PageList, Outro, CtaLink } from '@/components-
 import { genPageMetadata } from 'app/seo'
 import { allEvents } from 'contentlayer/generated'
 import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
+import { outroContent } from '@/data/outro-content'
 
 export const metadata = genPageMetadata({
   title: 'Design Systems Breakfast',
@@ -94,22 +95,10 @@ export default async function BreakfastsPage() {
       <Outro backgroundColor="var(--btg-hero-background-pink)">
         <div className="text-center">
           <h2 className="mx-auto mb-10 font-4xl text-4xl lg:w-4/5">
-            Want to speak at Design Systems Breakfast?
+            {outroContent['breakfast-speaking'].title}
           </h2>
           <p className="mx-auto mb-10 text-xl lg:w-3/4">
-            Share your insights about design systems, frontend development, UI design and team
-            collaboration at our casual morning meetups.{' '}
-            <CtaLink
-              to="/contact"
-              underline={true}
-              className="text-xl"
-              colorVar="var(--btg-hero-text-color)"
-              colorHoverVar="var(--btg-hero-text-color)"
-              borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
-            >
-              Contact Varya
-            </CtaLink>{' '}
-            to discuss your talk idea.
+            {outroContent['breakfast-speaking'].description}
           </p>
         </div>
       </Outro>

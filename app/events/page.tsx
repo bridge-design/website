@@ -2,6 +2,7 @@ import { HorizontalWave, Section, PageList, Outro, CtaLink } from '@/components-
 import { genPageMetadata } from 'app/seo'
 import { allEvents } from 'contentlayer/generated'
 import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
+import { outroContent } from '@/data/outro-content'
 
 export const metadata = genPageMetadata({
   title: 'Bridge the Gap Events',
@@ -47,21 +48,20 @@ export default async function EventsPage() {
       <Outro backgroundColor="var(--btg-hero-background-pink)">
         <div className="text-center">
           <h2 className="mx-auto mb-10 font-4xl text-4xl lg:w-4/5">
-            Want to have us speak at your event?
+            {outroContent['general-speaking'].title}
           </h2>
           <p className="mx-auto mb-10 text-xl lg:w-3/4">
-            Our team shares insights about design systems, team collaboration, and frontend
-            development. We'd love to contribute to your conference, meetup, or company event.
+            {outroContent['general-speaking'].description}
           </p>
           <CtaLink
-            to="/contact"
+            to={outroContent['general-speaking'].ctaUrl}
             underline={true}
             className="text-xl"
             colorVar="var(--btg-hero-text-color)"
             colorHoverVar="var(--btg-hero-text-color)"
             borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
           >
-            Get in touch
+            {outroContent['general-speaking'].ctaText}
           </CtaLink>
         </div>
       </Outro>
