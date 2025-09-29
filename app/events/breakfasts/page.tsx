@@ -16,7 +16,7 @@ export default async function BreakfastsPage() {
 
   // Filter only breakfast events and transform to match PageList format
   const breakfastEventPages = sortedMdxEvents
-    .filter((event) => event.slug.startsWith('breakfast-'))
+    .filter((event) => event?.slug?.startsWith('breakfast-'))
     .map((event) => ({
       path: `events/${event.slug}`,
       title: event.title,
@@ -45,48 +45,54 @@ export default async function BreakfastsPage() {
         </div>
         <article className="grow">
           <h1 className="mb-16 text-center font-5xl text-5xl">Casual Design Systems Breakfast</h1>
-          
           <div className="prose mx-auto my-12 text-justify dark:prose-invert">
             <p className="text-xl leading-relaxed">
-              Looking for a casual way to connect with design system people (both designers and engineers!), 
-              learn cutting-edge ideas, and network over coffee?
+              Looking for a casual way to connect with design system people (both designers and
+              engineers!), learn cutting-edge ideas, and network over coffee?
             </p>
-            
             <p className="text-xl leading-relaxed">
-              Enter <strong>Design Systems Breakfast!</strong> This is a relaxed morning gathering where you can 
-              discuss early-stage topics, exchange experiences, and build connections in a friendly setting. 
-              It's like catching up with colleagues over breakfast, but with fresh insights on design systems.
+              Enter <strong>Design Systems Breakfast!</strong> This is a relaxed morning gathering
+              where you can discuss early-stage topics, exchange experiences, and build connections
+              in a friendly setting. It's like catching up with colleagues over breakfast, but with
+              fresh insights on design systems.
             </p>
-            
+
             <p>
-              It started during COVID when everything went digital but we missed the friendly atmosphere of 
-              in-person gatherings. While there were (and still are) many online meetups, many felt too formal 
-              and structured. That's why we created something different.
+              It started during COVID when everything went digital but we missed the friendly
+              atmosphere of in-person gatherings. While there were (and still are) many online
+              meetups, many felt too formal and structured. That's why we created something
+              different.
             </p>
-            
+
             <p>
-              COVID has passed, but the design system community is now worldwide, so this event keeps living. 
-              Here's what makes it special:
+              COVID has passed, but the design system community is now worldwide, so this event
+              keeps living. Here's what makes it special:
             </p>
-            
-            <ul className="text-lg space-y-3">
-              <li><strong>🍳 It's breakfast time</strong></li>
+
+            <ul className="space-y-3 text-lg">
               <li>
-                <strong>☕ It's casual</strong> (People actually eat and drink coffee during the session! 
-                Join us with your breakfast. Or without, as you wish :-)
+                <strong>🍳 It's breakfast time</strong>
               </li>
               <li>
-                <strong>💬 We focus on networking and exchanging experiences while learning.</strong> This means 
-                a lot of discussion.
+                <strong>☕ It's casual</strong> (People actually eat and drink coffee during the
+                session! Join us with your breakfast. Or without, as you wish :-)
               </li>
               <li>
-                <strong>🚀 It's often early-stage content</strong> (Topics that aren't YET at conferences, 
-                because people bring ideas for early feedback. You can learn them first!)
+                <strong>
+                  💬 We focus on networking and exchanging experiences while learning.
+                </strong>{' '}
+                This means a lot of discussion.
               </li>
-              <li><strong>🙀 We don't record</strong> (That's a feature)</li>
+              <li>
+                <strong>🚀 It's often early-stage content</strong> (Topics that aren't YET at
+                conferences, because people bring ideas for early feedback. You can learn them
+                first!)
+              </li>
+              <li>
+                <strong>🙀 We don't record</strong> (That's a feature)
+              </li>
             </ul>
           </div>
-          
           <div className="my-16">
             <PageList pages={breakfastEventPages} />
           </div>
