@@ -69,7 +69,7 @@ export const Navigation: React.FC<NavigationProps> = ({
               onClick={() => setTimeout(() => setMenuOpen(false), 600)} // Close menu with delay after item click
             >
               <LinkComponent
-                href={`${basePath}${item.href}`}
+                href={`${basePath}/${item.href}`}
                 className={classnames(
                   styles.link,
                   'border-transparent transition-colors duration-200',
