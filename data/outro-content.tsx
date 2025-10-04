@@ -45,4 +45,16 @@ export const outroContent: Record<string, OutroContentItem> = {
     ctaText: '',
     ctaUrl: '',
   },
+  'case-studies': {
+    id: 'case-studies',
+    title: 'Ready to create your own success story?',
+    description: (
+      <>
+        We'd love to help you achieve exceptional results with your design systems, UI engineering,
+        and frontend development projects. Let's discuss how we can bring your vision to life.
+      </>
+    ),
+    ctaText: 'Discuss with us how to start your project',
+    ctaUrl: '/contact',
+  },
 }

@@ -5,6 +5,7 @@ import { components } from '@/components-new/MDXComponents'
 import {
   CtaLink,
   HorizontalWave,
+  Outro,
   ProjectTeam,
   ScrollTopAndComment,
   Section,
@@ -17,6 +18,7 @@ import type { CaseStudies } from 'contentlayer/generated'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
+import { outroContent } from '@/data/outro-content'
 
 export async function generateMetadata({
   params,
@@ -124,6 +126,26 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
           </div>
         </article>
       </Section>
+      <Outro backgroundColor="var(--btg-hero-background-pink)">
+        <div className="text-center">
+          <h2 className="mx-auto mb-10 font-4xl text-4xl lg:w-4/5">
+            {outroContent['case-studies'].title}
+          </h2>
+          <p className="mx-auto mb-10 text-xl lg:w-3/4">
+            {outroContent['case-studies'].description}
+          </p>
+          <CtaLink
+            to={outroContent['case-studies'].ctaUrl}
+            underline={true}
+            className="text-xl"
+            colorVar="var(--btg-hero-text-color)"
+            colorHoverVar="var(--btg-hero-text-color)"
+            borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
+          >
+            {outroContent['case-studies'].ctaText}
+          </CtaLink>
+        </div>
+      </Outro>
     </>
   )
 }
