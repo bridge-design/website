@@ -39,15 +39,30 @@ export async function generateMetadata({
   const publishedAt = new Date(post.date).toISOString()
   const modifiedAt = new Date(post.lastmod || post.date).toISOString()
   // const authors = authorDetails.map((author) => author.name)
+
+  // Use custom images if defined, otherwise generate OG image URL
   let imageList = [siteMetadata.socialBanner]
+  let ogImages
+
   if (post.images) {
+    // Use custom images from the post
     imageList = typeof post.images === 'string' ? [post.images] : post.images
+    ogImages = imageList.map((img) => {
+      return {
+        url: img.includes('http') ? img : siteMetadata.siteUrl + img,
+      }
+    })
+  } else {
+    // Use pre-generated static OG image for case studies without custom images
+    const ogImagePath = `/og-images/case-studies/${slug.replace(/\//g, '-')}.svg`
+    const baseUrl = siteMetadata.siteUrl.endsWith('/')
+      ? siteMetadata.siteUrl.slice(0, -1)
+      : siteMetadata.siteUrl
+    const generatedOgUrl = baseUrl + ogImagePath
+
+    imageList = [ogImagePath]
+    ogImages = [{ url: generatedOgUrl }]
   }
-  const ogImages = imageList.map((img) => {
-    return {
-      url: img.includes('http') ? img : siteMetadata.siteUrl + img,
-    }
-  })
 
   return {
     title: post.title,

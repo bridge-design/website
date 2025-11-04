@@ -28,6 +28,9 @@ public/sitemap.xml
 # search
 /public/search.json
 
+# generated OG images
+/public/og-images
+
 # misc
 .DS_Store
 
