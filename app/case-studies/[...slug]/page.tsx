@@ -54,7 +54,8 @@ export async function generateMetadata({
     })
   } else {
     // Use pre-generated static OG image for case studies without custom images
-    const ogImagePath = `/og-images/case-studies/${slug.replace(/\//g, '-')}.svg`
+    // Use PNG format for social media compatibility (Twitter doesn't support SVG)
+    const ogImagePath = `/og-images/case-studies/${slug.replace(/\//g, '-')}.png`
     const baseUrl = siteMetadata.siteUrl.endsWith('/')
       ? siteMetadata.siteUrl.slice(0, -1)
       : siteMetadata.siteUrl
