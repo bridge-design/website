@@ -64,6 +64,14 @@ export default function CheatSheet() {
         'Design QA: visual regression, accessibility audits',
       ],
     },
+    {
+      title: 'AI & Automation',
+      items: [
+        'Design-to-code: Figma-to-component conversion tools',
+        'LLM integration: chatbots using design system components',
+        'AI guardrails: ensuring generated UI follows system patterns',
+      ],
+    },
   ]
 
   const engineeringTopics = [
@@ -95,6 +103,16 @@ export default function CheatSheet() {
         'Storybook/Docs: MDX stories, interactive playgrounds',
         'CI/CD: preview deployments, visual diffs, auto-publishing',
         'Migration tools: codemods, upgrade guides',
+      ],
+    },
+    {
+      title: 'AI & Code Generation',
+      items: [
+        'MCP server: exposing design system to AI agents',
+        'LLM-friendly documentation: structured component specs',
+        'AI code review: pattern compliance, best practices',
+        'Copilot/AI contexts: design system usage examples',
+        'Space-driven development: best practices for AI-assisted development',
       ],
     },
     {
