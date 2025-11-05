@@ -53,7 +53,9 @@ const WorkshopTiles = () => {
           }
         >
           <div className="px-2 py-6">
-            <p className="text-lg font-bold">We can provide internal training on these topics for your team</p>
+            <p className="text-lg font-bold">
+              We can provide internal training on these topics for your team
+            </p>
           </div>
         </Card>
       </div>
@@ -98,7 +100,9 @@ const CursorForDesignSystemsPage = () => {
         <h1 className="mb-8 text-center font-4xl text-4xl leading-[1.125]">
           <span className="md:block">Cursor for Design System Components, Views and Pages</span>
         </h1>
-        <h2 className="mb-8 text-center font-3xl text-3xl leading-[1.125]">Develop, Document & Build with AI</h2>
+        <h2 className="mb-8 text-center font-3xl text-3xl leading-[1.125]">
+          Develop, Document & Build with AI
+        </h2>
       </Section>
 
       <Section narrow={true} className="mb-20">
@@ -108,20 +112,27 @@ const CursorForDesignSystemsPage = () => {
       <Section className="mb-20">
         <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">What you will learn?</h2>
         <p className="font-lg text-xl lg:max-w-[1000px]">
-          Learn how to develop design system components in Cursor, document them, and bring them to pages. While you can do some things via Figma AI tools, we offer Cursor because we've had better results with it on our projects.
+          Learn how to develop design system components in Cursor, document them, and bring them to
+          pages. While you can do some things via Figma AI tools, we offer Cursor because we've had
+          better results with it on our projects.
         </p>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* First column */}
           <div className="mt-8">
             <p className="text-lg">
-              You'll learn how to build components, maintain them, document them, and build pages and views out of these components. This hands-on workshop will guide you through setting up Cursor, understanding workflows, and mastering iteration when creating code.
+              You'll learn how to build components, maintain them, document them, and build pages
+              and views out of these components. This hands-on workshop will guide you through
+              setting up Cursor, understanding workflows, and mastering iteration when creating
+              code.
             </p>
           </div>
 
           {/* Second column */}
           <div className="mt-8">
             <p className="text-lg">
-              By the end of the workshop, you'll have practical experience with spec-driven development, using MCPs, polishing design system documentation, creating application pages, and understanding workflows between coding designers and engineering teams.
+              By the end of the workshop, you'll have practical experience with spec-driven
+              development, using MCPs, polishing design system documentation, creating application
+              pages, and understanding workflows between coding designers and engineering teams.
             </p>
           </div>
         </div>
@@ -129,11 +140,12 @@ const CursorForDesignSystemsPage = () => {
 
       <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Topics we'll cover</h2>
-        <ul className="mt-8 list-disc space-y-4 text-lg pl-6">
+        <ul className="mt-8 list-disc space-y-4 pl-6 text-lg">
           <li>Cursor: set up, basic of interface and workflows</li>
           <li>How to iterate when creating code</li>
           <li>MCP (Model Context Protocol) tools</li>
-          <li>Spec-driven development:
+          <li>
+            Spec-driven development:
             <ul className="ml-6 mt-2 list-disc space-y-2">
               <li>Gathering requirements</li>
               <li>Creating specs</li>
@@ -162,7 +174,8 @@ const CursorForDesignSystemsPage = () => {
       <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Why Attend</h2>
         <p className="mt-6 font-lg text-lg leading-lg tracking-lg">
-          This workshop is designed for designers and some developers. If you're not sure if this workshop is right for you, we recommend{' '}
+          This workshop is designed for designers and some developers. If you're not sure if this
+          workshop is right for you, we recommend{' '}
           <a
             href="https://www.linkedin.com/in/varyastepanova/"
             target="_blank"
@@ -206,10 +219,7 @@ const CursorForDesignSystemsPage = () => {
             LinkedIn
           </a>{' '}
           and send a message, or email at{' '}
-          <a
-            href="mailto:mail@varya.me"
-            className="underline hover:no-underline"
-          >
+          <a href="mailto:mail@varya.me" className="underline hover:no-underline">
             mail@varya.me
           </a>
           .
