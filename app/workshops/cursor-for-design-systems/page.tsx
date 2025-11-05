@@ -15,7 +15,7 @@ import { TESTIMONIALS } from '@/data/testimonials'
 import { team } from '@/data/team'
 
 export const metadata = genPageMetadata({
-  title: 'Cursor for Design Systems Workshop',
+  title: 'Workshop: Cursor for Design Systems, Views and Pages',
   description:
     'Learn how to develop design system components in Cursor, document them, and build pages. Hands-on remote workshop for designers learning to code and junior to mid-level developers. Master production-ready code generation with AI.',
 })
@@ -96,9 +96,9 @@ const CursorForDesignSystemsPage = () => {
       <Section narrow={true} className="mb-10">
         <p className="mb-4 text-center text-lg">👋 Hands-on workshop</p>
         <h1 className="mb-8 text-center font-4xl text-4xl leading-[1.125]">
-          <span className="md:block">Cursor for Design Systems</span>
-          <span className="md:block">Develop, Document & Build with AI</span>
+          <span className="md:block">Cursor for Design System Components, Views and Pages</span>
         </h1>
+        <h2 className="mb-8 text-center font-3xl text-3xl leading-[1.125]">Develop, Document & Build with AI</h2>
       </Section>
 
       <Section narrow={true} className="mb-20">
