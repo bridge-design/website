@@ -43,13 +43,13 @@
   </g>
   
   <!-- Case Study sign in header -->
-  <text x="600" y="78" text-anchor="middle" fill="#1a1814" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" letter-spacing="0.5">
+  <text x="600" y="78" text-anchor="middle" fill="#1a1814" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="600" letter-spacing="0.5">
     Bridge-the-Gap → Case Study
   </text>
   
   <!-- Main title (below the wave) -->
   
-  <text x="600" y="364" text-anchor="middle" fill="#1a1814" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" letter-spacing="-0.5">
+  <text x="600" y="364" text-anchor="middle" fill="#1a1814" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800" letter-spacing="-0.5">
     Elisa Design System Renewal
   </text>
   
