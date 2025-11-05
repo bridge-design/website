@@ -4,6 +4,7 @@ import { writeFileSync, mkdirSync, existsSync, readFileSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { createHash } from 'crypto'
+import sharp from 'sharp'
 import { allCaseStudies } from '../.contentlayer/generated/index.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -212,13 +213,13 @@ function generateOGImageSVG(title, headerBg) {
   </g>
   
   <!-- Case Study sign in header -->
-  <text x="600" y="${Math.round(headerHeight / 2) + 11}" text-anchor="middle" fill="${colors.headerText}" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" letter-spacing="0.5">
+  <text x="600" y="${Math.round(headerHeight / 2) + 11}" text-anchor="middle" fill="${colors.headerText}" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="600" letter-spacing="0.5">
     Bridge-the-Gap → Case Study
   </text>
   
   <!-- Main title (below the wave) -->
   ${titleLines.map((line, index) => `
-  <text x="600" y="${titleStartY + (index * 60)}" text-anchor="middle" fill="${colors.textPrimary}" font-family="system-ui, -apple-system, sans-serif" font-size="${index === 0 ? '56' : '56'}" font-weight="800" letter-spacing="-0.5">
+  <text x="600" y="${titleStartY + (index * 60)}" text-anchor="middle" fill="${colors.textPrimary}" font-family="Arial, Helvetica, sans-serif" font-size="${index === 0 ? '56' : '56'}" font-weight="800" letter-spacing="-0.5">
     ${line}
   </text>
   `).join('')}
@@ -261,39 +262,70 @@ function generateOGImageSVG(title, headerBg) {
   `.trim()
 }
 
-// Convert SVG to PNG using a simple approach
-function svgToPngDataUrl(svgString) {
-  const base64 = Buffer.from(svgString).toString('base64')
-  return `data:image/svg+xml;base64,${base64}`
+// Convert SVG to PNG using sharp
+async function convertSvgToPng(svgString, outputPath) {
+  try {
+    // Use sharp with SVG density settings for better font rendering
+    // density: 72 DPI is standard, but 150-300 gives better quality
+    await sharp(Buffer.from(svgString), {
+      density: 150, // Higher density for better text rendering
+    })
+      .png()
+      .toFile(outputPath)
+    return true
+  } catch (error) {
+    console.error('Error converting SVG to PNG:', error)
+    return false
+  }
 }
 
 console.log('🎨 Generating OG images for case studies...')
 
 // Generate OG images for case studies that don't have custom images
-for (const caseStudy of allCaseStudies) {
-  // Skip if the case study already has custom images
-  if (caseStudy.images) {
-    console.log(`⏭️  Skipping ${caseStudy.title} - has custom images`)
-    continue
-  }
+async function generateOGImages() {
+  for (const caseStudy of allCaseStudies) {
+    // Skip if the case study already has custom images
+    if (caseStudy.images) {
+      console.log(`⏭️  Skipping ${caseStudy.title} - has custom images`)
+      continue
+    }
 
-  const slug = caseStudy.slug
-  const title = caseStudy.title
-  const filename = `${slug.replace(/\//g, '-')}.svg`
-  const filepath = join(ogImagesDir, filename)
+    const slug = caseStudy.slug
+    const title = caseStudy.title
+    const baseFilename = `${slug.replace(/\//g, '-')}`
+    const svgFilename = `${baseFilename}.svg`
+    const pngFilename = `${baseFilename}.png`
+    const svgFilepath = join(ogImagesDir, svgFilename)
+    const pngFilepath = join(ogImagesDir, pngFilename)
 
-  // Get a random hero background color for this case study (deterministic based on slug)
-  const headerBg = getHeroColorForSlug(slug)
+    // Get a random hero background color for this case study (deterministic based on slug)
+    const headerBg = getHeroColorForSlug(slug)
 
-  // Generate SVG
-  const svgContent = generateOGImageSVG(title, headerBg)
-  
-  try {
-    writeFileSync(filepath, svgContent)
-    console.log(`✅ Generated OG image: ${filename}`)
-  } catch (error) {
-    console.error(`❌ Failed to generate OG image for ${title}:`, error)
+    // Generate SVG
+    const svgContent = generateOGImageSVG(title, headerBg)
+    
+    try {
+      // Write SVG file (for reference/debugging)
+      writeFileSync(svgFilepath, svgContent)
+      
+      // Convert SVG to PNG for social media compatibility
+      const pngSuccess = await convertSvgToPng(svgContent, pngFilepath)
+      if (pngSuccess) {
+        console.log(`✅ Generated OG image: ${pngFilename}`)
+      } else {
+        console.log(`⚠️  Generated SVG but PNG conversion failed: ${svgFilename}`)
+      }
+    } catch (error) {
+      console.error(`❌ Failed to generate OG image for ${title}:`, error)
+    }
   }
 }
 
-console.log('🎉 OG image generation complete!')
+generateOGImages()
+  .then(() => {
+    console.log('🎉 OG image generation complete!')
+  })
+  .catch((error) => {
+    console.error('❌ Error during OG image generation:', error)
+    process.exit(1)
+  })
