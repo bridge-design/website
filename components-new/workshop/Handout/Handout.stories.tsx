@@ -17,5 +17,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     blocks: handoutBlocks,
+    title: "Hands-on with design systems workshop handout.",
+    subtitle: "What's next 👇",
   },
 }
