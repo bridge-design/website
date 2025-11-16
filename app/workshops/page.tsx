@@ -15,7 +15,7 @@ const workshops = [
     date: new Date('2025-05-23'),
   },
   {
-    title: 'Cursor for Design Systems',
+    title: 'Cursor for Design System Components, Views and Pages',
     description: `Workshop on using Cursor for design systems development.`,
     href: '/workshops/cursor-for-design-systems',
     date: new Date('2025-11-18'),

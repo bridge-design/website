@@ -9,6 +9,7 @@ import {
   ProfileCard,
   Section,
   Testimonial,
+  TimeDisplay,
 } from '@/components-new/index'
 
 import { TESTIMONIALS } from '@/data/testimonials'
@@ -24,40 +25,84 @@ const WorkshopTiles = () => {
   return (
     <>
       <p className="mb-6 mt-8 text-center text-lg">Get your workshop spot 👇</p>
-      <div className="mx-auto grid w-full max-w-[80%] grid-cols-1 md:grid-cols-2">
+      <div className="mx-auto grid w-full max-w-[90%] grid-cols-1 gap-4 md:grid-cols-2">
+        {/* First Workshop Run - Sold Out */}
+        <Card
+          rounded={false}
+          className="relative h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
+        >
+          <div className="absolute right-2 top-2 rounded bg-red-500 px-2 py-1 text-xs font-bold text-white">
+            SOLD OUT
+          </div>
+          <div className="px-2 py-6">
+            <p className="text-lg font-bold">21st of November, 2025</p>
+            <p className="mb-2 text-lg font-bold">
+              <TimeDisplay time="9am — 11am" date="2025-11-21" defaultTimezone="CET" />
+            </p>
+            <p className="mt-8">Location: Remote (Zoom)</p>
+            <p className="mb-4">&nbsp;</p>
+            <p className="text-sm text-gray-600">
+              <a 
+                href="https://luma.com/6i4g2tqy" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="underline hover:no-underline text-[var(--btg-color-neutral-1000)] hover:text-[var(--btg-color-neutral-900)]"
+              >
+                View on Luma →
+              </a>
+            </p>
+          </div>
+        </Card>
+
+        {/* Second Workshop Run */}
         <Card
           rounded={false}
           className="h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
         >
           <div className="px-2 py-6">
-            <p className="text-lg font-bold">18th of November, 2025</p>
-            <p className="mb-2 text-lg font-bold">2 hours</p>
-            <p className="mt-16">Location: Remote (Zoom)</p>
-            <p className="mb-12">Price: TBD</p>
-          </div>
-        </Card>
-
-        <Card
-          rounded={false}
-          className="h-full bg-[var(--btg-color-neutral-100)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-neutral-200)]"
-          href="/contact"
-          footer={
-            <CtaLink
-              to="/contact"
-              className="px-2 text-lg font-medium"
-              colorVar="--btg-color-neutral-1000"
-              colorHoverVar="--btg-color-neutral-900"
-            >
-              Let's talk →
-            </CtaLink>
-          }
-        >
-          <div className="px-2 py-6">
-            <p className="text-lg font-bold">
-              We can provide internal training on these topics for your team
+            <p className="text-lg font-bold">5th of December, 2025</p>
+            <p className="mb-2 text-lg font-bold">
+              <TimeDisplay time="9am — 11am" date="2025-12-05" defaultTimezone="CET" />
+            </p>
+            <p className="mt-8">Location: Remote (Zoom)</p>
+            <p className="mb-4">Price: €30</p>
+            <p className="text-sm">Only 20 spots:{` `}
+              <a 
+                href="https://luma.com/89xuqqwy" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="underline hover:no-underline text-[var(--btg-color-neutral-1000)] hover:text-[var(--btg-color-neutral-900)]"
+              >
+                Register on Luma →
+              </a>
             </p>
           </div>
         </Card>
+
+        {/* Internal Training Card */}
+        <div className="md:col-span-2">
+          <Card
+            rounded={false}
+            className="h-full bg-[var(--btg-color-neutral-100)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-neutral-200)]"
+            href="/contact"
+            footer={
+              <CtaLink
+                to="/contact"
+                className="px-2 text-lg font-medium"
+                colorVar="--btg-color-neutral-1000"
+                colorHoverVar="--btg-color-neutral-900"
+              >
+                Let's talk →
+              </CtaLink>
+            }
+          >
+            <div className="px-2 py-6">
+              <p className="text-lg font-bold">
+                We can provide internal training on these topics for your team
+              </p>
+            </div>
+          </Card>
+        </div>
       </div>
     </>
   )
@@ -101,7 +146,7 @@ const CursorForDesignSystemsPage = () => {
           <span className="md:block">Cursor for Design System Components, Views and Pages</span>
         </h1>
         <h2 className="mb-8 text-center font-3xl text-3xl leading-[1.125]">
-          Develop, Document & Build with AI
+          Design, Develop, Document & Build with AI
         </h2>
       </Section>
 
@@ -174,7 +219,7 @@ const CursorForDesignSystemsPage = () => {
       <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Why Attend</h2>
         <p className="mt-6 font-lg text-lg leading-lg tracking-lg">
-          This workshop is designed for designers and some developers. If you're not sure if this
+          This workshop is designed for designers, product people, and some developers. If you're not sure if this
           workshop is right for you, we recommend{' '}
           <a
             href="https://www.linkedin.com/in/varyastepanova/"
@@ -188,7 +233,7 @@ const CursorForDesignSystemsPage = () => {
         </p>
         <div className="mt-10 grid grid-cols-1 gap-x-20 gap-y-16 md:grid-cols-2">
           <div className="">
-            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">For Designers</h2>
+            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">for Designers</h2>
             <ul className="list mt-6 list-disc">
               <li>Learn how to code and create living prototypes</li>
               <li className="mt-3">Provide better outputs that are closer to production-ready</li>
@@ -196,7 +241,15 @@ const CursorForDesignSystemsPage = () => {
             </ul>
           </div>
           <div className="">
-            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">For Developers</h2>
+            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">for Product Owners</h2>
+            <ul className="list mt-6 list-disc">
+              <li>Deliver product ideas fast and hand them off smoothly to design and dev teams</li>
+              <li className="mt-3">Create clear, AI-ready specs that accelerate development cycles</li>
+              <li className="mt-3">Bridge the gap between product vision and technical implementation</li>
+            </ul>
+          </div>
+          <div className="">
+            <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">for Developers</h2>
             <ul className="list mt-6 list-disc">
               <li>Level up in meaningful code generation with AI</li>
               <li className="mt-3">Master spec-driven development workflows</li>
