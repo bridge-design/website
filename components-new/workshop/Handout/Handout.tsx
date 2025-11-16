@@ -15,6 +15,8 @@ interface HandoutBlock {
 
 interface HandoutProps {
   blocks: HandoutBlock[]
+  title: string
+  subtitle: string
 }
 
 interface BlocksProps {
@@ -59,13 +61,13 @@ const Blocks: React.FC<BlocksProps> = ({ day, blocks }) => {
   )
 }
 
-export const Handout: React.FC<HandoutProps> = ({ blocks }) => {
+export const Handout: React.FC<HandoutProps> = ({ blocks, title, subtitle }) => {
   return (
     <div className="container mx-auto mt-16 max-w-5xl">
       <div className="text-light-on-background-900 text-center">
         <h2 className="mb-6 text-xl font-bold">👋 Welcome</h2>
-        <h1 className="mb-32 text-6xl">Hands-on with design systems workshop handout.</h1>
-        <h2 className="mb-6 text-xl font-bold">What's next 👇</h2>
+        <h1 className="mb-32 text-6xl">{title}</h1>
+        <h2 className="mb-6 text-xl font-bold">{subtitle}</h2>
       </div>
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
         <Blocks day={'all'} blocks={blocks} />
