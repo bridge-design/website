@@ -46,7 +46,7 @@ const WorkshopTiles = () => {
                 href="https://luma.com/6i4g2tqy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--btg-color-neutral-1000)]·underline·hover:text-[var(--btg-color-neutral-900)]·hover:no-underline"
+                className="text-[var(--btg-color-neutral-1000)] underline hover:text-[var(--btg-color-neutral-900)] hover:no-underline"
               >
                 View on Luma →
               </a>
@@ -73,7 +73,7 @@ const WorkshopTiles = () => {
                 href="https://luma.com/89xuqqwy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--btg-color-neutral-1000)]·underline·hover:text-[var(--btg-color-neutral-900)]·hover:no-underline"
+                className="text-[var(--btg-color-neutral-1000)] underline hover:text-[var(--btg-color-neutral-900)] hover:no-underline"
               >
                 Register on Luma →
               </a>
