@@ -12,10 +12,10 @@ export default function HandoutPage() {
       <style>{`:root { --btg-hero-background: var(--btg-hero-background-pink); }`}</style>
       <HorizontalWave color="var(--btg-hero-background)" />
       <Handout
-          title="Hands-on with design systems workshop handout."
-          subtitle="What's next 👇"
-          blocks={handoutBlocks}
-        />
+        title="Hands-on with design systems workshop handout."
+        subtitle="What's next 👇"
+        blocks={handoutBlocks}
+      />
     </>
   )
 }

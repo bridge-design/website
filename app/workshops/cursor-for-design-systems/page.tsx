@@ -42,11 +42,11 @@ const WorkshopTiles = () => {
             <p className="mt-8">Location: Remote (Zoom)</p>
             <p className="mb-4">&nbsp;</p>
             <p className="text-sm text-gray-600">
-              <a 
-                href="https://luma.com/6i4g2tqy" 
-                target="_blank" 
+              <a
+                href="https://luma.com/6i4g2tqy"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:no-underline text-[var(--btg-color-neutral-1000)] hover:text-[var(--btg-color-neutral-900)]"
+                className="text-[var(--btg-color-neutral-1000)]·underline·hover:text-[var(--btg-color-neutral-900)]·hover:no-underline"
               >
                 View on Luma →
               </a>
@@ -66,12 +66,14 @@ const WorkshopTiles = () => {
             </p>
             <p className="mt-8">Location: Remote (Zoom)</p>
             <p className="mb-4">Price: €30</p>
-            <p className="text-sm">Only 20 spots:{` `}
-              <a 
-                href="https://luma.com/89xuqqwy" 
-                target="_blank" 
+            <p className="text-sm">
+              Only 20 spots:
+              {` `}
+              <a
+                href="https://luma.com/89xuqqwy"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:no-underline text-[var(--btg-color-neutral-1000)] hover:text-[var(--btg-color-neutral-900)]"
+                className="text-[var(--btg-color-neutral-1000)]·underline·hover:text-[var(--btg-color-neutral-900)]·hover:no-underline"
               >
                 Register on Luma →
               </a>
@@ -219,8 +221,8 @@ const CursorForDesignSystemsPage = () => {
       <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Why Attend</h2>
         <p className="mt-6 font-lg text-lg leading-lg tracking-lg">
-          This workshop is designed for designers, product people, and some developers. If you're not sure if this
-          workshop is right for you, we recommend{' '}
+          This workshop is designed for designers, product people, and some developers. If you're
+          not sure if this workshop is right for you, we recommend{' '}
           <a
             href="https://www.linkedin.com/in/varyastepanova/"
             target="_blank"
@@ -244,8 +246,12 @@ const CursorForDesignSystemsPage = () => {
             <h2 className="font-3xl text-3xl leading-3xl tracking-2xl">for Product Owners</h2>
             <ul className="list mt-6 list-disc">
               <li>Deliver product ideas fast and hand them off smoothly to design and dev teams</li>
-              <li className="mt-3">Create clear, AI-ready specs that accelerate development cycles</li>
-              <li className="mt-3">Bridge the gap between product vision and technical implementation</li>
+              <li className="mt-3">
+                Create clear, AI-ready specs that accelerate development cycles
+              </li>
+              <li className="mt-3">
+                Bridge the gap between product vision and technical implementation
+              </li>
             </ul>
           </div>
           <div className="">
