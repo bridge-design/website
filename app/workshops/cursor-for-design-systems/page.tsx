@@ -16,9 +16,10 @@ import { TESTIMONIALS } from '@/data/testimonials'
 import { team } from '@/data/team'
 
 export const metadata = genPageMetadata({
-  title: 'Workshop: Cursor for Design Systems, Views and Pages',
+  title: 'Workshop: Design, Develop, Document & Build with Cursor AI',
   description:
-    'Learn how to develop design system components in Cursor, document them, and build pages. Hands-on remote workshop for designers learning to code and junior to mid-level developers. Master production-ready code generation with AI.',
+    'Hands-on remote workshop on using Cursor to design and develop design system components. Learn Figma MCP, Chrome DevTools MCP, avoid coding traps, and get production-ready code systematically. For designers, product owners, and developers. No coding or Cursor experience required, only basic design systems knowledge.',
+  image: '/images/workshops/curor-for-design-systems/thumb.png',
 })
 
 const WorkshopTiles = () => {
