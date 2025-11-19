@@ -142,19 +142,19 @@ const CursorForDesignSystemsPage = () => {
     {
       title: 'Hands-On Experience',
       description:
-        'Code yourself during the workshop. Get practical, production-ready results with guidance and support throughout.',
+        "Hands-on 'vibe coding' during the workshop. Code yourself with guidance and get practical, production-ready results you can reuse on your projects.",
       icon: 'Tools',
     },
     {
       title: 'Production-Ready Code',
       description:
-        'Learn to master meaningful code generation that is close to production quality, making your handoff to developers smoother.',
+        'Learn a systematic way to get meaningful, production-ready code from Cursor, making your handoff to developers smoother.',
       icon: 'MagicWand',
     },
     {
       title: 'Real Workflows',
       description:
-        'Understand how to work effectively with Cursor, including spec-driven development, documentation, and collaboration with engineering teams.',
+        'See workflows from real projects: spec-driven development, documentation, and collaboration between coding designers and engineering teams.',
       icon: 'Partnership',
     },
   ]
@@ -180,9 +180,10 @@ const CursorForDesignSystemsPage = () => {
       <Section className="mb-20">
         <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">What you will learn?</h2>
         <p className="font-lg text-xl lg:max-w-[1000px]">
-          Learn how to develop design system components in Cursor, document them, and bring them to
-          pages. While you can do some things via Figma AI tools, we offer Cursor because we've had
-          better results with it on our projects.
+          Learn how to use Cursor as a tool to design and develop design system components, document
+          them, and bring them to pages. We'll look at Figma MCP, Chrome DevTools MCP, typical AI
+          coding traps (especially if you're not a coder), and a systematic way to get
+          production-ready code with one prompt.
         </p>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* First column */}
@@ -229,6 +230,19 @@ const CursorForDesignSystemsPage = () => {
         </ul>
       </Section>
 
+      <Section className="mb-20" narrow={true}>
+        <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">What you need to know in advance</h2>
+        <ul className="mt-8 list-disc space-y-3 pl-6 text-lg">
+          <li>
+            You should be familiar with design systems as a concept. Basic knowledge is more than
+            enough.
+          </li>
+          <li>Do you need to know how to code? No.</li>
+          <li>Do you need to know Cursor? No.</li>
+          <li>Do you need to know Storybook? No.</li>
+        </ul>
+      </Section>
+
       {/* Workshop Highlights Section */}
       <Section className="mb-20">
         <Desk
@@ -242,8 +256,9 @@ const CursorForDesignSystemsPage = () => {
       <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Why Attend</h2>
         <p className="mt-6 font-lg text-lg leading-lg tracking-lg">
-          This workshop is designed for designers, product people, and some developers. If you're
-          not sure if this workshop is right for you, we recommend{' '}
+          This workshop is for designers, product people, and developers who want to work with
+          design systems in Cursor. If you're not sure if this workshop is right for you, we
+          recommend{' '}
           <a
             href="https://www.linkedin.com/in/varyastepanova/"
             target="_blank"
