@@ -231,7 +231,9 @@ const CursorForDesignSystemsPage = () => {
       </Section>
 
       <Section className="mb-20" narrow={true}>
-        <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">What you need to know in advance</h2>
+        <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">
+          What you need to know in advance
+        </h2>
         <ul className="mt-8 list-disc space-y-3 pl-6 text-lg">
           <li>
             You should be familiar with design systems as a concept. Basic knowledge is more than
