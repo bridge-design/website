@@ -5,6 +5,7 @@ import {
   Card,
   CtaLink,
   HorizontalWave,
+  Link,
   Outro,
   ProfileCard,
   Section,
@@ -32,7 +33,7 @@ const WorkshopTiles = () => {
           rounded={false}
           className="relative h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
         >
-          <div className="absolute right-2 top-2 rounded bg-red-500 px-2 py-1 text-xs font-bold text-white">
+          <div className="absolute right-2 top-2 rounded bg-[var(--btg-color-accent-500)] px-2 py-1 text-xs font-bold text-white">
             SOLD OUT
           </div>
           <div className="px-2 py-6">
@@ -41,25 +42,17 @@ const WorkshopTiles = () => {
               <TimeDisplay time="9am — 11am" date="2025-11-21" defaultTimezone="CET" />
             </p>
             <p className="mt-8">Location: Remote (Zoom)</p>
-            <p className="mb-4">&nbsp;</p>
-            <p className="text-sm text-gray-600">
-              <a
-                href="https://luma.com/6i4g2tqy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--btg-color-neutral-1000)] underline hover:text-[var(--btg-color-neutral-900)] hover:no-underline"
-              >
-                View on Luma →
-              </a>
-            </p>
           </div>
         </Card>
 
         {/* Second Workshop Run */}
         <Card
           rounded={false}
-          className="h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
+          className="relative h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
         >
+          <div className="absolute right-2 top-2 rounded bg-[var(--btg-color-highlight-1000)] px-2 py-1 text-xs font-bold text-[var(--btg-color-neutral-100)]">
+            EUROPE
+          </div>
           <div className="px-2 py-6">
             <p className="text-lg font-bold">5th of December, 2025</p>
             <p className="mb-2 text-lg font-bold">
@@ -82,12 +75,39 @@ const WorkshopTiles = () => {
           </div>
         </Card>
 
+        {/* Third Workshop Run */}
+        <Card
+          rounded={false}
+          className="relative h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
+        >
+          <div className="absolute right-2 top-2 rounded bg-[var(--btg-color-highlight-1000)] px-2 py-1 text-xs font-bold text-[var(--btg-color-neutral-100)]">
+            AMERICAS
+          </div>
+          <div className="px-2 py-6">
+            <p className="text-lg font-bold">9th of December, 2025</p>
+            <p className="mb-2 text-lg font-bold">9am — 11am (PST)</p>
+            <p className="mt-8">Location: Remote (Zoom)</p>
+            <p className="mb-4">Price: $35</p>
+            <p className="text-sm">
+              Only 20 spots:
+              {` `}
+              <a
+                href="https://luma.com/u5aiko87"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--btg-color-neutral-1000)] underline hover:text-[var(--btg-color-neutral-900)] hover:no-underline"
+              >
+                Register on Luma →
+              </a>
+            </p>
+          </div>
+        </Card>
+
         {/* Internal Training Card */}
-        <div className="md:col-span-2">
+        <Link href="/contact" className="block h-full">
           <Card
             rounded={false}
             className="h-full bg-[var(--btg-color-neutral-100)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-neutral-200)]"
-            href="/contact"
             footer={
               <CtaLink
                 to="/contact"
@@ -105,7 +125,7 @@ const WorkshopTiles = () => {
               </p>
             </div>
           </Card>
-        </div>
+        </Link>
       </div>
     </>
   )
@@ -122,19 +142,19 @@ const CursorForDesignSystemsPage = () => {
     {
       title: 'Hands-On Experience',
       description:
-        'Code yourself during the workshop. Get practical, production-ready results with guidance and support throughout.',
+        "Hands-on 'vibe coding' during the workshop. Code yourself with guidance and get practical, production-ready results you can reuse on your projects.",
       icon: 'Tools',
     },
     {
       title: 'Production-Ready Code',
       description:
-        'Learn to master meaningful code generation that is close to production quality, making your handoff to developers smoother.',
+        'Learn a systematic way to get meaningful, production-ready code from Cursor, making your handoff to developers smoother.',
       icon: 'MagicWand',
     },
     {
       title: 'Real Workflows',
       description:
-        'Understand how to work effectively with Cursor, including spec-driven development, documentation, and collaboration with engineering teams.',
+        'See workflows from real projects: spec-driven development, documentation, and collaboration between coding designers and engineering teams.',
       icon: 'Partnership',
     },
   ]
@@ -160,9 +180,10 @@ const CursorForDesignSystemsPage = () => {
       <Section className="mb-20">
         <h2 className="mb-10 font-4xl text-4xl lg:font-5xl lg:text-5xl">What you will learn?</h2>
         <p className="font-lg text-xl lg:max-w-[1000px]">
-          Learn how to develop design system components in Cursor, document them, and bring them to
-          pages. While you can do some things via Figma AI tools, we offer Cursor because we've had
-          better results with it on our projects.
+          Learn how to use Cursor as a tool to design and develop design system components, document
+          them, and bring them to pages. We'll look at Figma MCP, Chrome DevTools MCP, typical AI
+          coding traps (especially if you're not a coder), and a systematic way to get
+          production-ready code with one prompt.
         </p>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* First column */}
@@ -209,6 +230,21 @@ const CursorForDesignSystemsPage = () => {
         </ul>
       </Section>
 
+      <Section className="mb-20" narrow={true}>
+        <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">
+          What you need to know in advance
+        </h2>
+        <ul className="mt-8 list-disc space-y-3 pl-6 text-lg">
+          <li>
+            You should be familiar with design systems as a concept. Basic knowledge is more than
+            enough.
+          </li>
+          <li>Do you need to know how to code? No.</li>
+          <li>Do you need to know Cursor? No.</li>
+          <li>Do you need to know Storybook? No.</li>
+        </ul>
+      </Section>
+
       {/* Workshop Highlights Section */}
       <Section className="mb-20">
         <Desk
@@ -222,8 +258,9 @@ const CursorForDesignSystemsPage = () => {
       <Section className="mb-20" narrow={true}>
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Why Attend</h2>
         <p className="mt-6 font-lg text-lg leading-lg tracking-lg">
-          This workshop is designed for designers, product people, and some developers. If you're
-          not sure if this workshop is right for you, we recommend{' '}
+          This workshop is for designers, product people, and developers who want to work with
+          design systems in Cursor. If you're not sure if this workshop is right for you, we
+          recommend{' '}
           <a
             href="https://www.linkedin.com/in/varyastepanova/"
             target="_blank"
