@@ -16,6 +16,22 @@ const meta: Meta<typeof EventsBanner> = {
     title: {
       description: 'Optional title/header content for the banner',
     },
+    backgroundColor: {
+      control: 'text',
+      description: 'Background color CSS variable or value',
+    },
+    textColor: {
+      control: 'text',
+      description: 'Text color CSS variable or value',
+    },
+    iconBackgroundColor: {
+      control: 'text',
+      description: 'Icon background color CSS variable or value',
+    },
+    containerClasses: {
+      control: 'text',
+      description: 'Additional CSS classes for the container',
+    },
   },
 }
 
@@ -111,6 +127,33 @@ export const ConferencePreview: Story = {
     title: (
       <div className="mb-10 text-center">
         <h2 className="mb-6 font-4xl text-4xl">Conference & Workshop Highlights</h2>
+      </div>
+    ),
+  },
+}
+
+export const Transparent: Story = {
+  args: {
+    content: [
+      {
+        icon: 'Events',
+        title: 'Transparent Events',
+        description: 'Perfect for overlaying on hero images or colored page backgrounds.',
+      },
+      {
+        icon: 'Calendar',
+        title: 'Flexible Integration',
+        description: 'Seamlessly integrates with any page design without background interference.',
+      },
+    ],
+    backgroundColor: 'transparent',
+    textColor: 'var(--btg-color-neutral-100)',
+    iconBackgroundColor: 'var(--btg-color-neutral-800)',
+    containerClasses: 'p-0',
+    title: (
+      <div className="mb-10 text-center">
+        <h2 className="mb-6 font-4xl text-4xl">Transparent Events Banner</h2>
+        <p className="text-lg opacity-80">No background color, perfect for layering</p>
       </div>
     ),
   },

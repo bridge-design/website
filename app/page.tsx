@@ -3,6 +3,7 @@ import {
   Card,
   CtaLink,
   Hero,
+  Icon,
   LogosCloud,
   Outro,
   ProfileCard,
@@ -58,29 +59,101 @@ export default async function Page() {
         </div>
       </Hero>
 
-      {/* Workshop Promotion Section */}
-      {/* <Section className="mb-20 bg-[var(--btg-color-accent-600)] py-12">
-        <Card className="mx-auto max-w-4xl" href="/workshops/hands-on-design-systems">
-          <div className="flex flex-col items-center justify-between md:flex-row">
-            <div className="mb-6 md:mb-0 md:mr-8">
-              <h2 className="mb-2 text-2xl font-bold md:text-3xl">
-                Hands-on Design Systems Workshop
-              </h2>
-              <p className="mb-2 text-lg">9th April, 2025 • 9:00-16:00 CEST • Online</p>
-              <p className="mb-4">
-                Join our interactive workshop and learn how to build a design system with Figma,
-                React, and Storybook.
+      {/* Upcoming Events & Workshops Section */}
+      <Section className="pb-12">
+        <h2 className="mb-10 text-center text-4xl">Our Events or Events with Us 👇</h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <Card
+            href="/workshops/cursor-for-design-systems"
+            backgroundColorVar="--btg-color-highlight-600"
+            backgroundColorVarHover="--btg-color-highlight-700"
+            backgroundColorVarDark="--btg-color-highlight-600"
+            backgroundColorVarHoverDark="--btg-color-highlight-700"
+            textColorVar="--btg-color-neutral-1000"
+            textColorVarDark="--btg-color-neutral-1000"
+            className="bg-[var(--btg-color-primary-700)] hover:bg-[var(--btg-color-primary-600)]"
+          >
+            <div className="flex flex-col gap-4">
+              <div className="grid grid-cols-[auto_1fr] items-start gap-3">
+                <Icon name="Education" className="text-[var(--btg-color-highlight-500)]" size={40} />
+                <h3 className="text-xl font-bold">Cursor for Design Systems</h3>
+              </div>
+              <p>
+                Hands-on workshop on using Cursor AI to design and develop design system components,
+                views, and pages.
               </p>
-              <CtaLink to="/workshops/hands-on-design-systems" className="text-xl" arrow="end">
-                Get tickets
+              <CtaLink
+                to="/workshops/cursor-for-design-systems"
+                arrow="end"
+                colorVar="var(--btg-color-neutral-1000)"
+                colorHoverVar="var(--btg-color-neutral-900)"
+              >
+                Learn more
               </CtaLink>
             </div>
-            <div className="flex h-32 w-32 flex-shrink-0 items-center justify-center rounded-full bg-[var(--btg-color-accent-600)] md:h-40 md:w-40">
-              <span className="text-5xl text-white">🚀</span>
+          </Card>
+
+          <Card
+            href="/events/breakfasts"
+            backgroundColorVar="--btg-color-accent-500"
+            backgroundColorVarHover="--btg-color-accent-600"
+            backgroundColorVarDark="--btg-color-accent-500"
+            backgroundColorVarHoverDark="--btg-color-accent-600"
+            textColorVar="--btg-color-neutral-1000"
+            textColorVarDark="--btg-color-neutral-1000"
+            className="bg-[var(--btg-color-primary-700)] hover:bg-[var(--btg-color-primary-600)]"
+          >
+            <div className="flex flex-col gap-4">
+              <div className="grid grid-cols-[auto_1fr] items-start gap-3">
+                <Icon name="Cafe" className="text-[var(--btg-color-highlight-500)]" size={40} />
+                <h3 className="text-xl font-bold">Design Systems Breakfast</h3>
+              </div>
+              <p>
+                Free casual morning meetups where UX designers and UI developers share coffee,
+                ideas, and insights.
+              </p>
+              <CtaLink
+                to="/events/breakfasts"
+                arrow="end"
+                colorVar="var(--btg-color-neutral-1000)"
+                colorHoverVar="var(--btg-color-neutral-900)"
+              >
+                Join next breakfast
+              </CtaLink>
             </div>
-          </div>
-        </Card>
-      </Section> */}
+          </Card>
+
+          <Card
+            href="/contact"
+            backgroundColorVar="--btg-color-primary-500"
+            backgroundColorVarHover="--btg-color-primary-600"
+            backgroundColorVarDark="--btg-color-primary-500"
+            backgroundColorVarHoverDark="--btg-color-primary-600"
+            textColorVar="--btg-color-neutral-1000"
+            textColorVarDark="--btg-color-neutral-1000"
+            className="bg-[var(--btg-color-primary-700)] hover:bg-[var(--btg-color-primary-600)]"
+          >
+            <div className="flex flex-col gap-4">
+              <div className="grid grid-cols-[auto_1fr] items-start gap-3">
+                <Icon name="Partnership" className="text-[var(--btg-color-highlight-500)]" size={40} />
+                <h3 className="text-xl font-bold">Custom Workshops & Training</h3>
+              </div>
+              <p>
+                We provide internal training on design systems for your team. Tailored content for
+                your specific needs.
+              </p>
+              <CtaLink
+                to="/contact"
+                arrow="end"
+                colorVar="var(--btg-color-neutral-1000)"
+                colorHoverVar="var(--btg-color-neutral-900)"
+              >
+                Let's talk
+              </CtaLink>
+            </div>
+          </Card>
+        </div>
+      </Section>
 
       <Section className="pb-12">
         <h2 className="mb-6 text-center text-4xl">Our Design Systems Expertise</h2>

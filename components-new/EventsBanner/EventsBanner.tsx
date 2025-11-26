@@ -12,6 +12,10 @@ export interface EventsBannerItem {
 export interface EventsBannerProps {
   content?: EventsBannerItem[]
   title?: React.ReactNode
+  backgroundColor?: string
+  textColor?: string
+  iconBackgroundColor?: string
+  containerClasses?: string
 }
 
 /**
@@ -41,6 +45,10 @@ const defaultTitle = 'Our events and events with us'
 export const EventsBanner: React.FC<EventsBannerProps> = ({
   title = defaultTitle,
   content = defaultContent,
+  backgroundColor = "var(--btg-color-highlight-600)",
+  textColor = "var(--btg-color-neutral-1000)",
+  iconBackgroundColor = "var(--btg-color-highlight-400)",
+  containerClasses,
 }) => {
   const titleContainer = (
     <div className="mb-10 text-center">
@@ -51,9 +59,10 @@ export const EventsBanner: React.FC<EventsBannerProps> = ({
     <Desk
       title={titleContainer}
       content={content}
-      backgroundColor="var(--btg-color-highlight-600)"
-      textColor="var(--btg-color-neutral-1000)"
-      iconBackgroundColor="var(--btg-color-highlight-400)"
+      backgroundColor={backgroundColor}
+      textColor={textColor}
+      iconBackgroundColor={iconBackgroundColor}
+      containerClasses={containerClasses}
       url="/events"
       gridClasses="grid grid-cols-1 lg:grid-cols-2 gap-10"
     />
