@@ -52,7 +52,8 @@ export const Desk: React.FC<DeskProps> = ({
   }
 
   const defaultContainerClasses = classNames(
-    `bg-[${backgroundColor}] text-[${textColor}]`,
+    backgroundColor !== 'transparent' ? `bg-[${backgroundColor}]` : 'bg-transparent',
+    `text-[${textColor}]`,
     'p-10',
     url && 'cursor-pointer hover:opacity-90 transition-opacity duration-200',
     containerClasses
