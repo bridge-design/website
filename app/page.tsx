@@ -1,9 +1,8 @@
 import {
   Blob,
-  Card,
   CtaLink,
+  EventsBanner,
   Hero,
-  Icon,
   LogosCloud,
   Outro,
   ProfileCard,
@@ -15,6 +14,7 @@ import {
 import { team } from '@/data/team'
 import { TESTIMONIALS } from '@/data/testimonials'
 import { EXPERTISE } from '@/data/services'
+import { EVENTS_BANNER_ITEMS, EVENTS_BANNER_TITLE } from '@/data/events'
 import { allCaseStudies } from 'contentlayer/generated'
 
 const EXPERTISE_COLORS_AND_VARIANTS: Array<{
@@ -59,100 +59,9 @@ export default async function Page() {
         </div>
       </Hero>
 
-      {/* Upcoming Events & Workshops Section */}
+      {/* Events & Workshops Section */}
       <Section className="pb-12">
-        <h2 className="mb-10 text-center text-4xl">Our Events or Events with Us 👇</h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <Card
-            href="/workshops/cursor-for-design-systems"
-            backgroundColorVar="--btg-color-highlight-600"
-            backgroundColorVarHover="--btg-color-highlight-700"
-            backgroundColorVarDark="--btg-color-highlight-600"
-            backgroundColorVarHoverDark="--btg-color-highlight-700"
-            textColorVar="--btg-color-neutral-1000"
-            textColorVarDark="--btg-color-neutral-1000"
-            className="bg-[var(--btg-color-primary-700)] hover:bg-[var(--btg-color-primary-600)]"
-          >
-            <div className="flex flex-col gap-4">
-              <div className="grid grid-cols-[auto_1fr] items-start gap-3">
-                <Icon name="Education" className="text-[var(--btg-color-highlight-500)]" size={40} />
-                <h3 className="text-xl font-bold">Cursor for Design Systems</h3>
-              </div>
-              <p>
-                Hands-on workshop on using Cursor AI to design and develop design system components,
-                views, and pages.
-              </p>
-              <CtaLink
-                to="/workshops/cursor-for-design-systems"
-                arrow="end"
-                colorVar="var(--btg-color-neutral-1000)"
-                colorHoverVar="var(--btg-color-neutral-900)"
-              >
-                Learn more
-              </CtaLink>
-            </div>
-          </Card>
-
-          <Card
-            href="/events/breakfasts"
-            backgroundColorVar="--btg-color-accent-500"
-            backgroundColorVarHover="--btg-color-accent-600"
-            backgroundColorVarDark="--btg-color-accent-500"
-            backgroundColorVarHoverDark="--btg-color-accent-600"
-            textColorVar="--btg-color-neutral-1000"
-            textColorVarDark="--btg-color-neutral-1000"
-            className="bg-[var(--btg-color-primary-700)] hover:bg-[var(--btg-color-primary-600)]"
-          >
-            <div className="flex flex-col gap-4">
-              <div className="grid grid-cols-[auto_1fr] items-start gap-3">
-                <Icon name="Cafe" className="text-[var(--btg-color-highlight-500)]" size={40} />
-                <h3 className="text-xl font-bold">Design Systems Breakfast</h3>
-              </div>
-              <p>
-                Free casual morning meetups where UX designers and UI developers share coffee,
-                ideas, and insights.
-              </p>
-              <CtaLink
-                to="/events/breakfasts"
-                arrow="end"
-                colorVar="var(--btg-color-neutral-1000)"
-                colorHoverVar="var(--btg-color-neutral-900)"
-              >
-                Join next breakfast
-              </CtaLink>
-            </div>
-          </Card>
-
-          <Card
-            href="/contact"
-            backgroundColorVar="--btg-color-primary-500"
-            backgroundColorVarHover="--btg-color-primary-600"
-            backgroundColorVarDark="--btg-color-primary-500"
-            backgroundColorVarHoverDark="--btg-color-primary-600"
-            textColorVar="--btg-color-neutral-1000"
-            textColorVarDark="--btg-color-neutral-1000"
-            className="bg-[var(--btg-color-primary-700)] hover:bg-[var(--btg-color-primary-600)]"
-          >
-            <div className="flex flex-col gap-4">
-              <div className="grid grid-cols-[auto_1fr] items-start gap-3">
-                <Icon name="Partnership" className="text-[var(--btg-color-highlight-500)]" size={40} />
-                <h3 className="text-xl font-bold">Custom Workshops & Training</h3>
-              </div>
-              <p>
-                We provide internal training on design systems for your team. Tailored content for
-                your specific needs.
-              </p>
-              <CtaLink
-                to="/contact"
-                arrow="end"
-                colorVar="var(--btg-color-neutral-1000)"
-                colorHoverVar="var(--btg-color-neutral-900)"
-              >
-                Let's talk
-              </CtaLink>
-            </div>
-          </Card>
-        </div>
+        <EventsBanner items={EVENTS_BANNER_ITEMS} title={EVENTS_BANNER_TITLE} />
       </Section>
 
       <Section className="pb-12">
