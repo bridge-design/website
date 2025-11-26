@@ -2,7 +2,7 @@ import { genPageMetadata } from 'app/seo'
 
 import { team } from '@/data/team'
 import { TESTIMONIALS } from '@/data/testimonials'
-import { EVENTS_BANNER, EVENTS_BANNER_TITLE } from '@/data/events'
+import { EVENTS_BANNER_ITEMS, EVENTS_BANNER_TITLE } from '@/data/events'
 
 import {
   HorizontalWave,
@@ -57,7 +57,7 @@ export default async function TeamPage() {
         </div>
       </Section>
       <Section className="py-12">
-        <EventsBanner content={EVENTS_BANNER} title={EVENTS_BANNER_TITLE} />
+        <EventsBanner items={EVENTS_BANNER_ITEMS} title={EVENTS_BANNER_TITLE} />
       </Section>
     </>
   )

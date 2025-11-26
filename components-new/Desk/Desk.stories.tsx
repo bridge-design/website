@@ -245,3 +245,35 @@ export const MinimalGrid: Story = {
     ),
   },
 }
+
+export const Transparent: Story = {
+  args: {
+    content: [
+      {
+        icon: 'CloudApp',
+        title: 'Transparent Background',
+        description: 'Perfect for overlaying on images or colored backgrounds.',
+      },
+      {
+        icon: 'Layers',
+        title: 'Layered Design',
+        description: 'Seamlessly integrates with existing page layouts.',
+      },
+      {
+        icon: 'Opacity',
+        title: 'Clean Integration',
+        description: 'No background interference with your design system.',
+      },
+    ],
+    backgroundColor: 'transparent',
+    textColor: 'var(--btg-color-neutral-100)',
+    iconBackgroundColor: 'var(--btg-color-neutral-800)',
+    containerClasses: 'border border-dashed border-gray-300 bg-transparent',
+    title: (
+      <div className="mb-10 text-center">
+        <h2 className="mb-6 font-4xl text-4xl">Transparent Version</h2>
+        <p className="text-lg opacity-80">No background color, perfect for layering</p>
+      </div>
+    ),
+  },
+}
