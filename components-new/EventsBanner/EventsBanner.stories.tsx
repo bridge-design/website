@@ -23,15 +23,12 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-  args: {
-    // Uses default content and title
-  },
+  args: {},
 }
 
 export const WithoutTitle: Story = {
   args: {
     title: undefined,
-    // Uses default content
   },
 }
 
@@ -43,7 +40,6 @@ export const CustomTitle: Story = {
         <p className="text-lg opacity-80">Connect with design systems professionals</p>
       </div>
     ),
-    // Uses default content
   },
 }
 
@@ -61,7 +57,7 @@ export const ThreeItems: Story = {
         description: 'We speak at conferences, meetups, and company events sharing insights about design systems and team collaboration.',
       },
       {
-        icon: 'Users',
+        icon: 'UserMultiple',
         title: 'Community Events',
         description: 'Connect with the design systems community through workshops, panels, and networking opportunities.',
       },
@@ -107,7 +103,7 @@ export const ConferencePreview: Story = {
         description: 'We present at design and development conferences worldwide, sharing our expertise in design systems.',
       },
       {
-        icon: 'Users',
+        icon: 'UserMultiple',
         title: 'Workshop Hosting',
         description: 'Hands-on workshops for teams looking to implement or improve their design system processes.',
       },
