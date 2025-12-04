@@ -83,6 +83,9 @@ const WorkshopTiles = () => {
           {/* <div className="absolute right-2 top-2 rounded bg-[var(--btg-color-highlight-1000)] px-2 py-1 text-xs font-bold text-[var(--btg-color-neutral-100)]">
             AMERICAS
           </div> */}
+          <div className="absolute right-2 top-2 rounded bg-[var(--btg-color-accent-500)] px-2 py-1 text-xs font-bold text-white">
+            SOLD OUT
+          </div>
           <div className="px-2 py-6">
             <p className="text-lg font-bold">9th of December, 2025</p>
             <p className="mb-2 text-lg font-bold">9am — 11am (PST)</p>
