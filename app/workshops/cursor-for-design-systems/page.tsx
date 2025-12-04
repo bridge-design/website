@@ -29,7 +29,7 @@ const WorkshopTiles = () => {
       <p className="mb-6 mt-8 text-center text-lg">Get your workshop spot 👇</p>
       <div className="mx-auto grid w-full max-w-[90%] grid-cols-1 gap-4 md:grid-cols-2">
         {/* First Workshop Run - Sold Out */}
-        <Card
+        {/* <Card
           rounded={false}
           className="relative h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
         >
@@ -43,7 +43,7 @@ const WorkshopTiles = () => {
             </p>
             <p className="mt-8">Location: Remote (Zoom)</p>
           </div>
-        </Card>
+        </Card> */}
 
         {/* Second Workshop Run */}
         <Card
@@ -93,6 +93,38 @@ const WorkshopTiles = () => {
               {` `}
               <a
                 href="https://luma.com/u5aiko87"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--btg-color-neutral-1000)] underline hover:text-[var(--btg-color-neutral-900)] hover:no-underline"
+              >
+                Register on Luma →
+              </a>
+            </p>
+          </div>
+        </Card>
+
+        {/* Forth Workshop Run */}
+        <Card
+          rounded={false}
+          className="relative h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
+        >
+          {/* <div className="absolute right-2 top-2 rounded bg-[var(--btg-color-highlight-1000)] px-2 py-1 text-xs font-bold text-[var(--btg-color-neutral-100)]">
+            AMERICAS
+          </div> */}
+          <div className="px-2 py-6">
+            <p className="text-lg font-bold">27th of January, 2026</p>
+            <p className="text-m mb-2 font-bold">
+              9am — 11am (PST)
+              <br />
+              6pm — 8pm (CET)
+            </p>
+            <p className="mt-8">Location: Remote (Zoom)</p>
+            <p className="mb-4">Price: $40</p>
+            <p className="text-sm">
+              Only 20 spots:
+              {` `}
+              <a
+                href="https://luma.com/bx46lust"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--btg-color-neutral-1000)] underline hover:text-[var(--btg-color-neutral-900)] hover:no-underline"
