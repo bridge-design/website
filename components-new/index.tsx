@@ -1,4 +1,5 @@
 export { Advantages } from './Advantages/Advantages'
+export { RotatingText } from './RotatingText/RotatingText'
 export { Avatar } from './Avatar/Avatar'
 export { Blob } from './Blob/Blob'
 export { BlogList } from './BlogList/BlogList'
