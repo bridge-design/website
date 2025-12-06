@@ -4,6 +4,7 @@ import { Header } from '../components-new/Header/Header'
 import { Section } from '../components-new/Section/Section'
 import { Hero } from '../components-new/Hero/Hero'
 import { CtaLink } from '../components-new/CtaLink/CtaLink'
+import { RotatingText } from '../components-new/RotatingText/RotatingText'
 import { Footer } from '../components-new/Footer/Footer'
 import { ThreeColumnLayout } from '../components-new/ThreeColumnLayout/ThreeColumnLayout'
 import { Blob } from '../components-new/Blob/Blob'
@@ -16,6 +17,7 @@ import { TESTIMONIALS } from '../data/testimonials'
 import { EXPERTISE } from '../data/services'
 import { team } from '../data/team'
 import { caseStudiesExamples } from '../data/case-studies-examples'
+import { heroData } from '../data/hero'
 
 const EXPERTISE_COLORS_AND_VARIANTS: Array<{
   color: string
@@ -65,17 +67,23 @@ export const Default: Story = {
       <Hero backgroundColor="var(--btg-hero-background)">
         <div className="text-center lg:mt-8">
           <h1 className="mx-auto mb-16 font-2xl text-4xl leading-hero lg:w-4/5 lg:text-6xl">
-            We team up with designers and developers to build and scale design systems
+            {heroData.headingPrefix}{' '}
+            <RotatingText 
+              texts={heroData.rotatingTexts}
+              duration={2500}
+              animation="fade"
+              className="inline"
+            />
           </h1>
           <CtaLink
-            to="/contact"
+            to={heroData.cta.url}
             underline={true}
             className="text-xl"
             colorVar="var(--btg-hero-text-color)"
             colorHoverVar="var(--btg-hero-text-color)"
             borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
           >
-            Start a conversation
+            {heroData.cta.text}
           </CtaLink>
         </div>
       </Hero>
