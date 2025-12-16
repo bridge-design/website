@@ -20,6 +20,12 @@ const workshops = [
     href: '/workshops/cursor-for-design-systems',
     date: new Date('2025-11-18'),
   },
+  {
+    title: 'Storybook Tricks',
+    description: `Placeholder description for the upcoming Storybook Tricks workshop.`,
+    href: '/workshops/storybook-tricks',
+    date: new Date('2026-01-29'),
+  },
 ]
 
 // Sort workshops by date (latest first)
