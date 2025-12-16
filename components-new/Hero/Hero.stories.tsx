@@ -1,6 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Hero } from './Hero'
 import { CtaLink } from '../CtaLink/CtaLink'
+import { RotatingText } from '../RotatingText/RotatingText'
+import { heroData } from '@/data/hero'
 
 const meta: Meta<typeof Hero> = {
   title: 'Components/Hero',
@@ -34,21 +36,27 @@ type Story = StoryObj<typeof Hero>
 
 export const Default: Story = {
   args: {
-    title: 'Welcome to Our Platform',
+    title: heroData.title,
     children: (
       <div className="mt-8 text-center">
         <h1 className="font-6xl mx-auto mb-16 text-6xl leading-hero lg:w-4/5">
-          We team up with designers and developers to build and scale design systems
+          {heroData.headingPrefix}{' '}
+          <RotatingText 
+            texts={heroData.rotatingTexts}
+            duration={2500}
+            animation="fade"
+            className="inline"
+          />
         </h1>
         <CtaLink
-          to="/contact"
+          to={heroData.cta.url}
           underline={true}
           className="text-xl"
           colorVar="var(--btg-hero-text-color)"
           colorHoverVar="var(--btg-hero-text-color)"
           borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
         >
-          Start a conversation
+          {heroData.cta.text}
         </CtaLink>
       </div>
     ),

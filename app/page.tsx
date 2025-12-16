@@ -6,6 +6,7 @@ import {
   LogosCloud,
   Outro,
   ProfileCard,
+  RotatingText,
   Section,
   Testimonial,
   ThreeColumnLayout,
@@ -15,6 +16,7 @@ import { team } from '@/data/team'
 import { TESTIMONIALS } from '@/data/testimonials'
 import { EXPERTISE } from '@/data/services'
 import { EVENTS_BANNER_ITEMS, EVENTS_BANNER_TITLE } from '@/data/events'
+import { heroData } from '@/data/hero'
 import { allCaseStudies } from 'contentlayer/generated'
 
 const EXPERTISE_COLORS_AND_VARIANTS: Array<{
@@ -44,17 +46,23 @@ export default async function Page() {
       <Hero backgroundColor="var(--btg-hero-background-teal)">
         <div className="text-center lg:mt-8">
           <h1 className="mx-auto mb-16 font-2xl text-4xl leading-hero lg:w-4/5 lg:text-6xl">
-            We team up with designers and developers to build and scale design systems
+            {heroData.headingPrefix}{' '}
+            <RotatingText
+              texts={heroData.rotatingTexts}
+              duration={3000}
+              animation="fade"
+              className="inline"
+            />
           </h1>
           <CtaLink
-            to="/contact"
+            to={heroData.cta.url}
             underline={true}
             className="text-xl"
             colorVar="var(--btg-hero-text-color)"
             colorHoverVar="var(--btg-hero-text-color)"
             borderClassName="border-[var(--btg-hero-text-color)] hover:border-[var(--btg-hero-text-color)]"
           >
-            Start a conversation
+            {heroData.cta.text}
           </CtaLink>
         </div>
       </Hero>
