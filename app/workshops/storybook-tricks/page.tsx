@@ -33,7 +33,7 @@ const WorkshopTiles = () => {
           className="relative h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
         >
           <div className="px-2 pt-6">
-            <p className="text-lg font-bold">29th of January, 2026</p>
+            <p className="text-lg font-bold">3rd of February, 2026</p>
             <p className="mb-2 text-lg font-bold">
               <TimeDisplay time="6pm — 8pm" date="2025-12-05" defaultTimezone="CET" />
             </p>

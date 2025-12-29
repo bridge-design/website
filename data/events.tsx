@@ -2,19 +2,26 @@ import type { EventsBannerItem } from '@/components-new/EventsBanner/EventsBanne
 
 export const EVENTS_BANNER_ITEMS: EventsBannerItem[] = [
   {
+    icon: 'Tools',
+    title: 'Storybook Tricks, (semi-) advanced',
+    description: 'Practical recipes for documentation, testing, and automation. Master advanced Storybook customization for your design system.',
+    href: '/workshops/storybook-tricks',
+    ctaText: 'Learn more',
+  },
+  {
     icon: 'Education',
     title: 'Cursor for Design Systems',
     description: 'Hands-on workshop on using Cursor AI to design and develop design system components, views, and pages.',
     href: '/workshops/cursor-for-design-systems',
     ctaText: 'Learn more',
   },
-  {
-    icon: 'Cafe',
-    title: 'Design Systems Breakfast',
-    description: 'Free casual morning meetups where UX designers and UI developers share coffee, ideas, and insights.',
-    href: '/events/breakfasts',
-    ctaText: 'Join next breakfast',
-  },
+  // {
+  //   icon: 'Cafe',
+  //   title: 'Design Systems Breakfast',
+  //   description: 'Free casual morning meetups where UX designers and UI developers share coffee, ideas, and insights.',
+  //   href: '/events/breakfasts',
+  //   ctaText: 'Join next breakfast',
+  // },
   {
     icon: 'Partnership',
     title: 'Custom Workshops & Training',
