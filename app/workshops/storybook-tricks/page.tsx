@@ -140,9 +140,8 @@ const StorybookTricksPage = () => {
             <p className="text-lg">
               You'll learn how to structure and style your Storybook to act as a complete
               documentation site. We'll cover organizing the sidebar, creating custom pages, and
-              building bespoke documentation blocks. You will practice documenting design
-              tokens a way that bridges the gap between design
-              and code.
+              building bespoke documentation blocks. You will practice documenting design tokens a
+              way that bridges the gap between design and code.
             </p>
           </div>
 
@@ -150,9 +149,9 @@ const StorybookTricksPage = () => {
             <p className="text-lg">
               We will also dive into the ecosystem's advanced features. You'll set up automated
               interaction tests, reuse stories in unit tests, and create custom addons to enhance
-              the developer experience. We will touch RTL support, LLM-ready
-              documentation, version switchers and many more. You'll master the techniques to make your design system robust and
-              user-friendly.
+              the developer experience. We will touch RTL support, LLM-ready documentation, version
+              switchers and many more. You'll master the techniques to make your design system
+              robust and user-friendly.
             </p>
           </div>
         </div>
@@ -162,25 +161,28 @@ const StorybookTricksPage = () => {
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Topics we'll cover</h2>
         <ul className="mt-8 list-disc space-y-4 pl-6 text-lg">
           <li>
-            <strong>Storybook Organization:</strong> Sidebar structure, grouping, tags, and
-            custom pages
+            <strong>Storybook Organization:</strong> Sidebar structure, grouping, tags, and custom
+            pages
           </li>
           <li>
-            <strong>Design Tokens:</strong> Automating documentation for diffrent types of tokens and CSS utilities available in the library
+            <strong>Design Tokens:</strong> Automating documentation for diffrent types of tokens
+            and CSS utilities available in the library
           </li>
           <li>
             <strong>Custom Documentation:</strong> Creating custom Docs Page templates, styled
             blocks, and property tables
           </li>
           <li>
-            <strong>Developer Experience:</strong> Type-based documentation for props with automated and semi-automated enhancements
+            <strong>Developer Experience:</strong> Type-based documentation for props with automated
+            and semi-automated enhancements
           </li>
           <li>
             <strong>Testing Strategies:</strong> Interaction tests and reusing stories in unit tests
             (Vitest/Jest)
           </li>
           <li>
-            <strong>Advanced Customization:</strong> Custom addons, decorators, LLM-ready documentation and many more
+            <strong>Advanced Customization:</strong> Custom addons, decorators, LLM-ready
+            documentation and many more
           </li>
         </ul>
       </Section>
@@ -216,8 +218,8 @@ const StorybookTricksPage = () => {
         <h2 className="font-4xl text-4xl lg:font-5xl lg:text-5xl">Why Attend</h2>
         <p className="mt-6 font-lg text-lg leading-lg tracking-lg">
           This workshop is designed for those who want to get more out of Storybook than just
-          component rendering. You'll learn actionable techniques to make your Storybook a powerful, automated
-          platform.
+          component rendering. You'll learn actionable techniques to make your Storybook a powerful,
+          automated platform.
         </p>
         <div className="mt-10 grid grid-cols-1 gap-x-20 gap-y-16 md:grid-cols-2">
           <div className="">
@@ -238,16 +240,15 @@ const StorybookTricksPage = () => {
             </ul>
           </div>
           <div className="">
-            <h2 className="font-xl text-xl leading-xl tracking-xl">
-              for Designers who Code
-            </h2>
+            <h2 className="font-xl text-xl leading-xl tracking-xl">for Designers who Code</h2>
             <ul className="list mt-6 list-disc">
               <li>
                 Take ownership of the documentation structure and layout without relying heavily on
                 engineering resources.
               </li>
               <li className="mt-3">
-                Visualize design tokens and bridge the gap between Figma and the code library effectively.
+                Visualize design tokens and bridge the gap between Figma and the code library
+                effectively.
               </li>
               <li className="mt-3">
                 Create bespoke documentation pages and custom blocks that truly reflect your design
@@ -324,4 +325,3 @@ const StorybookTricksPage = () => {
 }
 
 export default StorybookTricksPage
-
