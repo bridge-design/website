@@ -2,7 +2,13 @@ import 'css/prism.css'
 import 'katex/dist/katex.css'
 
 import { components } from '@/components-new/MDXComponents'
-import { CtaLink, HorizontalWave, ScrollTopAndComment, Section } from '@/components-new/index'
+import {
+  CtaLink,
+  HorizontalWave,
+  ScrollTopAndComment,
+  Section,
+  Outro,
+} from '@/components-new/index'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs, allAuthors } from 'contentlayer/generated'
@@ -156,6 +162,22 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
           </div>
         </article>
       </Section>
+      <Outro backgroundColor="var(--btg-hero-background)">
+        <div className="text-center">
+          <h1 className="mx-auto mb-10 font-4xl text-4xl lg:w-4/5">
+            Want to start your transformaton journey with us?
+          </h1>
+          <CtaLink
+            to="/contact"
+            underline={true}
+            className="text-xl"
+            colorVar="--btg-hero-text-color"
+            colorHoverVar="--btg-hero-text-color"
+          >
+            Let's talk!
+          </CtaLink>
+        </div>
+      </Outro>
       {/* <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout> */}
