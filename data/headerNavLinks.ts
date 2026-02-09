@@ -1,23 +1,23 @@
 const headerNavLinks = [
   {
     name: 'Case studies',
-    href: '/case-studies',
+    href: 'case-studies',
   },
   {
     name: 'Services',
-    href: '/services',
+    href: 'services',
   },
   {
     name: 'Blog',
-    href: '/blog',
+    href: 'blog',
   },
   {
     name: 'Team',
-    href: '/team',
+    href: 'team',
   },
   {
     name: 'Contact',
-    href: '/contact',
+    href: 'contact',
   },
 ]
 
