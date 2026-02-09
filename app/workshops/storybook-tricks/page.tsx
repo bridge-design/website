@@ -27,8 +27,8 @@ const WorkshopTiles = () => {
   return (
     <>
       <p className="mb-6 mt-8 text-center text-lg">Get your workshop spot 👇</p>
-      <div className="mx-auto grid w-full max-w-[90%] grid-cols-1 gap-4 md:grid-cols-2">
-        <Card
+      <div className="mx-auto grid w-full max-w-[90%] grid-cols-1 gap-4 md:grid-cols-1">
+        {/* <Card
           rounded={false}
           className="relative h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
         >
@@ -52,7 +52,7 @@ const WorkshopTiles = () => {
               </a>
             </p>
           </div>
-        </Card>
+        </Card> */}
 
         {/* Internal Training Card */}
         <Link href="/contact" className="block h-full">
