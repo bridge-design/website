@@ -209,9 +209,24 @@ const convertToLocalTimezone = (
     // Get user's timezone
     const userTimezoneId = Intl.DateTimeFormat().resolvedOptions().timeZone
     
-    // Determine timezone offset for the default timezone (CET is UTC+1 in winter, UTC+2 in summer)
-    // For simplicity, we'll use UTC+1 for CET (winter time for November/December dates)
-    const defaultOffset = defaultTimezone === 'CET' ? '+01:00' : '+00:00'
+    // Determine UTC offset for the default timezone abbreviation
+    const timezoneOffsetMap: Record<string, string> = {
+      CET: '+01:00',
+      CEST: '+02:00',
+      EET: '+02:00',
+      EEST: '+03:00',
+      GMT: '+00:00',
+      UTC: '+00:00',
+      EST: '-05:00',
+      EDT: '-04:00',
+      CST: '-06:00',
+      CDT: '-05:00',
+      MST: '-07:00',
+      MDT: '-06:00',
+      PST: '-08:00',
+      PDT: '-07:00',
+    }
+    const defaultOffset = timezoneOffsetMap[defaultTimezone] ?? '+00:00'
     
     if (isRange) {
       const [startTime, endTime] = timeString.split(/—|-/).map((t) => t.trim())

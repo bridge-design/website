@@ -28,49 +28,35 @@ const WorkshopTiles = () => {
     <>
       <p className="mb-6 mt-8 text-center text-lg">Get your workshop spot 👇</p>
       <div className="mx-auto grid w-full max-w-[90%] grid-cols-1 gap-4 md:grid-cols-2">
-        {/* January 27, 2026 Workshop */}
+        {/* Monthly workshop track record */}
         <Card
           rounded={false}
           className="relative h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
         >
-          <div className="absolute right-2 top-2 rounded bg-[var(--btg-color-accent-500)] px-2 py-1 text-xs font-bold text-white">
-            SOLD OUT
-          </div>
           <div className="px-2 py-6">
-            <p className="text-lg font-bold">27th of January, 2026</p>
-            <p className="text-m mb-2 font-bold">
-              9am — 11am (PST)
-              <br />
-              6pm — 8pm (CET)
+            <p className="text-lg font-bold">Monthly Workshop</p>
+            <p className="mt-2 text-base">
+              We run this workshop every month. So far, <strong>~80 designers</strong> have trained
+              with us.
             </p>
-            <p className="mt-8">Location: Remote (Zoom)</p>
-            <p className="mb-4">Price: $40</p>
-            <p className="text-sm">
-              Only 20 spots:
-              {` `}
-              <a
-                href="https://luma.com/bx46lust"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--btg-color-neutral-1000)] underline hover:text-[var(--btg-color-neutral-900)] hover:no-underline"
-              >
-                Register on Luma →
-              </a>
-            </p>
+            <ul className="mt-2 space-y-1 text-xs">
+              <li className="line-through">February 2026</li>
+              <li className="line-through">January 2026</li>
+              <li className="line-through">December 2025</li>
+              <li className="line-through">November 2025</li>
+            </ul>
           </div>
         </Card>
 
-        {/* February 25, 2026 Workshop */}
+        {/* March 24, 2026 Workshop */}
         <Card
           rounded={false}
           className="relative h-full bg-[var(--btg-hero-background-blue)] text-[var(--btg-color-neutral-1000)] hover:bg-[var(--btg-color-highlight-700)]"
         >
           <div className="px-2 py-6">
-            <p className="text-lg font-bold">25th of February, 2026</p>
+            <p className="text-lg font-bold">Tuesday, March 24, 2026</p>
             <p className="text-m mb-2 font-bold">
-              9am — 11am (PST)
-              <br />
-              6pm — 8pm (CET)
+              <TimeDisplay time="1pm — 3:30pm" date="2026-03-24" defaultTimezone="EET" />
             </p>
             <p className="mt-8">Location: Remote (Zoom)</p>
             <p className="mb-4">Price: $40</p>
@@ -78,7 +64,7 @@ const WorkshopTiles = () => {
               Only 20 spots:
               {` `}
               <a
-                href="https://luma.com/y5tx56is"
+                href="https://luma.com/2l8h9uf6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--btg-color-neutral-1000)] underline hover:text-[var(--btg-color-neutral-900)] hover:no-underline"
@@ -112,37 +98,6 @@ const WorkshopTiles = () => {
             </div>
           </Card>
         </Link>
-      </div>
-
-      {/* Past Sessions */}
-      <div className="mx-auto mt-10 w-full max-w-[90%]">
-        <p className="tracking-wide mb-4 text-sm font-medium uppercase text-[var(--btg-color-neutral-600)]">
-          Past Sessions
-        </p>
-        <ul className="space-y-2 text-sm text-[var(--btg-color-neutral-600)]">
-          <li>
-            5th of December, 2025 —{' '}
-            <a
-              href="https://luma.com/89xuqqwy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:no-underline"
-            >
-              View on Luma
-            </a>
-          </li>
-          <li>
-            9th of December, 2025 —{' '}
-            <a
-              href="https://luma.com/u5aiko87"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:no-underline"
-            >
-              View on Luma
-            </a>
-          </li>
-        </ul>
       </div>
     </>
   )
