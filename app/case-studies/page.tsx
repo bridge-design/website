@@ -5,7 +5,7 @@ import { genPageMetadata } from 'app/seo'
 import { outroContent } from '@/data/outro-content'
 
 export const metadata = genPageMetadata({
-  title: 'Innocative Case Studies',
+  title: 'Case Studies',
   description: `Explore detailed case studies showcasing our expertise in UI engineering,
   design systems, and frontend development. Learn how Bridge the Gap has helped companies
   like Yara International, F-Secure, AppOmni, METRO, and Elisa achieve exceptional digital
