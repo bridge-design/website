@@ -1,67 +1,97 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 372" font-family="Inter, system-ui, -apple-system, sans-serif" role="img" aria-label="Pipeline: ingestion (git history → filter → embedding API) feeds Postgres + pgvector. Retrieval reads from there into the MCP server and the agent.">
+  <style>
+    /* light defaults — bridge-the-gap design tokens */
+    .pipe-box { fill: #f0eadb; stroke: #e5ddc8; }
+    .pipe-box--shared { fill: #f0eadb; stroke: #01949a; }
+    .pipe-text-strong { fill: #1a1814; }
+    .pipe-text-subtle { fill: #746b60; }
+    .pipe-bracket-label { fill: #8b8174; }
+    .pipe-bracket-sub { fill: #a39788; }
+    .pipe-bracket-line { stroke: #8b8174; }
+    .pipe-arrow { stroke: #8b8174; }
+    .pipe-arr-fill { fill: #8b8174; }
+    .pipe-teal-line { stroke: #01949a; }
+    .pipe-teal-text { fill: #01949a; }
+
+    /* dark overrides — activates when OS prefers dark */
+    @media (prefers-color-scheme: dark) {
+      .pipe-box { fill: #302c27; stroke: #46413a; }
+      .pipe-box--shared { fill: #302c27; stroke: #00b4ba; }
+      .pipe-text-strong { fill: #faf7ee; }
+      .pipe-text-subtle { fill: #a39788; }
+      .pipe-bracket-label { fill: #a39788; }
+      .pipe-bracket-sub { fill: #8b8174; }
+      .pipe-bracket-line { stroke: #a39788; }
+      .pipe-arrow { stroke: #a39788; }
+      .pipe-arr-fill { fill: #a39788; }
+      .pipe-teal-line { stroke: #00b4ba; }
+      .pipe-teal-text { fill: #00b4ba; }
+    }
+  </style>
+
   <defs>
     <marker id="pipe-arr" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
-      <polygon points="0 0, 8 3.5, 0 7" fill="#8b8174"/>
+      <polygon points="0 0, 8 3.5, 0 7" class="pipe-arr-fill"/>
     </marker>
   </defs>
 
   <!-- INGESTION bracket (above row 1) -->
-  <text x="300" y="14" text-anchor="middle" fill="#8b8174" font-size="11" font-weight="700" letter-spacing="1.4">INGESTION</text>
-  <text x="300" y="28" text-anchor="middle" fill="#a39788" font-size="10" font-style="italic">runs once at setup, then incrementally</text>
-  <line x1="30" y1="42" x2="570" y2="42" stroke="#8b8174" stroke-width="1.5"/>
-  <line x1="30" y1="42" x2="30" y2="54" stroke="#8b8174" stroke-width="1.5"/>
-  <line x1="570" y1="42" x2="570" y2="54" stroke="#8b8174" stroke-width="1.5"/>
+  <text x="300" y="14" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.4" class="pipe-bracket-label">INGESTION</text>
+  <text x="300" y="28" text-anchor="middle" font-size="10" font-style="italic" class="pipe-bracket-sub">runs once at setup, then incrementally</text>
+  <line x1="30" y1="42" x2="570" y2="42" stroke-width="1.5" class="pipe-bracket-line"/>
+  <line x1="30" y1="42" x2="30" y2="54" stroke-width="1.5" class="pipe-bracket-line"/>
+  <line x1="570" y1="42" x2="570" y2="54" stroke-width="1.5" class="pipe-bracket-line"/>
 
   <!-- ROW 1: Git history → Filter → Embedding API -->
   <g>
-    <rect x="30" y="64" width="160" height="84" rx="6" fill="#f0eadb" stroke="#e5ddc8" stroke-width="1.4"/>
-    <text x="110" y="100" text-anchor="middle" fill="#1a1814" font-size="13" font-weight="700">Git history</text>
-    <text x="110" y="124" text-anchor="middle" fill="#746b60" font-size="11">team’s full repo log</text>
+    <rect x="30" y="64" width="160" height="84" rx="6" stroke-width="1.4" class="pipe-box"/>
+    <text x="110" y="100" text-anchor="middle" font-size="13" font-weight="700" class="pipe-text-strong">Git history</text>
+    <text x="110" y="124" text-anchor="middle" font-size="11" class="pipe-text-subtle">team’s full repo log</text>
   </g>
   <g>
-    <rect x="220" y="64" width="160" height="84" rx="6" fill="#f0eadb" stroke="#e5ddc8" stroke-width="1.4"/>
-    <text x="300" y="100" text-anchor="middle" fill="#1a1814" font-size="13" font-weight="700">Filter</text>
-    <text x="300" y="124" text-anchor="middle" fill="#746b60" font-size="11">adoption commits only</text>
+    <rect x="220" y="64" width="160" height="84" rx="6" stroke-width="1.4" class="pipe-box"/>
+    <text x="300" y="100" text-anchor="middle" font-size="13" font-weight="700" class="pipe-text-strong">Filter</text>
+    <text x="300" y="124" text-anchor="middle" font-size="11" class="pipe-text-subtle">adoption commits only</text>
   </g>
   <g>
-    <rect x="410" y="64" width="160" height="84" rx="6" fill="#f0eadb" stroke="#e5ddc8" stroke-width="1.4"/>
-    <text x="490" y="100" text-anchor="middle" fill="#1a1814" font-size="13" font-weight="700">Embedding API</text>
-    <text x="490" y="124" text-anchor="middle" fill="#746b60" font-size="11">text → vector</text>
+    <rect x="410" y="64" width="160" height="84" rx="6" stroke-width="1.4" class="pipe-box"/>
+    <text x="490" y="100" text-anchor="middle" font-size="13" font-weight="700" class="pipe-text-strong">Embedding API</text>
+    <text x="490" y="124" text-anchor="middle" font-size="11" class="pipe-text-subtle">text → vector</text>
   </g>
 
   <!-- Row 1 arrows -->
-  <line x1="192" y1="106" x2="218" y2="106" stroke="#8b8174" stroke-width="1.5" marker-end="url(#pipe-arr)"/>
-  <line x1="382" y1="106" x2="408" y2="106" stroke="#8b8174" stroke-width="1.5" marker-end="url(#pipe-arr)"/>
+  <line x1="192" y1="106" x2="218" y2="106" stroke-width="1.5" class="pipe-arrow" marker-end="url(#pipe-arr)"/>
+  <line x1="382" y1="106" x2="408" y2="106" stroke-width="1.5" class="pipe-arrow" marker-end="url(#pipe-arr)"/>
 
   <!-- Wraparound arrow: end of row 1 → start of row 2 -->
-  <path d="M 572,106 H 588 V 188 H 12 V 270 H 28" fill="none" stroke="#8b8174" stroke-width="1.5" marker-end="url(#pipe-arr)"/>
+  <path d="M 572,106 H 588 V 188 H 12 V 270 H 28" fill="none" stroke-width="1.5" class="pipe-arrow" marker-end="url(#pipe-arr)"/>
 
   <!-- ROW 2: Postgres + pgvector → MCP server → Agent -->
   <g>
-    <rect x="30" y="228" width="160" height="84" rx="6" fill="#f0eadb" stroke="#01949a" stroke-width="2"/>
-    <text x="110" y="254" text-anchor="middle" fill="#1a1814" font-size="13" font-weight="700">Postgres</text>
-    <text x="110" y="271" text-anchor="middle" fill="#1a1814" font-size="13" font-weight="700">+ pgvector</text>
-    <text x="110" y="292" text-anchor="middle" fill="#746b60" font-size="11">stored locally</text>
+    <rect x="30" y="228" width="160" height="84" rx="6" stroke-width="2" class="pipe-box--shared"/>
+    <text x="110" y="254" text-anchor="middle" font-size="13" font-weight="700" class="pipe-text-strong">Postgres</text>
+    <text x="110" y="271" text-anchor="middle" font-size="13" font-weight="700" class="pipe-text-strong">+ pgvector</text>
+    <text x="110" y="292" text-anchor="middle" font-size="11" class="pipe-text-subtle">stored locally</text>
   </g>
   <g>
-    <rect x="220" y="228" width="160" height="84" rx="6" fill="#f0eadb" stroke="#e5ddc8" stroke-width="1.4"/>
-    <text x="300" y="264" text-anchor="middle" fill="#1a1814" font-size="13" font-weight="700">MCP server</text>
-    <text x="300" y="288" text-anchor="middle" fill="#746b60" font-size="11">Node process, local</text>
+    <rect x="220" y="228" width="160" height="84" rx="6" stroke-width="1.4" class="pipe-box"/>
+    <text x="300" y="264" text-anchor="middle" font-size="13" font-weight="700" class="pipe-text-strong">MCP server</text>
+    <text x="300" y="288" text-anchor="middle" font-size="11" class="pipe-text-subtle">Node process, local</text>
   </g>
   <g>
-    <rect x="410" y="228" width="160" height="84" rx="6" fill="#f0eadb" stroke="#e5ddc8" stroke-width="1.4"/>
-    <text x="490" y="264" text-anchor="middle" fill="#1a1814" font-size="13" font-weight="700">Agent</text>
-    <text x="490" y="288" text-anchor="middle" fill="#746b60" font-size="11">Claude Code or other</text>
+    <rect x="410" y="228" width="160" height="84" rx="6" stroke-width="1.4" class="pipe-box"/>
+    <text x="490" y="264" text-anchor="middle" font-size="13" font-weight="700" class="pipe-text-strong">Agent</text>
+    <text x="490" y="288" text-anchor="middle" font-size="11" class="pipe-text-subtle">Claude Code or other</text>
   </g>
 
   <!-- Row 2 arrows -->
-  <line x1="192" y1="270" x2="218" y2="270" stroke="#8b8174" stroke-width="1.5" marker-end="url(#pipe-arr)"/>
-  <line x1="382" y1="270" x2="408" y2="270" stroke="#8b8174" stroke-width="1.5" marker-end="url(#pipe-arr)"/>
+  <line x1="192" y1="270" x2="218" y2="270" stroke-width="1.5" class="pipe-arrow" marker-end="url(#pipe-arr)"/>
+  <line x1="382" y1="270" x2="408" y2="270" stroke-width="1.5" class="pipe-arrow" marker-end="url(#pipe-arr)"/>
 
-  <!-- RETRIEVAL bracket (below row 2, mirrored — caps point up, label sits at bottom) -->
-  <line x1="30" y1="322" x2="30" y2="334" stroke="#01949a" stroke-width="1.5"/>
-  <line x1="570" y1="322" x2="570" y2="334" stroke="#01949a" stroke-width="1.5"/>
-  <line x1="30" y1="334" x2="570" y2="334" stroke="#01949a" stroke-width="1.5"/>
-  <text x="300" y="348" text-anchor="middle" fill="#01949a" font-size="10" font-style="italic" opacity="0.85">runs on every query</text>
-  <text x="300" y="362" text-anchor="middle" fill="#01949a" font-size="11" font-weight="700" letter-spacing="1.4">RETRIEVAL</text>
+  <!-- RETRIEVAL bracket (below row 2, mirrored) -->
+  <line x1="30" y1="322" x2="30" y2="334" stroke-width="1.5" class="pipe-teal-line"/>
+  <line x1="570" y1="322" x2="570" y2="334" stroke-width="1.5" class="pipe-teal-line"/>
+  <line x1="30" y1="334" x2="570" y2="334" stroke-width="1.5" class="pipe-teal-line"/>
+  <text x="300" y="348" text-anchor="middle" font-size="10" font-style="italic" opacity="0.85" class="pipe-teal-text">runs on every query</text>
+  <text x="300" y="362" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.4" class="pipe-teal-text">RETRIEVAL</text>
 </svg>
