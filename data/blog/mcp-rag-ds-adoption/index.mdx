@@ -114,6 +114,8 @@ With RAG, the agent calls `search_adoption_examples("use Button on legacy page",
 
 Without RAG, the agent has two bad options. Option A: read the design system docs and guess. The result is plausible-looking code with the wrong import path or hallucinated props, because docs describe the API, not the migration pattern. The team will not merge it. Option B: paste three example files into the prompt manually. That works once, but it does not scale. It dumps a lot of unrelated code into the context window (everything around the change, not just the change itself), and it relies on you already knowing which past files are good examples. If you knew that, you probably would not need an agent for this.
 
+![With RAG: four steps ending in a merged migration (1 MCP call, ~3 KB context). Without RAG: six steps ending in a migration rejected in review (10+ tool calls, ~50 KB context).](/images/blog/mcp-rag-ds-adoption/with-without-rag.svg)
+
 **Use case 2. "What components are already partially in use?"**
 
 With RAG, the agent calls `list_indexed_components()` and gets an answer in one call. This drives migration planning. Which components have already been used somewhere in the legacy code? Which have not been touched at all? The answer shapes which migration to start next.
