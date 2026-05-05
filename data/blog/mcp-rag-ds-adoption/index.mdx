@@ -85,6 +85,8 @@ Schematically:
 
 `git history → filter → embedding → Postgres + pgvector → MCP server → agent`
 
+![Pipeline: ingestion runs once at setup; retrieval runs on every query, sharing the Postgres + pgvector store.](/images/blog/mcp-rag-ds-adoption/pipeline.svg)
+
 The whole pipeline runs once at setup, then incrementally on new commits. For a team with hundreds of past adoption commits, the first run takes a few minutes.
 
 ## Why this stays local
@@ -124,7 +126,24 @@ With RAG, the agent searches for diffs that touched the rename. It finds the com
 
 Without RAG, the agent's path is a fishing expedition. `git log -S 'medium'` returns dozens of unrelated commits. The agent reads each one's message, burning tokens on noise, until it finds the right one. Or it does not find it and guesses. Or it asks the developer, who asks a teammate, who asks the person who left the company two years ago.
 
-The pattern across all three is the same. Without retrieval, the agent compensates by exploring. Exploration is expensive in tokens, slow in wall time, and often inaccurate, because the agent gives up before it finds the real answer. RAG replaces exploration with retrieval.
+To make this concrete, here is what an MCP tool actually returns when the agent asks about migrating a date input component. The response is lightly anonymized but otherwise verbatim:
+
+```
+Migration checklist
+
+1. Change import to import { DateFieldV2 } from '@yourorg/ds'
+2. Rename minDate→min, maxDate→max
+3. Update onChange handler — receives value directly, not an event
+4. Replace hideClear with showClear (flip the boolean)
+5. Remove dateOnly/timeOnly props, use mode instead
+6. Add accessibility props (ariaLabel, prevMonthAriaLabel, nextMonthAriaLabel)
+
+15 files across the codebase were migrated in the main adoption commit (DS-412).
+```
+
+This is not a checklist the developer reads and applies by hand. The agent treats it as instructions. On the next legacy view that still uses the old `DateField`, the agent walks through the steps in order: rewrites the import, renames the props, restructures the `onChange` handler, flips the boolean. The retrieval becomes the migration plan, and the plan executes against every subsequent file the developer points it at.
+
+The pattern across all three use cases is the same. Without retrieval, the agent compensates by exploring. Exploration is expensive in tokens, slow in wall time, and often inaccurate, because the agent gives up before it finds the real answer. RAG replaces exploration with retrieval.
 
 The cost story compounds. As the corpus grows, each new code-update task uses fewer tokens than the last. Naive AI on legacy does the opposite. Every new task pays the same exploration cost.
 
