@@ -1,5 +1,5 @@
 ---
-title: "Get Your Design System into Legacy Code: A Custom MCP and RAG Playbook That Cuts AI Cost"
+title: 'Get Your Design System into Legacy Code: A Custom MCP and RAG Playbook That Cuts AI Cost'
 date: 2026-05-06
 draft: false
 summary: >
@@ -12,6 +12,57 @@ On large products with evolving design systems, getting the components into use 
 
 AI agents now look like a way to help. But when you point one at a million-line legacy repo, the agent has to grep, read files, and guess at conventions. The result is twenty dollars of tokens spent on a migration the team would not merge.
 
+_You don't need to read the console output below. It was meant to make you scary. 😱 Scroll down!_
+
+```
+$ claude code "update src/legacy/CheckoutPage.tsx to use the new Button from @yourorg/ds"
+
+⏺ Bash(grep -rln "Button" src --include="*.tsx")
+  ⎿ 247 files matched
+
+⏺ Read(node_modules/@yourorg/ds/README.md) — 14.2 KB
+⏺ Bash(grep -rln "from '@yourorg/ds'" src)
+  ⎿ 38 files
+
+⏺ Read(src/billing/InvoiceActions.tsx) — 312 lines
+⏺ Read(src/admin/UserList.tsx) — 478 lines
+⏺ Read(src/dashboard/QuickActions.tsx) — 256 lines
+⏺ Read(src/marketing/CTASection.tsx) — 189 lines
+⏺ Read(src/onboarding/StepNav.tsx) — 421 lines
+
+⏺ Read(src/legacy/components/Button.tsx) — 184 lines
+⏺ Read(src/legacy/components/Button.module.scss) — 62 lines
+
+  Thought for 47s — legacy Button uses `kind`. The new one
+  likely uses `variant`; mapping primary→"solid",
+  ghost→"subtle", danger→"destructive" by analogy with other
+  libraries.
+
+⏺ Read(src/legacy/CheckoutPage.tsx) — 1,043 lines
+⏺ Edit(src/legacy/CheckoutPage.tsx) — 14 Button replacements
+
+⏺ Bash(pnpm tsc --noEmit)
+  ⎿ 6 errors
+     Property 'variant' does not exist on type 'ButtonProps'.
+     Type '"destructive"' is not assignable to '"primary" | "secondary" | "tertiary"'.
+     …
+
+⏺ Read(node_modules/@yourorg/ds/dist/Button.d.ts) — 87 lines
+
+  Thought for 31s — the correct prop is `appearance`, not
+  `variant`. Also need <ThemeProvider>, not <Theme>. Re-doing.
+
+  ⋮ (8 more edit/typecheck iterations)
+
+──────────────────────────────────────────────────────
+  41 tool calls · 18,420 in / 3,205 out tokens
+  4m 12s · $19.74
+
+  Reviewer: "This isn't how we do it — see InvoiceActions
+  for the pattern. Also use <ThemeWrapper>, not <Theme>."
+  Status: closed without merge.
+```
+
 What fixes this is the corpus we give the agent: our own past code updates that already use the design system. The bottleneck is not the model. It is the corpus.
 
 The pattern compounds with codebase size. The larger and older the codebase, the worse naive AI does. The agent has to explore on every task: search the repository, open files, read conventions, infer what someone meant in a five-year-old commit. Exploration is what makes AI expensive on legacy code.
@@ -20,7 +71,7 @@ This article walks through the build and the use of a small system that gives th
 
 ## Why a generic RAG tutorial gets you nowhere
 
-> *If MCP and RAG are unfamiliar:* RAG (retrieval-augmented generation) means the agent looks things up before answering, and uses what it finds. MCP (Model Context Protocol) is a standard way for the agent to call your lookup tool. That is the whole primer you need for this article.
+> _If MCP and RAG are unfamiliar:_ RAG (retrieval-augmented generation) means the agent looks things up before answering, and uses what it finds. MCP (Model Context Protocol) is a standard way for the agent to call your lookup tool. That is the whole primer you need for this article.
 
 Most RAG tutorials index your documentation. That is reasonable for many use cases, but for a design system it is not enough. Documentation tells the agent what components exist and what their props are. It does not tell the agent how to update legacy code to use them.
 
@@ -36,15 +87,15 @@ One record equals one file's diff inside one commit. Per-file-per-commit granula
 
 The schema is small. Seven fields plus the embedding:
 
-| Field | What it holds | Why |
-|---|---|---|
-| commit sha | git hash | traceability |
-| file path | path of the changed file | one record per file |
-| diff | unified diff text | the actual pattern |
-| commit message | message text | engineer's intent |
-| components | list of design system components touched | filter and group |
-| author, date | metadata | freshness, lineage |
-| embedding | vector (1,536 numbers) | semantic search |
+| Field          | What it holds                            | Why                 |
+| -------------- | ---------------------------------------- | ------------------- |
+| commit sha     | git hash                                 | traceability        |
+| file path      | path of the changed file                 | one record per file |
+| diff           | unified diff text                        | the actual pattern  |
+| commit message | message text                             | engineer's intent   |
+| components     | list of design system components touched | filter and group    |
+| author, date   | metadata                                 | freshness, lineage  |
+| embedding      | vector (1,536 numbers)                   | semantic search     |
 
 **Why a vector at all?** Without one, you would do keyword search. That works for "find me past updates that introduce Button." It breaks the moment the agent's question is "find me past examples where we replaced a clickable div with a primary action." No shared keywords, same intent. A vector embedding turns each diff into ~1,500 numbers that encode what the diff is doing. Two diffs about the same kind of change end up near each other in that space, even with zero word overlap. That is what semantic search buys you.
 
@@ -148,6 +199,8 @@ This is not a checklist the developer reads and applies by hand. The agent treat
 The pattern across all three use cases is the same. Without retrieval, the agent compensates by exploring. Exploration is expensive in tokens, slow in wall time, and often inaccurate, because the agent gives up before it finds the real answer. RAG replaces exploration with retrieval.
 
 The cost story compounds. As the corpus grows, each new code-update task uses fewer tokens than the last. Naive AI on legacy does the opposite. Every new task pays the same exploration cost.
+
+![Cost per task over 50 tasks. Naive AI on legacy stays flat near $20. With RAG starts around $5 and falls toward $1 as the corpus grows. Numbers are illustrative.](/images/blog/mcp-rag-ds-adoption/cost-compounding.svg)
 
 ## Telling whether it works
 
