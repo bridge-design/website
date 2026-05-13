@@ -16,7 +16,7 @@ tags:
 
 ## The legacy code-update problem
 
-On large products with evolving design systems, getting the components into use across the codebase is a significant challenge. The design system team ships new components, but the legacy parts of the product keep using older patterns. Teams want to update the code, but the work is slow.
+On large products, shipping a new design system components is only half the battle. Getting the components into use across the codebase is a significant challenge. The design system team ships new components, but the legacy parts of the product keep using older patterns. Teams want to update the code, but the work is slow.
 
 AI agents now look like a way to help. But when you point one at a million-line legacy repo, the agent has to grep, read files, and guess at conventions. The result is twenty dollars of tokens spent on a migration the team would not merge.
 
@@ -71,7 +71,7 @@ $ claude code "update src/legacy/CheckoutPage.tsx to use the new Button from @yo
   Status: closed without merge.
 ```
 
-What fixes this is the corpus we give the agent: our own past code updates that already use the design system. The bottleneck is not the model. It is the corpus.
+You don't need smarter model to fix this issues. The real game changer here is the corpus. By feeding the agent your team's actual git history, you're giving it a roadmap of successful migrations instead of making it guess from scratch.
 
 The pattern compounds with codebase size. The larger and older the codebase, the worse naive AI does. The agent has to explore on every task: search the repository, open files, read conventions, infer what someone meant in a five-year-old commit. Exploration is what makes AI expensive on legacy code.
 
@@ -81,7 +81,7 @@ This article walks through the build and the use of a small system that gives th
 
 > _If MCP and RAG are unfamiliar:_ RAG (retrieval-augmented generation) means the agent looks things up before answering, and uses what it finds. MCP (Model Context Protocol) is a standard way for the agent to call your lookup tool. That is the whole primer you need for this article.
 
-Most RAG tutorials index your documentation. That is reasonable for many use cases, but for a design system it is not enough. Documentation tells the agent what components exist and what their props are. It does not tell the agent how to update legacy code to use them.
+Most RAG tutorials index your documentation. That is reasonable for many use cases, but for a design system it is not enough. Documentation tells the agent what components exist and what their props are. But it does not tell the agent how to update legacy code to use them.
 
 The right corpus for that question is the one nobody writes tutorials about: your team's git diffs of past code updates that introduced design system components.
 
@@ -240,4 +240,4 @@ Stand up Postgres with pgvector locally. Run the ingestion against your filter. 
 
 Use it for one week on real code-update work. Pay attention to which retrievals were useful and which were noise. Iterate the filter based on what you see. After a week, you will know whether to expand to more components, tighten the filter, or change the embedding strategy.
 
-The build is small. The data choice is the work.
+The actual code for this setup is surprisingly simple. The real effort (and the real payoff) lies in curating the right data.
