@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 524" font-family="Inter, system-ui, -apple-system, sans-serif" role="img" aria-label="Comparison of two paths for the same task. With RAG: 4 steps ending in a merged migration; one MCP call, ~3 KB context, accurate. Without RAG: 6 steps ending in a migration rejected in review; 10+ tool calls, ~50 KB context, errors likely.">
+  <style>
+    /* light defaults — bridge-the-gap design tokens */
+    .cmp-divider { stroke: #e5ddc8; }
+    .cmp-arrow { stroke: #a39788; }
+    .cmp-arr-fill { fill: #8b8174; }
+    .cmp-box-fill { fill: #f0eadb; }
+    .cmp-box-stroke { stroke: #e5ddc8; }
+    .cmp-box-stroke--teal { stroke: #01949a; }
+    .cmp-box-stroke--red { stroke: #db1f48; }
+    .cmp-text-strong { fill: #1a1814; }
+    .cmp-text-subtle { fill: #746b60; }
+    .cmp-text-mid { fill: #8b8174; }
+    .cmp-text-teal { fill: #01949a; }
+    .cmp-text-red { fill: #db1f48; }
+    .cmp-bg-teal { fill: #01949a; }
+    .cmp-bg-red { fill: #db1f48; }
+    .cmp-bg-neutral { fill: #1a1814; }
+
+    /* dark overrides — activates when OS prefers dark */
+    @media (prefers-color-scheme: dark) {
+      .cmp-divider { stroke: #46413a; }
+      .cmp-arrow { stroke: #8b8174; }
+      .cmp-arr-fill { fill: #a39788; }
+      .cmp-box-fill { fill: #302c27; }
+      .cmp-box-stroke { stroke: #46413a; }
+      .cmp-box-stroke--teal { stroke: #00b4ba; }
+      .cmp-box-stroke--red { stroke: #d9627f; }
+      .cmp-text-strong { fill: #faf7ee; }
+      .cmp-text-subtle { fill: #a39788; }
+      .cmp-text-mid { fill: #a39788; }
+      .cmp-text-teal { fill: #00b4ba; }
+      .cmp-text-red { fill: #d9627f; }
+      .cmp-bg-teal { fill: #00b4ba; }
+      .cmp-bg-red { fill: #d9627f; }
+      .cmp-bg-neutral { fill: #faf7ee; }
+    }
+  </style>
+
+  <defs>
+    <marker id="cmp-arr" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 7 3, 0 6" class="cmp-arr-fill"/>
+    </marker>
+  </defs>
+
+  <!-- Center divider -->
+  <line x1="380" y1="40" x2="380" y2="480" stroke-width="1" stroke-dasharray="4 3" class="cmp-divider"/>
+
+  <!-- Column headers -->
+  <rect x="66" y="40" width="248" height="32" rx="5" opacity="0.1" class="cmp-bg-teal"/>
+  <text x="190" y="62" text-anchor="middle" font-size="13" font-weight="800" letter-spacing="0.5" class="cmp-text-teal">With RAG</text>
+
+  <rect x="444" y="40" width="248" height="32" rx="5" opacity="0.05" class="cmp-bg-neutral"/>
+  <text x="568" y="62" text-anchor="middle" font-size="13" font-weight="800" letter-spacing="0.5" class="cmp-text-mid">Without RAG</text>
+
+  <!-- ── LEFT COLUMN: With RAG (4 steps) ── -->
+
+  <!-- Step 1: Agent receives task -->
+  <g>
+    <rect x="66" y="82" width="248" height="48" rx="5" stroke-width="1.2" class="cmp-box-fill cmp-box-stroke"/>
+    <text x="76" y="110" font-size="10" font-weight="700" opacity="0.45" class="cmp-text-teal">1</text>
+    <text x="190" y="102" text-anchor="middle" font-size="10" font-weight="600" class="cmp-text-subtle">Agent receives task:</text>
+    <text x="190" y="116" text-anchor="middle" font-size="12" font-weight="700" class="cmp-text-strong">“Use Button on legacy page”</text>
+  </g>
+  <line x1="190" y1="132" x2="190" y2="148" stroke-width="1.5" class="cmp-arrow" marker-end="url(#cmp-arr)"/>
+
+  <!-- Step 2: MCP call -->
+  <g>
+    <rect x="66" y="150" width="248" height="48" rx="5" stroke-width="1.2" class="cmp-box-fill cmp-box-stroke"/>
+    <text x="76" y="178" font-size="10" font-weight="700" opacity="0.45" class="cmp-text-teal">2</text>
+    <text x="190" y="170" text-anchor="middle" font-size="10" font-weight="600" class="cmp-text-subtle">MCP call:</text>
+    <text x="190" y="184" text-anchor="middle" font-size="10" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" class="cmp-text-strong">search_adoption_examples(…)</text>
+  </g>
+  <line x1="190" y1="200" x2="190" y2="216" stroke-width="1.5" class="cmp-arrow" marker-end="url(#cmp-arr)"/>
+
+  <!-- Step 3: Returns 3 past diffs -->
+  <g>
+    <rect x="66" y="218" width="248" height="48" rx="5" stroke-width="1.2" class="cmp-box-fill cmp-box-stroke"/>
+    <text x="76" y="246" font-size="10" font-weight="700" opacity="0.45" class="cmp-text-teal">3</text>
+    <text x="190" y="247" text-anchor="middle" font-size="12" font-weight="600" class="cmp-text-strong">Returns 3 past diffs</text>
+  </g>
+  <line x1="190" y1="268" x2="190" y2="284" stroke-width="1.5" class="cmp-arrow" marker-end="url(#cmp-arr)"/>
+
+  <!-- Step 4: Outcome — merged -->
+  <g>
+    <rect x="66" y="286" width="248" height="48" rx="5" stroke-width="1.8" class="cmp-box-fill cmp-box-stroke--teal"/>
+    <text x="76" y="314" font-size="10" font-weight="700" opacity="0.45" class="cmp-text-teal">4</text>
+    <text x="190" y="308" text-anchor="middle" font-size="12" font-weight="600" class="cmp-text-strong">Suggested migration</text>
+    <text x="190" y="323" text-anchor="middle" font-size="12" font-weight="800" class="cmp-text-teal">→ merged</text>
+  </g>
+
+  <!-- Left footer annotation -->
+  <rect x="66" y="358" width="248" height="28" rx="4" opacity="0.08" class="cmp-bg-teal"/>
+  <text x="190" y="376" text-anchor="middle" font-size="10" font-weight="700" class="cmp-text-teal">1 MCP call · ~3 KB context · accurate</text>
+
+  <!-- ── RIGHT COLUMN: Without RAG (6 steps) ── -->
+
+  <!-- Step 1: Agent receives task -->
+  <g>
+    <rect x="444" y="82" width="248" height="48" rx="5" stroke-width="1.2" opacity="0.95" class="cmp-box-fill cmp-box-stroke"/>
+    <text x="454" y="110" font-size="10" font-weight="700" opacity="0.45" class="cmp-text-mid">1</text>
+    <text x="568" y="102" text-anchor="middle" font-size="10" font-weight="600" class="cmp-text-subtle">Agent receives task:</text>
+    <text x="568" y="116" text-anchor="middle" font-size="12" font-weight="700" class="cmp-text-strong">“Use Button on legacy page”</text>
+  </g>
+  <line x1="568" y1="132" x2="568" y2="148" stroke-width="1.5" class="cmp-arrow" marker-end="url(#cmp-arr)"/>
+
+  <!-- Step 2: Grep repo -->
+  <g>
+    <rect x="444" y="150" width="248" height="48" rx="5" stroke-width="1.2" opacity="0.95" class="cmp-box-fill cmp-box-stroke"/>
+    <text x="454" y="178" font-size="10" font-weight="700" opacity="0.45" class="cmp-text-mid">2</text>
+    <text x="568" y="179" text-anchor="middle" font-size="12" font-weight="600" class="cmp-text-strong">Grep repo for Button</text>
+  </g>
+  <line x1="568" y1="200" x2="568" y2="216" stroke-width="1.5" class="cmp-arrow" marker-end="url(#cmp-arr)"/>
+
+  <!-- Step 3: 50 file matches -->
+  <g>
+    <rect x="444" y="218" width="248" height="48" rx="5" stroke-width="1.2" opacity="0.95" class="cmp-box-fill cmp-box-stroke"/>
+    <text x="454" y="246" font-size="10" font-weight="700" opacity="0.45" class="cmp-text-mid">3</text>
+    <text x="568" y="247" text-anchor="middle" font-size="12" font-weight="600" class="cmp-text-strong">50 file matches returned</text>
+  </g>
+  <line x1="568" y1="268" x2="568" y2="284" stroke-width="1.5" class="cmp-arrow" marker-end="url(#cmp-arr)"/>
+
+  <!-- Step 4: Reads 5 files -->
+  <g>
+    <rect x="444" y="286" width="248" height="48" rx="5" stroke-width="1.2" opacity="0.95" class="cmp-box-fill cmp-box-stroke"/>
+    <text x="454" y="314" font-size="10" font-weight="700" opacity="0.45" class="cmp-text-mid">4</text>
+    <text x="568" y="315" text-anchor="middle" font-size="12" font-weight="600" class="cmp-text-strong">Agent reads 5 files</text>
+  </g>
+  <line x1="568" y1="336" x2="568" y2="352" stroke-width="1.5" class="cmp-arrow" marker-end="url(#cmp-arr)"/>
+
+  <!-- Step 5: Guesses prop names -->
+  <g>
+    <rect x="444" y="354" width="248" height="48" rx="5" stroke-width="1.2" opacity="0.95" class="cmp-box-fill cmp-box-stroke"/>
+    <text x="454" y="382" font-size="10" font-weight="700" opacity="0.45" class="cmp-text-mid">5</text>
+    <text x="568" y="383" text-anchor="middle" font-size="12" font-weight="600" class="cmp-text-strong">Guesses prop names from docs</text>
+  </g>
+  <line x1="568" y1="404" x2="568" y2="420" stroke-width="1.5" class="cmp-arrow" marker-end="url(#cmp-arr)"/>
+
+  <!-- Step 6: Outcome — rejected in review -->
+  <g>
+    <rect x="444" y="422" width="248" height="48" rx="5" stroke-width="1.8" opacity="0.95" class="cmp-box-fill cmp-box-stroke--red"/>
+    <text x="454" y="450" font-size="10" font-weight="700" opacity="0.45" class="cmp-text-mid">6</text>
+    <text x="568" y="444" text-anchor="middle" font-size="12" font-weight="600" class="cmp-text-strong">Suggested migration</text>
+    <text x="568" y="459" text-anchor="middle" font-size="12" font-weight="800" class="cmp-text-red">→ rejected in review</text>
+  </g>
+
+  <!-- Right footer annotation -->
+  <rect x="444" y="494" width="248" height="28" rx="4" opacity="0.07" class="cmp-bg-red"/>
+  <text x="568" y="512" text-anchor="middle" font-size="10" font-weight="700" class="cmp-text-red">10+ tool calls · ~50 KB context · errors likely</text>
+</svg>
