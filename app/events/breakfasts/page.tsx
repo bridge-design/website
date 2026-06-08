@@ -45,7 +45,9 @@ export default async function BreakfastsPage() {
           </CtaLink>
         </div>
         <article className="grow">
-          <h1 className="mb-16 text-center font-5xl text-5xl">Casual Design Systems Breakfast</h1>
+          <h1 className="mb-16 text-center font-5xl text-5xl">
+            Casual Breakfasts on Design Systems and AI
+          </h1>
           <div className="prose mx-auto my-12 text-justify dark:prose-invert">
             <p className="text-xl leading-relaxed">
               Looking for a casual way to connect with design system people (both designers and
