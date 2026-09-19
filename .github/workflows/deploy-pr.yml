@@ -36,7 +36,7 @@ jobs:
         run: yarn install
         
       - name: Build
-        run: BASEPATH=/pr:${{ github.event.number }} yarn build
+        run: BASEPATH=/pr:${{ github.event.number }} NEXT_PUBLIC_BASE_PATH=/pr:${{ github.event.number }} yarn build
         
       # - name: Export static files for main site
         # run: BASEPATH=/pr:${{ github.event.number }} yarn export

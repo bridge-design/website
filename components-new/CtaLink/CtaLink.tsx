@@ -1,6 +1,8 @@
 import React, { forwardRef, ElementType, ReactNode } from 'react'
 import classNames from 'classnames'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
 interface CtaLinkProps {
   to: string
   as?: ElementType
@@ -40,9 +42,15 @@ export const CtaLink = forwardRef<HTMLElement, CtaLinkProps>(
       className
     )
     
+    // Handle base path for internal links when using default 'a' component
+    const isInternalLink = to.startsWith('/') || to.startsWith('#')
+    const href = Component === 'a' && isInternalLink && !to.startsWith('#') 
+      ? `${basePath}${to}` 
+      : to
+
     return (
       <Component 
-        href={to} 
+        href={href}
         className={classes} 
         ref={ref} 
         style={linkStyle}
