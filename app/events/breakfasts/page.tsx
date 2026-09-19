@@ -5,9 +5,9 @@ import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
 import { outroContent } from '@/data/outro-content'
 
 export const metadata = genPageMetadata({
-  title: 'Design Systems Breakfast',
-  description: `Casual morning gatherings for design system professionals to network, learn, and exchange experiences over coffee`,
-  keywords: `design systems breakfast, networking, meetup, design systems community`,
+  title: 'Casual Breakfasts on Design Systems, AI, and more',
+  description: `Casual morning gatherings for design system professionals, AI enthusiasts, and more to network, learn, and exchange experiences over coffee`,
+  keywords: `design systems breakfast, networking, meetup, design systems community, AI breakfast, AI meetup, AI community`,
   image: '/images/events/breakfasts/thumb.jpg',
 })
 
